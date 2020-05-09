@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/dateTxt"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="0dp"
+        android:text="Date"
+        android:background="?attr/cardBackgroundColor"
+        android:textColor="?attr/colorAccent"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/edateTxt"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="0dp"
+        android:background="?attr/cardBackgroundColor"
+        android:text="Date"
+        android:textColor="@color/myColor1"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sunrise" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sunrise" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sunset" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sunset" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Noon" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Noon" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Day Length" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Day length" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Moonrise" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Moonrise" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Moonset" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Moonset" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Midnight" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Midnight" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Night Length" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Night Length" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+            android:visibility="gone"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="San/sala" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="San/sala" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sakaddhha" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sakaddhha" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ritu" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ritu" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ayana" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ayana" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solar Month" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solar Month" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solar Day" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solar Day" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunar Month" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunar Month" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunar Day" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lunar Day" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tithi" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tithi" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nakshetra" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nakshetra" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bara" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bara" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Paksha" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Paksha" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:id="@+id/sunSignCntr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SunSign" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SunSign" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MoonSign" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MoonSign" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Joga" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Joga" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/txt22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Karana" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/etxt22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Karana" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/joginCntr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/jogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jogin" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(ସମ୍ମୁଖ,ବାମ,ଦକ୍ଷିଣ ଦିଗେ ଯୋଗିନୀ ଅଶୁଭ। ପୃଷ୍ଠେ ଅତି ଶୁଭ ଓ ଅନ୍ଯତ୍ର ଶୁଭ।) "
+                        android:textSize="11sp" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <TextView
+
+                        android:id="@+id/ejogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jogin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(Samukha, Bama, Dakshina dige Jogini Asubha. Prusthe ati subha o anyatra subha.) "
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/ghataBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="ghataBar" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="?attr/divider" />
+
+                        <TextView
+                            android:id="@+id/eghataBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="ghataBar" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/ghataChandra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ghataChandra" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="start"
+                            android:background="?attr/divider" />
+
+                        <TextView
+
+                            android:id="@+id/eghataChandra"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ghataChandra" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tarashuddhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tarashuddhi" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <TextView
+
+                        android:id="@+id/etarashuddhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="tarashuddhi" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/chandrashuddhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="chandrashuddhi" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <TextView
+
+                        android:id="@+id/echandrashuddhi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="chandrashuddhi" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/puskarCntr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/joginiFoodCntr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/borderpanchang"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/puskar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="puskar Bela" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="?attr/divider" />
+
+                    <TextView
+                        android:id="@+id/epuskar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="puskar Bela" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.2dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="?attr/divider" />
+
+                <LinearLayout
+                    android:id="@+id/shraddhaCntr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/shraddha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="shraddha" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <TextView
+
+                        android:id="@+id/eshraddha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="shraddha" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/borderpanchang"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/rajadarsan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="rajadarsan" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="start"
+                    android:background="?attr/divider" />
+
+                <TextView
+
+                    android:id="@+id/erajadarsan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="rajadarsan" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/borderpanchang"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="start"
+                        android:background="?attr/divider" />
+
+                    <TextView
+
+                        android:id="@+id/efood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/festi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/borderpanchang"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/fest1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+
+                    android:text="-" />
+
+                <TextView
+
+                    android:id="@+id/fest2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+
+                    android:text="-" />
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ausp_work_cntr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/shubhakama"
+                        android:src="@drawable/ic_festival"
+                        android:tint="@color/myColor6" />
+
+                    <TextView
+
+                        android:id="@+id/shubhakama"
+                        style="@style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="Auspicious Work"
+
+                        android:textColor="@color/myColor6"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/shubhakamalist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="not found" />
+
+                <TextView
+                    android:id="@+id/eshubhakamalist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:scrollHorizontally="false"
+                    android:text="not found" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/borderpanchang"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/auspicious_timings"
+                        android:src="@drawable/ic_festival"
+                        android:tint="@color/myColor6" />
+
+                    <TextView
+                        android:id="@+id/auspicious_timings"
+                        style="@style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="Auspicious Timings"
+
+                        android:textColor="@color/myColor6"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/amritaBela"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Brahma Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/eamritaBela"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Brahma Bela" />
+
+
+                <LinearLayout
+                    android:id="@+id/mahendarBelaCntr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="2dp"
+                        android:background="?attr/divider" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/mahendarBela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Brahma Bela" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="0.2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="?attr/divider" />
+
+                    <TextView
+                        android:id="@+id/emahendarBela"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Brahma Bela" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Abhjit Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Abhjit Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Brahma Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Brahma Bela" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="1dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/borderpanchang"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/inauspicious_timings"
+                    style="@style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="Inauspicious Timings"
+                    android:textColor="@color/myColor7"
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Vara Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Vara Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kala Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kala Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kala Ratri" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kala Ratri" />
+
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Vajyama Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Vajyama Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Durmuhurta Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Durmuhurta Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Rahu Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Rahu Bela" />
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Gulika Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Gulika Bela" />
+
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txt30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Yama Bela" />
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+                <TextView
+                    android:id="@+id/etxt30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Yama Bela" />
+
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="0.2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/divider" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+

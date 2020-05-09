@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackgroundFloating">
+
+    <androidx.viewpager.widget.ViewPager
+        android:fillViewport="true"
+        android:id="@+id/tabViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:backgroundTint="?attr/colorAccent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_gravity="top"
+
+            android:background="?attr/colorPrimary"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:visibility="visible"
+
+            app:tabBackground="?attr/colorPrimary"
+            app:tabGravity="center"
+            app:tabIndicatorColor="?attr/colorPrimary"
+            app:tabIndicatorHeight="0.1dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="2dp"
+            app:tabPaddingStart="2dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/grey"
+            tools:ignore="UnusedAttribute"
+
+
+            />
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+    <ImageView
+        android:id="@+id/cal_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_more_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

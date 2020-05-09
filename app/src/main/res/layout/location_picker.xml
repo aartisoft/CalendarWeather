@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/locPickerRl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_bg_home"
+    android:clickable="true"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/myLocationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="Set your current place, so that you will get more accuracy in weather, sun, moon &amp; muhurta information"
+
+            android:textStyle="normal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pick_my_city"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="90dp"
+            android:background="@android:color/transparent"
+            android:gravity="left|center_vertical"
+            android:text="Pick your city from Map"
+            app:icon="@drawable/ic_outline_location_on_24px"
+            android:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/type_my_city"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="145dp"
+            android:background="@android:color/transparent"
+
+            android:gravity="left|center_vertical"
+
+            android:text="Type your city"
+            android:visibility="gone"
+
+            app:icon="@drawable/ic_vector_location" />
+
+        <ImageView
+            android:id="@+id/close_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="0dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:gravity="center"
+android:tint="?attr/colorAccent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

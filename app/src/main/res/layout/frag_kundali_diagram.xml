@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackgroundFloating">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="?attr/colorBackgroundFloating"
+        android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="100dp"
+
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/separator1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/lagna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/dellRed"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/diagramCntr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floating_action_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_margin="1dp"
+                        android:tint="@color/white"
+                        app:backgroundTint="@color/dellRed"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/ic_vector_share" />
+                </FrameLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/dellRed"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/jataka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ଜାତକ/କୁଣ୍ଡଳୀ"
+                    android:textColor="@color/dellRed"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titleInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Loading..."
+                    android:textColor="@color/dellRed" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:progressTint="?attr/colorAccent"
+            android:visibility="visible" />
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

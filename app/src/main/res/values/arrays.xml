@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="rss" translatable="false">
+
+        <item>or],[2],[Otv Odisha],[Top News],[UCCgLMMp4lv7fSD2sBz1Ai6Q</item>
+        <item>or],[2],[News World Odisha],[Top News],[UCCTrqrHKqdS915K-TpMG6pg</item>
+        <item>or],[2],[Prameya News7],[Top News],[UCaErUjJ2bJ7I7fYqrvwS3bw</item>
+        <item>or],[2],[Etv News Odia],[Top News],[UCUK49UvmYWYLiB7_bZFuFZQ</item>
+        <item>or],[2],[Kanak News],[Top News],[UC90RW5ZmBBqp4r2QIQxfACA</item>
+        <item>or],[2],[Kalinga TV],[Top News],[UC1vOCYEu3DfoI4fYcfWKmWA</item>
+
+        <item>or],[2],[Sarthak Music],[Music],[UCbBWncD3X_dfXwxmj4KwJnA</item>
+        <item>or],[2],[Namita Agrawal],[Music],[UCzhhvdUDJyVQL7qddS60lSg</item>
+        <item>or],[2],[Odia Bhajan],[Music],[UCTCtBVxD_OSSLuaOk5YpiWA</item>
+        <item>or],[2],[Odia Bhagabata],[Music],[UC9N2wTn6BqS01APwRJdv3yQ</item>
+        <item>or],[2],[Tarang Music],[Music],[UCcg5_O9TsTLMUbvK6K4Shdg</item>
+
+        <item>te],[2],[Sakshi TV Live],[Top News],[UCQ_FATLW83q-4xJ2fsi8qAw</item>
+        <item>te],[2],[TV9 Telugu],[Top News],[UCPXTXMecYqnRKNdqdVOGSFg</item>
+        <item>te],[2],[ABN Telugu],[Top News],[UC_2irx_BQR7RsBKmUV9fePQ</item>
+        <item>te],[2],[NTV Telugu],[Top News],[UCumtYpCY26F6Jr3satUgMvA</item>
+        <item>te],[2],[V6 News Telugu],[Top News],[UCDCMjD1XIAsCZsYHNMGVcog</item>
+        <item>te],[2],[TV5 News],[Top News],[UCAR3h_9fLV82N2FH4cE4RKw</item>
+        <item>te],[2],[T News],[Top News],[UCp1CmHJa82ppRClE-t1uh0A</item>
+        <item>te],[2],[I News],[Top News],[UC4jYxQXFqB5q6INV6WEQC2A</item>
+
+        <item>te],[2],[Maa Music],[Music],[UC3pFVvw_HwykroUwLRdfRkg</item>
+        <item>te],[2],[Aditya Music],[Music],[UCNApqoVYJbYSrni4YsbXzyQ</item>
+        <item>te],[2],[T-Series Music],[Music],[UCnJjcn5FrgrOEp5_N45ZLEQ</item>
+        <item>te],[2],[Tollywood Tv],[Entertainment],[UCXGc7PY61gLV0oZ-qP-zbtA</item>
+        <item>te],[2],[Tollywood Latest News],[Entertainment],[UCfwwVv0Azcj62KjUiPJxs9w</item>
+
+        <item>ml],[2],[asianetnews],[Top News],[UCf8w5m0YsRa8MHQ5bwSGmbw</item>
+        <item>ml],[2],[Manorama News],[Top News],[UCP0uG-mcMImgKnJz-VjJZmQ</item>
+        <item>ml],[2],[People TV],[Top News],[UCnEvxaWfVL91XIYuyQRO5QA</item>
+        <item>ml],[2],[TVMathrubhumi],[Top News],[UCwXrBBZnIh2ER4lal6WbAHw</item>
+        <item>ml],[2],[News18 Kerala],[Top News],[UC-mMi78WJST4N5o8_i1FoXw</item>
+        <item>ml],[2],[REPORTER LIVE],[Top News],[UCFx1nseXKTc1Culiu3neeSQ</item>
+
+        <item>mr],[2],[Abp Majha],[Top News],[UCH7nv1A9xIrAifZJNvt7cgA</item>
+        <item>mr],[2],[Maharashtra1 Tv],[Top News],[UCC9c1An841f3iVOTsspyDew</item>
+        <item>mr],[2],[Jai Maharashtra News],[Top News],[UCmBLIcqOLWwrrAJ-jaCttqw</item>
+        <item>mr],[2],[NMF News],[Top News],[UCvxi7_X1VSaMr_osIamYNaw</item>
+        <item>mr],[2],[Tv9 Marathi],[Top News],[UCeR8XDjET_7foV4xYfchbhw</item>
+        <item>mr],[2],[IBN Lokmat],[Top News],[UCrcpw88HvKJ0skdsHniCJtQ</item>
+        <item>mr],[2],[ZEE 24 TAAS],[Top News],[UCVbsFo8aCgvIRIO9RYwsQMA</item>
+
+        <item>kn],[2],[Tv9 Kannada],[Top News],[UC8dnBi4WUErqYQHZ4PfsLTg</item>
+        <item>kn],[2],[Janasri News],[Top News],[UCdm4-I-SQW1_EfYqAsWiZZg</item>
+        <item>kn],[2],[Top Kannada TV],[Top News],[UC8hVoXNFmuLgz4wXRAxAbXg</item>
+        <item>kn],[2],[Prajaa TV Kannada News],[Top News],[UCzbp060f3-VA3VvrUYjIYBQ</item>
+        <item>kn],[2],[Btv Kannada],[Top News],[UC55LzMuR6ZeSpJMNCAfzb8w</item>
+        <item>kn],[2],[Public TV],[Top News],[UCl-OodciBGZ0k8K8rBZGe4w</item>
+        <item>kn],[2],[Suvarna News],[Top News],[UCjElJyiXmQXnWmceQ1JyKrA</item>
+
+
+        <item>ta],[2],[Puthiya Thalaimurai TV],[Top News],[UCmyKnNRH0wH-r8I-ceP-dsg</item>
+        <item>ta],[2],[Oneindia Tamil],[Top News],[UCpZBvTbjam0yTrD4HUUWTZw</item>
+        <item>ta],[2],[Polimer News],[Top News],[UC8Z-VjXBtDJTvq6aqkIskPg</item>
+        <item>ta],[2],[News18 Tamilnadu],[Top News],[UCat88i6_rELqI_prwvjspRA</item>
+        <item>ta],[2],[Sunnews Live],[Top News],[UCYlh4lH762HvHt6mmiecyWQ</item>
+        <item>ta],[2],[News7 Tamil],[Top News],[UCGyZswzm4G-wEfRQHgMSAuw</item>
+        <item>ta],[2],[Thanthi TV],[Top News],[UC-JFyL0zDFOsPMpuWu39rPA</item>
+        <item>ta],[2],[NewsGlitz],[Top News],[UCiqE4DQsQ0zlwjOV04s2gEA</item>
+        <item>ta],[2],[Kalaignar TV News],[Top News],[UCcVF2Fth-qEA4T1Lhn3CgKg</item>
+
+
+        <item>ta],[2],[Mango Music],[Music],[UCUHcAOIdzRjCj99dHLqksWg</item>
+        <item>ta],[2],[T-Series],[Music],[UCAEv0ANkT221wXsTnxFnBsQ</item>
+        <item>ta],[2],[Saregama],[Music],[UCzee67JnEcuvjErRyWP3GpQ</item>
+        <item>ta],[2],[Eros],[Music],[UCnS5MV3PRAgTGu2Y2DdGhfQ</item>
+
+
+        <item>bn],[2],[24 ghanta],[Top News],[UCdF5Q5QVbYstYrTfpgUl0ZA</item>
+        <item>bn],[2],[ABP ANANDA],[Top News],[UCv3rFzn-GHGtqzXiaq3sWNg</item>
+
+
+        <item>gu],[2],[Tv9 Gujarati],[Top News],[UC4wn12z5w8VNVkzpcju5opA</item>
+        <item>gu],[2],[Sandesh News],[Top News],[UCiAH2s_M6nPfGZk-PpfyPkg</item>
+        <item>gu],[2],[GSTV NEWSCHANNEL],[Top News],[UCR6arqcGnmild76MuXQjezA</item>
+        <item>gu],[2],[Vtv Gujarati],[Top News],[UCMX41X1am8oYxT336dqk4sA</item>
+        <item>gu],[2],[BK News],[Top News],[UC8Mu96zNLM6STo7iFxl4LBw</item>
+        <item>gu],[2],[ABP Asmita],[Top News],[UC3C6_1ETXfE807LltDbKYxg</item>
+
+
+        <item>pa],[2],[ZEE],[Top News],[UCmhe0p2-m_KURZYQNchK-QQ</item>
+        <item>pa],[2],[ABP Sanjha],[Top News],[UCYGZ0qW3w_dWExE3QzMkwZA</item>
+        <item>pa],[2],[GlobalPunjabTV],[Top News],[UCZOP4KKUhOuhZKagI2b9viQ</item>
+        <item>pa],[2],[PTC News],[Top News],[UCQLEbraENUGWh6p1Rv664rQ</item>
+
+
+        <item>hi],[2],[Aaj Tak],[Top News],[UCt4t-jeY85JegMlZ-E5UWtA</item>
+        <item>hi],[2],[ABP NEWS],[Top News],[UCRWFSbif-RFENbBrSiez1DA</item>
+        <item>hi],[2],[Zee News],[Top News],[UCIvaYmXn910QMdemBG3v1pQ</item>
+        <item>hi],[2],[BBC Hindi],[Top News],[UCN7B-QD0Qgn2boVH5Q0pOWg</item>
+        <item>hi],[2],[NDTV],[Top News],[UCZFMm1mMw0F81Z37aaEzTUA</item>
+        <item>hi],[2],[India Today],[Top News],[UCYPvAwZP8pZhSMW8qs7cVCw</item>
+        <item>hi],[2],[News 24],[Top News],[UCuzS3rPQAYqHcLWqOFuY0pw</item>
+        <item>hi],[2],[Samachar Plus],[Top News],[UClqKYflIhRWdUxuFIG_UAjA</item>
+        <item>hi],[2],[Bollywood Break],[Entertainment],[UCfBi8WeBMdUDMII4LGqU_pQ</item>
+        <item>hi],[2],[Bollywood All Time],[Entertainment],[UCPaJ5g6yjeWb13sZCVDFgHg</item>
+        <item>hi],[2],[News18 India],[Top News],[UCPP3etACgdUWvizcES1dJ8Q</item>
+
+
+        <item>hi],[2],[zoom],[Entertainment],[UCotI-SqRXnkAZX4bMqlRNjw</item>
+        <item>hi],[2],[Movie Talkies],[Entertainment],[UCU5pQWmxvxqRP5u-SdoV8rQ</item>
+        <item>hi],[2],[Bollywood Spy],[Entertainment],[UCA5wv3lbx6fn54ou6uytSIA</item>
+        <item>hi],[2],[Lehren TV],[Entertainment],[UCxcriVvVwJQ81AHoRwfcd-Q</item>
+        <item>hi],[2],[Bollywood Now],[Entertainment],[UCdILIiuXr2UQUhc5SFVbKtw</item>
+        <item>hi],[2],[Viralbollywood],[Entertainment],[UCZT_OWY9abyO3V9Rmdvh02w</item>
+
+        <item>hi],[2],[BAB Entertainment],[Entertainment],[UCMF_UCRItRTL0NlPHCXhFhA</item>
+        <item>hi],[2],[Bollywood Music],[Music],[UCr_pADpnsYU0vstpsKhroCA</item>
+        <item>hi],[2],[PlayNow],[Music],[UCpe9ytF9947W38f2roD120A</item>
+        <item>hi],[2],[T-Series],[Music],[UCq-Fj5jknLsUf-MWSy4_brA</item>
+        <item>hi],[2],[Zee Music Company],[Music],[UCFFbwnve3yF62-tVXkTyHqg</item>
+        <item>hi],[2],[Sony Music India],[Music],[UC56gTxNs4f9xZ7Pa2i5xNzg</item>
+        <item>hi],[2],[YRF],[Music],[UCbTLwN10NoCU4WDzLf1JMOA</item>
+        <item>hi],[2],[Eros Now],[Entertainment],[UCX52tYZiEh_mHoFja3Veciw</item>
+
+
+        <item>en],[2],[The Newshour Debate],[Top News],[UCw8Fc5R0Q5yyS3KrDCPM3xg</item>
+        <item>en],[2],[TIMES NOW],[Top News],[UC6RJ7-PaXg6TIH2BzZfTV7w</item>
+        <item>en],[2],[The Times of India],[Top News],[UCckHqySbfy5FcPP6MD_S-Yg</item>
+        <item>en],[2],[The Economic Times],[Top News],[UCJFOER35ggIWwsXh2ZDnqyg</item>
+
+
+        <item>en],[2],[NASA],[Top News],[UCLA_DiR1FfKNvjuUpBHmylQ</item>
+        <item>en],[2],[BBC],[Top News],[UC16niRr50-MSBwiO3YDb3RA</item>
+        <item>en],[2],[STAR SPORTS],[Cricket],[UCmqfX0S3x0I3uwLkPdpX03w</item>
+        <item>en],[2],[ICC],[Cricket],[UCt2JXOLNxqry7B_4rRZME3Q</item>
+        <item>en],[2],[cricket.com.au],[Cricket],[UCkBY0aHJP9BwjZLDYxAQrKg</item>
+        <item>en],[2],[BollywoodHungama],[Entertainment],[UCzR7770PbrKcG9OYGzBep9w</item>
+        <item>en],[2],[Hindustan Times],[Top News],[UCm7lHFkt2yB_WzL67aruVBQ</item>
+        <item>en],[2],[Reuters],[Top News],[UChqUTb7kYRX8-EiaN3XFrSQ</item>
+        <item>en],[2],[CNN],[Top News],[UCupvZG-5ko_eiXAupbDfxWw</item>
+        <item>en],[2],[Sky News],[Top News],[UCoMdktPbSTixAyNGwb-UYkQ</item>
+        <item>en],[2],[Fox News],[Top News],[UCXIJgqnII2ZOINSWNOGFThA</item>
+        <item>en],[2],[Science Channel],[Top News],[UCvJiYiBUbw4tmpRSZT2r1Hw</item>
+        <item>en],[2],[Discovery],[Top News],[UCqOoboPm3uhY_YXhvhmL-WA</item>
+        <item>en],[2],[The Weather Channel],[Top News],[UCGTUbwceCMibvpbd2NaIP7A</item>
+
+
+    </string-array>
+    <string-array name="observances_mapping_arr" translatable="false">
+        <item>{"slNo":"1","date":\""1/1\"","name":\""New Year\'s Day\"","wiki":\""New_Year%27s_Day\","desc":\"New Year\'s Day, also called simply New Year\'s or New Year, is observed on January 1, the first day of the year on the modern Gregorian calendar as well as the Julian calendar. In pre-Christian Rome under the Julian calendar, the day was dedicated to Janus, god of gateways and beginnings, for whom January is also named.\""}</item>
+        <item>{"slNo":"2","date":\""1/1\"","name":\""Global Family Day\"","wiki":\""Global_Family_Day\","desc":\"Global Family Day, One Day of Peace and Sharing, is celebrated every January 1 in the United States as a global day of peace and sharing. Global Family Day grew out of the United Nations Millennium celebration, "One Day In Peace".\""}</item>
+        <item>{"slNo":"3","date":\""1/4\"","name":\""World Braille Day\"","wiki":\""Louis_Braille\","desc":\"This day is birth day of Louis Braille. He was a French educator and inventor of a system of reading and writing for use by the blind or visually impaired. His system remains known worldwide simply as braille.\""}</item>
+        <item>{"slNo":"4","date":\""1/21\"","name":\""World Day of Hugs\"","wiki":\""National_Hugging_Day\","desc":\"National Hugging Day is an annual event dedicated to hugging. It was created by Kevin Zaborney and occurs annually on January 21. The day was first celebrated on January 21, 1986 in Clio, Michigan, USA. The holiday is also observed in many other countries.The idea of National Hug Day is to encourage everyone to hug family and friends more often.Zaborney cautions to ask first if one is unsure of the response.\""}</item>
+        <item>{"slNo":"5","date":\""1/26\"","name":\""Republic Day (India)\"","wiki":\""Republic_Day_(India)\","desc":\"Republic Day honors the date on which the Constitution of India came into force on 26 January 1950 replacing the Government of India Act (1935) as the governing document of India.\""}</item>
+        <item>{"slNo":"6","date":\""1/27\"","name":\""International Holocaust Remembrance Day\"","wiki":\""International_Holocaust_Remembrance_Day\","desc":\"International Holocaust Remembrance Day, is an international memorial day on 27 January commemorating the victims of the Holocaust. It commemorates the genocide that resulted in the death of an estimated 6 million Jewish people, 2 million Romani people, 250,000 mentally and physically disabled people, and 9,000 homosexual men by the Nazi regime and its collaborators.\""}</item>
+        <item>{"slNo":"7","date":\""1/30\"","name":\""World Leprosy Day\"","wiki":\""World_Leprosy_Day\","desc":\"World Leprosy Day is observed internationally on January 30 or its nearest Sunday to increase the public awareness of the Leprosy or Hansen\'s Disease. This day was chosen in commemoration of the death of Gandhi, the leader of India who understood the importance of leprosy.\""}</item>
+        <item>{"slNo":"8","date":\""1/31\"","name":\""Street Children\'s Day\"","wiki":\""Jugend_Eine_Welt#Street_Children.27s_Day\","desc":\"The "Street Children\'s Day" is commemorated every year on the January 31st and should highlight the situation of these children and young people and raise funds for projects run by the Salesians of Don Bosco and the Salesian Sisters of Don Bosco in favour of street children worldwide.\""}</item>
+        <item>{"slNo":"9","date":\""2/2\"","name":\""World Wetlands Day\"","wiki":\""World_Wetlands_Day\","desc":\"The 2 February each year is World Wetlands Day, marking the date of the adoption of the Convention on Wetlands on 2 February 1971. Established to raise awareness about the value of wetlands for humanity and the planet,\""}</item>
+        <item>{"slNo":"10","date":\""2/4\"","name":\""World Cancer Day\"","wiki":\""World_Cancer_Day\","desc":\"World Cancer Day is an international day marked on February 4 to raise awareness of cancer and to encourage its prevention, detection, and treatment. \""}</item>
+        <item>{"slNo":"11","date":\""2/6\"","name":\""International Day of Zero Tolerance to Female Genital Mutilation\"","wiki":\""International_Day_of_Zero_Tolerance_to_Female_Genital_Mutilation\","desc":\"February 6th has been dedicated to the intolerance of Female Genital Mutilation (FGM.)  This is a movement for the rights of women and their bodies, as well as the protection of their physical health- which can be tremendously affected later in life. These efforts are to benefit actions fighting violence against women and girls as a whole.\""}</item>
+        <item>{"slNo":"12","date":\""2/11\"","name":\""World Day of the Sick\"","wiki":\""World_Day_of_the_Sick\","desc":\"It is celebrated every year on February 11, for all believers seeks to be "a special time of prayer and sharing, of offering one\'s suffering"\""}</item>
+        <item>{"slNo":"13","date":\""2/12\"","name":\""Red Hand Day\"","wiki":\""Red_Hand_Day\","desc":\"Red Hand Day or International Day against the Use of Child Soldiers,February 12 each year, is an annual commemoration day on which pleas are made to political leaders and events are staged around the world to draw attention to the fates of child soldiers, children who are forced to serve as soldiers in wars and armed conflicts. \""}</item>
+        <item>{"slNo":"14","date":\""2/13\"","name":\""World Radio Day\"","wiki":\""World_Radio\","desc":\"13 February is World Radio Day — a day to celebrate radio as a medium; to improve international cooperation between broadcasters; and to encourage major networks and community radio alike to promote access to information, freedom of expression and gender equality over the airwaves.\""}</item>
+        <item>{"slNo":"15","date":\""2/14\"","name":\""Valentine\'s Day\"","wiki":\""Valentine%27s_Day\","desc":\"14 February, a day when it is traditional to send a card, often anonymously, to a person one is romantically involved with or attracted to.\""}</item>
+        <item>{"slNo":"16","date":\""2/20\"","name":\""World Day of Social Justice\"","wiki":\""World_Day_of_Social_Justice\","desc":\"World Day of Social Justice is a day on 20 February, recognizing the need to promote efforts to tackle issues such as poverty, exclusion and unemployment.\""}</item>
+        <item>{"slNo":"17","date":\""2/21\"","name":\""International Mother Language Day\"","wiki":\""International_Mother_Language_Day\","desc":\"International Mother Language Day (IMLD) is a worldwide annual observance held on 21 February to promote awareness of linguistic and cultural diversity and multilingualism.\""}</item>
+        <item>{"slNo":"18","date":\""2/22\"","name":\""World Thinking Day\"","wiki":\""World_Thinking_Day\","desc":\"It is a day on 22 February when they think about their "sisters" (and "brothers") in all the countries of the world, the meaning of Guiding, and its global impact.\""}</item>
+        <item>{"slNo":"19","date":\""2/27\"","name":\""Anosmia Awareness Day\"","wiki":\""Anosmia_Awareness_Day\","desc":\"Anosmia Awareness Day is a day to spread awareness about Anosmia (an-OHZ-me-uh), the loss of the sense of smell, and it takes place each year on February 27\""}</item>
+        <item>{"slNo":"20","date":\""2/28\"","name":\""Rare Disease Day\"","wiki":\""Rare_Disease_Day\","desc":\"World Rare Disease Day 2016. World Rare Disease Day is an annual observance held on the last day of February to raise awareness for rare diseases and improve access to treatments and medical representation for individuals with rare diseases and their families.\""}</item>
+        <item>{"slNo":"21","date":\""3/1\"","name":\""Self-Injury Awareness Day\"","wiki":\""Self-Injury_Awareness_Day\","desc":\"Self-injury Awareness Day (SIAD) (also known as Self-Harm Awareness Day) is a grassroots annual global awareness event / campaign on March 1, where on this day, and in the weeks leading up to it, some people choose to be more open about their own self-harm, and awareness organizations make special efforts to raise awareness about self-harm and self-injury.\""}</item>
+        <item>{"slNo":"22","date":\""3/3\"","name":\""World Wildlife Day\"","wiki":\""World_Wildlife_Day\","desc":\"3 March, the day of the adoption of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), as World Wildlife Day, which proposed by Thailand, to celebrate and raise awareness of the world’s wild fauna and flora.\""}</item>
+        <item>{"slNo":"23","date":\""3/8\"","name":\""International Women\'s Day\"","wiki":\""United_Nations_Day_for_Women%27s_Rights_and_International_Peace\","desc":\"International Women\'s Day (March 8) is a global day celebrating the social, economic, cultural and political achievements of women. The day also marks a call to action for accelerating gender parity.\""}</item>
+        <item>{"slNo":"24","date":\""3/9\"","name":\""World Kidney Day\"","wiki":\""World_Kidney_Day\","desc":\"World Kidney Day is a global awareness campaign aimed at raising awareness of the importance of our kidneys to our overall health and at reducing the frequency and impact of kidney disease and its associated problems worldwide.\""}</item>
+        <item>{"slNo":"25","date":\""3/14\"","name":\""Pi Day\"","wiki":\""Pi_Day\","desc":\"Pi Day is an annual celebration of the mathematical constant π (pi). Pi Day is observed on March 14 (3/14 in the month/day date format) since 3, 1, and 4 are the first three significant digits of π.\""}</item>
+        <item>{"slNo":"26","date":\""3/15\"","name":\""World Consumer Rights Day\"","wiki":\""World_Consumer_Rights_Day\","desc":\"15 March is World Consumer Rights Day (WCRD), an annual occasion for celebration and solidarity within the international consumer movement. It marks the date in 1962 President John F Kennedy first outlined the definition of Consumer Rights.\""}</item>
+        <item>{"slNo":"27","date":\""3/17\"","name":\""World Sleep Day\"","wiki":\""World_Sleep_Day\","desc":\"The World Sleep Day (Friday of the second full week of March) is an annual event organized by the World Sleep Day Committee of the World Association of Sleep Medicine (WASM) since 2008.\""}</item>
+        <item>{"slNo":"28","date":\""3/20\"","name":\""World Oral Health Day\"","wiki":\""World_Oral_Health_Day\","desc":\"World Oral Health Day (WOHD) is celebrated every year on 20 March. It is an international day to celebrate the benefits of a healthy mouth and to promote worldwide awareness of the issues around oral health and the importance of oral hygiene to looking after everyone old and young.\""}</item>
+        <item>{"slNo":"29","date":\""3/20\"","name":\""International Day of Happiness\"","wiki":\""International_Day_of_Happiness\","desc":\"The International Day of Happiness (known as Happiness Day) is celebrated throughout the world on the 20th of March.\""}</item>
+        <item>{"slNo":"30","date":\""3/20\"","name":\""World Sparrow Day\"","wiki":\""World_Sparrow_Day\","desc":\"World Sparrow Day is a day designated to raise awareness of the house sparrow and then other common birds to urban environments, and of threats to their populations, observed on 20 March.\""}</item>
+        <item>{"slNo":"31","date":\""3/21\"","name":\""International Day for the Elimination of Racial Discrimination\"","wiki":\""International_Day_for_the_Elimination_of_Racial_Discrimination\","desc":\"The International Day for the Elimination of Racial Discrimination is observed annually on 21 March. On that day, in 1960, police opened fire and killed 69 people at a peaceful demonstration in Sharpeville, South Africa, against the apartheid pass laws.\""}</item>
+        <item>{"slNo":"32","date":\""3/21\"","name":\""World Poetry Day\"","wiki":\""World_Poetry_Day\","desc":\"World Poetry Day is a time to appreciate and support poets and poetry around the world. It is held on March 21 each year.\""}</item>
+        <item>{"slNo":"33","date":\""3/21\"","name":\""World Down Syndrome Day\"","wiki":\""World_Down_Syndrome_Day\","desc":\"World Down Syndrome Day (WDSD), observed on 21 March every year, is a global awareness day which has been officially observed by the United Nations since 2012. ... Each year the voice of people with Down syndrome, and those who live and work with them, grows louder.\""}</item>
+        <item>{"slNo":"34","date":\""3/21\"","name":\""International Day of Forests\"","wiki":\""International_Day_of_Forests\","desc":\"March 21 is the United Nations\' (UN) International Day of Forests, which promotes the importance of forests and trees in our lives. The day addresses issues such as deforestation.\""}</item>
+        <item>{"slNo":"35","date":\""3/22\"","name":\""World Water Day\"","wiki":\""World_Water_Day\","desc":\"World Water Day is an annual event celebrated on March 22. The day focuses attention on the importance of fresh water and advocates for the sustainable management of freshwater resources.\""}</item>
+        <item>{"slNo":"36","date":\""3/23\"","name":\""World Meteorological Day\"","wiki":\""World_Meteorological_Organization\","desc":\"World Meteorological Day is annually held on or around March 23 to remember the World Meteorological Organization\'s establishment on that date in 1950.\""}</item>
+        <item>{"slNo":"37","date":\""3/24\"","name":\""World Tuberculosis Day\"","wiki":\""World_Tuberculosis_Day\","desc":\"World Tuberculosis Day is a worldwide event that aims to raise public awareness of tuberculosis and the efforts made to prevent and treat this disease. This event is held on March 24 each year and is promoted by organizations such as the World Health Organization (WHO).\""}</item>
+        <item>{"slNo":"38","date":\""3/25\"","name":\""International Day of Remembrance of the Victims of Slavery and the Transatlantic Slave Trade\"","wiki":\""International_Day_of_Remembrance_of_the_Victims_of_Slavery_and_the_Transatlantic_Slave_Trade\","desc":\"The day 25 March every year, honours and remembers those who suffered and died as a consequence of the transatlantic slave trade, which has been called "the worst violation of human rights in history",in which over 400 years more than 15 million men, women and children were the victims.\""}</item>
+        <item>{"slNo":"39","date":\""3/27\"","name":\""World Theatre Day\"","wiki":\""World_Theatre_Day\","desc":\"World Theatre Day (WTD) is celebrated on March 27. It was initiated in 1961 by the International Theatre Institute.\""}</item>
+        <item>{"slNo":"40","date":\""4/1\"","name":\""World April Fools\' Day\"","wiki":\""April_Fools\'_Day\","desc":\"April Fools\' Day (sometimes called All Fools\' Day) is celebrated every year on April 1 by playing practical jokes and spreading hoaxes. The jokes and their victims are called April fools.\""}</item>
+        <item>{"slNo":"41","date":\""4/2\"","name":\""World Autism Awareness Day\"","wiki":\""World_Autism_Awareness_Day\","desc":\"World Autism Awareness Day is an internationally recognised day on the 2nd of April every year, encouraging Member States of the United Nations to take measures to raise awareness about children with autism throughout the world.\""}</item>
+        <item>{"slNo":"42","date":\""4/2\"","name":\""International Children\'s Book Day\"","wiki":\""International_Children%27s_Book_Day\","desc":\"International Children\'s Book Day (ICBD) is a yearly event sponsored by the International Board on Books for Young People (IBBY), an international non-profit organization. Founded in 1967, the day is observed on or around Hans Christian Andersen\'s birthday, April 2.\""}</item>
+        <item>{"slNo":"43","date":\""4/7\"","name":\""World Health Day\"","wiki":\""World_Health_Day\","desc":\"The World Health Day is a global health awareness day celebrated every year on 7 April, under the sponsorship of the World Health Organization (WHO). In 1948, the WHO held the First World Health Assembly. The Assembly decided to celebrate 7 April of each year, with effect from 1950, as the World Health Day.\""}</item>
+        <item>{"slNo":"44","date":\""4/8\"","name":\""International Romani Day\"","wiki":\""International_Romani_Day\","desc":\"The International Romani Day (April 8) is a day to celebrate Romani culture and raise awareness of the issues facing Romani people.\""}</item>
+        <item>{"slNo":"45","date":\""4/17\"","name":\""World Hemophilia Day\"","wiki":\""World_Hemophilia_Day\","desc":\"World Hemophilia Day is an international observance held annually on April 17 by the WFH. It is an awareness day for hemophilia and other bleeding disorders, which also serves to raise funds and attract volunteers for the WFH. It was started in 1989; April 17 was chosen in honor of Frank Schnabel\'s birthday.\""}</item>
+        <item>{"slNo":"46","date":\""4/18\"","name":\""International Day For Monuments and Sites\"","wiki":\""International_Day_For_Monuments_and_Sites\","desc":\"The International Day for Monuments and Sites(World Heritage Day) is held on 18 April each year around the world with different types of activities, including visits to monuments and heritage sites, conferences, round tables and newspaper articles.\""}</item>
+        <item>{"slNo":"47","date":\""4/22\"","name":\""International Mother Earth Day\"","wiki":\""International_Mother_Earth_Day\","desc":\"The term Mother Earth is used because it "reflects the interdependence that exists among human beings, other living species and the planet we all inhabit". It is decided to designate April 22 as International Mother Earth Day.\""}</item>
+        <item>{"slNo":"48","date":\""4/23\"","name":\""World Book Day\"","wiki":\""World_Book_and_Copyright_Day\","desc":\"World Book Day or World Book and Copyright Day (also known as International Day of the Book or World Book Days) is a yearly event on April 23rd, organized by the United Nations Educational, Scientific and Cultural Organization (UNESCO), to promote reading, publishing and copyright.\""}</item>
+        <item>{"slNo":"49","date":\""4/23\"","name":\""English Language Day\"","wiki":\""UN_English_Language_Day\","desc":\" English Language Day is observed annually on April 23.The event was established by the UNESCO (United Nations Educational, Scientific and Cultural Organization)[not in citation given]in 2010 to seeking "to celebrate multilingualism and cultural diversity as well as to promote equal use of all six of its official working languages throughout the organization". April 23 was chosen as the date for the English language because it is the anniversary of William Shakespeare’s birth.\""}</item>
+        <item>{"slNo":"50","date":\""4/24\"","name":\""World Day for Laboratory Animals\"","wiki":\""World_Day_for_Laboratory_Animals\","desc":\"World Day for Laboratory Animals. World Day For Animals In Laboratories (also known as World Lab Animal Day) is observed every year on 24 April. ... The National Anti-Vivisection Society (NAVS) describe the day as an "international day of commemoration" for animals in laboratories.\""}</item>
+        <item>{"slNo":"51","date":\""4/25\"","name":\""World Malaria Day\"","wiki":\""World_Malaria_Day\","desc":\"World Malaria Day (WMD) is an international observance commemorated every year on 25 April and recognizes global efforts to control malaria.\""}</item>
+        <item>{"slNo":"52","date":\""4/26\"","name":\""World Intellectual Property Day\"","wiki":\""World_Intellectual_Property_Day\","desc":\"World Intellectual Property Day is observed annually on 26 April.The event was established by the World Intellectual Property Organization (WIPO) in 2000 to "raise awareness of how patents, copyright, trademarks and designs impact on daily life" and "to celebrate creativity, and the contribution made by creators and innovators to the development of societies across the globe".\""}</item>
+        <item>{"slNo":"53","date":\""4/28\"","name":\""World Day for Safety and Health at Work\"","wiki":\""Workers%27_Memorial_Day\","desc":\"The World Day for Safety and Health at Work is an annual international campaign to promote safe, healthy and decent work. It is held on 28 April and has been observed by the International Labour Organization (ILO) since 2003.\""}</item>
+        <item>{"slNo":"54","date":\""4/29\"","name":\""Day of Remembrance for all Victims of Chemical Warfare\"","wiki":\""Day_of_Remembrance_for_all_Victims_of_Chemical_Warfare\","desc":\"The Day of Remembrance for all Victims of Chemical Warfare is an annual event held on April 29 as a "tribute to the victims of chemical warfare, as well as to reaffirm the commitment of the Organization for the Prohibition of Chemical Weapons (OPCW) to the elimination of the threat of chemical weapons.\""}</item>
+        <item>{"slNo":"55","date":\""4/29\"","name":\""International Dance Day\"","wiki":\""International_Dance_Day\","desc":\"International Dance Day was introduced in 1982 by the International Dance Council (CID, Conseil International de la Danse), a UNESCO partner NGO, and is celebrated yearly, on April 29.\""}</item>
+        <item>{"slNo":"56","date":\""4/30\"","name":\""International Jazz Day\"","wiki":\""International_Jazz_Day\","desc":\"International Jazz Day is a yearly event on 30 April, organized by UNESCO to celebrate “the virtues of jazz as an educational tool, and a force for peace, unity, dialogue and enhanced cooperation among people.” The Day was proclaimed during the UNESCO General Conference in November 2011.\""}</item>
+        <item>{"slNo":"57","date":\""5/1\"","name":\""International Workers\' Day\"","wiki":\""International_Workers%27_Day\","desc":\"Worker Day is an annual holiday on 1st-May to celebrate the achievements of workers.\""}</item>
+        <item>{"slNo":"58","date":\""5/3\"","name":\""World Press Freedom Day\"","wiki":\""World_Press_Freedom_Day\","desc":\"May 3 to be World Press Freedom Day to raise awareness of the importance of freedom of the press and remind governments of their duty to respect and uphold the right to freedom of expression enshrined.\""}</item>
+        <item>{"slNo":"59","date":\""5/4\"","name":\""International Firefighters\' Day\"","wiki":\""International_Firefighters%27_Day\","desc":\"International Firefighters\' Day (IFFD) is observed on May 4. It was instituted after proposal emailed out across the world on January 4, 1999 due to the deaths of five firefighters in tragic circumstances in a wildfire in Australia.\""}</item>
+        <item>{"slNo":"60","date":\""5/5\"","name":\""International Midwives Day\"","wiki":\""International_Midwives_Day\","desc":\"International Day of the Midwife was first celebrated May 7th 1991, and has since been observed in over 50 nations around the world. The idea of having a day to recognize and honor midwives.\""}</item>
+        <item>{"slNo":"61","date":\""5/8\"","name":\""World Red Cross and Red Crescent Day\"","wiki":\""World_Red_Cross_and_Red_Crescent_Day\","desc":\"World Red Cross Red Crescent Day is celebrated on 8 May each year. This date is the anniversary of the birth of Henry Dunant (born 8 May 1828), the founder of International Committee of the Red Cross (ICRC) and the recipient of the first Nobel Peace Prize.\""}</item>
+        <item>{"slNo":"62","date":\""5/8\"","name":\""Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War\"","wiki":\""Time_of_Remembrance_and_Reconciliation_for_Those_Who_Lost_Their_Lives_during_the_Second_World_War\","desc":\"Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War. The United Nations (UN) has a two-day global observance that occurs on May 8 and 9 each year. It is known as the “Time of Remembrance and Reconciliation for Those Who Lost Their Lives during the Second World War”.\""}</item>
+        <item>{"slNo":"63","date":\""5/9\"","name":\""Europe Day\"","wiki":\""Europe_Day\","desc":\"In Europe, Europe Day is an annual celebration of peace and unity in Europe. There are two separate designations of Europe Day: 5 May for the Council of Europe, and 9 May for the European Union (EU)\""}</item>
+        <item>{"slNo":"64","date":\""5/12\"","name":\""International Nurses Day\"","wiki":\""International_Nurses_Day\","desc":\"International Nurses Day (IND) is an international day celebrated around the world on 12 May (the anniversary of Florence Nightingale\'s birth) of each year, to mark the contributions nurses make to society.\""}</item>
+        <item>{"slNo":"65","date":\""5/13\"","name":\""International Migratory Bird Day\"","wiki":\""Bird_Day\","desc":\"World Migratory Bird Day is a two-day event annually held on the second weekend of May to highlight the need to protect migratory birds and their habitats. The United Nations is one of the many organizations that support this global awareness campaign.\""}</item>
+        <item>{"slNo":"66","date":\""5/15\"","name":\""International Day of Families\"","wiki":\""International_Day_of_Families\","desc":\"The International Day of Families is observed on the 15th of May every year. The Day was proclaimed by the UN General Assembly in 1993 with resolution A/RES/47/237 and reflects the importance the international community attaches to families. The International Day provides an opportunity to promote awareness of issues relating to families and to increase knowledge of the social, economic and demographic processes affecting families.\""}</item>
+        <item>{"slNo":"67","date":\""5/17\"","name":\""World Telecommunication and Information Society Day\"","wiki":\""World_Information_Society_Day\","desc":\"World Information Society Day was proclaimed to be on 17 May by a United Nations General Assembly resolution, following the 2005 World Summit on the Information Society in Tunis.\""}</item>
+        <item>{"slNo":"68","date":\""5/17\"","name":\""International Day Against Homophobia and Transphobia\"","wiki":\""International_Day_Against_Homophobia_and_Transphobia\","desc":\"The International Day Against Homophobia, Transphobia and Biphobia is observed on May 17 and aims to coordinate international events that raise awareness of LGBT rights violations and stimulate interest in LGBT rights work worldwide.\""}</item>
+        <item>{"slNo":"69","date":\""5/18\"","name":\""World AIDS Vaccine Day\"","wiki":\""World_AIDS_Vaccine_Day\","desc":\"World AIDS Vaccine Day. World AIDS Vaccine Day, also known as HIV Vaccine Awareness Day, is observed annually on May 18. HIV vaccine advocates mark the day by promoting the continued urgent need for a vaccine to prevent HIV infection and AIDS.\""}</item>
+        <item>{"slNo":"70","date":\""5/18\"","name":\""International Museum Day\"","wiki":\""International_Museum_Day\","desc":\"International Museum Day (IMD) is an international day a celebration that held every year on or around 18 May, coordinated by the International Council of Museums (ICOM).\""}</item>
+        <item>{"slNo":"71","date":\""5/21\"","name":\""World Day for Cultural Diversity for Dialogue and Development\"","wiki":\""World_Day_for_Cultural_Diversity_for_Dialogue_and_Development\","desc":\"The World Day for Cultural Diversity for Dialogue and Development is a United Nations–sanctioned international holiday for the promotion of diversity issues. It is currently held on May 21\""}</item>
+        <item>{"slNo":"72","date":\""5/22\"","name":\""International Day for Biological Diversity\"","wiki":\""International_Day_for_Biological_Diversity\","desc":\"The International Day for Biological Diversity (or World Biodiversity Day) is a United Nations–sanctioned international day for the promotion of biodiversity issues. It is currently held on May 22.\""}</item>
+        <item>{"slNo":"73","date":\""5/23\"","name":\""World Turtle Day\"","wiki":\""World_Turtle_Day\","desc":\"The purpose of World Turtle Day, May 23, sponsored yearly since 2000 by American Tortoise Rescue, is to bring attention to, and increase knowledge of and respect for, turtles and tortoises, and encourage human action to help them survive and thrive.\""}</item>
+        <item>{"slNo":"74","date":\""5/25\"","name":\""Geek Pride Day\"","wiki":\""Geek_Pride_Day\","desc":\"Geek Pride Day is an initiative to promote geek culture, celebrated annually on May 25. The initiative originated in Spain in 2006 as (Spanish: Día del orgullo friki) and spread around the world via the Internet.\""}</item>
+        <item>{"slNo":"75","date":\""5/25\"","name":\""Towel Day\"","wiki":\""Towel_Day\","desc":\"Towel Day is an annual celebration on the 25th of May, as a tribute to the late author Douglas Adams (1952-2001). On that day, fans around the universe carry a towel in his honour.\""}</item>
+        <item>{"slNo":"76","date":\""5/31\"","name":\""World No-Tobacco Day\"","wiki":\""World_No_Tobacco_Day\","desc":\"World No Tobacco Day (WNTD) is observed around the world every year on May 31. It is intended to encourage a 24-hour period of abstinence from all forms of tobacco consumption around the globe.\""}</item>
+        <item>{"slNo":"77","date":\""5/2\"","name":\""World Asthma Day\"","wiki":\""World_Asthma_Day\","desc":\"World Asthma Day is an annual event organized by the Global Initiative for Asthma (GINA) to improve asthma awareness and care around the world. World Asthma Day takes place on the first Tuesday of May. The theme of 2012\'s event was "You Can Control Your Asthma".\""}</item>
+        <item>{"slNo":"78","date":\""5/13\"","name":\""World Fair Trade Day\"","wiki":\""World_Fair_Trade_Day\","desc":\"WFTO is a global association of 324 organizations in over 70 countries, and Fair Trade Day takes place on the second Saturday of May of each year, and it is an inclusive worldwide festival of events celebrating Fair Trade as a tangible contribution to the fight against poverty and exploitation, climate change.\""}</item>
+        <item>{"slNo":"79","date":\""5/14\"","name":\""Mother\'s Day\"","wiki":\""Mother%27s_Day\","desc":\"Mother’s Day is a celebration honoring the mother of the family, as well as motherhood, maternal bonds, and the influence of mothers in society.\""}</item>
+        <item>{"slNo":"80","date":\""5/10\"","name":\""Vesak\"","wiki":\""Vesak\","desc":\"This most important Buddhist festival is known as either Vesak, Wesak or Buddha Day, and is celebrated annually on the full moon of the ancient lunar month of Vesakha, which usually falls in May, or in early June.\""}</item>
+        <item>{"slNo":"81","date":\""6/1\"","name":\""Global Day of Parents\"","wiki":\""Global_Day_of_Parents\","desc":\"June 1 to be the Global Day of Parents "to appreciate all parents in all parts of the world for their selfless commitment to children and their lifelong sacrifice towards nurturing this relationship".\""}</item>
+        <item>{"slNo":"82","date":\""6/4\"","name":\""International Day of Innocent Children Victims of Aggression\"","wiki":\""International_Day_of_Innocent_Children_Victims_of_Aggression\","desc":\"International Day of Innocent Children Victims of Aggression is observed on June 4 each year. The purpose of the day is to acknowledge the pain suffered by children throughout the world who are the victims of physical, mental and emotional abuse.\""}</item>
+        <item>{"slNo":"83","date":\""6/5\"","name":\""World Environment Day\"","wiki":\""World_Environment_Day\","desc":\"World Environment Day (WED) is observed every year on 5 June to raise global awareness to take positive environmental action to protect nature and the planet Earth.\""}</item>
+        <item>{"slNo":"84","date":\""6/8\"","name":\""World Oceans Day\"","wiki":\""World_Ocean_Day\","desc":\"World Oceans Day. A sunset in the White Sea. ... World Oceans Day is celebrated every June 8. It was celebrated unofficially since its original proposal in 1992 by Canada at the Earth Summit in Rio de Janeiro, Brazil. It was officially recognized by the United Nations in late 2008.\""}</item>
+        <item>{"slNo":"85","date":\""6/12\"","name":\""World Day Against Child Labour\"","wiki":\""World_Day_Against_Child_Labour\","desc":\"The World Day Against Child Labour is an International Labour Organization (ILO) sanctioned holiday first launched in 2002 aiming to raise awareness and activism to prevent child labour\""}</item>
+        <item>{"slNo":"86","date":\""6/14\"","name":\""World Blood Donor Day\"","wiki":\""World_Blood_Donor_Day\","desc":\"Every year on 14 June, countries around the world celebrate World Blood Donor Day (WBDD). The event, established in 2004, serves to raise awareness of the need for safe blood and blood products, and to thank blood donors for their voluntary, life-saving gifts of blood.\""}</item>
+        <item>{"slNo":"87","date":\""6/15\"","name":\""Global Wind Day\"","wiki":\""Global_Wind_Day\","desc":\"Global Wind Day is a worldwide event that occurs annually on 15 June. It is a day for discovering wind, its power and the possibilities it holds to change our world. ... The European Wind Energy Association (EWEA) and the Global Wind Energy Council (GWEC) coordinate the Global Wind Day through a network of partners.\""}</item>
+        <item>{"slNo":"88","date":\""6/17\"","name":\""World Day to Combat Desertification and Drought\"","wiki":\""World_Day_to_Combat_Desertification_and_Drought\","desc":\"The World Day to Combat Desertification and Drought is a United Nations observance each June 17. Its purpose is to highlight ways to prevent desertification and recover from drought.\""}</item>
+        <item>{"slNo":"89","date":\""6/20\"","name":\""World Refugee Day\"","wiki":\""World_Refugee_Day\","desc":\"World Refugee Day is observed on June 20 each year. This event honors the courage, strength and determination of women, men and children who are forced to flee their homeland under threat of persecution, conflict and violence.\""}</item>
+        <item>{"slNo":"90","date":\""6/21\"","name":\""International Yoga Day\"","wiki":\""International_Yoga_Day\","desc":\"Yoga is a 5,000-year-old physical, mental and spiritual practice Having its origin in India, Which Aims to transform both body and mind. On December 11 in 2014, the United Nations General Assembly declared June 21st as the International Day of Yoga.\""}</item>
+        <item>{"slNo":"91","date":\""6/23\"","name":\""International Widow\'s Day\"","wiki":\""International_Widows_Day\","desc":\"International Widows Day is a United Nations ratified day of action to address the "poverty and injustice faced by millions of widows and their dependents in many countries". The day takes place annually on 23 June.\""}</item>
+        <item>{"slNo":"92","date":\""6/26\"","name":\""International Day against Drug Abuse and Illicit Trafficking\"","wiki":\""International_Day_against_Drug_Abuse_and_Illicit_Trafficking\","desc":\"International Day Against Drug Abuse and Illicit Trafficking falls on June 26 each year to raise awareness of the major problem that illicit drugs represent to society. This day is supported by individuals, communities and various organizations all over the world.\""}</item>
+        <item>{"slNo":"93","date":\""6/26\"","name":\""International Day in Support of Victims of Torture\"","wiki":\""International_Day_in_Support_of_Victims_of_Torture\","desc":\"International Day in Support of Victims of Torture – 26 June is held annually on 26 June to speak out against the crime of torture and to honor and support victims and survivors throughout the world.\""}</item>
+        <item>{"slNo":"94","date":\""6/30\"","name":\""International Asteroid Day raises public awareness of the asteroid impact hazard\"","wiki":\""Asteroid_Day\","desc":\"30 June International Asteroid Day to observe each year at the international level the anniversary of the Tunguska impact over Siberia, Russian Federation, on 30 June 1908 and to raise public awareness about the asteroid impact hazard.\""}</item>
+        <item>{"slNo":"95","date":\""6/18\"","name":\""Fathers\' Day\"","wiki":\""Fathers%27_Day\","desc":\"Father\'s Day is celebrated worldwide to recognize the contribution that fathers and father figures make to the lives of their children. This day celebrates fatherhood and male parenting. Although it is celebrated on a variety of dates worldwide, many countries observe this day on the third Sunday in June.\""}</item>
+        <item>{"slNo":"96","date":\""7/1\"","name":\""International Day of Cooperatives\"","wiki":\""International_Day_of_Cooperatives\","desc":\"On December 16, 1992, the United Nations General Assembly proclaimed in resolution 47/90 "the first Saturday of July 1995 to be International Day of Cooperatives, marking the centenary of the establishment of the International Cooperative Alliance."\""}</item>
+        <item>{"slNo":"97","date":\""7/2\"","name":\""World UFO Day\"","wiki":\""World_UFO_Day\","desc":\"World UFO Day is an awareness day for people to gather together and watch the skies for unidentified flying objects. The day is celebrated by some on June 24, and others on July 2.\""}</item>
+        <item>{"slNo":"98","date":\""7/11\"","name":\""World Population Day\"","wiki":\""World_Population_Day\","desc":\"World Population day is an annual event, observed on July 11 every year, which seeks to raise awareness of global population issues. The event was established by the Governing Council of the United Nations Development Programme in 1989.\""}</item>
+        <item>{"slNo":"99","date":\""7/17\"","name":\""World Day for International Justice\"","wiki":\""World_Day_for_International_Justice\","desc":\"World Day for International Justice, also referred to as Day of International Criminal Justice or International Justice Day is an international day celebrated throughout the world on July 17 as part of an effort to recognize the emerging system of international criminal justice.\""}</item>
+        <item>{"slNo":"100","date":\""7/18\"","name":\""Nelson Mandela International Day\"","wiki":\""Mandela_Day\","desc":\"Nelson Mandela International Day (or Mandela Day) is an annual international day in honour of Nelson Mandela, celebrated each year on 18 July, Mandela\'s birthday. The day was officially declared by the United Nations in November 2009, with the first UN Mandela Day held on 18 July 2010.\""}</item>
+        <item>{"slNo":"101","date":\""7/28\"","name":\""World Hepatitis Day\"","wiki":\""World_Hepatitis_Day\","desc":\"World Hepatitis Day, observed on July 28 every year, aims to raise global awareness of hepatitis — a group of infectious diseases known as Hepatitis A, B, C, D, and E — and encourage prevention, diagnosis and treatment.\""}</item>
+        <item>{"slNo":"102","date":\""7/29\"","name":\""International Tiger Day\"","wiki":\""International_Tiger_Day\","desc":\"Global Tiger Day, often called International Tiger Day, is an annual celebration to raise awareness for tiger conservation, held annually on 29 July. It was created in 2010 at the Saint Petersburg Tiger Summit.\""}</item>
+        <item>{"slNo":"103","date":\""8/4\"","name":\""International Beer Day\"","wiki":\""International_Beer_Day\","desc":\"International Beer Day (IBD) is a celebration on the first Friday of every August founded in 2007 in Santa Cruz, California.\""}</item>
+        <item>{"slNo":"104","date":\""8/6\"","name":\""Friendship Day\"","wiki":\""Friendship_Day\","desc":\"The first World Friendship Day was proposed for 30 July in 1958, by the World Friendship Crusade. On 27 April 2011 the General Assembly of the United Nations declared 30 July as official International Friendship Day. However, some countries, including India, celebrate Friendship Day on the first Sunday of August.\""}</item>
+        <item>{"slNo":"105","date":\""8/9\"","name":\""International Day of the World\'s Indigenous People\"","wiki":\""International_Day_of_the_World%27s_Indigenous_People\","desc":\"The International Day of the World\'s Indigenous Peoples is observed on August 9 each year to promote and protect the rights of the world\'s indigenous population. This event also recognizes the achievements and contributions that indigenous people make to improve world issues such as environmental protection.\""}</item>
+        <item>{"slNo":"106","date":\""8/12\"","name":\""International Youth Day\"","wiki":\""International_Youth_Day\","desc":\"International Youth Day (IYD) is an awareness day designated by the United Nations. The purpose of the day is to draw attention to a given set of cultural and legal issues surrounding youth. The first IYD was observed on 12 August, 2000.\""}</item>
+        <item>{"slNo":"107","date":\""8/13\"","name":\""International Lefthanders Day\"","wiki":\""International_Lefthanders_Day\","desc":\"August 13 is designated International Lefthanders Day by lefthanders International. It was first observed on the 13th of August, in the year 1976. As the name suggests, it is meant to promote awareness of the inconveniences faced by left-handers in a predominantly right-handed world.\""}</item>
+        <item>{"slNo":"108","date":\""8/15\"","name":\""Independence Day (India)\"","wiki":\""Independence_Day_(India)\","desc":\"Independence Day, is annually observed on 15 August as a national holiday in India commemorating the nation\'s independence from the British Empire on 15 August 1947.\""}</item>
+        <item>{"slNo":"109","date":\""8/19\"","name":\""World Humanitarian Day\"","wiki":\""World_Humanitarian_Day\","desc":\"World Humanitarian Day is a day on August 19, dedicated to recognize humanitarian personnel and those who have lost their lives working for humanitarian causes.\""}</item>
+        <item>{"slNo":"110","date":\""8/23\"","name":\""International Day for the Remembrance of the Slave Trade and its Abolition\"","wiki":\""International_Day_for_the_Remembrance_of_the_Slave_Trade_and_its_Abolition\","desc":\"International Day for the Remembrance of the Slave Trade and its Abolition, August 23 of each year, the day designated by UNESCO to memorialize the transatlantic slave trade.\""}</item>
+        <item>{"slNo":"111","date":\""8/29\"","name":\""International Day against Nuclear Tests\"","wiki":\""International_Day_against_Nuclear_Tests\","desc":\"The International Day against Nuclear Tests is observed on August 29. It was established on December 2, 2009 at the 64th session of the United Nations General Assembly by the resolution 64/35, which was adopted unanimously.\""}</item>
+        <item>{"slNo":"112","date":\""8/30\"","name":\""International Day of the Disappeared\"","wiki":\""International_Day_of_the_Disappeared\","desc":\"The International Day of the Disappeared on is a day on August 30, created to draw attention to the fate of individuals imprisoned at places and under poor conditions unknown to their relatives and/or legal representatives. ... But the definition of the Missing or the Disappeared goes far beyond the victims of enforced disappearance.\""}</item>
+        <item>{"slNo":"113","date":\""9/5\"","name":\""International Day of Charity\"","wiki":\""International_Day_of_Charity\","desc":\"The International Day of Charity is observed annually on 5 September. It was declared by the United Nations General Assembly in 2012.\""}</item>
+        <item>{"slNo":"114","date":\""9/5\"","name":\""Teacher\'s Day (India)\"","wiki":\""Sarvepalli_Radhakrishnan\","desc":\"September 5, the day teacher and President Dr Sarvepalli Radhakrishnan Virswami was born. ... Since then, his birthday has been observed as “Teacher\'s Day”\""}</item>
+        <item>{"slNo":"115","date":\""9/8\"","name":\""International Literacy Day\"","wiki":\""International_Literacy_Day\","desc":\"September 8 was proclaimed International Literacy Day by UNESCO on November 17, 1965. Its aim is to highlight the importance of literacy to individuals, communities and societies. On International Literacy Day each year, UNESCO reminds the international community of the status of literacy and adult learning globally.\""}</item>
+        <item>{"slNo":"116","date":\""9/10\"","name":\""World Suicide Prevention Day\"","wiki":\""World_Suicide_Prevention_Day\","desc":\"World Suicide Prevention Day (WSPD) is an awareness day observed on 10 September every year, in order to provide worldwide commitment and action to prevent suicides, with various activities around the world.\""}</item>
+        <item>{"slNo":"117","date":\""9/15\"","name":\""International Day of Democracy\"","wiki":\""International_Day_of_Democracy\","desc":\"15 September as the International Day of Democracy—with the purpose of promoting and upholding the principles of democracy.\""}</item>
+        <item>{"slNo":"118","date":\""9/16\"","name":\""International Day for the Preservation of the Ozone Layer\"","wiki":\""International_Day_for_the_Preservation_of_the_Ozone_Layer\","desc":\"September 16 to be the International Day for the Preservation of the Ozone Layer, commemorating the date when the Montreal Protocol on Substances that Deplete the Ozone Layer was signed in 1987. The day was first celebrated on September 16, 1995.\""}</item>
+        <item>{"slNo":"119","date":\""9/18\"","name":\""World Water Monitoring Day\"","wiki":\""World_Water_Monitoring_Day\","desc":\"World Water Monitoring Day is celebrated on September 18. It was initially chosen to be a month later (October 18) to recognize the anniversary of the US Clean Water Act, which was enacted by the US Congress in 1972 to restore and protect the country’s water resources. In 2007, the date was changed to facilitate participation in parts of the world where temperatures reach freezing at that time.\""}</item>
+        <item>{"slNo":"120","date":\""9/19\"","name":\""International Talk Like a Pirate Day\"","wiki":\""International_Talk_Like_a_Pirate_Day\","desc":\"International Talk Like a Pirate Day (ITLAPD, September 19) is a parodic holiday created in 1995 by John Bauer (Ol\' Chumbucket) and Mark Summers (Cap\'n Slappy), of Albany, Oregon, U.S., who proclaimed September 19 each year as the day when everyone in the world should talk like a pirate.\""}</item>
+        <item>{"slNo":"121","date":\""9/21\"","name":\""International Day of Peace\"","wiki":\""International_Day_of_Peace\","desc":\" 21 September. It is dedicated to world peace, and specifically the absence of war and violence, such as might be occasioned by a temporary ceasefire in a combat zone for humanitarian aid access.\""}</item>
+        <item>{"slNo":"122","date":\""9/27\"","name":\""World Tourism Day\"","wiki":\""World_Tourism_Day\","desc":\"World Tourism Day (WTD) is held annually on 27 September. Its purpose is to foster awareness among the international community of the importance of tourism and its social, cultural, political and economic value.\""}</item>
+        <item>{"slNo":"123","date":\""9/28\"","name":\""World Rabies Day\"","wiki":\""World_Rabies_Day\","desc":\"September 28 is World Rabies Day, a global health observance started in 2007 to raise awareness about the burden of rabies and bring together partners to enhance prevention and control efforts worldwide.\""}</item>
+        <item>{"slNo":"124","date":\""9/28\"","name":\""International Right to Know Day\"","wiki":\""International_Right_to_Know_Day\","desc":\"The International Right to Know Day was proposed on 28 September 2002 at a meeting of Freedom of information organisations from around the world in Sofia, Bulgaria,"in order to raise awareness about people\'s right to access government information while promoting freedom of information as essential to both democracy and good governance"\""}</item>
+        <item>{"slNo":"125","date":\""9/28\"","name":\""International Safe Abortion Day\"","wiki":\""International_Safe_Abortion_Day\","desc":\"The letter explained that “28 September was declared an international day of action for the decriminalization of abortion in 1990 by the women\'s health movement and has been celebrated annually ever since.” ... "Safe abortion is an essential health service for women.\""}</item>
+        <item>{"slNo":"126","date":\""9/29\"","name":\""World Heart Day\"","wiki":\""World_Heart_Day\","desc":\"World Heart Day on 29 September is the World Heart Federation\'s (and the world\'s!) biggest platform for raising awareness about cardiovascular disease (CVD).\""}</item>
+        <item>{"slNo":"127","date":\""9/29\"","name":\""International Coffee Day\"","wiki":\""International_Coffee_Day\","desc":\"On September 29, International Coffee Day is an occasion that is used to promote and celebrate coffee as a beverage.\""}</item>
+        <item>{"slNo":"128","date":\""9/30\"","name":\""Blasphemy Day\"","wiki":\""Blasphemy_Day\","desc":\"International Blasphemy Day encourages individuals and groups to openly express criticism of religion and blasphemy laws. \""}</item>
+        <item>{"slNo":"129","date":\""9/30\"","name":\""International Translation Day\"","wiki":\""International_Translation_Day\","desc":\"International Translation Day is celebrated every year on 30 September on the feast of St. Jerome, the Bible translator who is considered the patron saint of translators. The celebrations have been promoted by FIT (the International Federation of Translators) ever since it was set up in 1953.\""}</item>
+        <item>{"slNo":"130","date":\""10/1\"","name":\""International Day of Older Persons\"","wiki":\""International_Day_of_Older_Persons\","desc":\"The International Day of Older Persons is observed on October 1 each year. On December 14, 1990 the United Nations General Assembly voted to establish October 1 as the International Day of Older Persons as recorded in Resolution 45/106.\""}</item>
+        <item>{"slNo":"131","date":\""10/1\"","name":\""World Vegetarian Day\"","wiki":\""World_Vegetarian_Day\","desc":\"World Vegetarian Day is observed annually around the planet on October 1. It is a day of celebration established by the North American Vegetarian Society in 1977 and endorsed by the International Vegetarian Union in 1978, "To promote the joy, compassion and life-enhancing possibilities of vegetarianism."\""}</item>
+        <item>{"slNo":"132","date":\""10/2\"","name":\""International Day of Non-Violence\"","wiki":\""International_Day_of_Non-Violence\","desc":\"The United Nations\' (UN) International Day of Non-Violence is a global observance that promotes non-violence through education and public awareness. It is annually held on October 2 to coincide with renowned Indian leader Mahatma Gandhi\'s birthday.\""}</item>
+        <item>{"slNo":"133","date":\""10/9\"","name":\""World Post Day\"","wiki":\""World_Post_Day\","desc":\"World Post day happens each year on October 9, commemorating the date for the establishment of Universal Postal Union (UPU) in 1874 in Bern, Switzerland. The UPU was the start of global communications revolution, allowing people could write to others all over the world.\""}</item>
+        <item>{"slNo":"134","date":\""10/10\"","name":\""World Mental Health Day\"","wiki":\""World_Mental_Health_Day\","desc":\"World Mental Health Day (10 October) is a day for global mental health education, awareness and advocacy. It was first celebrated in 1992 at the initiative of the World Federation for Mental Health, a global mental health organization with members and contacts in many countries\""}</item>
+        <item>{"slNo":"135","date":\""10/11\"","name":\""International Day of the Girl Child\"","wiki":\""International_Day_of_the_Girl_Child\","desc":\"International Day of the Girl Child is an international observance day declared by the United Nations; it is also called the Day of the Girl and the International Day of the Girl. October 11, 2012, was the first Day of the Girl.\""}</item>
+        <item>{"slNo":"136","date":\""10/13\"","name":\""International Day for Disaster Reduction\"","wiki":\""International_Day_for_Natural_Disaster_Reduction\","desc":\"The United Nations General Assembly designated October 13th as the International Day for Natural Disaster Reduction as part of its proclamation of the International Decade for Natural Disaster Reduction.\""}</item>
+        <item>{"slNo":"137","date":\""10/14\"","name":\""World Standards Day\"","wiki":\""World_Standards_Day\","desc":\"Each year on 14 October, the members of the IEC, ISO and ITU celebrate World Standards Day, which is a means of paying tribute to the collaborative efforts of the thousands of experts worldwide who develop the voluntary technical agreements that are published as international standards.\""}</item>
+        <item>{"slNo":"138","date":\""10/15\"","name":\""Global Handwashing Day\"","wiki":\""Global_Handwashing_Day\","desc":\"Global Handwashing Day (GHD) is a campaign to motivate and mobilize people around the world to improve their handwashing habits by washing their hands with soap at critical moments throughout each day. It takes place on 15 October of each year.\""}</item>
+        <item>{"slNo":"139","date":\""10/16\"","name":\""World Food Day\"","wiki":\""World_Food_Day\","desc":\"Because when it comes to hunger, the only acceptable number in the world is zero. World Food Day celebrates the creation of the Food and Agriculture Organization of the United Nations (FAO) on October 16, 1945 in Quebec, Canada.\""}</item>
+        <item>{"slNo":"140","date":\""10/16\"","name":\""National Boss Day\"","wiki":\""National_Boss_Day\","desc":\"Background. The concept of National Boss Day began in 1958 when Patricia Bays Haroski, then an employee at State Farm Insurance Company in Deerfield, Illinois, registered the holiday with the United States Chamber of Commerce. She designated October 16 as the special day because it was her father\'s birthday.\""}</item>
+        <item>{"slNo":"141","date":\""10/17\"","name":\""International Day for the Eradication of Poverty\"","wiki":\""International_Day_for_the_Eradication_of_Poverty\","desc":\"The United Nations\' (UN) International Day for the Eradication of Poverty is observed on October 17 each year since 1993. It promotes people\'s awareness of the need to eradicate poverty and destitution worldwide, particularly in developing countries.\""}</item>
+        <item>{"slNo":"142","date":\""10/18\"","name":\""World Vasectomy Day\"","wiki":\""World_Vasectomy_Day\","desc":\"World Vasectomy Day was an event to raise global awareness of vasectomy as a solution to prevent unintended pregnancies.\""}</item>
+        <item>{"slNo":"143","date":\""10/20\"","name":\""World Osteoporosis Day\"","wiki":\""World_Osteoporosis_Day\","desc":\"World Osteoporosis Day is observed annually on 20 October, and launches a year-long campaign dedicated to raising global awareness of the prevention, diagnosis and treatment of osteoporosis and metabolic bone disease.\""}</item>
+        <item>{"slNo":"144","date":\""10/20\"","name":\""World Statistics Day\"","wiki":\""World_Statistics_Day\","desc":\"World Statistics Day was celebrated for the first time on 20 October 2010 worldwide. The United Nations Statistical Commission declared the day. As of 2010 , 103 countries celebrate a national Statistics Day, including 51 African countries that jointly celebrate African Statistics Day annually on 18 November.\""}</item>
+        <item>{"slNo":"145","date":\""10/22\"","name":\""International Stuttering Awareness Day\"","wiki":\""International_Stuttering_Awareness_Day\","desc":\"International Stuttering Awareness Day. October 22 was designated International Stuttering Awareness Day (ISAD) in 1998. The day is intended to raise public awareness of the millions of people – one percent of the world\'s population – who have the speech disorder of stuttering, also known as stammering.\""}</item>
+        <item>{"slNo":"146","date":\""10/24\"","name":\""World Tripe Day\"","wiki":\""https://en.wikipedia.org/w/index.php?title=World_Tripe_Day&amp;action=edit&amp;redlink=1\","desc":\"October 24 is World Tripe Day. If dedication and effort are any indication, the holiday known as World Tripe Day is as real as it gets. Since 2012, the Tripe Marketing Board (TMB) has campaigned tirelessly to raise awareness of the hidden virtues of consuming, or at least discussing, the stomachs of ruminant mammals.\""}</item>
+        <item>{"slNo":"147","date":\""10/24\"","name":\""World Development Information Day\"","wiki":\""World_Development_Information_Day\","desc":\"The assembly also decided that the day should coincide with United Nations Day to stress the central role of development in the UN\'s work. World Development Information Day was first held on October 24, 1973, and has been held on this date each year since then.\""}</item>
+        <item>{"slNo":"148","date":\""10/26\"","name":\""Intersex Awareness Day\"","wiki":\""Intersex_Awareness_Day\","desc":\"Intersex Awareness Day is an internationally observed awareness day designed to highlight human rights issues faced by intersex people.\""}</item>
+        <item>{"slNo":"149","date":\""10/27\"","name":\""World Day for Audiovisual Heritage\"","wiki":\""World_Day_for_Audiovisual_Heritage\","desc":\"The World Day for Audiovisual Heritage is annually observed on October 27 to build global awareness of issues on preserving audiovisual material, such as sound recordings and moving images.\""}</item>
+        <item>{"slNo":"150","date":\""10/28\"","name":\""International Animation Day\"","wiki":\""International_Animation_Day\","desc":\"October 28, the International Animation Day (IAD) was proclaimed in 2002 by the ASIFA as the main global event to celebrate the art of animation. This day commemorates the first public performance of Charles-Émile Reynaud\'s Théâtre Optique at the Grevin Museum in Paris, 1892.\""}</item>
+        <item>{"slNo":"151","date":\""10/29\"","name":\""World Stroke Day\"","wiki":\""World_Stroke_Day\","desc":\"World Stroke Day is observed on October 29 to underscore the serious nature and high rates of stroke, raise awareness of the prevention and treatment of the condition, and ensure better care and support for survivors.\""}</item>
+        <item>{"slNo":"152","date":\""10/2\"","name":\""World Habitat Day\"","wiki":\""World_Habitat_Day\","desc":\"World Habitat Day is observed every year on the first Monday of October throughout the world. It was officially designated by the United Nations and first celebrated in 1986. The purpose of the day is to reflect on the state of our cities and towns and the basic human right to adequate shelter.\""}</item>
+        <item>{"slNo":"153","date":\""10/12\"","name":\""World Sight Day\"","wiki":\""World_Sight_Day\","desc":\"World Sight Day (WSD) is an annual day of awareness held on the second Thursday of October, to focus global attention on blindness and vision impairment.\""}</item>
+        <item>{"slNo":"154","date":\""10/6\"","name":\""World Smile Day\"","wiki":\""World_Smile_Day\","desc":\"World Smile Day is celebrated on the first Friday in the month of October every year.\""}</item>
+        <item>{"slNo":"155","date":\""11/1\"","name":\""World Vegan Day\"","wiki":\""World_Vegan_Day\","desc":\"World Vegan Day is an annual event celebrated by vegans around the world every 1 November.\""}</item>
+        <item>{"slNo":"156","date":\""11/6\"","name":\""International Day for Preventing the Exploitation of the Environment in War and Armed Conflict\"","wiki":\""International_Day_for_Preventing_the_Exploitation_of_the_Environment_in_War_and_Armed_Conflict\","desc":\"The International Day for Preventing the Exploitation of the Environment in War and Armed Conflict is observed annually on November 6.\""}</item>
+        <item>{"slNo":"157","date":\""11/8\"","name":\""International Day of Radiology\"","wiki":\""International_Day_of_Radiology\","desc":\"The International Day of Radiology (IDoR) is an annual event promoting the role of medical imaging in modern healthcare. It is celebrated on November 8 each year, and coincides with the anniversary of the discovery of x-rays.\""}</item>
+        <item>{"slNo":"158","date":\""11/12\"","name":\""World Pneumonia Day\"","wiki":\""World_Pneumonia_Day\","desc":\"World Pneumonia Day (November 12) provides an annual forum for the world to stand together and demand action in the fight against pneumonia.\""}</item>
+        <item>{"slNo":"159","date":\""11/13\"","name":\""World Kindness Day\"","wiki":\""World_Kindness_Day\","desc":\"World Kindness Day is an international observance on 13 November. It was introduced in 1998 by the World Kindness Movement a coalition of nations kindness NGOs.\""}</item>
+        <item>{"slNo":"160","date":\""11/14\"","name":\""World Diabetes Day\"","wiki":\""World_Diabetes_Day\","desc":\"World Diabetes Day (WDD) is celebrated annually on November 14. Led by the International Diabetes Federation (IDF), World Diabetes Day was created in 1991 by IDF and the World Health Organization in response to growing concerns about the escalating health threat posed by diabetes.\""}</item>
+        <item>{"slNo":"161","date":\""11/14\"","name":\""Children\'s Day (India)\"","wiki":\""Bal_Diwas\","desc":\"Birthday of Pandit Jawaharlal Nehru is celebrated as Children\'s Day in India. India\'s first Prime Minister, Pandit Jawaharlal Nehru, was born on November 14. Apart from being known for his skills as a statesman, Nehru was also immensely fond of children.\""}</item>
+        <item>{"slNo":"162","date":\""11/15\"","name":\""Day of the Imprisoned Writer\"","wiki":\""Day_of_the_Imprisoned_Writer\","desc":\"The Day of the Imprisoned Writer is an annual, international day intended to recognize and support writers who resist repression of the basic human right to freedom of expression and who stand up to attacks made against their right to impart information. This day is observed each year on November 15.\""}</item>
+        <item>{"slNo":"163","date":\""11/16\"","name":\""International Day for Tolerance\"","wiki":\""International_Day_for_Tolerance\","desc":\"The International Day for Tolerance is an annual observance declared by UNESCO in 1995 to generate public awareness of the dangers of intolerance. It is observed on 16 November.\""}</item>
+        <item>{"slNo":"164","date":\""11/17\"","name":\""International Students Day\"","wiki":\""International_Students_Day\","desc":\"International Students\' Day is an international observance of student community, held annually on November 17. Originally commemorating the Nazi German storming of Czech universities in 1939 and the subsequent killing and sending of students to concentration camps, a number of universities now mark it, sometimes on a day other than November 17, for a nonpolitical celebration of the multiculturalism of their international students.\""}</item>
+        <item>{"slNo":"165","date":\""11/17\"","name":\""World Prematurity Day\"","wiki":\""World_Prematurity_Day\","desc":\"World Prematurity Day is observed on 17 November each year to raise awareness of preterm birth and the concerns of preterm babies and their families worldwide. Approximately 15 million babies are born preterm each year, accounting for about one in 10 of all babies born worldwide.\""}</item>
+        <item>{"slNo":"166","date":\""11/19\"","name":\""International Men\'s Day\"","wiki":\""International_Men%27s_Day\","desc":\"International Men\'s Day (IMD) is an annual international event celebrated on 19 November. Inaugurated in 1992 on 7 February by Thomas Oaster, the project was re-initialised in 1999 in Trinidad and Tobago.\""}</item>
+        <item>{"slNo":"167","date":\""11/20\"","name":\""Transgender Day of Remembrance\"","wiki":\""Transgender_Day_of_Remembrance\","desc":\"Transgender Day of Remembrance, which occurs annually on November 20, is a day to memorialize those who have been murdered as a result of transphobia and to bring attention to the continued violence endured by the transgender community. ... The Gay &amp; Lesbian Alliance Against Defamation (GLAAD) has extensively covered TDoR.\""}</item>
+        <item>{"slNo":"168","date":\""11/21\"","name":\""World Television Day\"","wiki":\""World_Television_Day\","desc":\"In December 1996 the United Nations General Assembly proclaimed 21 November as World Television Day commemorating the date on which the first World Television Forum was held in 1996.\""}</item>
+        <item>{"slNo":"169","date":\""11/21\"","name":\""World Hello Day\"","wiki":\""World_Hello_Day\","desc":\"World Hello Day is a secular holiday observed annually on November 21, to express that conflicts should be resolved through communication rather than the use of force. Participants verbally greet ten people or more on that day as an expression of the importance of personal communication in preserving peace.\""}</item>
+        <item>{"slNo":"170","date":\""11/25\"","name":\""International Day for the Elimination of Violence against Women\"","wiki":\""International_Day_for_the_Elimination_of_Violence_against_Women\","desc":\"The United Nations General Assembly has designated November 25 as the International Day for the Elimination of Violence Against Women (Resolution 54/134).\""}</item>
+        <item>{"slNo":"171","date":\""11/16\"","name":\""World Philosophy Day\"","wiki":\""World_Philosophy_Day\","desc":\"It was first celebrated on 21 November 2002. By celebrating World Philosophy Day each year, on the third Thursday of November, UNESCO underlines the enduring value of philosophy for the development of human thought, for each culture and for each individual.\""}</item>
+        <item>{"slNo":"172","date":\""11/19\"","name":\""World Day of Remembrance for Road Traffic Victims\"","wiki":\""World_Day_of_Remembrance_for_Road_Traffic_Victims\","desc":\"The World Day of Remembrance for Road Traffic Victims (WDR) is commemorated on the third Sunday of November each year...\""}</item>
+        <item>{"slNo":"173","date":\""12/1\"","name":\""World AIDS Day\"","wiki":\""World_AIDS_Day\","desc":\"World AIDS Day is held on the 1st December each year and is an opportunity for people worldwide to unite in the fight against HIV, show their support for people living with HIV and to commemorate people who have died. World AIDS Day was the first ever global health day, held for the first time in 1988.\""}</item>
+        <item>{"slNo":"174","date":\""12/2\"","name":\""International Day for the Abolition of Slavery\"","wiki":\""International_Day_for_the_Abolition_of_Slavery\","desc":\"The International Day for the Abolition of Slavery, 2 December, marks the date of the adoption, by the General Assembly, of the United Nations Convention for the Suppression of the Traffic in Persons and of the Exploitation of the Prostitution of Others (resolution 317(IV) of 2 December 1949).\""}</item>
+        <item>{"slNo":"175","date":\""12/3\"","name":\""International Day of Persons with Disabilities\"","wiki":\""International_Day_of_Persons_with_Disabilities\","desc":\"International Day of Persons with Disabilities. International Day of Persons with Disabilities (December 3) is an international observance promoted by the United Nations since 1992.\""}</item>
+        <item>{"slNo":"176","date":\""12/5\"","name":\""World Soil Day\"","wiki":\""World_Soil_Day\","desc":\"The International Year of Soils, 2015 (IYS 2015) was declared by the Sixty-eighth session of the United Nations General Assembly on December 20th, 2013 after recognizing December 5th as World Soil Day.The purpose of the IYS is to raise awareness worldwide of the importance of soils for food security, agriculture, as well as in mitigation of climate change, poverty alleviation, and sustainable development.\""}</item>
+        <item>{"slNo":"177","date":\""12/5\"","name":\""International Volunteer Day for Economic and Social Development\"","wiki":\""International_Volunteer_Day\","desc":\"International Volunteer Day for Economic and Social Development, also known as International Volunteer Day (IVD), is observed on December 5 each year.\""}</item>
+        <item>{"slNo":"178","date":\""12/7\"","name":\""International Civil Aviation Day\"","wiki":\""International_Civil_Aviation_Day\","desc":\"The organization is a United Nations (UN) body responsible for developing international standards for aviation safety. International Civil Aviation Day reminds people about the importance of international civil aviation in modern society.\""}</item>
+        <item>{"slNo":"179","date":\""12/9\"","name":\""International Anti-Corruption Day\"","wiki":\""International_Anti-Corruption_Day\","desc":\"International Anti-Corruption Day has been observed annually, on 9 December, since the passage of the United Nations Convention Against Corruption on 31 October 2003.\""}</item>
+        <item>{"slNo":"180","date":\""12/10\"","name":\""Human Rights Day\"","wiki":\""Human_Rights_Day\","desc":\"Human Rights Day is observed by the international community every year on 10 December. It commemorates the day in 1948 the United Nations General Assembly adopted the Universal Declaration of Human Rights.\""}</item>
+        <item>{"slNo":"181","date":\""12/11\"","name":\""International Mountain Day\"","wiki":\""Mountain_Day#International_Mountain_Day\","desc":\"International Mountain Day. The year 2002 was the International Year of Mountains. As this year drew to a close, the United Nations (UN) General Assembly proclaimed December 11 to be International Mountain Day.\""}</item>
+        <item>{"slNo":"182","date":\""12/18\"","name":\""International Migrants Day\"","wiki":\""International_Migrants_Day\","desc":\"International Migrants Day is an international day observed on 18 December as International Migrants Day appointed by the General Assembly of United Nations on 4 December 2000 taking into account the large and increasing number of migrants in the world.\""}</item>
+        <item>{"slNo":"183","date":\""12/20\"","name":\""International Human Solidarity Day\"","wiki":\""International_Human_Solidarity_Day\","desc":\"The United Nations\' (UN) International Human Solidarity Day is annually held on December 20 to celebrate unity in diversity. It also aims to remind people on the importance of solidarity in working towards eradicating poverty.\""}</item>
+    </string-array>
+
+    <string-array name="youtube" translatable="false">
+        <item>{"key":"_pt9MML4Ehs","lang":"all","titleL":\""Jana Gana Mana Indian national anthem\"","titleE":\""Jana Gana Mana Indian national anthem\""}</item>
+        <item>{"key":"DxP-Qx_KmAo","lang":"or","titleL":\""Vande Utkal Janani (ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ)- Anthem of Odisha\"","titleE":\""Vande Utkal Janani (ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ)- Anthem of Odisha\""}</item>
+        <item>{"key":"W1R7Yr10RJI","lang":"all","titleL":\""Sare jahan se acha\"","titleE":\""Sare jahan se acha\""}</item>
+        <item>{"key":"qNfuMrBjzQY","lang":"all","titleL":\""Vande Mataram\"","titleE":\""Vande Mataram\""}</item>
+        <item>{"key":"LoRCgQ4Zs0E","lang":"all","titleL":\""Maa Tujhe Salaam\"","titleE":\""Maa Tujhe Salaam\""}</item>
+        <item>{"key":"nlTjtcyDgzI","lang":"all","titleL":\""Raghupati Raghav Raja Ram\"","titleE":\""Raghupati Raghav Raja Ram\""}</item>
+        <item>{"key":"LXBlgP4zW7o","lang":"all","titleL":\""Bharat humko jaan se pyara hai\"","titleE":\""Bharat humko jaan se pyara hai\""}</item>
+        <item>{"key":"VQ089_7Tx_w","lang":"or","titleL":\""Ahe daya maya biswa bihari\"","titleE":\""LAXMI PURAN\""}</item>
+        <item>{"key":"qAA2oDiz1Vs","lang":"or","titleL":\""Aahe Nila Saila\"","titleE":\""LAXMI PURAN\""}</item>
+
+        <item>{"key":"Pzz3vNNFM5I","lang":"or","titleL":\""LAXMI PURAN\"","titleE":\""LAXMI PURAN\""}</item>
+        <item>{"key":"0oFFeaKRnUQ","lang":"or","titleL":\""Khudurkuni Puja Part1\"","titleE":\""Khudurkuni Puja\""}</item>
+        <item>{"key":"VeRS72scMxE","lang":"or","titleL":\""Khudurkuni Puja Part2\"","titleE":\""Khudurkuni Puja\""}</item>
+        <item>{"key":"Eb5Zc_d9XJk","lang":"or","titleL":\""Khudurkuni Puja Part3\"","titleE":\""Khudurkuni Puja\""}</item>
+        <item>{"key":"1532IEglaN4","lang":"or","titleL":\""Khudurkuni Puja Part4\"","titleE":\""Khudurkuni Puja\""}</item>
+        <item>{"key":"KEnqEZJg5Pk","lang":"or","titleL":\""Khudurkuni Puja Part5\"","titleE":\""Khudurkuni Puja\""}</item>
+        <item>{"key":"h8qTnwQRdhc","lang":"all","titleL":\""Navgraha Mantra\"","titleE":\""Navgraha Mantra\""}</item>
+        <item>{"key":"nU1iYDTfVCU","lang":"all","titleL":\""Navagraha Stotram\"","titleE":\""Navagraha Stotram\""}</item>
+        <item>{"key":"nJrYlcOAJdI","lang":"all","titleL":\""Surya Mantra\"","titleE":\""Surya Mantra\""}</item>
+        <item>{"key":"AETFvQonfV8","lang":"all","titleL":\""Hanuman Chalisa with Subtitles\"","titleE":\""Hanuman Chalisa with Subtitles\""}</item>
+        <item>{"key":"4HNbwEiHPlg","lang":"all","titleL":\""Shani Mantra\"","titleE":\""Shani Mantra\""}</item>
+        <item>{"key":"5iTxEKsRfvM","lang":"all","titleL":\""Ganesh Vandana\"","titleE":\""Ganesh Vandana\""}</item>
+        <item>{"key":"lZtMMNt_Mnk","lang":"all","titleL":\""Durga Saptshati\"","titleE":\""Durga Saptshati\""}</item>
+        <item>{"key":"lBUxbFU0E9E","lang":"all","titleL":\""Shree Ram Bhajana\"","titleE":\""Shree Ram Bhajana\""}</item>
+        <item>{"key":"M3PsXWnRywU","lang":"all","titleL":\""Hey Ram Hey Ram (Shree Ram Dhun\"","titleE":\""Hey Ram Hey Ram (Shree Ram Dhun\""}</item>
+        <item>{"key":"obppCkYGqI8","lang":"all","titleL":\""GOVIND BOLO HARI GOPAL BOLO\"","titleE":\""GOVIND BOLO HARI GOPAL BOLO\""}</item>
+        <item>{"key":"adyjwFgXRNY","lang":"all","titleL":\""Mahamrityunjay Mantra 108 times\"","titleE":\""Mahamrityunjay Mantra 108 times\""}</item>
+        <item>{"key":"Tp_WZbKFQ_g","lang":"all","titleL":\""MAHA LAKSHMI STUTHI\"","titleE":\""MAHA LAKSHMI STUTHI\""}</item>
+        <item>{"key":"hOXRhzzrHl4","lang":"all","titleL":\""Jai Jai Maha Kali\"","titleE":\""Jai Jai Maha Kali\""}</item>
+        <item>{"key":"AEN5Gx-mLGc","lang":"all","titleL":\""Om Gan Ganpate Namo Namah 108 times\"","titleE":\""Om Gan Ganpate Namo Namah 108 times\""}</item>
+        <item>{"key":"nwRoHC83wx0","lang":"all","titleL":\""Gayatri Mantra ( 108 peaceful chants )\"","titleE":\""Gayatri Mantra ( 108 peaceful chants )\""}</item>
+        <item>{"key":"QovtSWOKQ0c","lang":"all","titleL":\""Maha Kali Mantra 108 times\"","titleE":\""Maha Kali Mantra 108 times\""}</item>
+        <item>{"key":"E1I_05xu-ro","lang":"all","titleL":\""Om namah Shivaya Mantra\"","titleE":\""Om namah Shivaya Mantra\""}</item>
+        <item>{"key":"HEcn2Bvakr4","lang":"all","titleL":\""Lakshmi Mantra 108 times\"","titleE":\""Lakshmi Mantra 108 times\""}</item>
+        <item>{"key":"q5jZfaThME4","lang":"all","titleL":\""Shani Mahamantra 108 times\"","titleE":\""Shani Mahamantra 108 times\""}</item>
+        <item>{"key":"RsvKnNzqWsk","lang":"all","titleL":\""Om Aim Hrim Klim, Devi Mantra 108 Times\"","titleE":\""Om Aim Hrim Klim, Devi Mantra 108 Times\""}</item>
+        <item>{"key":"O_QXVanxAxI","lang":"all","titleL":\""Sai Chalisa\"","titleE":\""Sai Chalisa\""}</item>
+        <item>{"key":"6pqUw9sI6Is","lang":"all","titleL":\""Shree Bala Ji Mantra\"","titleE":\""Shree Bala Ji Mantra\""}</item>
+        <item>{"key":"dYuJuGsw7OE","lang":"all","titleL":\""Shree Gurudattatrya Mantra\"","titleE":\""Shree Gurudattatrya Mantra\""}</item>
+        <item>{"key":"NNbUgAOGqhE","lang":"all","titleL":\""Hanuman Mantra\"","titleE":\""Hanuman Mantra\""}</item>
+        <item>{"key":"2i41Dz0cTcM","lang":"all","titleL":\""Shree Navnath Mantra 108 times\"","titleE":\""Shree Navnath Mantra 108 times\""}</item>
+        <item>{"key":"-QjXbKLNFAk","lang":"all","titleL":\""Shree Ram Jay Ram Jay Jaya Ram - Shree Rama Mantra 108 Times\"","titleE":\""Shree Ram Jay Ram Jay Jaya Ram - Shree Rama Mantra 108 Times\""}</item>
+        <item>{"key":"NwmIBp7k31Y","lang":"all","titleL":\""Shree Surya dev Mantra 108 times\"","titleE":\""Shree Surya dev Mantra 108 times\""}</item>
+        <item>{"key":"O5wlqRcTLDA","lang":"all","titleL":\""DURGA MANTRA\"","titleE":\""DURGA MANTRA\""}</item>
+        <item>{"key":"XznY-ToduAk","lang":"all","titleL":\""Shree Mumbadevi Mantra\"","titleE":\""Shree Mumbadevi Mantra\""}</item>
+        <item>{"key":"e_pfa6226r8","lang":"all","titleL":\""Jai Santoshi Maa - Shree Santoshi Mata Mantra\"","titleE":\""Jai Santoshi Maa - Shree Santoshi Mata Mantra\""}</item>
+        <item>{"key":"RwOttd-PUH8","lang":"all","titleL":\""Saraswati Mantra For Concentration In Studies\"","titleE":\""Saraswati Mantra For Concentration In Studies\""}</item>
+        <item>{"key":"UdPTqGVbUdg","lang":"all","titleL":\""Hare Rama Hare Krishna |108 Times\"","titleE":\""Hare Rama Hare Krishna |108 Times\""}</item>
+        <item>{"key":"7goTgvmo7cY","lang":"all","titleL":\""Lord Vishnu Mantra Chant – 108 times\"","titleE":\""Lord Vishnu Mantra Chant – 108 times\""}</item>
+        <item>{"key":"ix8XuUPc_mM","lang":"all","titleL":\""OM NAMO NARAYANA\"","titleE":\""OM NAMO NARAYANA\""}</item>
+
+
+    </string-array>
+
+
+    <string-array name="weather_desc_eng">
+        <item>thunderstorm with light rain</item>
+        <item>thunderstorm with rain</item>
+        <item>thunderstorm with heavy rain</item>
+        <item>light thunderstorm</item>
+        <item>thunderstorm</item>
+        <item>heavy thunderstorm</item>
+        <item>ragged thunderstorm</item>
+        <item>thunderstorm with light drizzle</item>
+        <item>thunderstorm with drizzle</item>
+        <item>thunderstorm with heavy drizzle</item>
+        <item>light intensity drizzle</item>
+        <item>drizzle</item>
+        <item>heavy intensity drizzle</item>
+        <item>light intensity drizzle rain</item>
+        <item>drizzle rain</item>
+        <item>heavy intensity drizzle rain</item>
+        <item>shower rain and drizzle</item>
+        <item>heavy shower rain and drizzle</item>
+        <item>shower drizzle</item>
+        <item>light rain</item>
+        <item>moderate rain</item>
+        <item>heavy intensity rain</item>
+        <item>very heavy rain</item>
+        <item>extreme rain</item>
+        <item>freezing rain</item>
+        <item>light intensity shower rain</item>
+        <item>shower rain</item>
+        <item>heavy intensity shower rain</item>
+        <item>ragged shower rain</item>
+        <item>light snow</item>
+        <item>snow</item>
+        <item>heavy snow</item>
+        <item>sleet</item>
+        <item>shower sleet</item>
+        <item>light rain and snow</item>
+        <item>rain and snow</item>
+        <item>light shower snow</item>
+        <item>shower snow</item>
+        <item>heavy shower snow</item>
+        <item>mist</item>
+        <item>smoke</item>
+        <item>haze</item>
+        <item>sand, dust whirls</item>
+        <item>fog</item>
+        <item>sand</item>
+        <item>dust</item>
+        <item>volcanic ash</item>
+        <item>squalls</item>
+        <item>tornado</item>
+        <item>clear sky</item>
+        <item>few clouds</item>
+        <item>scattered clouds</item>
+        <item>broken clouds</item>
+        <item>overcast clouds</item>
+    </string-array>
+    <string-array name="weather_desc_code">
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>210</item>
+        <item>211</item>
+        <item>212</item>
+        <item>221</item>
+        <item>230</item>
+        <item>231</item>
+        <item>232</item>
+        <item>300</item>
+        <item>301</item>
+        <item>302</item>
+        <item>310</item>
+        <item>311</item>
+        <item>312</item>
+        <item>313</item>
+        <item>314</item>
+        <item>321</item>
+        <item>500</item>
+        <item>501</item>
+        <item>502</item>
+        <item>503</item>
+        <item>504</item>
+        <item>511</item>
+        <item>520</item>
+        <item>521</item>
+        <item>522</item>
+        <item>531</item>
+        <item>600</item>
+        <item>601</item>
+        <item>602</item>
+        <item>611</item>
+        <item>612</item>
+        <item>615</item>
+        <item>616</item>
+        <item>620</item>
+        <item>621</item>
+        <item>622</item>
+        <item>701</item>
+        <item>711</item>
+        <item>721</item>
+        <item>731</item>
+        <item>741</item>
+        <item>751</item>
+        <item>761</item>
+        <item>762</item>
+        <item>771</item>
+        <item>781</item>
+        <item>800</item>
+        <item>801</item>
+        <item>802</item>
+        <item>803</item>
+        <item>804</item>
+    </string-array>
+
+    <string-array name="weather_desc_or">
+        <item>ଘଡ଼ଘଡ଼ି ସହ ସାମାନ୍ଯ ଝଡ଼ ବର୍ଷା</item>
+        <item>ଘଡ଼ଘଡ଼ି ସହ ପ୍ରବଳ ଝଡ଼ବର୍ଷା</item>
+        <item>ଘଡ଼ଘଡ଼ି ସହ ଅତି ପ୍ରବଳ ଝଡ଼ବର୍ଷା</item>
+        <item>ହାଲକା ଘଡ଼ଘଡ଼ି ଓ ଝଡ଼</item>
+        <item>ଘଡ଼ଘଡ଼ି ଓ ଝଡ଼</item>
+        <item>ପ୍ରବଳ ଘଡ଼ଘଡ଼ି ସହ ଝଡ଼</item>
+        <item>ଅତି ପ୍ରବଳ ଘଡ଼ଘଡ଼ି ସହ ଝଡ଼</item>
+        <item>ଘଡ଼ଘଡ଼ି ସହ ସାମାନ୍ୟ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଘଡ଼ଘଡ଼ି ସହ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଘଡ଼ଘଡ଼ି ସହ ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ପ୍ରବଳ ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଅତି ପ୍ରବଳ ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ହାଲକା ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଅତି ପ୍ରବଳ ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ପ୍ରବଳ ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item> ଲଗାଣ ଝିପ୍ ଝିପ୍ ବର୍ଷା</item>
+        <item>ହାଲକା ବର୍ଷା</item>
+        <item>ସାଧାରଣ ବର୍ଷା</item>
+        <item>ପ୍ରବଳ ବର୍ଷା</item>
+        <item>ଅତି ପ୍ରବଳ ବର୍ଷା</item>
+        <item>ମୂଷଳ ଧାରାରେ ବର୍ଷା</item>
+        <item>ବର୍ଷା ସହ କରକାପାତ</item>
+        <item>ସାମାନ୍ଯ ଲଗାଣ ବର୍ଷା</item>
+        <item>ଲଗାଣ ବର୍ଷା</item>
+        <item>ପ୍ରବଳ ଲଗାଣ ବର୍ଷା</item>
+        <item>ଅତି ପ୍ରବଳ ଲଗାଣ ବର୍ଷା</item>
+        <item>ହାଲକା ତୁଷାରପାତ </item>
+        <item>ସାଧାରଣ ତୁଷାରପାତ</item>
+        <item>ପ୍ରବଳ ତୁଷାରପାତ</item>
+        <item>ତୁଷାର ଓ କରକାପାତ</item>
+        <item>ଲଗାଣ ତୁଷାର ଓ କରକାପାତ</item>
+        <item>ହାଲକା ବର୍ଷା ଓ ତୁଷାରପାତ</item>
+        <item>ଲଗାଣ ବର୍ଷା ଓ ତୁଷାରପାତ</item>
+        <item>ହାଲକା ଲଗାଣ ତୁଷାରପାତ</item>
+        <item> ଲଗାଣ ତୁଷାରପାତ</item>
+        <item>ପ୍ରବଳ ଲଗାଣ ତୁଷାରପାତ</item>
+        <item>କୁହୁଡ଼ିଆ ଆକାଶ</item>
+        <item>ଧୂମ୍ରାଭ ଆକାଶ</item>
+        <item>ହାଲକା ଧୂମ୍ରାଭ ଆକାଶ</item>
+        <item>ବାଲି ଧୂଳି ପୂର୍ଣ୍ଣ ଘୁର୍ଣ୍ଣିଝଡ଼</item>
+        <item>କୁହୁଡ଼ି</item>
+        <item>ବାଲି ଝଡ଼</item>
+        <item>ଧୂଳି ଝଡ଼</item>
+        <item>ଅଗ୍ନି ଉଦ୍ଗିରଣ ଜନିତ ପାଉଁଶ</item>
+        <item>ଆକସ୍ମିକ ପ୍ରବଳ ଝଡ଼ବାତ୍ଯା</item>
+        <item>ଘୁର୍ଣ୍ଣିଝଡ଼</item>
+        <item>ନିର୍ମଳ ଆକାଶ</item>
+        <item>ସାମାନ୍ଯ ମେଘୁଆ ଆକାଶ</item>
+        <item>ବିକ୍ଷିପ୍ତ ବାଦଲଭରା ଆକାଶ</item>
+        <item>ଗର୍ଜ୍ଜନଶୀଳ ବାଦଲଭରା ଆକାଶ</item>
+        <item>ଘନ ବାଦଲଭରା ଆକାଶ</item>
+    </string-array>
+</resources>

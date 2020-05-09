@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#33000000">
+
+    <RelativeLayout
+        android:id="@+id/weather"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="2dp"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/imgRel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/img"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_gravity="top|center_horizontal"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_02d" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgRel"
+
+            android:gravity="center"
+            android:text="-"
+            android:textColor="#eeeeee"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:ellipsize="marquee"/>
+
+        <TextView
+            android:id="@+id/update_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temp"
+            android:gravity="center"
+            android:text="-"
+            android:ellipsize="marquee"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+       >
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/today_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="#eeeeee"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:ellipsize="marquee"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/today_dina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="-"
+                android:textColor="#eeeeee"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                android:ellipsize="marquee"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/momentinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+
+                android:text="-"
+                android:ellipsize="marquee"
+                android:textColor="#eeeeee"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                android:singleLine="true" />
+
+
+
+            <LinearLayout
+                android:id="@+id/others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+              >
+
+                <TextView
+                    android:id="@+id/horoscope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:text="@string/l_button_rashi"
+                    android:textColor="#ffe100"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:paddingRight="3dp"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+
+                    android:gravity="left|center_vertical"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:id="@+id/prayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:text="@string/l_button_prayer"
+                    android:textColor="#ffe100"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+
+                    android:gravity="left|center_vertical"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:id="@+id/news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:text="@string/l_button_news"
+                    android:textColor="#ffe100"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+
+                    android:gravity="left|center_vertical"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:paddingLeft="3dp"
+                    android:id="@+id/event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:text="@string/l_button_event"
+                    android:textColor="#ffe100"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+

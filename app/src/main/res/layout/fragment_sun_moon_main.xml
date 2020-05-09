@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="40dp"
+        android:id="@+id/tabViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:backgroundTint="?attr/colorAccent"
+        android:clickable="false">
+
+    </androidx.viewpager.widget.ViewPager>
+    <RelativeLayout
+        android:background="?attr/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+
+        app:layout_constraintEnd_toStartOf="@+id/tabLayout"
+
+        >
+        <ImageView
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/white"
+
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            />
+        <ImageView
+            android:tint="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_toEndOf="@+id/prev"
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_refresh"
+
+            />
+        <ImageView
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_toEndOf="@+id/refresh"
+            android:id="@+id/goto_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_calendar"
+            android:tint="@color/white"
+            />
+        <ImageView
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+
+            android:layout_toEndOf="@+id/goto_date"
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_chevron_right"
+            android:tint="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tabLayout"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|end"
+
+        android:background="?attr/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="2dp"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="2dp"
+        app:tabPaddingStart="2dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabTextColor="@color/grey"
+        tools:ignore="UnusedAttribute"/>
+
+</FrameLayout>

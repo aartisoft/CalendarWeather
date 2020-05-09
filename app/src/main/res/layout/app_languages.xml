@@ -1,0 +1,290 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/lang_bg"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <FrameLayout
+            android:id="@+id/mid"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="20dp">
+
+            <ProgressBar
+                android:id="@+id/determinateBar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/dellRed"
+                android:progressTint="@color/dellRed" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_text"
+
+
+                />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/langCntr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Please Select Your Regional Language"
+                android:textColor="@color/dellRed"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+
+                tools:context="com.iexamcenter.calendarweather.MainActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang1"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+
+                        android:text="@string/lang_odia"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang2"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_kannada"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang3"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_gujarati"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang4"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_odia"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang5"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_kannada"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang6"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_gujarati"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang7"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_odia"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:padding="0dp"
+                        android:id="@+id/lang8"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_kannada"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:padding="0dp"
+                        android:id="@+id/lang9"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_gujarati"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang10"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/lang_hindi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/lang11"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="2"
+                        android:lines="2"
+                        android:text="None of above\n known to me"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dellRed" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textCntr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Welcome To Panchanga Darpana"
+                android:textColor="@color/dellRed"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/thank_msg"
+                android:textColor="@color/carbon"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/proceed"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

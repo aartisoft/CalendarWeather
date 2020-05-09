@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cat" translatable="false">
+        <item>Top Quotes</item>
+        <item>Good Morning</item>
+        <item>Good Night</item>
+        <item>Birthday</item>
+        <item>Inspirational</item>
+        <item>Love</item>
+        <item>Motivational</item>
+        <item>Life</item>
+        <item>Friendship</item>
+        <item>Funny</item>
+        <item>Positive</item>
+        <item>Smile</item>
+        <item>Leadership</item>
+        <item>Family</item>
+        <item>Friendship</item>
+    </string-array>
+    <string-array name="auth" translatable="false">
+        <item>0|1|A. P. J. Abdul Kalam|A._P._J._Abdul_Kalam|https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Apj_abdul_kalam.JPG/460px-Apj_abdul_kalam.JPG</item>
+        <item>1|0|Abraham Lincoln|Abraham_Lincoln|https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/440px-Abraham_Lincoln_O-77_matte_collodion_print.jpg</item>
+        <item>2|0|Albert Einstein|Albert_Einstein|https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/440px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg</item>
+        <item>3|0|Aristotle|Aristotle|https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/440px-Aristotle_Altemps_Inv8575.jpg</item>
+        <item>4|1|Atal Bihari Vajpayee|Atal_Bihari_Vajpayee|https://upload.wikimedia.org/wikipedia/commons/8/87/Ab_vajpayee.jpg</item>
+        <item>5|1|B. R. Ambedkar|B._R._Ambedkar|https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Dr._Bhimrao_Ambedkar.jpg/440px-Dr._Bhimrao_Ambedkar.jpg</item>
+        <item>6|0|Barack Obama|Barack_Obama|https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/440px-President_Barack_Obama.jpg</item>
+        <item>7|0|Benjamin Franklin|Benjamin_Franklin|https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Benjamin_Franklin_by_Joseph_Duplessis_1778.jpg/440px-Benjamin_Franklin_by_Joseph_Duplessis_1778.jpg</item>
+        <item>8|1|Bhagat Singh|Bhagat_Singh|https://upload.wikimedia.org/wikipedia/commons/9/9b/Bhagat_Singh_1929_140x190.jpg</item>
+        <item>9|0|Buddha|Gautama_Buddha|https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg/440px-Buddha_in_Sarnath_Museum_%28Dhammajak_Mutra%29.jpg</item>
+        <item>10|0|C. S. Lewis|C._S._Lewis|https://upload.wikimedia.org/wikipedia/en/1/1e/C.s.lewis3.JPG</item>
+        <item>11|1|C. V. Raman|C._V._Raman|https://upload.wikimedia.org/wikipedia/commons/e/e6/Sir_CV_Raman.JPG</item>
+        <item>12|1|Chanakya|Chanakya|https://upload.wikimedia.org/wikipedia/commons/c/cd/Chanakya_artistic_depiction.jpg</item>
+        <item>13|0|Confucius|Confucius|https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/%E5%AD%94%E5%AD%90%E8%81%96%E8%B9%9F%E5%9C%96.png/440px-%E5%AD%94%E5%AD%90%E8%81%96%E8%B9%9F%E5%9C%96.png</item>
+        <item>14|0|Dalai Lama|Dalai_Lama|https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Dalailama1_20121014_4639.jpg/440px-Dalailama1_20121014_4639.jpg</item>
+        <item>15|1|Dayananda Saraswati|Dayananda_Saraswati|https://upload.wikimedia.org/wikipedia/commons/e/ea/Dayananda_Saraswati.jpg</item>
+        <item>16|0|Donald Trump|Donald_Trump|https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/440px-Donald_Trump_official_portrait.jpg</item>
+        <item>17|0|Edgar Allan Poe|Edgar_Allan_Poe|https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Edgar_Allan_Poe_daguerreotype_crop.png/400px-Edgar_Allan_Poe_daguerreotype_crop.png</item>
+        <item>18|0|Eleanor Roosevelt|Eleanor_Roosevelt|https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Eleanor_Roosevelt_portrait_1933.jpg/440px-Eleanor_Roosevelt_portrait_1933.jpg        </item>
+        <item>19|0|Ernest Hemingway|Ernest_Hemingway|https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/ErnestHemingway.jpg/440px-ErnestHemingway.jpg</item>
+        <item>20|0|Friedrich Nietzsche|Friedrich_Nietzsche|https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/440px-Nietzsche187a.jpg</item>
+        <item>21|0|Henry David Thoreau|Henry_David_Thoreau|https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg/440px-Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg</item>
+        <item>22|1|Indira Gandhi|Indira_Gandhi|https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Indira_Gandhi_1977.jpg/440px-Indira_Gandhi_1977.jpg</item>
+        <item>23|1|Jawaharlal Nehru|Jawaharlal_Nehru|https://upload.wikimedia.org/wikipedia/commons/5/5f/Jnehru.jpg</item>
+        <item>24|1|Jiddu Krishnamurti|Jiddu_Krishnamurti|https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Jiddu_Krishnamurti_01.jpg/500px-Jiddu_Krishnamurti_01.jpg</item>
+        <item>25|0|John F. Kennedy|John_F._Kennedy|https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/John_F._Kennedy%2C_White_House_photo_portrait%2C_looking_up.jpg/440px-John_F._Kennedy%2C_White_House_photo_portrait%2C_looking_up.jpg</item>
+        <item>26|0|Khalil Gibran|Kahlil_Gibran|https://upload.wikimedia.org/wikipedia/commons/8/87/Khalil_Gibran.jpg</item>
+        <item>27|1|Lal Bahadur Shastri|Lal_Bahadur_Shastri|https://upload.wikimedia.org/wikipedia/commons/4/45/Lal_Bahadur_Shastri_%28cropped%29.jpg</item>
+        <item>28|0|Lao Tzu|Laozi|https://images.gr-assets.com/authors/1435903703p5/2622245.jpg</item>
+        <item>29|1|Maharishi Mahesh Yogi|Maharishi_Mahesh_Yogi|https://upload.wikimedia.org/wikipedia/commons/8/8e/Maharishi_Huntsville_Jan_1978A.JPG</item>
+        <item>30|1|Mahatma Gandhi|Mahatma_Gandhi|https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Portrait_Gandhi.jpg/440px-Portrait_Gandhi.jpg</item>
+        <item>31|0|Marcus Aurelius|Marcus_Aurelius|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Marcus_Aurelius_bust_Istanbul_Archaeological_Museum_-_inv._5129_T.jpg/440px-Marcus_Aurelius_bust_Istanbul_Archaeological_Museum_-_inv._5129_T.jpg</item>
+        <item>32|0|Marilyn Monroe|Marilyn_Monroe|https://upload.wikimedia.org/wikipedia/commons/4/4e/Monroecirca1953.jpg</item>
+        <item>33|0|Mark Twain|Mark_Twain|https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg/440px-Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg</item>
+        <item>34|0|Martin Luther|Martin_Luther|https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Martin_Luther_by_Cranach-restoration.tif/lossy-page1-440px-Martin_Luther_by_Cranach-restoration.tif.jpg</item>
+        <item>35|0|Martin Luther King, Jr.|Martin_Luther_King_Jr.|https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Martin-Luther-King-1964-leaning-on-a-lectern.jpg/440px-Martin-Luther-King-1964-leaning-on-a-lectern.jpg</item>
+        <item>36|0|Maya Angelou|Maya_Angelou|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Angelou_at_Clinton_inauguration.jpg/440px-Angelou_at_Clinton_inauguration.jpg</item>
+        <item>37|1|Mother Teresa|Mother_Teresa|https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/MotherTeresa_094.jpg/440px-MotherTeresa_094.jpg</item>
+        <item>38|0|Muhammad Ali|Muhammad_Ali|https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/440px-Muhammad_Ali_NYWTS.jpg</item>
+        <item>39|1|Munshi Premchand|Premchand|https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Munshi_Premchand_half_bust_statue.jpg/440px-Munshi_Premchand_half_bust_statue.jpg</item>
+        <item>40|0|Napoleon Bonaparte|Napoleon|https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/440px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg</item>
+        <item>41|0|Nelson Mandela|Nelson_Mandela|https://upload.wikimedia.org/wikipedia/commons/1/14/Nelson_Mandela-2008_%28edit%29.jpg</item>
+        <item>42|0|Oscar Wilde|Oscar_Wilde|https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Oscar_Wilde_Sarony.jpg/440px-Oscar_Wilde_Sarony.jpg</item>
+        <item>43|1|Paramahansa Yogananda|Paramahansa_Yogananda|https://upload.wikimedia.org/wikipedia/commons/3/3f/Paramahansa_Yogananda_Standard_Pose.jpg</item>
+        <item>44|0|Plato|Plato|https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Plato_Silanion_Musei_Capitolini_MC1377.jpg/440px-Plato_Silanion_Musei_Capitolini_MC1377.jpg</item>
+        <item>45|1|Rabindranath Tagore|Rabindranath_Tagore|https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Rabindranath_Tagore_unknown_location.jpg/440px-Rabindranath_Tagore_unknown_location.jpg</item>
+        <item>46|0|Ralph Waldo Emerson|Ralph_Waldo_Emerson|https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ralph_Waldo_Emerson_ca1857_retouched.jpg/440px-Ralph_Waldo_Emerson_ca1857_retouched.jpg</item>
+        <item>47|1|Ramakrishna|Ramakrishna|https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ramakrishna.jpg/440px-Ramakrishna.jpg</item>
+        <item>48|1|Ramana Maharshi|Ramana_Maharshi|https://upload.wikimedia.org/wikipedia/commons/4/4c/Sri_Ramana_Maharshi_-_Portrait_-_G._G_Welling_-_1948.jpg</item>
+        <item>49|0|Ronald Reagan|Ronald_Reagan|https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/440px-Official_Portrait_of_President_Reagan_1981.jpg</item>
+        <item>50|0|Rumi|Rumi|https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/%C4%B0zmir_Buca_Mevlana_heykeli_ve_mesire_alan%C4%B1_5.jpg/440px-%C4%B0zmir_Buca_Mevlana_heykeli_ve_mesire_alan%C4%B1_5.jpg</item>
+        <item>51|1|Shirdi Sai Baba|Sai_Baba_of_Shirdi|https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shirdi_Sai_Baba_3.jpg/440px-Shirdi_Sai_Baba_3.jpg</item>
+        <item>52|1|Satyajit Ray|Satyajit_Ray|https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Satyajit_Ray_in_New_York.jpg/440px-Satyajit_Ray_in_New_York.jpg</item>
+        <item>53|1|Shakuntala Devi|Shakuntala_Devi|https://upload.wikimedia.org/wikipedia/en/5/5c/Shakuntala_Devi_%28writer_and_mental_calculator%29.jpg</item>
+        <item>54|0|Socrates|Socrates|https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Socrates_Louvre.jpg/440px-Socrates_Louvre.jpg</item>
+        <item>55|0|Steve Jobs|Steve_Jobs|https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/440px-Steve_Jobs_Headshot_2010-CROP.jpg</item>
+        <item>56|0|Steven Wright|Steven_Wright|https://upload.wikimedia.org/wikipedia/commons/6/68/Steven_Wright_1994.jpg</item>
+        <item>57|1|Subhas Chandra Bose|Subhas_Chandra_Bose|https://upload.wikimedia.org/wikipedia/commons/7/7e/Netaji_Subhas_Chandra_Bose.jpg</item>
+        <item>58|1|Subrahmanyan Chandrasekhar|Subrahmanyan_Chandrasekhar|https://upload.wikimedia.org/wikipedia/commons/6/67/Subrahmanyan_Chandrasekhar.gif</item>
+        <item>59|0|Sun Tzu|Sun_Tzu|https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Enchoen27n3200.jpg/440px-Enchoen27n3200.jpg</item>
+        <item>60|1|Swami Sivananda|Sivananda_Saraswati|https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Krishnananda_and_Sivananda_1945.jpg/440px-Krishnananda_and_Sivananda_1945.jpg</item>
+        <item>61|1|Swami Vivekananda|Swami_Vivekananda|https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Swami_Vivekananda-1893-09-signed.jpg/440px-Swami_Vivekananda-1893-09-signed.jpg</item>
+        <item>62|0|Theodore Roosevelt|Theodore_Roosevelt|https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/President_Roosevelt_-_Pach_Bros.tif/lossy-page1-440px-President_Roosevelt_-_Pach_Bros.tif.jpg</item>
+        <item>63|0|Thomas Jefferson|Thomas_Jefferson|https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg/440px-Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg</item>
+        <item>64|0|Voltaire|Voltaire|https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Nicolas_de_Largilli%C3%A8re%2C_Fran%C3%A7ois-Marie_Arouet_dit_Voltaire_%28vers_1724-1725%29_-001.jpg/440px-Nicolas_de_Largilli%C3%A8re%2C_Fran%C3%A7ois-Marie_Arouet_dit_Voltaire_%28vers_1724-1725%29_-001.jpg</item>
+        <item>65|0|Walt Disney|Walt_Disney|https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Walt_Disney_1946.JPG/440px-Walt_Disney_1946.JPG</item>
+        <item>66|0|Warren Buffett|Warren_Buffett|https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit.jpg/440px-Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit.jpg</item>
+        <item>67|0|William Shakespeare|William_Shakespeare|https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/440px-Shakespeare.jpg</item>
+        <item>68|0|Winston Churchill|Winston_Churchill|https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/500px-Sir_Winston_Churchill_-_19086236948.jpg</item>
+    </string-array>
+
+</resources>

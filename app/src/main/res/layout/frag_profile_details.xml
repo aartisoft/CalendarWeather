@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/cardBackgroundColor"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+       >
+
+        <RelativeLayout
+            android:id="@+id/profileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/profileImage"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NAME"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FULLNAME"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/bday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BORN"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/bplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BORNPLACE"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/dday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DEATH"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/jobtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PROFESSION"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/profileContainer"
+                android:id="@+id/famousfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Famous" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@+id/famousfor">
+
+            <include  layout="@layout/tab_layout_famous_people" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

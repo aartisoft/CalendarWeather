@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+    <color name="grey_day">#eeeeee</color>
+    <color name="divider">#eeeeee</color>
+    <color name="grey">#BBBBBB</color>
+    <color name="white">#ffffff</color>
+    <color name="carbon">#444444</color>
+    <color name="auspicious">#f05e87</color>
+
+    <color name="colorPrimary">#e75480</color>
+    <color name="colorAccent">#e75480</color>
+
+
+    <color name="mainBg">#4f6e8b</color>
+    <color name="mainBgDark">#496580</color>
+
+    <color name="orange">#e75480</color>
+
+    <color name="sunMoon">#E99D2D</color>
+    <color name="yellowDark">#ffff00</color>
+    <color name="berry">#B7295A</color>
+
+    <color name="red">#FF0000</color>
+
+
+    <color name="dellBlue">#007DB8</color>
+    <color name="dellYellow">#F2AF00</color>
+    <color name="dellRed">#CE1126</color>
+    <color name="dellMidnight">#00447C</color>
+
+    <color name="myColor1">#e75480</color>
+    <color name="myColor2">#e75480</color>
+    <color name="myColor3">#e75480</color>
+    <color name="myColor4">#e75480</color>
+    <color name="myColor5">#e75480</color>
+    <color name="myColor6">#e75480</color>
+    <color name="myColor7">#e75480</color>
+</resources>

@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <item
+        android:id="@+id/search_by_bengali_channel"
+        android:title="Bangla Channel"
+        />
+    <item
+        android:id="@+id/search_by_gujarati_channel"
+        android:title="Gujarati Channel"
+        />
+
+    <item
+        android:id="@+id/search_by_kannada_channel"
+        android:title="Kannada Channel"
+        />
+    <item
+        android:id="@+id/search_by_malayalam_channel"
+        android:title="Malayalam Channel"
+        />
+    <item
+        android:id="@+id/search_by_marathi_channel"
+        android:title="Marathi Channel"
+        />
+
+    <item
+        android:id="@+id/search_by_odia_channel"
+        android:title="Odia Channel"
+        />
+    <item
+        android:id="@+id/search_by_punjabi_channel"
+        android:title="Punjabi Channel"
+        />
+    <item
+        android:id="@+id/search_by_tamil_channel"
+        android:title="Tamil Channel"
+        />
+    <item
+        android:id="@+id/search_by_telugu_channel"
+        android:title="Telugu Channel"
+        />
+    <item
+        android:id="@+id/search_by_hindi_channel"
+        android:title="Hindi Channel"
+        />
+    <item
+        android:id="@+id/search_by_english_channel"
+        android:title="English Channel"
+        />
+    <item
+        android:id="@+id/search_by_category"
+        android:title="Category"
+
+        />
+    <item
+        android:id="@+id/search_by_title"
+        android:title="Title"
+        app:showAsAction="never" />
+
+
+
+</menu>

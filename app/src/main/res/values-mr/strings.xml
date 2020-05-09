@@ -1,0 +1,616 @@
+<resources>
+    <string-array name="e_arr_tithi">
+
+
+        <item>Prathama</item>
+        <item>Dwitiya</item>
+        <item>Tritiya</item>
+        <item>Chaturthi</item>
+        <item>Panchami</item>
+        <item>Shashthi</item>
+        <item>Saptami</item>
+        <item>Ashtami</item>
+        <item>Navami</item>
+        <item>Dashami</item>
+        <item>Ekadashi</item>
+        <item>Dwadashi</item>
+        <item>Thrayodashi</item>
+        <item>Chaturdashi</item>
+        <item>Purnima</item>
+        <item>Prathama</item>
+        <item>Dwitiya</item>
+        <item>Tritiya</item>
+        <item>Chaturthi</item>
+        <item>Panchami</item>
+        <item>Shashthi</item>
+        <item>Saptami</item>
+        <item>Ashtami</item>
+        <item>Navami</item>
+        <item>Dashami</item>
+        <item>Ekadashi</item>
+        <item>Dwadashi</item>
+        <item>Thrayodashi</item>
+        <item>Chaturdashi</item>
+        <item>Amabasya</item>
+    </string-array>
+    <string-array name="l_arr_tithi">
+
+
+        <item>प्रथमा</item>
+        <item>द्वितीया</item>
+        <item>तृतीया</item>
+        <item>चतूर्थी</item>
+        <item>पंचमी</item>
+        <item>षष्ठी</item>
+        <item>सप्तमी</item>
+        <item>अष्टमी</item>
+        <item>नवमी</item>
+        <item>दसमी</item>
+        <item>एकादशी</item>
+        <item>द्वादशी</item>
+        <item>त्रयोदशी</item>
+        <item>चतुर्दशी</item>
+        <item>पूर्णिमा</item>
+        <item>प्रथमा</item>
+        <item>द्वितीया</item>
+        <item>तृतीया</item>
+        <item>चतूर्थी</item>
+        <item>पंचमी</item>
+        <item>षष्ठी</item>
+        <item>सप्तमी</item>
+        <item>अष्टमी</item>
+        <item>नवमी</item>
+        <item>दसमी</item>
+        <item>एकादशी</item>
+        <item>द्वादशी</item>
+        <item>त्रयोदशी</item>
+        <item>चतुर्दशी</item>
+        <item>अमावस्या</item>
+    </string-array>
+    <string-array name="e_arr_karana">
+        <item>Kinstughna</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Bava</item>
+        <item>Balava</item>
+        <item>Kaulava</item>
+        <item>Taitila</item>
+        <item>Garaja</item>
+        <item>Vanija</item>
+        <item>Vishti</item>
+        <item>Shakuni</item>
+        <item>Chatushpada</item>
+        <item>Nagava</item>
+    </string-array>
+    <string-array name="l_arr_karana">
+        <item>किम्स्तुग्न</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>बव</item>
+        <item>बालव</item>
+        <item>कौलव</item>
+        <item>तैतुल</item>
+        <item>गरिज</item>
+        <item>वणिज</item>
+        <item>विस्टि</item>
+        <item>शकुनि</item>
+        <item>चतुश्पाद</item>
+        <item>नाग</item>
+    </string-array>
+
+    <string-array name="e_arr_joga">
+        <item>Vishkambha</item>
+        <item>Priti</item>
+        <item>Ayushman</item>
+        <item>Saubhagya</item>
+        <item>Shobhana</item>
+        <item>Atiganda</item>
+        <item>Sukarman</item>
+        <item>Dhriti</item>
+        <item>Shula</item>
+        <item>Ganda</item>
+        <item>Vriddhi</item>
+        <item>Dhruva</item>
+        <item>Vyaghata</item>
+        <item>Harshana</item>
+        <item>Vajra</item>
+        <item>Siddhi</item>
+        <item>Vyatipata</item>
+        <item>Varigha</item>
+        <item>Parigha</item>
+        <item>Shiva</item>
+        <item>Siddha</item>
+        <item>Sadhya</item>
+        <item>Shubha</item>
+        <item>Shukla</item>
+        <item>Brahma</item>
+        <item>Indra</item>
+        <item>Vaidhriti</item>
+    </string-array>
+    <string-array name="l_arr_joga">
+        <item>विश्कम्भ</item>
+        <item>प्रीति</item>
+        <item>आयुष्मान</item>
+        <item>सौभाग्य</item>
+        <item>शोभन</item>
+        <item>अतिगंडा</item>
+        <item>सुकर्म</item>
+        <item>धृति</item>
+        <item>शूला</item>
+        <item>गंडा</item>
+        <item>वृद्धि</item>
+        <item>ध्रुव</item>
+        <item>व्याघता</item>
+        <item>हर्षण</item>
+        <item>वज्र</item>
+        <item>सिद्धि</item>
+        <item>व्यतिपात</item>
+        <item>वरीघा</item>
+        <item>परिघ</item>
+        <item>शिव</item>
+        <item>सिद्ध</item>
+        <item>साध्य</item>
+        <item>शुभ</item>
+        <item>शुक्ल</item>
+        <item>भ्रह्म</item>
+        <item>इन्द्र</item>
+        <item>वैध्रुथि</item>
+    </string-array>
+    <string name="l_shraddha">श्राद्ध</string>
+    <string name="l_uayan">उत्तरायण</string>
+    <string name="l_dayan">दक्षिणायण</string>
+
+    <string name="l_sala_sana">Vilayati Era</string>
+    <string name="l_shakaddha">शक सम्वत</string>
+    <string name="l_noon">मध्याह्न</string>
+    <string name="l_day_length">दिनमान</string>
+    <string name="l_midnight">मध्यरात्री</string>
+    <string name="l_night_length">रात्रिमान</string>
+    <string name="l_solar_month">सौर महिना</string>
+    <string name="l_solar_day">सौर दिवस</string>
+    <string name="l_plunar_month">चन्द्र माह</string>
+    <string name="l_plunar_day">चंद्र दिवस </string>
+    <string name="l_alunar_month">चन्द्र माह</string>
+    <string name="l_alunar_day">चंद्र दिवस</string>
+    <string name="l_fortnight">पक्ष</string>
+    <string name="l_tithi">तिथि</string>
+    <string name="l_day">दिन</string>
+    <string name="l_nakshetra">नक्षत्र</string>
+    <string name="l_solar_rasi">सूर्य राशि</string>
+    <string name="l_lunar_rashi">चन्द्र राशि</string>
+    <string name="l_joga">योग</string>
+    <string name="l_karana">करण</string>
+    <string name="l_amrit_bela">अमृत काल</string>
+    <string name="l_abhijit_bela">अभिजितमुहूर्त</string>
+    <string name="l_brahma_bela">ब्रह्म मुहूर्त</string>
+    <string name="l_vajyam_bela">वर्ज्य</string>
+    <string name="l_durmuhurta_bela">दुर्मुहूर्त</string>
+    <string name="l_rahu_bela">राहुकाल</string>
+    <string name="l_gulika_bela">गुलिक काल</string>
+    <string name="l_yama_bela">यमगण्ड</string>
+    <string name="l_time_prattha">Subha</string>
+    <string name="l_time_diba">Diba</string>
+    <string name="l_time_sandhya">Sham</string>
+    <string name="l_time_night">Ratra</string>
+    <string name="l_time_hour">Ghanta</string>
+    <string name="l_time_min">Min</string>
+    <string name="l_time_from">-</string>
+    <string name="l_time_to"></string>
+    <string name="l_time_next">नंतर</string>
+
+    <string name="e_sala_sana">Vilayati Era</string>
+    <string name="e_shakaddha">Shaka</string>
+    <string name="e_noon">Noon</string>
+    <string name="e_day_length">Day Length</string>
+    <string name="e_midnight">Midnight</string>
+    <string name="e_night_length">Night Length</string>
+    <string name="e_solar_month">Solar Month</string>
+    <string name="e_solar_day">Solar Day</string>
+    <string name="e_plunar_month">Lunar Month</string>
+    <string name="e_plunar_day">Lunar Day </string>
+    <string name="e_alunar_month">Lunar Month</string>
+    <string name="e_alunar_day">Lunar Day</string>
+    <string name="e_fortnight">Fortnight</string>
+    <string name="e_tithi">Tithi</string>
+    <string name="e_day">Day</string>
+    <string name="e_nakshetra">Nakshyatra</string>
+    <string name="e_solar_rasi">Sun sign</string>
+    <string name="e_lunar_rashi">Moon sign</string>
+    <string name="e_joga">Joga</string>
+    <string name="e_karana">Karana</string>
+    <string name="e_amrit_bela">Amrit Kalam</string>
+    <string name="e_abhijit_bela">Abhijit</string>
+    <string name="e_brahma_bela">Brahma Muhurta</string>
+    <string name="e_vajyam_bela">Varjyam</string>
+    <string name="e_durmuhurta_bela">Durmuhurtam</string>
+    <string name="e_rahu_bela">Rahu Kalam</string>
+    <string name="e_gulika_bela">Gulikai Kalam</string>
+    <string name="e_yama_bela">Yamaganda</string>
+    <string name="e_time_from">-</string>
+    <string name="e_time_to">upto</string>
+    <string name="e_time_next">next</string>
+
+
+    <string name="l_button_rashi">Horoscope</string>
+    <string name="l_button_news">News</string>
+    <string name="l_button_event">Events</string>
+    <string name="l_button_prayer">Prayer</string>
+
+    <string name="l_sankranti">संक्रांति</string>
+    <string name="l_paksha">पक्ष</string>
+    <string name="l_bara">वार</string>
+    <string name="l_masa">मास</string>
+
+    <string name="l_ritu">ऋतू</string>
+    <string name="l_festival">उत्सव</string>
+    <string name="l_sunrise">सुर्योदय</string>
+    <string name="l_sunset">सूर्यास्त</string>
+    <string name="l_moonrise">चंद्रोदय</string>
+    <string name="l_moonset">चंद्रास्त</string>
+    <string name="l_dina">दिन</string>
+
+    <string-array name="l_arr_number">
+        <item>०</item>
+        <item>१</item>
+        <item>२</item>
+        <item>३</item>
+        <item>४</item>
+        <item>५</item>
+        <item>६</item>
+        <item>७</item>
+        <item>८</item>
+        <item>९</item>
+    </string-array>
+    <string-array name="l_arr_paksha">
+        <item>शुक्ल </item>
+        <item>कृष्ण </item>
+    </string-array>
+    <string-array name="l_arr_masa">
+        <item>वैशाख</item>
+        <item>ज्येष्ठ</item>
+        <item>आषाढ</item>
+        <item>श्रावण</item>
+        <item>भाद्रपद</item>
+        <item>आश्विन</item>
+        <item>कार्तिक</item>
+        <item>मार्गशीर्ष</item>
+        <item>पुष्य</item>
+        <item>माघ </item>
+        <item>फाल्गुन</item>
+        <item>चैत्र</item>
+    </string-array>
+    <string-array name="l_arr_month">
+        <item>जनवरी</item>
+        <item>फरवरी</item>
+        <item>मार्च</item>
+        <item>अप्रेल</item>
+        <item>मई</item>
+        <item>जून</item>
+        <item>जुलाई</item>
+        <item>अगस्त</item>
+        <item>सितंबर</item>
+        <item>अक्टूबर</item>
+        <item>नवम्बर</item>
+        <item>दिसंबर</item>
+    </string-array>
+
+    <string-array name="l_arr_bara">
+        <item>रविवार</item>
+        <item>सोमवार</item>
+        <item>मंगळवार</item>
+        <item>बुधवार</item>
+        <item>गुरुवार</item>
+        <item>शुक्रवार</item>
+        <item>शनिवार</item>
+    </string-array>
+
+    <string-array name="l_arr_rasi_kundali">
+        <item>मेष</item>
+        <item>वृषभ</item>
+        <item>मिथुन</item>
+        <item>कर्क</item>
+        <item>सिंह</item>
+        <item>कन्या</item>
+        <item>तूळ</item>
+        <item>वृश्चिक</item>
+        <item>धनु</item>
+        <item>मकर</item>
+        <item>कुंभ</item>
+        <item>मीन</item>
+    </string-array>
+    <string-array name="l_arr_nakshatra">
+        <item>अश्विनी</item>
+        <item>भरणी</item>
+        <item>कृत्तिका</item>
+        <item>रोहिणी</item>
+        <item>मार्गशीर्ष</item>
+        <item>आद्रा</item>
+        <item>पुनर्वसु</item>
+        <item>पुष्य</item>
+        <item>आश्ळेषा</item>
+        <item>मघा</item>
+        <item>पूर्व फाल्गुनी</item>
+        <item>उत्तर फाल्गुनी</item>
+        <item>हस्त</item>
+        <item>चित्रा</item>
+        <item>स्वाती</item>
+        <item>विशाखा</item>
+        <item>अनुराधा</item>
+        <item>ज्येष्ठा</item>
+        <item>मूल</item>
+        <item>पूर्वाषाढा</item>
+        <item>उत्तराषाढा</item>
+        <item>श्रवण</item>
+        <item>श्रविष्ठा</item>
+        <item>शतभिषक्</item>
+        <item>पूर्वभाद्रपद</item>
+        <item>उत्तरभाद्रपद</item>
+        <item>रेवती</item>
+        <item>अभिजित</item>
+    </string-array>
+
+    <string-array name="l_arr_tithi15">
+        <item>अमावस्या</item>
+        <item>प्रथमा</item>
+        <item>द्वितीया</item>
+        <item>तृतीया</item>
+        <item>चतूर्थी</item>
+        <item>पंचमी</item>
+        <item>षष्ठी</item>
+        <item>सप्तमी</item>
+        <item>अष्टमी</item>
+        <item>नवमी</item>
+        <item>दसमी</item>
+        <item>एकादशी</item>
+        <item>द्वादशी</item>
+        <item>त्रयोदशी</item>
+        <item>चतुर्दशी</item>
+        <item>पूर्णिमा</item>
+    </string-array>
+
+    <string name="e_sankranti">Sankranti</string>
+    <string name="e_paksha">Paksha</string>
+    <string name="e_dina">Dina</string>
+
+    <string name="e_festival">Utsaba</string>
+    <string name="e_sunrise">Sunrise</string>
+    <string name="e_sunset">Suryasta</string>
+    <string name="e_moonrise">Chandrodaya</string>
+    <string name="e_moonset">Chandrasta</string>
+
+    <string-array name="e_arr_masa">
+        <item>Baisakha</item>
+        <item>Jyaistha</item>
+        <item>Asadha</item>
+        <item>Srabana</item>
+        <item>Bhadra</item>
+        <item>Aswina</item>
+        <item>Kartika</item>
+        <item>Margashirsa</item>
+        <item>Pausa</item>
+        <item>Magha</item>
+        <item>Phalguna</item>
+        <item>Chaitra</item>
+    </string-array>
+
+
+    <string-array name="e_arr_bara">
+        <item>Rabibar</item>
+        <item>Somabar</item>
+        <item>Mangalabar</item>
+        <item>Budhabar</item>
+        <item>Gurubar</item>
+        <item>Shukrabar</item>
+        <item>Shanibar</item>
+    </string-array>
+    <string-array name="e_arr_ritu">
+        <item>Grisma</item>
+        <item>Varsa</item>
+        <item>Sarad</item>
+        <item>Hemanta</item>
+        <item>Sisira</item>
+        <item>Vasanta</item>
+    </string-array>
+    <string-array name="l_arr_ritu">
+        <item>ग्रीष्म</item>
+        <item>वर्षा</item>
+        <item>शरद्</item>
+        <item>हेमन्त</item>
+        <item>शिशिर</item>
+        <item>बसन्त</item>
+    </string-array>
+
+    <string-array name="e_arr_rasi_kundali">
+        <item>Mesa</item>
+        <item>Brushabha</item>
+        <item>Mithuna</item>
+        <item>Karkata</item>
+        <item>Singha</item>
+        <item>Kanya</item>
+        <item>Tula</item>
+        <item>Vrischika</item>
+        <item>Dhanu</item>
+        <item>Makara</item>
+        <item>Kumbha</item>
+        <item>Mina</item>
+    </string-array>
+
+
+    <string-array name="e_arr_nakshatra">
+        <item>Ashwini</item>
+        <item>Bharani</item>
+        <item>Krittika</item>
+        <item>Rohini</item>
+        <item>Mragashirsa</item>
+        <item>Ardra</item>
+        <item>Punarvasu</item>
+        <item>Pushya</item>
+        <item>Ashlesha</item>
+        <item>Magha</item>
+        <item>Purva Phalguni</item>
+        <item>Uttara Phalguni</item>
+        <item>Hasta</item>
+        <item>Chitra</item>
+        <item>Swati</item>
+        <item>Visakha</item>
+        <item>Anuradha</item>
+        <item>Jyeshtha</item>
+        <item>Mula</item>
+        <item>Purva Ashadha</item>
+        <item>Uttara Ashadha</item>
+        <item>Shravana</item>
+        <item>Dhanishta</item>
+        <item>Shatabhisha</item>
+        <item>Purva Bhadrapada</item>
+        <item>Uttara Bhadrapada</item>
+        <item>Revati</item>
+        <item>Abhijit</item>
+    </string-array>
+    <string-array name="e_arr_tithi15">
+        <item>Amabasya</item>
+        <item>Prathama</item>
+        <item>Dwitiya</item>
+        <item>Tritiya</item>
+        <item>Chaturthi</item>
+        <item>Panchami</item>
+        <item>Shashthi</item>
+        <item>Saptami</item>
+        <item>Ashtami</item>
+        <item>Navami</item>
+        <item>Dashami</item>
+        <item>Ekadashi</item>
+        <item>Dwadashi</item>
+        <item>Thrayodashi</item>
+        <item>Chaturdashi</item>
+        <item>Purnima</item>
+    </string-array>
+>
+
+    <string-array name="l_arr_muhurta">
+        <item>रुद्र</item>
+        <item>अहि</item>
+        <item>मित्रा</item>
+        <item>पितृ</item>
+        <item>वासू</item>
+        <item>वराह</item>
+        <item>विसवेदेव</item>
+        <item>विधी</item>
+        <item>सूतमुखी</item>
+        <item>पुरुहूत</item>
+        <item>वाहिनी</item>
+        <item>नाकटनाकार</item>
+        <item>वरून</item>
+        <item>आर्यमान</item>
+        <item>भाग</item>
+        <item>गिरीश</item>
+        <item>अजपदा</item>
+        <item>अहिर-बुध्न्य</item>
+        <item>पुष्य</item>
+        <item>अश्विनी</item>
+        <item>यम</item>
+        <item>अग्नि</item>
+        <item>धातृ</item>
+        <item>कांडा</item>
+        <item>दिती</item>
+        <item>जीव / अमृता</item>
+        <item>विसनू</item>
+        <item>द्युमाद्गद्युती</item>
+        <item>ब्रह्मा</item>
+        <item>समुद्रम</item>
+
+    </string-array>
+</resources>

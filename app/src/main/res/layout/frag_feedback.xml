@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackgroundFloating"
+    android:minWidth="1000dp"
+    android:minHeight="6000dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/txt1"
+                style="@style/TextAppearance.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Feedback" />
+
+            <LinearLayout
+                android:id="@+id/sendCntr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:orientation="horizontal"
+
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/TextAppearance.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="SEND" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:tint="?attr/colorButtonNormal"
+                    app:srcCompat="@drawable/ic_outline_send_24px" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="What feedback do you have for us?"
+
+            android:textSize="14sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="10dp"
+        android:background="?attr/cardBackgroundColor"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_help"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Help" />
+
+            <RadioButton
+                android:id="@+id/radio_bug"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bug" />
+
+            <RadioButton
+                android:id="@+id/radio_suggestion"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Suggestion" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/pick_my_city"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/type"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+
+        android:gravity="left"
+        android:hint="Type your feedback here.."
+        android:padding="5dp"
+
+        android:textSize="15sp"
+
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pick_my_city"
+        android:layout_margin="10dp"
+        android:text="How to contact you"
+
+
+        />
+
+    <LinearLayout
+        android:id="@+id/type2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_margin="10dp"
+        android:background="?attr/cardBackgroundColor"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_whatsapp"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Whatsapp" />
+
+            <RadioButton
+                android:id="@+id/radio_email"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email" />
+
+            <RadioButton
+                android:id="@+id/radio_phone"
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Phone" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/senderAddress"
+        style="@style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/type2"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="left"
+        android:hint="Type your contact here"
+        android:inputType="textEmailAddress"
+        android:padding="5dp"
+
+        android:textSize="15sp"
+
+        />
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/blankText"
+        android:layout_below="@+id/senderAddress"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/close"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:background="?attr/cardBackgroundColor"
+            android:gravity="center"
+
+            android:padding="10dp"
+            android:text="Close"
+
+            android:textColor="?attr/colorAccent"
+
+            android:textStyle="normal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendBtn2"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            app:icon="@drawable/ic_outline_send_24px"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="SEND"
+
+            android:textColor="@color/white"
+
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/blankText"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+
+        />
+
+
+</RelativeLayout>
+

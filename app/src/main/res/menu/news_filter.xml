@@ -1,0 +1,57 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--item
+        android:id="@+id/news_subscribe"
+        android:title="Subscribe Channel"
+        app:showAsAction="never" /-->
+    <item
+        android:id="@+id/news_publish"
+        android:title="Manage Channel" />
+    <item
+        android:id="@+id/news_cricket"
+        android:title="Cricket News" />
+    <item
+        android:id="@+id/news_movie"
+        android:title="Entertainment" />
+    <item
+        android:id="@+id/news_music"
+        android:title="Music Release" />
+
+
+    <item
+        android:id="@+id/search_by_bengali_news"
+        android:title="Bangla News" />
+    <item
+        android:id="@+id/search_by_gujarati_news"
+        android:title="Gujarati News" />
+
+    <item
+        android:id="@+id/search_by_kannada_news"
+        android:title="Kannada News" />
+    <item
+        android:id="@+id/search_by_malayalam_news"
+        android:title="Malayalam News" />
+    <item
+        android:id="@+id/search_by_marathi_news"
+        android:title="Marathi News" />
+
+    <item
+        android:id="@+id/search_by_odia_news"
+        android:title="Odia News" />
+    <item
+        android:id="@+id/search_by_punjabi_news"
+        android:title="Punjabi News" />
+    <item
+        android:id="@+id/search_by_tamil_news"
+        android:title="Tamil News" />
+    <item
+        android:id="@+id/search_by_telugu_news"
+        android:title="Telugu News" />
+    <item
+        android:id="@+id/search_by_hindi_news"
+        android:title="Hindi News" />
+    <item
+        android:id="@+id/search_by_english_news"
+        android:title="English News" />
+
+</menu>
