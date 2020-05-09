@@ -1716,5 +1716,73 @@
         <item>November</item>
         <item>December</item>
     </string-array>
+    <string-array name="l_arr_main_menu" tools:ignore="ExtraTranslation">
+        <item>1_0_ମୂଖ୍ୟ ପୃଷ୍ଠା</item>
+        <item>1_1_ସେଟିଙ୍ଗ୍ସ</item>
+        <item>1_2_ପଞ୍ଜିକା</item>
+        <item>1_3_ପର୍ବ ପର୍ବାଣି</item>
+        <item>1_4_ରାଶିଫଳ</item>
+        <item>1_5_ପାଣିପାଗ</item>
+        <item>1_6_ସୂର୍ଯ୍ୟ ଓ ଚନ୍ଦ୍ର ସ୍ଥିତି</item>
+        <item>1_7_ବୈଦିକ ସମୟ</item>
+        <item>1_8_କାନ୍ଥ ପଞ୍ଜିକା</item>
+        <item>2_0_ଜ୍ୟୋତିଷ ପୃଷ୍ଠା</item>
+        <item>2_1_ଜନ୍ମ ଜାତକ</item>
+        <item>2_2_ଜାତକ ମିଳନ</item>
+        <item>2_3_ଗ୍ରହାବସ୍ଥିତି ଓ ଚଳନ</item>
+        <item>3_0_ମହତ୍ ବାଣୀ ପୃଷ୍ଠା</item>
+        <item>3_1_ମହତ୍ ବାଣୀ</item>
+        <item>3_2_ଜାତୀୟ</item>
+        <item>3_3_ଆନ୍ତର୍ଜାତୀୟ</item>
+        <item>4_0_ପଞ୍ଜିକା ଟିପ୍ପଣୀ</item>
+        <item>4_1_ଜନ୍ମ ବାର୍ଷିକୀ</item>
+        <item>4_2_ମୃତ୍ୟୁ ବାର୍ଷିକୀ</item>
+        <item>4_3_ଅନ୍ୟାନ୍ୟ ବାର୍ଷିକୀ</item>
+        <item>5_0_ଅନ୍ୟାନ୍ୟ</item>
+        <item>5_1_ପାଳନୀୟ ଦିବସ</item>
+        <item>5_2_ଆରାଧନା</item>
+        <item>5_3_ଆଜି ତାରିଖର ମହତ୍ତ୍ବ</item>
+        <item>5_4_ଗଣମାଧ୍ୟମ</item>
+        <item>6_0_ପ୍ରଯୁକ୍ତି ସୂଚନା</item>
+        <item>6_1_ବିଜ୍ଞାପନ ଦୂରିକରଣ</item>
+        <item>6_2_ଆପ୍ ର ମୂଲ୍ୟାଙ୍କନ</item>
+        <item>6_3_ଆପ୍ ର ପ୍ରଚାରିକରଣ</item>
+        <item>6_4_ପରାମର୍ଶ ପ୍ରଦାନିକରଣ</item>
+        <item>6_5_ପ୍ରସ୍ତୁତକାରୀଙ୍କ ବ୍ୟକ୍ତିଗତ ସର୍ତ୍ତାବଳୀ</item>
+    </string-array>
+    <string-array name="e_arr_main_menu" tools:ignore="ExtraTranslation">
+        <item>1_0_Main Page</item>
+        <item>1_1_Settings</item>
+        <item>1_2_Calendar</item>
+        <item>1_3_Festivals</item>
+        <item>1_4_Horoscope</item>
+        <item>1_5_Weather</item>
+        <item>1_6_Sun Moon</item>
+        <item>1_7_Vedic Time</item>
+        <item>1_8_Wall Calendar</item>
+        <item>2_0_Jyotish Page</item>
+        <item>2_1_Janma Kundali</item>
+        <item>2_2_Kundali Milana</item>
+        <item>2_3_Planet</item>
+        <item>3_0_Quote Page</item>
+        <item>3_1_Category</item>
+        <item>3_2_National</item>
+        <item>3_3_International</item>
+        <item>4_0_Calendar Note</item>
+        <item>4_1_Vedic Birthday</item>
+        <item>4_2_Vedic Death day</item>
+        <item>4_3_Other Event day</item>
+        <item>5_0_More</item>
+        <item>5_1_Observance</item>
+        <item>5_2_Aradhana</item>
+        <item>5_3_On This Day</item>
+        <item>5_4_Media</item>
+        <item>6_0_Technical Information</item>
+        <item>6_1_Remove Ads</item>
+        <item>6_2_Rate App</item>
+        <item>6_3_Share</item>
+        <item>6_4_Feedback</item>
+        <item>6_5_Privacy Policy</item>
+    </string-array>
 </resources>
 

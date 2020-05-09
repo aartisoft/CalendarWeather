@@ -18,32 +18,108 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:background="?attr/colorPrimary"
-        android:fitsSystemWindows="true"
         android:clickable="true"
+        android:fitsSystemWindows="true"
         android:focusable="true">
 
+        <LinearLayout
+            android:id="@+id/nav_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/colorPrimary"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp">
+
+            <FrameLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_noti_small"
+                    android:tint="@color/white" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="Panchanga\nDarpana" />
+
+                <TextView
+
+                    android:id="@+id/version"
+                    style="@style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="Version" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Show as English"
+                    android:textColor="@color/yellowDark"
+                    app:useMaterialThemeColors="true" />
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
 
             android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/closeCntr"
-            android:background="?attr/colorBackgroundFloating"
-            app:headerLayout="@layout/nav_header_main"
+
+            android:layout_below="@+id/nav_header"
+            android:background="@color/grey_day"
             app:itemIconTint="?attr/colorAccent"
-            app:itemTextColor="?attr/colorAccent"
-            app:menu="@menu/activity_main_drawer" />
+            app:itemTextColor="?attr/colorAccent">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:background="@color/grey_day"
+                android:dividerHeight="0.5dp"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+        </com.google.android.material.navigation.NavigationView>
 
         <LinearLayout
             android:id="@+id/closeCntr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+
             android:clickable="true"
+            android:focusable="true"
+            android:gravity="bottom"
             android:orientation="horizontal"
-            android:padding="5dp"
-            android:focusable="true">
+            android:padding="5dp">
 
 
             <ImageView

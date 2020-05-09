@@ -19,6 +19,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +39,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -72,6 +75,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -79,7 +83,14 @@ import java.util.concurrent.TimeUnit;
 //import static com.iexamcenter.calendarweather.billingmodule.billing.BillingManager.BILLING_MANAGER_NOT_INITIALIZED;
 
 @SuppressWarnings("NullableProblems")
-public class MainActivity extends AppCompatActivity implements /* BillingProvider, */NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
+
+    ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
+
+
     private static final String DIALOG_TAG = "dialog";
 
     // private BillingManager mBillingManager;
@@ -103,10 +114,12 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
     MainViewModel viewModel;
     boolean workManagerStarted = false;
     Resources mRes;
+
     String le_menu_settings, le_menu_panchanga, le_menu_calendar, le_menu_festivals, le_menu_horoscope, le_menu_weather, le_menu_sun_moon, le_menu_vedic_time;
     String le_menu_wall_calendar, le_menu_janma_kundali, le_menu_kundali_milana, le_menu_planet, le_menu_category, le_menu_national, le_menu_international, le_menu_observance;
     String le_menu_aradhana, le_menu_on_this_day, le_menu_media, le_menu_birth_anniversary, le_menu_death_anniversary, le_menu_other_anniversary, le_menu_panchang, le_menu_choghadia, le_menu_remove_ads, le_menu_rate_app, le_menu_share;
     String le_menu_feedback, le_menu_privacy_policy;
+    String[] le_arr_main_menu;
     Menu menu;
     MenuItem nav_settings, nav_home, nav_calendar, nav_festival, nav_horoscope, nav_weather, nav_sun_moon, nav_vedic, nav_wall_calendar, nav_janma_kundali, nav_kundali_milana, nav_planet, nav_quote_cat, nav_quote_indian, nav_quote_others, nav_observance, nav_aradhana, nav_onthisday, nav_media, nav_birth_anniversary, nav_death_anniversary, nav_other_anniversary, nav_remove_ads, nav_rate, nav_share, nav_feedback, nav_privacy;
 
@@ -122,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
         mRes = mContext.getResources();
         Log.e("xx", "xxxxxx::::::" + CalendarWeatherApp.isPanchangEng);
         if (!CalendarWeatherApp.isPanchangEng) {
+            le_arr_main_menu = mRes.getStringArray(R.array.l_arr_main_menu);
             le_menu_settings = mRes.getString(R.string.l_menu_settings);
             Log.e("xx", "xxxxxx::::::::::" + le_menu_settings);
             le_menu_panchanga = mRes.getString(R.string.l_menu_panchanga);
@@ -156,6 +170,7 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
             le_menu_feedback = mRes.getString(R.string.l_menu_feedback);
             le_menu_privacy_policy = mRes.getString(R.string.l_menu_privacy_policy);
         } else {
+            le_arr_main_menu = mRes.getStringArray(R.array.e_arr_main_menu);
             le_menu_settings = mRes.getString(R.string.e_menu_settings);
             le_menu_panchanga = mRes.getString(R.string.e_menu_panchanga);
             le_menu_calendar = mRes.getString(R.string.e_menu_calendar);
@@ -341,7 +356,8 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
         navigationView = findViewById(R.id.nav_view);
 
         View header = navigationView.getHeaderView(0);
-        navigationView.setNavigationItemSelectedListener(this);
+        // navigationView.setNavigationItemSelectedListener(this);
+        //menu=navigationView.getMenu();
         if (!mPref.isFirstUse()) {
             setUpHome();
         } else {
@@ -350,7 +366,8 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
 
             selectlang();
         }
-        menu = navigationView.getMenu();
+
+        /*
 
 
         nav_settings = menu.findItem(R.id.nav_settings);
@@ -382,6 +399,8 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
         nav_feedback = menu.findItem(R.id.nav_feedback);
         nav_privacy = menu.findItem(R.id.nav_privacy);
 
+         */
+
 
         System.out.println("IAPFragment::1:" + mPref.isFirstUse());
         if (Connectivity.isConnected(mContext) && mPref.isFirstUse()) {
@@ -394,8 +413,9 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
         onNewIntent(getIntent());
 
 
-        TextView versionTxt = header.findViewById(R.id.version);
-        SwitchMaterial switch1 = header.findViewById(R.id.switch1);
+        TextView versionTxt = findViewById(R.id.version);
+        SwitchMaterial switch1 = findViewById(R.id.switch1);
+        expListView = findViewById(R.id.expandableListView);
         versionTxt.setText(version);
         //  initBilling();
         showHideBannerAds();
@@ -408,7 +428,8 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
             @Override
             public void run() {
                 getMyResource();
-                setMenuItem();
+                // setMenuItem();
+                expandMenu();
             }
         }, 1000);
 
@@ -419,15 +440,211 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
             viewModel.isEngChanged(isChecked);
 
             getMyResource();
-            setMenuItem();
+            expandMenu();
             // }
         });
         viewModel.getCurrLang().observe(this, lang -> {
             CalendarWeatherApp.updateAppResource(getResources(), this);
             getMyResource();
-            setMenuItem();
-
+            // setMenuItem();
+            expandMenu();
         });
+
+
+    }
+
+    public void expandMenu() {
+        prepareListData();
+
+
+        listAdapter = new ExpandableMenuListAdapter(this, listDataHeader, listDataChild);
+        expListView.setAdapter(listAdapter);
+        // preparing list data
+
+
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+
+                int page = groupPosition + 1, subpage = childPosition + 1;
+                switch (page) {
+                    case 1:
+                        switch (subpage) {
+                            case 1:
+                                Intent intent = new Intent(mContext, MySettingsActivity.class);
+                                startActivity(intent);
+                                break;
+                            case 2:
+                                goToPage(1, 1);
+                                break;
+                            case 3:
+                                goToPage(1, 2);
+                                break;
+                            case 4:
+                                goToPage(1, 3);
+                                break;
+                            case 5:
+                                openFragment(0);//weather
+                                break;
+                            case 6:
+                                openFragment(1); //vedic
+                                break;
+                            case 7:
+                                openFragment(2); //sunmoon
+                                break;
+                            case 8:
+                                openFragment(3); //wallcale
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (subpage) {
+                            case 1:
+                                goToPage(2, 1);
+                                break;
+                            case 2:
+                                goToPage(2, 2);
+                                break;
+                            case 3:
+                                goToPage(2, 3);
+                                break;
+                        }
+                        break;
+                    case 3:
+                        switch (subpage) {
+                            case 1:
+                                goToPage(3, 1);
+                                break;
+                            case 2:
+                                goToPage(3, 2);
+                                break;
+                            case 3:
+                                goToPage(3, 3);
+                                break;
+                        }
+                        break;
+                    case 4:
+                        switch (subpage) {
+                            case 1:
+                                openFragment(4); //birth
+                                break;
+                            case 2:
+                                openFragment(5); //death
+                                break;
+                            case 3:
+                                openFragment(6); //others
+                                break;
+                        }
+                        break;
+                    case 5:
+                        switch (subpage) {
+                            case 1:
+                                goToPage(4, 1);
+                                break;
+                            case 2:
+                                goToPage(4, 2);
+                                break;
+                            case 3:
+                                goToPage(4, 3);
+                                break;
+                            case 4:
+                                goToPage(4, 3);
+                                break;
+                        }
+                        break;
+                    case 6:
+                        switch (subpage) {
+                            case 1:
+                                openFragment(7);
+                                break;
+                            case 2:
+                                openFragment(8);
+                                break;
+                            case 3:
+                                openFragment(9);
+                                break;
+                            case 4:
+                                openFragment(10);
+                                break;
+                            case 5:
+                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
+                                startActivity(browserIntent);
+                                break;
+                        }
+                        break;
+
+
+                }
+
+
+
+
+                Toast.makeText(
+                        getApplicationContext(),
+                        listDataHeader.get(groupPosition)
+                                + " : "
+                                + listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition) + "---" + page + ":" + subpage, Toast.LENGTH_SHORT)
+                        .show();
+                return false;
+            }
+        });
+        expListView.expandGroup(0);
+        // Listview Group expanded listener
+        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Expanded",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+// Listview Group collasped listener
+        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Collapsed",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    private void prepareListData() {
+
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+        // Adding child data
+        int len = le_arr_main_menu.length;
+
+        for (int i = 0; i < len; i++) {
+            String[] arr = le_arr_main_menu[i].split("_");
+            if (arr[1].contains("0")) {
+                listDataHeader.add(arr[2]);
+            }
+
+        }
+        int size = listDataHeader.size();
+
+        for (int j = 0; j < size; j++) {
+            List<String> child = new ArrayList<String>();
+            for (int i = 0; i < len; i++) {
+                String[] arr = le_arr_main_menu[i].split("_");
+                if (Integer.parseInt(arr[0]) == (j + 1) && !arr[1].contains("0")) {
+                    child.add(arr[2]);
+                }
+            }
+
+            listDataChild.put(listDataHeader.get(j), child);
+        }
+
+
     }
 
     private void clearAllFile(boolean all) {
@@ -567,14 +784,14 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
     public void removeAds() {
 
 
-        onPurchaseButtonClicked();
+       // onPurchaseButtonClicked();
 
     }
 
-
+/*
     public void onPurchaseButtonClicked() {
 
-      /*  if (mAcquireFragment == null) {
+        if (mAcquireFragment == null) {
             mAcquireFragment = new AcquireFragment();
         }
 
@@ -588,10 +805,10 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
 
                 mAcquireFragment.onManagerReady(this);
             }
-        }*/
+        }
     }
 
-    /*
+
         public boolean isAcquireFragmentShown() {
             return mAcquireFragment != null && mAcquireFragment.isVisible();
         }
@@ -916,172 +1133,23 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.commit();
                 break;
+            case 7:
+            if (Connectivity.isConnected(mContext)) {
+                IAPFragment feedbackDialog = IAPFragment.newInstance(this);
+                feedbackDialog.show(ft, "IAPFragment");
 
-        }
-
-
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
-            return false;
-        }
-        FragmentManager fm = getSupportFragmentManager();
-
-        Fragment frag;
-        FragmentTransaction ft = fm.beginTransaction();
-        switch (id) {
-            case R.id.nav_settings:
-                Intent intent = new Intent(this, MySettingsActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.nav_home:
-                Calendar cal = Calendar.getInstance();
-                frag = DayViewMainFragment.newInstance();
-                Bundle args = new Bundle();
-                args.putInt("DAY", cal.get(Calendar.DAY_OF_MONTH));
-                args.putInt("MONTH", cal.get(Calendar.MONTH));
-                args.putInt("YEAR", cal.get(Calendar.YEAR));
-                frag.setArguments(args);
-                ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_DAYINFO_TAG);
-
-                ft.addToBackStack(AppConstants.FRAG_DAYINFO_TAG);
-                ft.commit();
-
-                break;
-            case R.id.nav_calendar:
-                goToPage(1, 1);
-                break;
-            case R.id.nav_festival:
-                goToPage(1, 2);
-
-                break;
-
-
-            case R.id.nav_horoscope:
-                goToPage(1, 3);
-
-                break;
-
-            case R.id.nav_planet:
-                goToPage(2, 3);
-                break;
-
-
-            case R.id.nav_janma_kundali:
-                goToPage(2, 1);
-
-                break;
-            case R.id.nav_kundali_milana:
-                goToPage(2, 2);
-                break;
-
-
-            case R.id.nav_weather:
-                openFragment(0);
-                break;
-            case R.id.nav_vedic:
-                openFragment(2);
-                break;
-            case R.id.nav_sun_moon:
-                openFragment(1);
-                break;
-            case R.id.nav_wall_calendar:
-                openFragment(3);
-                break;
-            case R.id.nav_birth_anniversary:
-
-                openFragment(4);
-                break;
-            case R.id.nav_death_anniversary:
-
-                openFragment(5);
-                break;
-            case R.id.nav_other_anniversary:
-
-                openFragment(6);
-                break;
-
-            case R.id.nav_quote_cat:
-                goToPage(3, 1);
-                break;
-            case R.id.nav_quote_indian:
-                goToPage(3, 2);
-                break;
-            case R.id.nav_quote_others:
-                goToPage(3, 3);
-                break;
-
-
-            case R.id.nav_observance:
-                goToPage(4, 1);
-                break;
-            case R.id.nav_aradhana:
-                goToPage(4, 2);
-                break;
-            case R.id.nav_media:
-                goToPage(4, 4);
-                break;
-            case R.id.nav_onthisday:
-                goToPage(4, 3);
-                break;
-
-
-            case R.id.nav_remove_ads:
-                if (Connectivity.isConnected(this)) {
-
-
-                          /*  frag = IAPFragment.newInstance();
-                            ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_WEATHER_TAG);
-                            ft.addToBackStack(AppConstants.FRAG_WEATHER_TAG);
-                            ft.commit();*/
-
-                    IAPFragment feedbackDialog = IAPFragment.newInstance(this);
-                    feedbackDialog.show(ft, "IAPFragment");
-
-                    //  removeAds();
-                } else {
-                    Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
-                }
-                break;
-
-
-/*
-                try {
-                    Calendar beginTime = Calendar.getInstance();
-                    beginTime.set(beginTime.get(Calendar.YEAR), beginTime.get(Calendar.MONTH), beginTime.get(Calendar.DATE), 6, 30);
-                    Calendar endTime = Calendar.getInstance();
-                    endTime.set(endTime.get(Calendar.YEAR), endTime.get(Calendar.MONTH), endTime.get(Calendar.DATE), 18, 30);
-
-                    Intent intentEvent = new Intent(Intent.ACTION_INSERT)
-                            .setType("vnd.android.cursor.item/event")
-                            .setData(CalendarContract.Events.CONTENT_URI)
-                            .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
-                            .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis())
-                            .putExtra(CalendarContract.Events.VISIBLE, false)
-                            .putExtra(CalendarContract.Events.ALL_DAY, false)
-                            .putExtra(CalendarContract.Reminders.METHOD, true)
-                            .putExtra(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
-                    startActivity(intentEvent);
-                } catch (Exception e) {
-                    Toast.makeText(this, "No Event Calendar Found", Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                }
-*/
-            //break;
-
-
-            case R.id.nav_rate:
-                if (Connectivity.isConnected(this))
-                    AppRater.app_launched(this, true);
-                else {
-                    Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
-                }
-                break;
-            case R.id.nav_share:
+            } else {
+                Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
+            }
+            break;
+            case 8:
+            if (Connectivity.isConnected(this))
+                AppRater.app_launched(this, true);
+            else {
+                Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
+            }
+           break;
+            case 9:
                 drawer.closeDrawer(Gravity.LEFT);
                 frag = fm.findFragmentByTag("share");
                 if (frag != null) {
@@ -1089,14 +1157,8 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
                 }
                 AppShareDialog shareDialog = AppShareDialog.newInstance(this);
                 shareDialog.show(ft, "share");
-
-
-                // Intent intent1 = new Intent(this, FullscreenActivity.class);
-                // startActivity(intent1);
-
-
                 break;
-            case R.id.nav_feedback:
+            case 10:
                 drawer.closeDrawer(Gravity.LEFT);
                 frag = fm.findFragmentByTag("feedback");
                 if (frag != null) {
@@ -1106,38 +1168,208 @@ public class MainActivity extends AppCompatActivity implements /* BillingProvide
                 feedbackDialog.show(ft, "feedback");
                 break;
 
-            case R.id.nav_privacy:
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
-                startActivity(browserIntent);
-                break;
-            case R.id.nav_test:
-                if (CalendarWeatherApp.ForTesting) {
-                    CalendarWeatherApp.ForTesting = false;
-                    Toast.makeText(mContext, "Tester access removed", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    CalendarWeatherApp.ForTesting = true;
-                    Toast.makeText(mContext, "You are a tester now", Toast.LENGTH_SHORT).show();
-
-                }
-
-                break;
-
-
         }
 
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+
     }
 
+    /*
+        @Override
+        public boolean onNavigationItemSelected(MenuItem item) {
+
+
+
+            int id = item.getItemId();
+
+
+            if (id == android.R.id.home) {
+                NavUtils.navigateUpFromSameTask(this);
+                return false;
+            }
+            FragmentManager fm = getSupportFragmentManager();
+
+            Fragment frag;
+            FragmentTransaction ft = fm.beginTransaction();
+            switch (id) {
+                case R.id.nav_settings:
+                    Intent intent = new Intent(this, MySettingsActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.nav_home:
+                    Calendar cal = Calendar.getInstance();
+                    frag = DayViewMainFragment.newInstance();
+                    Bundle args = new Bundle();
+                    args.putInt("DAY", cal.get(Calendar.DAY_OF_MONTH));
+                    args.putInt("MONTH", cal.get(Calendar.MONTH));
+                    args.putInt("YEAR", cal.get(Calendar.YEAR));
+                    frag.setArguments(args);
+                    ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_DAYINFO_TAG);
+
+                    ft.addToBackStack(AppConstants.FRAG_DAYINFO_TAG);
+                    ft.commit();
+
+                    break;
+                case R.id.nav_calendar:
+                    goToPage(1, 1);
+                    break;
+                case R.id.nav_festival:
+                    goToPage(1, 2);
+
+                    break;
+
+
+                case R.id.nav_horoscope:
+                    goToPage(1, 3);
+
+                    break;
+
+                case R.id.nav_planet:
+                    goToPage(2, 3);
+                    break;
+
+
+                case R.id.nav_janma_kundali:
+                    goToPage(2, 1);
+
+                    break;
+                case R.id.nav_kundali_milana:
+                    goToPage(2, 2);
+                    break;
+
+
+                case R.id.nav_weather:
+                    openFragment(0);
+                    break;
+                case R.id.nav_vedic:
+                    openFragment(2);
+                    break;
+                case R.id.nav_sun_moon:
+                    openFragment(1);
+                    break;
+                case R.id.nav_wall_calendar:
+                    openFragment(3);
+                    break;
+                case R.id.nav_birth_anniversary:
+
+                    openFragment(4);
+                    break;
+                case R.id.nav_death_anniversary:
+
+                    openFragment(5);
+                    break;
+                case R.id.nav_other_anniversary:
+
+                    openFragment(6);
+                    break;
+
+                case R.id.nav_quote_cat:
+                    goToPage(3, 1);
+                    break;
+                case R.id.nav_quote_indian:
+                    goToPage(3, 2);
+                    break;
+                case R.id.nav_quote_others:
+                    goToPage(3, 3);
+                    break;
+
+
+                case R.id.nav_observance:
+                    goToPage(4, 1);
+                    break;
+                case R.id.nav_aradhana:
+                    goToPage(4, 2);
+                    break;
+                case R.id.nav_media:
+                    goToPage(4, 4);
+                    break;
+                case R.id.nav_onthisday:
+                    goToPage(4, 3);
+                    break;
+
+
+                case R.id.nav_remove_ads:
+                    if (Connectivity.isConnected(this)) {
+
+
+                              //  frag = IAPFragment.newInstance();
+                               // ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_WEATHER_TAG);
+                                //ft.addToBackStack(AppConstants.FRAG_WEATHER_TAG);
+                              //  ft.commit();
+
+                        IAPFragment feedbackDialog = IAPFragment.newInstance(this);
+                        feedbackDialog.show(ft, "IAPFragment");
+
+                        //  removeAds();
+                    } else {
+                        Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
+                    }
+                    break;
+
+
+                case R.id.nav_rate:
+                    if (Connectivity.isConnected(this))
+                        AppRater.app_launched(this, true);
+                    else {
+                        Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
+                    }
+                    break;
+                case R.id.nav_share:
+                    drawer.closeDrawer(Gravity.LEFT);
+                    frag = fm.findFragmentByTag("share");
+                    if (frag != null) {
+                        ft.remove(frag);
+                    }
+                    AppShareDialog shareDialog = AppShareDialog.newInstance(this);
+                    shareDialog.show(ft, "share");
+
+
+                    // Intent intent1 = new Intent(this, FullscreenActivity.class);
+                    // startActivity(intent1);
+
+
+                    break;
+                case R.id.nav_feedback:
+                    drawer.closeDrawer(Gravity.LEFT);
+                    frag = fm.findFragmentByTag("feedback");
+                    if (frag != null) {
+                        ft.remove(frag);
+                    }
+                    FeedbackDialog feedbackDialog = FeedbackDialog.newInstance(this, 0);
+                    feedbackDialog.show(ft, "feedback");
+                    break;
+
+                case R.id.nav_privacy:
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
+                    startActivity(browserIntent);
+                    break;
+                case R.id.nav_test:
+                    if (CalendarWeatherApp.ForTesting) {
+                        CalendarWeatherApp.ForTesting = false;
+                        Toast.makeText(mContext, "Tester access removed", Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        CalendarWeatherApp.ForTesting = true;
+                        Toast.makeText(mContext, "You are a tester now", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    break;
+
+
+            }
+
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+        }
+    */
     public void goToPage(int page, int section) {
 
         viewModel.setPageSubpage(page + "_" + section);
-      /* Intent intent = new Intent(AppConstants.GOTOPAGE);
+        Intent intent = new Intent(AppConstants.GOTOPAGE);
 
         intent.putExtra("PAGE", page);
         intent.putExtra("SECTION", section);
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);*/
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
 
     }
 

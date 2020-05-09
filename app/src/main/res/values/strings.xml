@@ -1543,5 +1543,73 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
     <string name="l_menu_feedback">Feedback</string>
     <string name="l_menu_privacy_policy">Privacy Policy</string>
 
+    <string-array name="l_arr_main_menu" tools:ignore="ExtraTranslation">
+        <item>1_0_Main</item>
+        <item>1_1_Settings</item>
+        <item>1_2_Calendar</item>
+        <item>1_3_Festivals</item>
+        <item>1_4_Horoscope</item>
+        <item>1_5_Weather</item>
+        <item>1_6_Sun Moon</item>
+        <item>1_7_Vedic Time</item>
+        <item>1_8_Wall Calendar</item>
+        <item>2_0_Jyotish</item>
+        <item>2_1_Janma Kundali</item>
+        <item>2_2_Kundali Milana</item>
+        <item>2_3_Planet</item>
+        <item>3_0_Quote</item>
+        <item>3_1_Category</item>
+        <item>3_2_National</item>
+        <item>3_3_International</item>
+        <item>4_0_Calendar Note</item>
+        <item>4_1_Vedic Birthday</item>
+        <item>4_2_Vedic Death day</item>
+        <item>4_3_Other Event day</item>
+        <item>5_0_More</item>
+        <item>5_1_Observance</item>
+        <item>5_2_Aradhana</item>
+        <item>5_3_On This Day</item>
+        <item>5_4_Media</item>
+        <item>6_0_extra</item>
+        <item>6_1_Remove Ads</item>
+        <item>6_2_Rate App</item>
+        <item>6_3_Share</item>
+        <item>6_4_Feedback</item>
+        <item>6_5_Privacy Policy</item>
+    </string-array>
+    <string-array name="e_arr_main_menu" tools:ignore="ExtraTranslation">
+        <item>1_0_Main</item>
+        <item>1_1_Settings</item>
+        <item>1_2_Calendar</item>
+        <item>1_3_Festivals</item>
+        <item>1_4_Horoscope</item>
+        <item>1_5_Weather</item>
+        <item>1_6_Sun Moon</item>
+        <item>1_7_Vedic Time</item>
+        <item>1_8_Wall Calendar</item>
+        <item>2_0_Jyotish</item>
+        <item>2_1_Janma Kundali</item>
+        <item>2_2_Kundali Milana</item>
+        <item>2_3_Planet</item>
+        <item>3_0_Quote</item>
+        <item>3_1_Category</item>
+        <item>3_2_National</item>
+        <item>3_3_International</item>
+        <item>4_0_Calendar Note</item>
+        <item>4_1_Vedic Birthday</item>
+        <item>4_2_Vedic Death day</item>
+        <item>4_3_Other Event day</item>
+        <item>5_0_More</item>
+        <item>5_1_Observance</item>
+        <item>5_2_Aradhana</item>
+        <item>5_3_On This Day</item>
+        <item>5_4_Media</item>
+        <item>6_0_extra</item>
+        <item>6_1_Remove Ads</item>
+        <item>6_2_Rate App</item>
+        <item>6_3_Share</item>
+        <item>6_4_Feedback</item>
+        <item>6_5_Privacy Policy</item>
+    </string-array>
 </resources>
 

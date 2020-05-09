@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_outline_settings"
+            android:title="@string/l_menu_settings" />
+
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_festival"
+            android:title="@string/l_menu_panchanga"
+            android:visible="false" />
+
+
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_outline_grid_on"
+            android:title="@string/l_menu_calendar" />
+        <item
+            android:id="@+id/nav_festival"
+            android:icon="@drawable/ic_outline_local_florist"
+            android:title="@string/l_menu_festivals"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_horoscope"
+            android:icon="@drawable/ic_horoscope"
+            android:title="@string/l_menu_horoscope"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_outline_weather"
+            android:title="@string/l_menu_weather" />
+        <item
+            android:id="@+id/nav_sun_moon"
+            android:icon="@drawable/ic_outline_sun"
+            android:title="@string/l_menu_sun_moon" />
+        <item
+            android:id="@+id/nav_vedic"
+            android:icon="@drawable/ic_vedic_time"
+            android:title="@string/l_menu_vedic_time" />
+        <item
+            android:id="@+id/nav_wall_calendar"
+            android:icon="@drawable/ic_outline_wallcalendar"
+            android:title="@string/l_menu_wall_calendar" />
+
+
+        <item android:title="Jyotish">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_janma_kundali"
+                        android:icon="@drawable/ic_outline_timelapse"
+                        android:title="@string/l_menu_janma_kundali" />
+
+                    <item
+                        android:id="@+id/nav_kundali_milana"
+                        android:icon="@drawable/ic_hinduist_swastika"
+                        android:title="@string/l_menu_kundali_milana" />
+                    <item
+                        android:id="@+id/nav_planet"
+                        android:icon="@drawable/ic_rotate_right_black_24dp"
+                        android:iconTint="@color/colorPrimary"
+                        android:title="@string/l_menu_planet" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Quote">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_quote_cat"
+                        android:icon="@drawable/ic_quotes_cat"
+                        android:title="@string/l_menu_category" />
+                    <item
+                        android:id="@+id/nav_quote_indian"
+                        android:icon="@drawable/ic_quote_indians"
+                        android:title="@string/l_menu_national" />
+                    <item
+                        android:id="@+id/nav_quote_others"
+                        android:icon="@drawable/ic_more_author"
+                        android:title="@string/l_menu_international" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="More">
+            <menu>
+                <group android:checkableBehavior="single">
+
+
+                    <item
+                        android:id="@+id/nav_observance"
+                        android:icon="@drawable/ic_outline_turned_in_not"
+                        android:title="@string/l_menu_observance" />
+
+                    <item
+                        android:id="@+id/nav_aradhana"
+                        android:icon="@drawable/ic_prayers"
+                        android:title="@string/l_menu_aradhana" />
+                    <item
+                        android:id="@+id/nav_onthisday"
+                        android:icon="@drawable/ic_otd_event"
+                        android:title="@string/l_menu_on_this_day" />
+                    <item
+                        android:id="@+id/nav_media"
+                        android:icon="@drawable/ic_outline_omg"
+                        android:title="@string/l_menu_media" />
+
+
+                </group>
+            </menu>
+        </item>
+        <item android:title="Calendar Note">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_event"
+                        android:icon="@drawable/ic_outline_event"
+                        android:title="@string/l_menu_add_event"
+                        android:visible="false"/>
+
+                    <item
+                        android:id="@+id/nav_birth_anniversary"
+                        android:icon="@drawable/ic_outline_event"
+                        android:title="@string/l_menu_birth_anniversary" />
+                    <item
+                        android:id="@+id/nav_death_anniversary"
+                        android:icon="@drawable/ic_outline_event"
+                        android:title="@string/l_menu_death_anniversary" />
+                    <item
+                        android:id="@+id/nav_other_anniversary"
+                        android:icon="@drawable/ic_outline_event"
+                        android:title="@string/l_menu_other_anniversary" />
+                </group>
+            </menu>
+        </item>
+
+        <item
+            android:icon="@drawable/ic_festival"
+            android:title="@string/l_menu_panchang"
+            android:visible="false" />
+
+        <item
+            android:icon="@drawable/ic_outline_timelapse"
+            android:title="@string/l_menu_choghadia"
+            android:visible="false" />
+
+
+    </group>
+
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_remove_ads"
+            android:icon="@drawable/ic_remov_ads"
+            android:title="@string/l_menu_remove_ads" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_outline_star"
+            android:title="@string/l_menu_rate_app" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_outline_share"
+            android:title="@string/l_menu_share" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_outline_comment"
+            android:title="@string/l_menu_feedback" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_content_copy_black_24dp"
+            android:title="@string/l_menu_privacy_policy" />
+
+        <item
+            android:id="@+id/nav_test"
+            android:enabled="false"
+            android:icon="@drawable/ic_content_copy_black_24dp"
+            android:title="For Testing"
+            android:visible="false" />
+    </group>
+
+</menu>
