@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    buildToolsVersion = BUILD_TOOL_VERSION
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    signingConfigs {
+        config {
+            try {
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+                storeFile file('/Users/sasikantasahoo/Documents/AndroidKeystore/calendarweather.jks')
+                storePassword STORE_PASSWORD
+            }
+            catch (ex) {
+                 throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    defaultConfig {
+        applicationId APPLICATION_ID
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resValue "string", "app_name", APP_NAME
+        resValue "string", "API_KEY", API_KEY
+        resValue "string", "adsApplicationId", ADS_APP_ID
+        resValue "string", "facebook_app_id", FACEBOOK_APP_ID
+        resValue "string", "banner_ad_unit_id", BANNER_AD_UNIT
+        // vectorDrawables.useSupportLibrary = true
+    }
+
+
+
+    /*
+     <string name="console_url">https://console.developers.google.com/apis/credentials?project=calendar-and-weather</string>
+     <string name="console_gmail">iexamcenter@gmail.com</string>
+     <string name="console_api_key">AIzaSyBqmEkATbKBAZpwx9iHL5e0Qbo-zRH1StI</string>
+     <string name="console_server_key">AIzaSyDenrKjFfdwR22xSaAmkp8TQlu8rtJHFxc</string>
+     <string name="console_browser_key">AIzaSyDiRC6aukzR2djvMvs66QQpUS8-bYvHcd8</string>
+     */
+    buildTypes {
+        debug {
+
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+
+            //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // signingConfig signingConfigs.config
+
+
+        }
+        release {
+            minifyEnabled true // <-- enable minification
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.libraries.places:places-compat:2.2.0'
+    implementation 'com.android.billingclient:billing:2.2.0'
+
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation "com.google.android.gms:play-services-ads:19.1.0"
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24'
+    implementation "io.reactivex:rxandroid:1.2.1"
+    implementation "io.reactivex:rxjava:1.1.6"
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    implementation "com.facebook.android:facebook-android-sdk:4.27.0"
+    implementation 'org.apache.commons:commons-io:1.3.2'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation "androidx.work:work-runtime:2.3.4"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.room:room-runtime:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+
+}
