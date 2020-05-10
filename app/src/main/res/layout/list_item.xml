@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@color/white"
     android:padding="10dp">
 
     <TextView
@@ -10,10 +11,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:background="@color/white"
         android:textSize="14sp"
         android:layout_marginStart="10dp"
         android:gravity="center_vertical"
-        android:drawableStart="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
         />
 
 </LinearLayout>

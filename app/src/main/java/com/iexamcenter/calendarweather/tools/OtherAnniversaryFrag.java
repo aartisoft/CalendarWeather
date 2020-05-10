@@ -322,13 +322,15 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
             @Override
             public void onClick(View v) {
                 Calendar endTime, beginTime;
-                endTime = beginTime = (Calendar) v.getTag();
+               DataCls obj= (DataCls) v.getTag();
+                endTime = beginTime = obj.cal;
 
                 try {
                     Intent intentEvent = new Intent(Intent.ACTION_INSERT)
                             .setType("vnd.android.cursor.item/event")
                             .setData(CalendarContract.Events.CONTENT_URI)
-                            .putExtra(CalendarContract.Events.TITLE, anniName + "Set reminder name here")
+                            .putExtra(CalendarContract.Events.TITLE, obj.title)
+                            .putExtra(CalendarContract.Events.DESCRIPTION, obj.desc)
                             .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
                             .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis())
                             .putExtra(CalendarContract.Events.VISIBLE, false)
@@ -655,7 +657,11 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
                     String formatted = format1.format(calculatedBirthCal.getTime());
                     String txt2Str = "Annual Event Date : " + formatted + "\n" + headerStr;
                     txt1.setGravity(Gravity.CENTER);
-                    reminder.setTag(calculatedBirthCal);
+                    DataCls obj= new DataCls();
+                    obj.cal=calculatedBirthCal;
+                    obj.desc= txt2Str;
+                    obj.title="Event Reminder";
+                    reminder.setTag(obj);
                     reminder.setVisibility(View.VISIBLE);
                     txt1.setText(txt2Str);
                     next.setVisibility(View.VISIBLE);
@@ -669,7 +675,11 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
                     String txt2Str = "Annual Event Date : " + formatted + "\n" + headerStr;
                     txt.setGravity(Gravity.CENTER);
                     txt1.setGravity(Gravity.CENTER);
-                    reminder.setTag(calculatedBirthCal);
+                    DeathAnniversaryFrag.DataCls obj= new DeathAnniversaryFrag.DataCls();
+                    obj.cal=calculatedBirthCal;
+                    obj.desc= txt1Str+"\n\n"+txt2Str;
+                    obj.title="Event Reminder for "+formatted;
+                    reminder.setTag(obj);
                     reminder.setVisibility(View.VISIBLE);
                     if (type == 0) {
                         txt.setText(txt1Str);
@@ -838,6 +848,10 @@ public int getHinduMonth(CoreDataHelper myCoreData){
             return myCoreData.getLunarMonthPurnimantIndex();
         }
 }
-
+    public static class DataCls{
+        public Calendar cal;
+        public String desc;
+        public String title;
+    }
 }
 
