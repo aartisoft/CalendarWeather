@@ -58,7 +58,7 @@ public class DeathAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public static final String ARG_POSITION = "POSITION";
     int bYear, bMonth, bDate, bHour, bMin;
     int noDobMonthIndex, noDobRashiIndex, noDobNakshetraIndex, noDobEngMonthIndex, noDobTithiIndex;
-    int PAGE_TYPE;
+   // int PAGE_TYPE;
     LinearLayout nodobcntr;
     CheckBox nodob;
     Spinner spinner1, spinner2;
@@ -107,12 +107,9 @@ public class DeathAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public final String DATE_FORMAT_2 = "hh:mm a z";
     DialogFragment appLangDialog;
 
-    public static DeathAnniversaryFrag newInstance(int type) {
+    public static DeathAnniversaryFrag newInstance() {
         DeathAnniversaryFrag myFragment = new DeathAnniversaryFrag();
 
-        Bundle args = new Bundle();
-        args.putInt("PAGE_TYPE", type);
-        myFragment.setArguments(args);
 
         return myFragment;
 
@@ -238,7 +235,9 @@ public class DeathAnniversaryFrag extends Fragment implements LocationDialog.Loc
         prev.setVisibility(GONE);
         view1.setVisibility(GONE);
         reminder.setVisibility(GONE);
-
+        String placeDateHelp = "Tap <DEATH PLACE> & <DEATH DATE> to change Death Details";
+        TextView placeDateHelpTV=rootView.findViewById(R.id.placeDateHelp);
+        placeDateHelpTV.setText(placeDateHelp);
         nodob = rootView.findViewById(R.id.noDateTime);
         nodobcntr = rootView.findViewById(R.id.noDateTimeSpinner);
         spinner1 = rootView.findViewById(R.id.spinner1);
@@ -798,24 +797,7 @@ Log.e("myCoreData1","myCoreData:2:"+mTithiIndex);
         View rootView = inflater.inflate(R.layout.fragment_tool_birth_day, null);
         setRetainInstance(true);
         setHasOptionsMenu(true);
-        PAGE_TYPE = getArguments().getInt("PAGE_TYPE", 0);
 
-        switch (PAGE_TYPE) {
-            case 4:
-                calcType = 1;
-                anniName = "Birth";
-                anniType = 1;
-                pageTitle = "Vedic Birthday";
-                subTitle = "Know when to celebrate";
-                lbl_spinner1Txt = "Select Birth Month";
-                lbl_spinner2Txt = "Select Birth Nakshetra-Rashi";
-                nodobTxt = "Check here, If you don't know birth place, date & time";
-                spinner1Prompt = "LUNAR MONTH";
-                spinner2Prompt = "NAKSHETRA-RASHI";
-                lbl_place_txt = "BIRTH PLACE";
-                lbl_date_txt = "BIRTH DATE";
-                break;
-            case 5:
                 calcType = 2;
                 anniName = "Death";
                 anniType = 2;
@@ -828,23 +810,7 @@ Log.e("myCoreData1","myCoreData:2:"+mTithiIndex);
                 spinner2Prompt = "PAKSHYA-TITHI";
                 lbl_place_txt = "DEATH PLACE";
                 lbl_date_txt = "DEATH DATE";
-                break;
-            case 6:
-                calcType = 1;
-                anniName = "Other Event";
-                anniType = 3;
-                pageTitle = "Vedic Other Event Anniversary";
-                subTitle = "Know when to celebrate";
-                lbl_spinner1Txt = "Select Event Month";
-                lbl_spinner2Txt = "Select Event Nakshetra-Rashi";
-                nodobTxt = "Check here, If you don't know event date & time";
-                spinner1Prompt = "LUNAR MONTH";
-                spinner2Prompt = "NAKSHETRA-RASHI";
-                lbl_place_txt = "PLACE";
-                lbl_date_txt = "DATE";
-                break;
 
-        }
         titleval = mContext.getSupportActionBar().getTitle().toString();
         subTitleVal = mContext.getSupportActionBar().getSubtitle().toString();
 

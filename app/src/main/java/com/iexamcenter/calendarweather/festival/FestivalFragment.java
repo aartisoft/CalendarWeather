@@ -105,23 +105,15 @@ public class FestivalFragment extends Fragment {
     };
 
     private void showDatePicker() {
-
-
         DatePickerFragment date = new DatePickerFragment();
-
-
         Calendar calender = Calendar.getInstance();
         Bundle args = new Bundle();
         args.putInt("year", calender.get(Calendar.YEAR));
         args.putInt("month", calender.get(Calendar.MONTH));
         args.putInt("dayofmonth", calender.get(Calendar.DAY_OF_MONTH));
         date.setArguments(args);
-
         date.setCallBack(ondate);
-
-        date.show(getFragmentManager(), "Date Picker");
-
-
+        date.show(mContext.getSupportFragmentManager(), "Date Picker");
     }
 
     @Override
@@ -277,7 +269,7 @@ public class FestivalFragment extends Fragment {
 
 
         viewModel.getEphemerisData(curr, 2).removeObservers(this);
-        viewModel.getEphemerisData(curr, 2).observe(this, obj -> {
+        viewModel.getEphemerisData(curr, 2).observe(mContext, obj -> {
             if (obj != null && obj.size() != 0) {
                 PanchangTask ptObj = new PanchangTask();
                 HashMap<String, CoreDataHelper> myPanchangHashMap = ptObj.panchangMapping(obj, mPref.getMyLanguage(), mPref.getLatitude(), mPref.getLongitude(), mContext);

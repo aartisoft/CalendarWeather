@@ -152,11 +152,11 @@ public class IAPFragment extends DialogFragment implements PurchasesUpdatedListe
                                 && list != null) {
                             System.out.println("IAPFragment::61:"+list.size());
                             if(list.size()>0) {
-                                Toast.makeText(activity, "  You are a premium member. " + list.size(), Toast.LENGTH_LONG).show();
+                               // Toast.makeText(activity, "  You are a premium member. " + list.size(), Toast.LENGTH_LONG).show();
                                 mPref.setRemovedAds(true);
                                 mPref.load();
                             }else{
-                                Toast.makeText(activity,  "  You are not a premium member. ", Toast.LENGTH_LONG).show();
+                               // Toast.makeText(activity,  "  You are not a premium member. ", Toast.LENGTH_LONG).show();
                             }
                         }
                     }

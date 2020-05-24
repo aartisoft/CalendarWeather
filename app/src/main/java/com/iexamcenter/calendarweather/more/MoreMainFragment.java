@@ -101,6 +101,7 @@ public TabLayout getTabLayout(){
         tabViewPager = rootView.findViewById(R.id.tabViewPager);
         tabLayout = rootView.findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(tabViewPager);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
        // tabViewPager.setOffscreenPageLimit(3);
         tabViewPager.setAdapter(MorePagerAdapter.newInstance(getChildFragmentManager(), activity));
         tabViewPager.setCurrentItem(CalendarWeatherApp.getSelectedSubPage()-1);

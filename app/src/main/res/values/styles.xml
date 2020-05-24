@@ -41,10 +41,22 @@
                 <item name="tabSelectedTextColor">@color/red</item>
                 -->
 
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
     </style>
 
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
     <style name="datepicker" parent="Theme.MaterialComponents.Light.Dialog">
 
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePickerTheme.ButtonBarNegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DatePickerTheme.ButtonBarPositiveButtonStyle</item>
         <item name="colorPrimary">@color/dellBlue</item>
         <item name="colorPrimaryDark">@color/mainBg</item>
         <item name="colorAccent">@color/dellBlue</item>
@@ -68,9 +80,16 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/red</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePickerTheme.ButtonBarNegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DatePickerTheme.ButtonBarPositiveButtonStyle</item>
         <item name="colorControlNormal">@android:color/transparent</item>
     </style>
-
+    <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <style name="DatePickerTheme.ButtonBarPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
     <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/mainBg</item>
         <item name="android:textStyle">bold</item>

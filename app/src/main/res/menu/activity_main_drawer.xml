@@ -83,7 +83,7 @@
     </menu>
     </item>
 
-    <item android:title="Quote">
+    <item android:title="Quote" android:visible="false">
         <menu>
             <group android:checkableBehavior="single">
                 <item

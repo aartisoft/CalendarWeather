@@ -79,6 +79,7 @@ public class RootFragment extends Fragment {
             al.add(1);
             al.add(1);
             al.add(1);
+           // al.add(1);
 
             CalendarWeatherApp.updateAppResource(activity.getResources(), activity);
             mPager.getAdapter().notifyDataSetChanged();
@@ -91,6 +92,7 @@ public class RootFragment extends Fragment {
             al.add(1);
             al.add(1);
             al.add(1);
+           // al.add(1);
 
             CalendarWeatherApp.updateAppResource(activity.getResources(), activity);
             mPager.getAdapter().notifyDataSetChanged();
@@ -122,6 +124,7 @@ public class RootFragment extends Fragment {
             al.add(1);
             al.add(1);
             al.add(1);
+           // al.add(1);
         }
 
         mPagerAdapter = new RootPagerAdapter(getChildFragmentManager(), activity, al);
@@ -156,14 +159,18 @@ public class RootFragment extends Fragment {
                 case R.id.nav_home:
                     mPager.setCurrentItem(0);
                     break;
-                case R.id.nav_quote:
-                    mPager.setCurrentItem(2);
-                    break;
+
                 case R.id.nav_media:
                     mPager.setCurrentItem(1);
                     break;
+                 case R.id.nav_premium:
+                     mPager.setCurrentItem(2);
+                     break;
+              //  case R.id.nav_quote:
+                //    mPager.setCurrentItem(3);
+                  //  break;
                 case R.id.nav_other:
-                    mPager.setCurrentItem(3);
+                    mPager.setCurrentItem(4);
                     break;
               //  case R.id.nav_calendar:
                 //    mPager.setCurrentItem(1);

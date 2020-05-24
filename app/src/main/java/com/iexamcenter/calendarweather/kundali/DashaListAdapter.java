@@ -75,14 +75,6 @@ public class DashaListAdapter extends RecyclerView.Adapter<DashaListAdapter.Item
         for(int i=0;i<=position;i++){
             KundaliDashaFrag.dasha obj1 = mItems.get(i);
             if(i==0) {
-                /*days = (int) (obj1.remYear * (365.2425));
-                startdate.setTimeInMillis(dob.getTimeInMillis());*/
-
-               // days = (int) (obj.remYear * (365.2425));
-               // enddate = Calendar.getInstance();
-               // enddate.setTimeInMillis(dob.getTimeInMillis());
-              //  enddate.add(Calendar.DAY_OF_MONTH, days);
-
                 startdate = Calendar.getInstance();
                 startdate.setTimeInMillis(dob.getTimeInMillis());
                 startDateStr = dateFormat.format(startdate.getTime());
@@ -91,49 +83,20 @@ public class DashaListAdapter extends RecyclerView.Adapter<DashaListAdapter.Item
 
             }
             else{
-               /* days = (int) (obj1.totalyear * (365.2425));
-                enddate.add(Calendar.DAY_OF_MONTH, days);
-                startdate.setTimeInMillis(enddate.getTimeInMillis() - days * 24 * 60 * 60 * 1000L);*/
-
                 days = (int) (obj1.totalyear * (365.2425));
 
                 enddate.add(Calendar.DAY_OF_MONTH, days);
-                //startdate=enddate;
+
                 startdate.setTimeInMillis(enddate.getTimeInMillis() - days * 24 * 60 * 60 * 1000L);
                 startDateStr = dateFormat.format(startdate.getTime());
                 endDateStr = dateFormat.format(enddate.getTime());
                 dateStr = startDateStr + "   -    " + endDateStr + "<BR/><font color='#AAAAAA'>" + obj.totalyear + " years period</font>";
             }
-          //  planetLord = lplanetList[obj1.planet];
+
 
         }
 
-       /* startDateStr = dateFormat.format(startdate.getTime());
-        endDateStr = dateFormat.format(enddate.getTime());
-        dateStr = startDateStr + "   -    " + endDateStr + "<BR/><font color='#AAAAAA'>" + obj.totalyear + " years period</font>";*/
 
-       /* if (position == 0 ) {
-            days = (int) (obj.remYear * (365.2425));
-            enddate = Calendar.getInstance();
-            enddate.setTimeInMillis(dob.getTimeInMillis());
-            enddate.add(Calendar.DAY_OF_MONTH, days);
-
-            startdate = Calendar.getInstance();
-            startdate.setTimeInMillis(dob.getTimeInMillis());
-            startDateStr = dateFormat.format(startdate.getTime());
-            endDateStr = dateFormat.format(enddate.getTime());
-            dateStr = startDateStr + "   -    " + endDateStr + "<BR/><font color='#AAAAAA'>"+ yearMonthDay(obj.remYear) + "</font>";
-
-        } else {
-            days = (int) (obj.totalyear * (365.2425));
-
-            enddate.add(Calendar.DAY_OF_MONTH, days);
-            //startdate=enddate;
-            startdate.setTimeInMillis(enddate.getTimeInMillis() - days * 24 * 60 * 60 * 1000L);
-            startDateStr = dateFormat.format(startdate.getTime());
-            endDateStr = dateFormat.format(enddate.getTime());
-            dateStr = startDateStr + "   -    " + endDateStr + "<BR/><font color='#AAAAAA'>" + obj.totalyear + " years period</font>";
-        }*/
 
         holder.container.removeAllViews();
         calculateSubDasha(obj, position,startdate, enddate, holder.container);

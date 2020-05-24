@@ -12,6 +12,7 @@ import com.iexamcenter.calendarweather.MainActivity;
 import com.iexamcenter.calendarweather.R;
 import com.iexamcenter.calendarweather.news.ListFragment;
 import com.iexamcenter.calendarweather.observance.ObservanceFragment;
+import com.iexamcenter.calendarweather.quote.QuoteMainFragment;
 import com.iexamcenter.calendarweather.thisday.ThisDayFragment;
 import com.iexamcenter.calendarweather.youtube.MantraFragment;
 
@@ -48,21 +49,28 @@ class MorePagerAdapter extends FragmentPagerAdapter {
         switch (position) {
 
 
-            case 0:
+            case 1:
+                fragment = QuoteMainFragment.newInstance();
+                args = new Bundle();
+                args.putInt("MONTH", calendar.get(Calendar.MONTH));
+                args.putInt("YEAR", calendar.get(Calendar.YEAR));
+                fragment.setArguments(args);
+                return fragment;
+            case 4:
                 fragment = ObservanceFragment.newInstance();
                 args = new Bundle();
                 args.putInt("MONTH", calendar.get(Calendar.MONTH));
                 args.putInt("YEAR", calendar.get(Calendar.YEAR));
                 fragment.setArguments(args);
                 return fragment;
-            case 1:
+            case 0:
                 fragment = MantraFragment.newInstance();
                 args = new Bundle();
                 args.putInt(MantraFragment.ARG_POSITION, position);
                 fragment.setArguments(args);
                 return fragment;
 
-            case 2:
+            case 3:
                 args = new Bundle();
                 fragment = ThisDayFragment.newInstance();
 
@@ -71,7 +79,7 @@ class MorePagerAdapter extends FragmentPagerAdapter {
               //  args.putInt(ThisDayFragment.ARG_POSITION, position);
                 fragment.setArguments(args);
                 return fragment;
-            case 3:
+            case 2:
                 fragment = ListFragment.getInstance();
                 args = new Bundle();
                 args.putInt(ListFragment.ARG_POSITION, position);
@@ -88,15 +96,16 @@ class MorePagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
 
-            case 0:
+            case 4:
                 return "Observance";
 
-
             case 1:
+                return "Quote";
+            case 0:
                 return "Aradhana";
-            case 2:
-                return "On This Day";
             case 3:
+                return "This Day";
+            case 2:
                 return "Media";
         }
 
@@ -106,6 +115,6 @@ class MorePagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }

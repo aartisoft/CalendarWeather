@@ -57,7 +57,7 @@ public class BirthAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public static final String ARG_POSITION = "POSITION";
     int bYear, bMonth, bDate, bHour, bMin;
     int noDobMonthIndex, noDobRashiIndex, noDobNakshetraIndex, noDobEngMonthIndex,noDobTithiIndex;
-    int PAGE_TYPE;
+    //int PAGE_TYPE;
     LinearLayout nodobcntr;
     CheckBox nodob;
     Spinner spinner1, spinner2;
@@ -106,12 +106,12 @@ public class BirthAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public final String DATE_FORMAT_2 = "hh:mm a z";
     DialogFragment appLangDialog;
 
-    public static BirthAnniversaryFrag newInstance(int type) {
+    public static BirthAnniversaryFrag newInstance() {
         BirthAnniversaryFrag myFragment = new BirthAnniversaryFrag();
 
-        Bundle args = new Bundle();
-        args.putInt("PAGE_TYPE", type);
-        myFragment.setArguments(args);
+       // Bundle args = new Bundle();
+       // args.putInt("PAGE_TYPE", type);
+       // myFragment.setArguments(args);
 
         return myFragment;
 
@@ -242,7 +242,9 @@ public class BirthAnniversaryFrag extends Fragment implements LocationDialog.Loc
         nodobcntr = rootView.findViewById(R.id.noDateTimeSpinner);
         spinner1 = rootView.findViewById(R.id.spinner1);
         spinner2 = rootView.findViewById(R.id.spinner2);
-
+       String placeDateHelp = "Tap <BIRTH PLACE> & <BIRTH DATE> to change Birth Details";
+        TextView placeDateHelpTV=rootView.findViewById(R.id.placeDateHelp);
+        placeDateHelpTV.setText(placeDateHelp);
 
         lbl_spinner1.setText(lbl_spinner1Txt);
         lbl_spinner2.setText(lbl_spinner2Txt);
@@ -785,10 +787,8 @@ public class BirthAnniversaryFrag extends Fragment implements LocationDialog.Loc
         View rootView = inflater.inflate(R.layout.fragment_tool_birth_day, null);
         setRetainInstance(true);
         setHasOptionsMenu(true);
-        PAGE_TYPE = getArguments().getInt("PAGE_TYPE", 0);
+       // PAGE_TYPE = getArguments().getInt("PAGE_TYPE", 0);
 
-        switch (PAGE_TYPE) {
-            case 4:
                 calcType = 1;
                 anniName = "Birth";
                 anniType = 1;
@@ -801,37 +801,7 @@ public class BirthAnniversaryFrag extends Fragment implements LocationDialog.Loc
                 spinner2Prompt = "NAKSHETRA-RASHI";
                 lbl_place_txt = "BIRTH PLACE";
                 lbl_date_txt = "BIRTH DATE";
-                break;
-            case 5:
-                calcType = 2;
-                anniName = "Death";
-                anniType = 2;
-                pageTitle = "Vedic Death";
-                subTitle = "Know when to celebrate";
-                lbl_spinner1Txt = "Select Death Month";
-                lbl_spinner2Txt = "Select Death Pakshya-Tithi";
-                nodobTxt = "Check here, If you don't know death place, date & time";
-                spinner1Prompt = "LUNAR MONTH";
-                spinner2Prompt = "PAKSHYA-TITHI";
-                lbl_place_txt = "DEATH PLACE";
-                lbl_date_txt = "DEATH DATE";
-                break;
-            case 6:
-                calcType = 1;
-                anniName = "Other Event";
-                anniType = 3;
-                pageTitle = "Vedic Other Event Anniversary";
-                subTitle = "Know when to celebrate";
-                lbl_spinner1Txt = "Select Event Month";
-                lbl_spinner2Txt = "Select Event Nakshetra-Rashi";
-                nodobTxt = "Check here, If you don't know event date & time";
-                spinner1Prompt = "LUNAR MONTH";
-                spinner2Prompt = "NAKSHETRA-RASHI";
-                lbl_place_txt = "PLACE";
-                lbl_date_txt = "DATE";
-                break;
 
-        }
         titleval = mContext.getSupportActionBar().getTitle().toString();
         subTitleVal = mContext.getSupportActionBar().getSubtitle().toString();
 

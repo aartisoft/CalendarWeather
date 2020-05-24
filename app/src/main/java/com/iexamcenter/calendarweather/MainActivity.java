@@ -328,7 +328,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        findViewById(R.id.closeCntr).setOnClickListener(v -> finish());
+        findViewById(R.id.closeCntr).setOnClickListener(v -> {
+            if (mPref.isRemovedAds()) {
+                CalendarWeatherApp.isRewardedPremiumGrp1 = false;
+                CalendarWeatherApp.isRewardedPremiumGrp2 = false;
+            }
+            finish();
+        });
 
         drawer = findViewById(R.id.drawer_layout);
 
@@ -468,6 +474,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
 
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                }
                 int page = groupPosition + 1, subpage = childPosition + 1;
                 switch (page) {
                     case 1:
@@ -513,32 +522,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                         break;
                     case 3:
-                        switch (subpage) {
-                            case 1:
-                                goToPage(3, 1);
-                                break;
-                            case 2:
-                                goToPage(3, 2);
-                                break;
-                            case 3:
-                                goToPage(3, 3);
-                                break;
-                        }
+
+                        goToPage(3, subpage);
                         break;
+
                     case 4:
-                        switch (subpage) {
-                            case 1:
-                                openFragment(4); //birth
-                                break;
-                            case 2:
-                                openFragment(5); //death
-                                break;
-                            case 3:
-                                openFragment(6); //others
-                                break;
-                        }
-                        break;
-                    case 5:
                         switch (subpage) {
                             case 1:
                                 goToPage(4, 1);
@@ -550,11 +538,14 @@ public class MainActivity extends AppCompatActivity {
                                 goToPage(4, 3);
                                 break;
                             case 4:
-                                goToPage(4, 3);
+                                goToPage(4, 4);
+                                break;
+                            case 5:
+                                goToPage(4, 5);
                                 break;
                         }
                         break;
-                    case 6:
+                    case 5:
                         switch (subpage) {
                             case 1:
                                 openFragment(7);
@@ -577,7 +568,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-
 
 
                 return false;
@@ -612,7 +602,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < len; i++) {
             String[] arr = le_arr_main_menu[i].split("_");
-            if (arr[1].contains("0")) {
+            if (arr[1].contentEquals("0")) {
                 listDataHeader.add(arr[2]);
             }
 
@@ -623,7 +613,7 @@ public class MainActivity extends AppCompatActivity {
             List<String> child = new ArrayList<String>();
             for (int i = 0; i < len; i++) {
                 String[] arr = le_arr_main_menu[i].split("_");
-                if (Integer.parseInt(arr[0]) == (j + 1) && !arr[1].contains("0")) {
+                if (Integer.parseInt(arr[0]) == (j + 1) && !arr[1].contentEquals("0")) {
                     child.add(arr[2]);
                 }
             }
@@ -764,42 +754,47 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else {
+            CalendarWeatherApp.isRewardedPremiumGrp1 = true;
+            CalendarWeatherApp.isRewardedPremiumGrp2 = true;
             mAdView.setVisibility(View.GONE);
         }
+        //CalendarWeatherApp.isRewardedPremiumGrp1=true;
+        //  CalendarWeatherApp.isRewardedPremiumGrp2=true;
+
     }
 
     public void removeAds() {
 
 
-       // onPurchaseButtonClicked();
+        // onPurchaseButtonClicked();
 
     }
 
-/*
-    public void onPurchaseButtonClicked() {
+    /*
+        public void onPurchaseButtonClicked() {
 
-        if (mAcquireFragment == null) {
-            mAcquireFragment = new AcquireFragment();
-        }
+            if (mAcquireFragment == null) {
+                mAcquireFragment = new AcquireFragment();
+            }
 
-        if (!isAcquireFragmentShown()) {
-            mAcquireFragment.show(mContext.getSupportFragmentManager(), DIALOG_TAG);
+            if (!isAcquireFragmentShown()) {
+                mAcquireFragment.show(mContext.getSupportFragmentManager(), DIALOG_TAG);
 
-            if (mBillingManager != null
-                    && mBillingManager.getBillingClientResponseCode()
-                    > BILLING_MANAGER_NOT_INITIALIZED) {
+                if (mBillingManager != null
+                        && mBillingManager.getBillingClientResponseCode()
+                        > BILLING_MANAGER_NOT_INITIALIZED) {
 
 
-                mAcquireFragment.onManagerReady(this);
+                    mAcquireFragment.onManagerReady(this);
+                }
             }
         }
-    }
 
 
-        public boolean isAcquireFragmentShown() {
-            return mAcquireFragment != null && mAcquireFragment.isVisible();
-        }
-    */
+            public boolean isAcquireFragmentShown() {
+                return mAcquireFragment != null && mAcquireFragment.isVisible();
+            }
+        */
     @Override
     public void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -1015,12 +1010,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
+    public void onPause() {
+        super.onPause();
+        Log.e("onPause", "onPause:::-XY-:");
+    }
+
+    @Override
+    public void onResume() {
         super.onResume();
         Helper.getInstance().hideKeyboard(mContext);
         CalendarWeatherApp.isForeground = true;
+        Log.e("onPause", "onResume:::-XY-:");
+        CalendarWeatherApp.updateAppResource(mContext.getResources(), mContext);
     }
-
 
     @Override
     public void onBackPressed() {
@@ -1040,6 +1042,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
 
             if (sBackPressed + 2000 > System.currentTimeMillis()) {
+                if (!mPref.isRemovedAds()) {
+                    CalendarWeatherApp.isRewardedPremiumGrp1 = false;
+                    CalendarWeatherApp.isRewardedPremiumGrp2 = false;
+                }
                 finish();
             } else {
                 drawer.openDrawer(Gravity.LEFT);
@@ -1103,39 +1109,39 @@ public class MainActivity extends AppCompatActivity {
                 ft.commit();
                 break;
             case 4:
-                frag = BirthAnniversaryFrag.newInstance(type);
+                frag = BirthAnniversaryFrag.newInstance();
                 ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.commit();
                 break;
             case 5:
-                frag = DeathAnniversaryFrag.newInstance(type);
+                frag = DeathAnniversaryFrag.newInstance();
                 ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.commit();
                 break;
             case 6:
-                frag = OtherAnniversaryFrag.newInstance(type);
+                frag = OtherAnniversaryFrag.newInstance();
                 ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.commit();
                 break;
             case 7:
-            if (Connectivity.isConnected(mContext)) {
-                IAPFragment feedbackDialog = IAPFragment.newInstance(this);
-                feedbackDialog.show(ft, "IAPFragment");
+                if (Connectivity.isConnected(mContext)) {
+                    IAPFragment feedbackDialog = IAPFragment.newInstance(this);
+                    feedbackDialog.show(ft, "IAPFragment");
 
-            } else {
-                Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
-            }
-            break;
+                } else {
+                    Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
+                }
+                break;
             case 8:
-            if (Connectivity.isConnected(this))
-                AppRater.app_launched(this, true);
-            else {
-                Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
-            }
-           break;
+                if (Connectivity.isConnected(this))
+                    AppRater.app_launched(this, true);
+                else {
+                    Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
+                }
+                break;
             case 9:
                 drawer.closeDrawer(Gravity.LEFT);
                 frag = fm.findFragmentByTag("share");

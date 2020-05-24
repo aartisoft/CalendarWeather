@@ -41,6 +41,8 @@ public class CalendarWeatherApp extends Application {
     public static int displayMonthInt = 0;
     public static int displayDayInt = 0;
     public static boolean isPanchangEng=false;
+    public static boolean isRewardedPremiumGrp1 =false;
+    public static boolean isRewardedPremiumGrp2 =false;
     public static boolean ForTesting;
 
     public static void setDisplayYearInt(int val) {

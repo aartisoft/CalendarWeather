@@ -33,6 +33,8 @@ android {
         resValue "string", "adsApplicationId", ADS_APP_ID
         resValue "string", "facebook_app_id", FACEBOOK_APP_ID
         resValue "string", "banner_ad_unit_id", BANNER_AD_UNIT
+        resValue "string", "reward_ad_unit_id_1", REWARD_AD_UNIT_1
+        resValue "string", "reward_ad_unit_id_2", REWARD_AD_UNIT_2
         // vectorDrawables.useSupportLibrary = true
     }
 

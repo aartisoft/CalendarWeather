@@ -385,6 +385,7 @@ public class CoreDataHelper{
         Calendar calendarEnd = getCalendar();
         calendarEnd.add(Calendar.MINUTE, convertHourToMinute(endTime) + ist);
         Calendar calendarNextEnd = getCalendar();
+        Calendar calendarNextToNextEnd = getCalendar();
 
 
         calendarNextEnd.add(Calendar.MINUTE, convertHourToMinute(nextEndTime) + ist);
@@ -412,6 +413,7 @@ public class CoreDataHelper{
             calendarNextEnd.add(Calendar.MINUTE, convertHourToMinute(nextEndTime) + ist);
             currCal = calendarEnd;
             nextCal = calendarNextEnd;
+
 
 
         } else if (currVal < val) {
@@ -457,6 +459,13 @@ public class CoreDataHelper{
         obj.currValEndTime = currCal;
         obj.le_nextValEndTime = nextCal;
         obj.currValStartTime = calendarStart;
+
+        if(nextToNextEndTime>0) {
+            calendarNextToNextEnd = getCalendar();
+            calendarNextToNextEnd.add(Calendar.MINUTE, convertHourToMinute(nextToNextEndTime) + ist);
+
+            obj.nextToNextValEndTime = calendarNextToNextEnd;
+        }
 
 
         return obj;

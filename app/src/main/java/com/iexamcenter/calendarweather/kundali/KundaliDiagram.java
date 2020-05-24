@@ -28,13 +28,16 @@ public class KundaliDiagram extends View {
     String[] house = new String[]{"10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "12", "11"};
     Resources res;
     float rad3, rad2, rad1, rad11;
-    HashMap<Integer, KundaliDiagramFrag.houseinfo> houseinfo;
+    HashMap<Integer, houseinfo> houseinfo;
     String nakshetraTithi, le_lagna;
     Context context;
     int textSizelagna,textSize, offset,mType;
     String le_planet_mangal,le_planet_shukra,le_planet_budha,le_planet_chandra,le_planet_surya,le_planet_gura,le_planet_sani;
-
-    public KundaliDiagram(Context context, int width, int height, HashMap<Integer, KundaliDiagramFrag.houseinfo> houseinfo, String nakshetraTithi, String[] zodiac) {
+    public static class houseinfo {
+        public int houseno, rashi;
+        public String planetList,planetIndexList;
+    }
+    public KundaliDiagram(Context context, int width, int height, HashMap<Integer, houseinfo> houseinfo, String nakshetraTithi, String[] zodiac) {
         super(context);
         res = context.getResources();
         mType = CalendarWeatherApp.isPanchangEng ? 1 : 0;
@@ -256,7 +259,7 @@ public class KundaliDiagram extends View {
 
             }
             canvas.drawTextOnPath(hno, circle, (float) (dist - bw), offset, tPaint);
-            KundaliDiagramFrag.houseinfo obj = houseinfo.get((Integer.parseInt(strArr[i]) - 1));
+           houseinfo obj = houseinfo.get((Integer.parseInt(strArr[i]) - 1));
             String planetVals = obj.planetList;
             String[] arrStr = planetVals.split(",");
             for (int k = 0; k < arrStr.length; k++) {

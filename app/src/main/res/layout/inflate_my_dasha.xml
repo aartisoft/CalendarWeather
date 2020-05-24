@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/janmaDashaCntr1"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/dashaName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Maha\nDasha"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/dashaPlanet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Antar\nDasha" />
+
+    <TextView
+        android:id="@+id/dashaStart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8"
+        android:gravity="center"
+        android:text="Pratyantar\nDasha" />
+
+    <TextView
+        android:id="@+id/dashaEnd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8"
+        android:gravity="center"
+        android:text="Shookshma\nDasha" />
+
+</LinearLayout>

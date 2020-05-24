@@ -72,7 +72,7 @@ public class KundaliDiagramFrag extends Fragment {
     String le_ghara;
     ArrayList<Integer> rashiInHouse;
     String lagnaLngNow, lagnaLngAtSunrise;
-    ArrayList<houseinfo> houseinfos;
+    ArrayList<KundaliDiagram.houseinfo> houseinfos;
     LinearLayout diagramCntr;
     int solarDay, lunarDay, paksha, weekDay, solarMonth, lunarMonth, tithiKundali, nakshetraKundali, jogaKundali, karanaKundali, moonSignKundali, sunSignKundali;
     int[] houseOwnerPlanet = new int[]{4, 3, 2, 1, 0, 2, 3, 4, 5, 6, 6, 5};
@@ -82,7 +82,7 @@ public class KundaliDiagramFrag extends Fragment {
     String le_lagna, le_mangala_dosha, le_tithi, le_nakshetra, le_joga, le_karana, le_lunar_rashi, le_solar_rasi;
     boolean isMangalaDosha = false;
     String latitude, longitude;
-    HashMap<Integer, KundaliDiagramFrag.houseinfo> houseinfosMap;
+    HashMap<Integer, KundaliDiagram.houseinfo> houseinfosMap;
     Calendar selCalPrevday;
     boolean considerPrevday = false;
     String nakshetraTithi;
@@ -411,11 +411,6 @@ public class KundaliDiagramFrag extends Fragment {
                 ArrayList<Helper.lagna> lagnaListAtSunrise = Helper.getInstance().getLagna(sunRiseVal, sunDegAtSunrise, lat);
 
 
-// 11X30+17+31'16"
-//testing start
-
-                Log.e("Lagna", sunDegAtSunrise + ":::::LagnaASC:sunRiseVal:::::" + sunDegAtSunrise + "::A:" + A + "B" + B + "=" + ayamansa + "::" + selYear + "-" + selMonth + "-" + selDate);
-                //testing end
 
                 Log.e("latitude1", ":latitude1:X:" + lagnaListAtSunrise.size());
                 CoreDataHelper.Panchanga tithi = myCoreData.getTithi();
@@ -548,6 +543,7 @@ public class KundaliDiagramFrag extends Fragment {
                 Log.e("Lagna", ":LagnaASC:6:" + totalDeg);
 
                 lagnaLngNow = getLatLng(totalDeg)[0];
+
                 Log.e("Lagna", lagnarashi + ":LagnaASC:X:" + totalDeg + "::" + lagnaLngNow);
                 rashiInHouse = new ArrayList<>();
                 int houseRashi = lagnarashi;
@@ -578,7 +574,7 @@ public class KundaliDiagramFrag extends Fragment {
 
 
                 for (int house = 0; house < 12; house++) {
-                    houseinfo obj = new houseinfo();
+                    KundaliDiagram.houseinfo obj = new KundaliDiagram.houseinfo();
                     obj.houseno = house;
                     obj.rashi = rashiInHouse.get(house);
                     String planetStr = "";
@@ -685,12 +681,12 @@ public class KundaliDiagramFrag extends Fragment {
         }
 
     }
-
+/*
     public static class houseinfo {
         public int houseno, rashi;
         public String planetList;
     }
-
+*/
     public String[] getLatLng(double deg) {
         String[] strArr;
         // deg=Math.abs(deg);

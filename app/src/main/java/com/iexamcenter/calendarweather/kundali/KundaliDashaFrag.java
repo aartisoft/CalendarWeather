@@ -97,50 +97,12 @@ public class KundaliDashaFrag extends Fragment {
             longitude = mPref.getLongitude();
             diagramCntr = rootView.findViewById(R.id.diagramCntr);
 
-          /*  l_tithi_fullarr = mContext.getResources().getStringArray(R.array.l_arr_tithi);
-            l_nakshatra_arr = mContext.getResources().getStringArray(R.array.l_arr_nakshatra);
-            l_karana_fullarr = mContext.getResources().getStringArray(R.array.l_arr_karana);
-            l_joga_arr = mContext.getResources().getStringArray(R.array.l_arr_joga);
-            l_month_arr = mContext.getResources().getStringArray(R.array.l_arr_month);
-            l_bara_arr = mContext.getResources().getStringArray(R.array.l_arr_bara);
-            l_paksha_arr = mContext.getResources().getStringArray(R.array.l_arr_paksha);
-            l_masa_arr = mContext.getResources().getStringArray(R.array.l_arr_masa);
-
-            lpaksha = mContext.getResources().getString(R.string.l_paksha);
-            lshakaddha = mContext.getResources().getString(R.string.l_shakaddha);
-            lsala = mContext.getResources().getString(R.string.l_sal);
-            lritu = mContext.getResources().getString(R.string.l_ritu);
-            dina = mContext.getResources().getString(R.string.l_dina);
-
-            samvat = mContext.getResources().getString(R.string.l_samvat);
-            tithiTitle = mContext.getResources().getString(R.string.l_tithi);
-            nakshetraTitle = mContext.getResources().getString(R.string.l_nakshetra);
-            jogaTitle = mContext.getResources().getString(R.string.l_joga);
-            karanaTitle = mContext.getResources().getString(R.string.l_karana);
-            moonSignTitle = mContext.getResources().getString(R.string.l_lunar_rashi);
-            sunSignTitle = mContext.getResources().getString(R.string.l_solar_rasi);
-
-
-            lagna_title = mContext.getResources().getString(R.string.l_lagna);
-            yes_noTitle = mContext.getResources().getStringArray(R.array.l_arr_ausp_work_yes_no);
-            mangala_doshaTitle = mContext.getResources().getString(R.string.l_mangala_dosha);
-
-           */
 
             txt1 = rootView.findViewById(R.id.txt1);
 
             pkey_ghara = mContext.getResources().getString(R.string.l_ghara);
             dashaList = new ArrayList<>();
             dashaRView = rootView.findViewById(R.id.dashaList);
-           /* dashaList = new ArrayList<>();
-            RecyclerView dashaRView = rootView.findViewById(R.id.dashaList);
-
-            dashaListAdapter = new DashaListAdapter(mContext, dashaList, lplanetList);
-
-            LinearLayoutManager llm = new LinearLayoutManager(mContext);
-            dashaRView.setLayoutManager(llm);
-            dashaRView.setHasFixedSize(false);
-            dashaRView.setAdapter(dashaListAdapter);*/
 
 
             Calendar cal = Calendar.getInstance();

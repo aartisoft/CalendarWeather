@@ -14,40 +14,54 @@
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:padding="10dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/lbl_date"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_outline_calendar"
-            android:gravity="start|center_vertical"
 
             android:layout_gravity="center_vertical"
-            android:text="Set Your Event Date:"
+
+            android:gravity="end|center_vertical"
+            android:text="Date Of Event : "
 
             android:textColor="@color/colorPrimary"
             android:textSize="14sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DATE"
-            android:gravity="start|center_vertical"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:drawableEnd="@drawable/ic_outline_calendar"
+            android:gravity="start|center_vertical"
+            android:text="DATE"
             android:textColor="@color/colorPrimary"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
+    <TextView
+
+        android:id="@+id/placeDateHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Tap [Date Of Event] to change Event Date"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/dateCntr" />
     <LinearLayout
         android:id="@+id/noDateTimeCntr"
         android:layout_width="match_parent"
@@ -56,13 +70,13 @@
         android:orientation="vertical"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateCntr">
+        app:layout_constraintTop_toBottomOf="@+id/placeDateHelp">
 
         <CheckBox
             android:id="@+id/noDateTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Check here, If you don't know annivesary date."
+            android:text="Check here, If you don't know event date."
             android:textColor="@color/colorPrimary" />
 
         <LinearLayout

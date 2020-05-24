@@ -60,7 +60,7 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public static final String ARG_POSITION = "POSITION";
     int bYear, bMonth, bDate;//, bHour, bMin;
     int noDobMonthIndex, noDobRashiIndex, noDobNakshetraIndex, noDobEngMonthIndex, noDobTithiIndex;
-    int PAGE_TYPE;
+   // int PAGE_TYPE;
     LinearLayout nodobcntr;
     RadioGroup calType;
     CheckBox nodob;
@@ -110,11 +110,9 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
     public final String DATE_FORMAT_2 = "hh:mm a z";
     DialogFragment appLangDialog;
 
-    public static OtherAnniversaryFrag newInstance(int type) {
+    public static OtherAnniversaryFrag newInstance() {
         OtherAnniversaryFrag myFragment = new OtherAnniversaryFrag();
-        Bundle args = new Bundle();
-        args.putInt("PAGE_TYPE", type);
-        myFragment.setArguments(args);
+
         return myFragment;
     }
 
@@ -675,7 +673,7 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
                     String txt2Str = "Annual Event Date : " + formatted + "\n" + headerStr;
                     txt.setGravity(Gravity.CENTER);
                     txt1.setGravity(Gravity.CENTER);
-                    DeathAnniversaryFrag.DataCls obj= new DeathAnniversaryFrag.DataCls();
+                    DataCls obj= new DataCls();
                     obj.cal=calculatedBirthCal;
                     obj.desc= txt1Str+"\n\n"+txt2Str;
                     obj.title="Event Reminder for "+formatted;
@@ -734,10 +732,8 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
         View rootView = inflater.inflate(R.layout.fragment_tool_anniversary_day, null);
         setRetainInstance(true);
         setHasOptionsMenu(true);
-        PAGE_TYPE = getArguments().getInt("PAGE_TYPE", 0);
+      //  PAGE_TYPE = getArguments().getInt("PAGE_TYPE", 0);
 
-        switch (PAGE_TYPE) {
-            case 6:
                 calcType = 1;
                 anniName = "Event";
                 anniType = 3;
@@ -748,10 +744,7 @@ public class OtherAnniversaryFrag extends Fragment implements LocationDialog.Loc
                 nodobTxt = "Check here, If you don't know date";
                 spinner1Prompt = "LUNAR MONTH";
                 spinner2Prompt = "NAKSHETRA-RASHI";
-               // lbl_date_txt = "DATE";
-                break;
 
-        }
         titleval = mContext.getSupportActionBar().getTitle().toString();
         subTitleVal = mContext.getSupportActionBar().getSubtitle().toString();
 

@@ -1,4 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+   <string name="l_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
+   <string name="e_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
+    <string name="l_pitru_dosha">Pitru Dosha</string>
+    <string name="e_pitru_dosha">Pitru Dosha</string>
+    <string name="l_yoga_header">%1$s Auspicious Days</string>
+    <string name="e_yoga_header">%1$s Auspicious Days</string>
+
+    <string name="l_kala_sarpa_dosha">Kala Sarpa Yoga</string>
+    <string name="e_kala_sarpa_dosha">Kala Sarpa Yoga</string>
+
+   <string name="l_nakshetra_pada">pada</string>
+    <string name="e_nakshetra_pada">pada</string>
     <string name="e_good">Good</string>
     <string name="e_bad">Bad - Puja needed</string>
     <string name="e_worst">Very Bad</string>
@@ -421,17 +433,17 @@
     <string name="e_bara">bara</string>
 
     <string-array name="l_arr_number">
-    <item>0</item>
-    <item>1</item>
-    <item>2</item>
-    <item>3</item>
-    <item>4</item>
-    <item>5</item>
-    <item>6</item>
-    <item>7</item>
-    <item>8</item>
-    <item>9</item>
-</string-array>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
     <string-array name="e_arr_number">
         <item>0</item>
         <item>1</item>
@@ -1543,8 +1555,8 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
     <string name="l_menu_feedback">Feedback</string>
     <string name="l_menu_privacy_policy">Privacy Policy</string>
 
-    <string-array name="l_arr_main_menu" tools:ignore="ExtraTranslation">
-        <item>1_0_Main</item>
+    <string-array name="l_arr_main_menu">
+        <item>1_0_Main Page</item>
         <item>1_1_Settings</item>
         <item>1_2_Calendar</item>
         <item>1_3_Festivals</item>
@@ -1553,32 +1565,45 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
         <item>1_6_Sun Moon</item>
         <item>1_7_Vedic Time</item>
         <item>1_8_Wall Calendar</item>
-        <item>2_0_Jyotish</item>
+        <item>2_0_Jyotish Page</item>
         <item>2_1_Janma Kundali</item>
         <item>2_2_Kundali Milana</item>
         <item>2_3_Planet</item>
-        <item>3_0_Quote</item>
-        <item>3_1_Category</item>
-        <item>3_2_National</item>
-        <item>3_3_International</item>
-        <item>4_0_Calendar Note</item>
-        <item>4_1_Vedic Birthday</item>
-        <item>4_2_Vedic Death day</item>
-        <item>4_3_Other Event day</item>
-        <item>5_0_More</item>
-        <item>5_1_Observance</item>
-        <item>5_2_Aradhana</item>
-        <item>5_3_On This Day</item>
-        <item>5_4_Media</item>
-        <item>6_0_extra</item>
-        <item>6_1_Remove Ads</item>
-        <item>6_2_Rate App</item>
-        <item>6_3_Share</item>
-        <item>6_4_Feedback</item>
-        <item>6_5_Privacy Policy</item>
+        <item>3_0_Premium Page</item>
+        <item>3_1_Vedic Birthday</item>
+        <item>3_2_Shraddha</item>
+        <item>3_3_Annual Event</item>
+        <item>3_4_Birth Rashi</item>
+        <item>3_5_Birth Star</item>
+        <item>3_6_Birth Lagna</item>
+        <item>3_7_Mangala Dosha</item>
+        <item>3_8_Pitru Dosha</item>
+        <item>3_9_Kala Sarpa Dosha</item>
+        <item>3_10_Graha Dasha</item>
+        <item>3_11_Baby Name Initials</item>
+        <item>3_12_Age Calculator</item>
+        <item>3_13_Amrit Siddhi Yoga</item>
+        <item>3_14_Sarvartha Siddhi Yoga</item>
+        <item>3_15_Ravi Pushya Yoga</item>
+        <item>3_16_Guru Pushya Yoga</item>
+        <item>3_17_Dwipushkar Yoga</item>
+        <item>3_18_Tripushkar Yoga</item>
+        <item>3_19_Abhijit Nakshatra</item>
+        <item>4_0_More</item>
+        <item>4_1_Aradhana</item>
+        <item>4_2_Legend Says</item>
+        <item>4_3_Media</item>
+        <item>4_4_On This Day</item>
+        <item>4_5_Observance</item>
+        <item>5_0_extra</item>
+        <item>5_1_Remove Ads</item>
+        <item>5_2_Rate App</item>
+        <item>5_3_Share</item>
+        <item>5_4_Feedback</item>
+        <item>5_5_Privacy Policy</item>
     </string-array>
-    <string-array name="e_arr_main_menu" tools:ignore="ExtraTranslation">
-        <item>1_0_Main</item>
+    <string-array name="e_arr_main_menu">
+        <item>1_0_Main Page</item>
         <item>1_1_Settings</item>
         <item>1_2_Calendar</item>
         <item>1_3_Festivals</item>
@@ -1587,29 +1612,194 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
         <item>1_6_Sun Moon</item>
         <item>1_7_Vedic Time</item>
         <item>1_8_Wall Calendar</item>
-        <item>2_0_Jyotish</item>
+        <item>2_0_Jyotish Page</item>
         <item>2_1_Janma Kundali</item>
         <item>2_2_Kundali Milana</item>
         <item>2_3_Planet</item>
-        <item>3_0_Quote</item>
-        <item>3_1_Category</item>
-        <item>3_2_National</item>
-        <item>3_3_International</item>
-        <item>4_0_Calendar Note</item>
-        <item>4_1_Vedic Birthday</item>
-        <item>4_2_Vedic Death day</item>
-        <item>4_3_Other Event day</item>
-        <item>5_0_More</item>
-        <item>5_1_Observance</item>
-        <item>5_2_Aradhana</item>
-        <item>5_3_On This Day</item>
-        <item>5_4_Media</item>
-        <item>6_0_extra</item>
-        <item>6_1_Remove Ads</item>
-        <item>6_2_Rate App</item>
-        <item>6_3_Share</item>
-        <item>6_4_Feedback</item>
-        <item>6_5_Privacy Policy</item>
+        <item>3_0_Premium Page</item>
+        <item>3_1_Vedic Birthday</item>
+        <item>3_2_Shraddha</item>
+        <item>3_3_Annual Event</item>
+        <item>3_4_Birth Rashi</item>
+        <item>3_5_Birth Star</item>
+        <item>3_6_Birth Lagna</item>
+        <item>3_7_Mangala Dosha</item>
+        <item>3_8_Pitru Dosha</item>
+        <item>3_9_Kala Sarpa Dosha</item>
+        <item>3_10_Graha Dasha</item>
+        <item>3_11_Baby Name Initials</item>
+        <item>3_12_Age Calculator</item>
+        <item>3_13_Amrit Siddhi Yoga</item>
+        <item>3_14_Sarvartha Siddhi Yoga</item>
+        <item>3_15_Ravi Pushya Yoga</item>
+        <item>3_16_Guru Pushya Yoga</item>
+        <item>3_17_Dwipushkar Yoga</item>
+        <item>3_18_Tripushkar Yoga</item>
+        <item>3_19_Abhijit Nakshatra</item>
+        <item>4_0_More</item>
+        <item>4_1_Aradhana</item>
+        <item>4_2_Legend Says</item>
+        <item>4_3_Media</item>
+        <item>4_4_On This Day</item>
+        <item>4_5_Observance</item>
+        <item>5_0_extra</item>
+        <item>5_1_Remove Ads</item>
+        <item>5_2_Rate App</item>
+        <item>5_3_Share</item>
+        <item>5_4_Feedback</item>
+        <item>5_5_Privacy Policy</item>
+    </string-array>
+
+    <string-array name="l_name_initials" tools:ignore="ExtraTranslation">
+        <item>1-Chu-Che-Cho-Laa</item>
+        <item>2-Lee-Loo-Le-Lo</item>
+        <item>3-A-Ee-U-E</item>
+        <item>4-O-Vaa-Vee-Vu</item>
+        <item>5-Ve-Vo-Kaa-Kee</item>
+        <item>6-Ku-Gha-Ing-Chha</item>
+        <item>7-Ke-Ko-Haa-Hee</item>
+        <item>8-Hu-He-Ho-Daa</item>
+        <item>9-Dee-Doo-De-Do</item>
+        <item>10-Maa-Mee-Moo-Me</item>
+        <item>11-Mo-Taa-Tee-Too</item>
+        <item>12-Te-To-Paa-Pee</item>
+        <item>13-Poo-Sha-Na-Tha</item>
+        <item>14-Pe-Po-Raa-Ree</item>
+        <item>15-Roo-Re-Ro-Taa</item>
+        <item>16-Tee-Too-Te-To</item>
+        <item>17-Naa-Nee-Noo-Ne</item>
+        <item>18-No-Yaa-Yee-Yoo</item>
+        <item>19-Ye-Yo-Bhaa-Bhee</item>
+        <item>20-Bhoo-Dhaa-Phaa-Dha</item>
+        <item>21-Bhe-Bho-Jaa-Jee</item>
+        <item>22-Khee-Khoo-Khe-Kho</item>
+        <item>23-Gaa-Gee-Gu-Ge</item>
+        <item>24-Go-Saa-See-Soo</item>
+        <item>25-Se-So-Daa-Dee</item>
+        <item>26-Doo-Tha-Jha-Yna</item>
+        <item>27-De-Do-Cha-Chee</item>
+
+    </string-array>
+    <string-array name="e_name_initials" tools:ignore="ExtraTranslation">
+        <item>1-Chu-Che-Cho-Laa</item>
+        <item>2-Lee-Loo-Le-Lo</item>
+        <item>3-A-Ee-U-E</item>
+        <item>4-O-Vaa-Vee-Vu</item>
+        <item>5-Ve-Vo-Kaa-Kee</item>
+        <item>6-Ku-Gha-Ing-Chha</item>
+        <item>7-Ke-Ko-Haa-Hee</item>
+        <item>8-Hu-He-Ho-Daa</item>
+        <item>9-Dee-Doo-De-Do</item>
+        <item>10-Maa-Mee-Moo-Me</item>
+        <item>11-Mo-Taa-Tee-Too</item>
+        <item>12-Te-To-Paa-Pee</item>
+        <item>13-Poo-Sha-Na-Tha</item>
+        <item>14-Pe-Po-Raa-Ree</item>
+        <item>15-Roo-Re-Ro-Taa</item>
+        <item>16-Tee-Too-Te-To</item>
+        <item>17-Naa-Nee-Noo-Ne</item>
+        <item>18-No-Yaa-Yee-Yoo</item>
+        <item>19-Ye-Yo-Bhaa-Bhee</item>
+        <item>20-Bhoo-Dhaa-Phaa-Dha</item>
+        <item>21-Bhe-Bho-Jaa-Jee</item>
+        <item>22-Khee-Khoo-Khe-Kho</item>
+        <item>23-Gaa-Gee-Gu-Ge</item>
+        <item>24-Go-Saa-See-Soo</item>
+        <item>25-Se-So-Daa-Dee</item>
+        <item>26-Doo-Tha-Jha-Yna</item>
+        <item>27-De-Do-Cha-Chee</item>
+
+    </string-array>
+    <string-array name="l_arr_dasha_name" translatable="false">
+        <item>Maha\nDasha</item>
+        <item>Antar\nDasha</item>
+        <item>Pratyantar\nDasha</item>
+        <item>Shookshma\nDasha</item>
+        <item>Pran\nDasha</item>
+    </string-array>
+    <string-array name="e_arr_dasha_name" translatable="false">
+        <item>Maha\nDasha</item>
+        <item>Antar\nDasha</item>
+        <item>Pratyantar\nDasha</item>
+        <item>Shookshma\nDasha</item>
+        <item>Pran\nDasha</item>
+    </string-array>
+    <string-array name="l_arr_sarpa_yoga" translatable="false">
+        <item>Anant Kala Sarpa Yoga</item>
+        <item>Kulik Kala Sarpa Yoga</item>
+        <item>Vasuki Kala Sarpa Yoga</item>
+        <item>Shankhapal Kala Sarpa Yoga</item>
+        <item>Padma Kala Sarpa Yoga</item>
+        <item>Maha Padma Kala Sarpa Yoga</item>
+        <item>Takshak Kala Sarpa Yoga</item>
+        <item>Karkotak Kala Sarpa Yoga</item>
+        <item>Shankhachoodh Kala Sarpa Yoga</item>
+        <item>Ghatak Kala Sarpa Yoga</item>
+        <item>Vishakt Kala Sarpa Yoga</item>
+        <item>Shesh Nag Kala Sarpa Yoga</item>
+    </string-array>
+
+    <string-array name="e_arr_sarpa_yoga" translatable="false">
+        <item>Anant Kala Sarpa Yoga</item>
+        <item>Kulik Kala Sarpa Yoga</item>
+        <item>Vasuki Kala Sarpa Yoga</item>
+        <item>Shankhapal Kala Sarpa Yoga</item>
+        <item>Padma Kala Sarpa Yoga</item>
+        <item>Maha Padma Kala Sarpa Yoga</item>
+        <item>Takshak Kala Sarpa Yoga</item>
+        <item>Karkotak Kala Sarpa Yoga</item>
+        <item>Shankhachoodh Kala Sarpa Yoga</item>
+        <item>Ghatak Kala Sarpa Yoga</item>
+        <item>Vishakt Kala Sarpa Yoga</item>
+        <item>Shesh Nag Kala Sarpa Yoga</item>
+    </string-array>
+    <string-array name="l_arr_special_calculator" translatable="false">
+        <item>Vedic Birthday</item>
+        <item>Shraddha</item>
+        <item>Annual Event</item>
+        <item>Janma Rashi</item>
+        <item>Janma Nakshetra</item>
+        <item>Janma Lagna</item>
+        <item>Mangala Dosha</item>
+        <item>Pitru Dosha</item>
+
+        <item>Kala Sarpa Dosha</item>
+        <item>Graha Dasha</item>
+        <item>Baby Name Initials</item>
+        <item>Age Calculator</item>
+    </string-array>
+    <string-array name="e_arr_special_calculator" translatable="false">
+        <item>Vedic Birthday</item>
+        <item>Annual Shraddha Day</item>
+        <item>Annual Event Day</item>
+        <item>Birth Rashi</item>
+        <item>Birth Star</item>
+        <item>Birth Lagna</item>
+        <item>Mangala Dosha</item>
+        <item>Pitru Dosha</item>
+
+        <item>Kala Sarpa Dosha</item>
+        <item>Graha Dasha</item>
+        <item>Baby Name Initials</item>
+        <item>Age Calculator</item>
+    </string-array>
+    <string-array name="l_arr_special_ausp_day" translatable="false">
+        <item>Amrit Siddhi Yoga</item>
+        <item>Sarvartha Siddhi Yoga</item>
+        <item>Ravi Pushya Yoga</item>
+        <item>Guru Pushya Yoga</item>
+        <item>Dwipushkar Yoga</item>
+        <item>Tripushkar Yoga</item>
+        <item>Abhijit Nakshatra</item>
+    </string-array>
+    <string-array name="e_arr_special_ausp_day" translatable="false">
+        <item>Amrit Siddhi Yoga</item>
+        <item>Sarvartha Siddhi Yoga</item>
+        <item>Ravi Pushya Yoga</item>
+        <item>Guru Pushya Yoga</item>
+        <item>Dwipushkar Yoga</item>
+        <item>Tripushkar Yoga</item>
+        <item>Abhijit Nakshatra</item>
     </string-array>
 </resources>
 

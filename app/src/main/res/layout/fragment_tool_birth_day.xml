@@ -99,14 +99,26 @@
 
         </LinearLayout>
     </LinearLayout>
+    <TextView
 
+        android:id="@+id/placeDateHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Tap PLACE &amp; DATE to change Birth Details "
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/birthdetails" />
     <LinearLayout
         android:id="@+id/noDateTimeCntr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthdetails"
+        app:layout_constraintTop_toBottomOf="@+id/placeDateHelp"
         android:padding="5dp"
         android:background="@color/grey_day"
         >

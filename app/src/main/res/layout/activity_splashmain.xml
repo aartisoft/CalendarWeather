@@ -36,7 +36,7 @@
                     android:layout_gravity="center"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitXY"
-                    android:src="@drawable/logo_text"
+                    android:src="@drawable/ic_launcher"
 
 
                     />

@@ -1,4 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="l_name_initials_str"><![CDATA[ଜନ୍ମ ନକ୍ଷତ୍ର ପାଦ <span style=\"color:#FF8C00;\"><strong>( %1$s )</strong></span> ରୁ ନାମର ପ୍ରଥମ ଅକ୍ଷର :  <span style=\"color:#FF8C00;\"><strong> %2$s </strong></span>]]></string>
+    <string name="e_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
+    <string name="l_pitru_dosha">ପିତୃ ଦୋଷ</string>
+    <string name="e_pitru_dosha">Pitru Dosha</string>
+
+    <string name="l_yoga_header">%1$s Auspicious Days</string>
+    <string name="e_yoga_header">%1$s Auspicious Days</string>
+
+    <string name="l_kala_sarpa_dosha">କାଳ ସର୍ପ ଯୋଗ</string>
+    <string name="e_kala_sarpa_dosha">Kala Sarpa Yoga</string>
+
+    <string name="l_nakshetra_pada">ପାଦ</string>
+    <string name="e_nakshetra_pada">pada</string>
 
     <string name="l_sankranti">ସଙ୍କ୍ରାନ୍ତି</string>
     <string name="e_sankranti">Sankranti</string>
@@ -50,7 +63,6 @@
 
     <string name="l_shakaddha">ଶକାବ୍ଦ</string>
     <string name="e_shakaddha">Sakabda</string>
-
 
 
     <string name="l_noon">ଦିନାର୍ଦ୍ଧ</string>
@@ -523,7 +535,7 @@
     <string name="l_menu_privacy_policy">ପ୍ରସ୍ତୁତକାରୀଙ୍କ ବ୍ୟକ୍ତିଗତ ସର୍ତ୍ତାବଳୀ</string>
 
 
-    <string-array name="l_arr_kundali_yoni" translatable="false">
+    <string-array name="l_arr_kundali_yoni">
         <item>ଅଶ୍ଵ</item>
         <item>ଗଜ</item>
         <item>ମେଷ</item>
@@ -1121,33 +1133,33 @@
     </string-array>
 
     <string-array name="l_arr_nakshatra">
-        <item>ଅଶ୍ଵିନୀ</item>
-        <item>ଦ୍ଵିଜା</item>
-        <item>କୃତ୍ତିକା</item>
-        <item>ରୋହିଣୀ</item>
-        <item>ମୃଗଶୀରା</item>
-        <item>ଆର୍ଦ୍ରା</item>
-        <item>ପୁନର୍ବସୁ</item>
-        <item>ପୁଷ୍ୟା</item>
-        <item>ଅଶ୍ଳେଷା</item>
-        <item>ମଘା</item>
-        <item>ପୂର୍ବାଫାଲ୍ଗୁନି</item>
-        <item>ଉତ୍ତରାଫାଲ୍ଗୁନି</item>
-        <item>ହସ୍ତା</item>
-        <item>ଚିତ୍ରା</item>
-        <item>ସ୍ୱାତୀ</item>
-        <item>ବିଶାଖା</item>
-        <item>ଅନୁରାଧା</item>
-        <item>ଜ୍ୟେଷ୍ଠା</item>
-        <item>ମୂଳା</item>
-        <item>ପୂର୍ବାଷାଢ଼ା</item>
-        <item>ଉତ୍ତରାଷାଢ଼ା</item>
-        <item>ଶ୍ରବଣା</item>
-        <item>ଧନିଷ୍ଠା</item>
-        <item>ଶତଭିଷା</item>
-        <item>ପୂର୍ବଭାଦ୍ରପଦ</item>
-        <item>ଉତ୍ତରାଭାଦ୍ରପଦ</item>
-        <item>ରେବତୀ</item>
+        1<item>ଅଶ୍ଵିନୀ</item>
+        2<item>ଦ୍ଵିଜା</item>
+        3<item>କୃତ୍ତିକା</item>
+        4<item>ରୋହିଣୀ</item>
+        5<item>ମୃଗଶୀରା</item>
+        6<item>ଆର୍ଦ୍ରା</item>
+        7<item>ପୁନର୍ବସୁ</item>
+        8<item>ପୁଷ୍ୟା</item>
+        9<item>ଅଶ୍ଳେଷା</item>
+        10<item>ମଘା</item>
+        11<item>ପୂର୍ବାଫାଲ୍ଗୁନି</item>
+        12<item>ଉତ୍ତରାଫାଲ୍ଗୁନି</item>
+        13<item>ହସ୍ତା</item>
+        14<item>ଚିତ୍ରା</item>
+        15<item>ସ୍ୱାତୀ</item>
+        16<item>ବିଶାଖା</item>
+        17<item>ଅନୁରାଧା</item>
+        18<item>ଜ୍ୟେଷ୍ଠା</item>
+        19<item>ମୂଳା</item>
+        20<item>ପୂର୍ବାଷାଢ଼ା</item>
+        21<item>ଉତ୍ତରାଷାଢ଼ା</item>
+        22<item>ଶ୍ରବଣା</item>
+        23<item>ଧନିଷ୍ଠା</item>
+        24<item>ଶତଭିଷା</item>
+        25<item>ପୂର୍ବଭାଦ୍ରପଦ</item>
+        26<item>ଉତ୍ତରାଭାଦ୍ରପଦ</item>
+        27<item>ରେବତୀ</item>
         <item>ଅଭିଜିତ</item>
     </string-array>
     <string-array name="e_arr_nakshatra">
@@ -1730,25 +1742,38 @@
         <item>2_1_ଜନ୍ମ ଜାତକ</item>
         <item>2_2_ଜାତକ ମିଳନ</item>
         <item>2_3_ଗ୍ରହାବସ୍ଥିତି ଓ ଚଳନ</item>
-        <item>3_0_ମହତ୍ ବାଣୀ ପୃଷ୍ଠା</item>
-        <item>3_1_ମହତ୍ ବାଣୀ</item>
-        <item>3_2_ଜାତୀୟ</item>
-        <item>3_3_ଆନ୍ତର୍ଜାତୀୟ</item>
-        <item>4_0_ପଞ୍ଜିକା ଟିପ୍ପଣୀ</item>
-        <item>4_1_ଜନ୍ମ ବାର୍ଷିକୀ</item>
-        <item>4_2_ମୃତ୍ୟୁ ବାର୍ଷିକୀ</item>
-        <item>4_3_ଅନ୍ୟାନ୍ୟ ବାର୍ଷିକୀ</item>
-        <item>5_0_ଅନ୍ୟାନ୍ୟ</item>
-        <item>5_1_ପାଳନୀୟ ଦିବସ</item>
-        <item>5_2_ଆରାଧନା</item>
-        <item>5_3_ଆଜି ତାରିଖର ମହତ୍ତ୍ବ</item>
-        <item>5_4_ଗଣମାଧ୍ୟମ</item>
-        <item>6_0_ପ୍ରଯୁକ୍ତି ସୂଚନା</item>
-        <item>6_1_ବିଜ୍ଞାପନ ଦୂରିକରଣ</item>
-        <item>6_2_ଆପ୍ ର ମୂଲ୍ୟାଙ୍କନ</item>
-        <item>6_3_ଆପ୍ ର ପ୍ରଚାରିକରଣ</item>
-        <item>6_4_ପରାମର୍ଶ ପ୍ରଦାନିକରଣ</item>
-        <item>6_5_ପ୍ରସ୍ତୁତକାରୀଙ୍କ ବ୍ୟକ୍ତିଗତ ସର୍ତ୍ତାବଳୀ</item>
+        <item>3_0_ସ୍ବତନ୍ତ୍ର ଜ୍ୟୋତିଷ ପୃଷ୍ଠା</item>
+        <item>3_1_ଜନ୍ମ  ବାର୍ଷିକୀ</item>
+        <item>3_2_ଶ୍ରାଦ୍ଧ ବାର୍ଷିକୀ</item>
+        <item>3_3_ସ୍ମୃତି ବାର୍ଷିକୀ</item>
+        <item>3_4_ଜନ୍ମ ରାଶି</item>
+        <item>3_5_ଜନ୍ମ ନକ୍ଷତ୍ର</item>
+        <item>3_6_ଜନ୍ମ ଲଗ୍ନ</item>
+        <item>3_7_ମଙ୍ଗଳ ଦୋଷ</item>
+        <item>3_8_ପିତୃ ଦୋଷ</item>
+        <item>3_9_କାଳସର୍ପ ଦୋଷ</item>
+        <item>3_10_ଗ୍ରହ ଦଶା</item>
+        <item>3_11_ନକ୍ଷତ୍ରରୁ ନାମ</item>
+        <item>3_12_ବୟସ</item>
+        <item>3_13_ଅମୃତ ସିଦ୍ଧି ଯୋଗ</item>
+        <item>3_14_ସର୍ବାର୍ଥ ସିଦ୍ଧି ଯୋଗ</item>
+        <item>3_15_ରବି ପୁଷ୍ୟା ଯୋଗ</item>
+        <item>3_16_ଗୁରୁ ପୁଷ୍ୟା ଯୋଗ</item>
+        <item>3_17_ଦ୍ବିପୁଷ୍କର ଯୋଗ</item>
+        <item>3_18_ତ୍ରିପୁଷ୍କର ଯୋଗ</item>
+        <item>3_19_ଅଭିଜିତ ନକ୍ଷତ୍ର</item>
+        <item>4_0_ଅନ୍ୟାନ୍ୟ</item>
+        <item>4_1_ଆରାଧନା</item>
+        <item>4_2_ମହତ୍ ବାଣୀ</item>
+        <item>4_3_ଗଣମାଧ୍ୟମ</item>
+        <item>4_4_ଆଜି ତାରିଖର ମହତ୍ତ୍ବ</item>
+        <item>4_5_ପାଳନୀୟ ଦିବସ</item>
+        <item>5_0_ପ୍ରଯୁକ୍ତି ସୂଚନା</item>
+        <item>5_1_ବିଜ୍ଞାପନ ଦୂରିକରଣ</item>
+        <item>5_2_ଆପ୍ ର ମୂଲ୍ୟାଙ୍କନ</item>
+        <item>5_3_ଆପ୍ ର ପ୍ରଚାରିକରଣ</item>
+        <item>5_4_ପରାମର୍ଶ ପ୍ରଦାନିକରଣ</item>
+        <item>5_5_ପ୍ରସ୍ତୁତକାରୀଙ୍କ ବ୍ୟକ୍ତିଗତ ସର୍ତ୍ତାବଳୀ</item>
     </string-array>
     <string-array name="e_arr_main_menu" tools:ignore="ExtraTranslation">
         <item>1_0_Main Page</item>
@@ -1764,25 +1789,192 @@
         <item>2_1_Janma Kundali</item>
         <item>2_2_Kundali Milana</item>
         <item>2_3_Planet</item>
-        <item>3_0_Quote Page</item>
-        <item>3_1_Category</item>
-        <item>3_2_National</item>
-        <item>3_3_International</item>
-        <item>4_0_Calendar Note</item>
-        <item>4_1_Vedic Birthday</item>
-        <item>4_2_Vedic Death day</item>
-        <item>4_3_Other Event day</item>
-        <item>5_0_More</item>
-        <item>5_1_Observance</item>
-        <item>5_2_Aradhana</item>
-        <item>5_3_On This Day</item>
-        <item>5_4_Media</item>
-        <item>6_0_Technical Information</item>
-        <item>6_1_Remove Ads</item>
-        <item>6_2_Rate App</item>
-        <item>6_3_Share</item>
-        <item>6_4_Feedback</item>
-        <item>6_5_Privacy Policy</item>
+        <item>3_0_Premium Page</item>
+        <item>3_1_Vedic Birthday</item>
+        <item>3_2_Shraddha</item>
+        <item>3_3_Annual Event</item>
+        <item>3_4_Birth Rashi</item>
+        <item>3_5_Birth Star</item>
+        <item>3_6_Birth Lagna</item>
+        <item>3_7_Mangala Dosha</item>
+        <item>3_8_Pitru Dosha</item>
+        <item>3_9_Kala Sarpa Dosha</item>
+        <item>3_10_Graha Dasha</item>
+        <item>3_11_Baby Name Initials</item>
+        <item>3_12_Age Calculator</item>
+        <item>3_13_Amrit Siddhi Yoga</item>
+        <item>3_14_Sarvartha Siddhi Yoga</item>
+        <item>3_15_Ravi Pushya Yoga</item>
+        <item>3_16_Guru Pushya Yoga</item>
+        <item>3_17_Dwipushkar Yoga</item>
+        <item>3_18_Tripushkar Yoga</item>
+        <item>3_19_Abhijit Nakshatra</item>
+        <item>4_0_More</item>
+        <item>4_1_Aradhana</item>
+        <item>4_2_Legend Says</item>
+        <item>4_3_Media</item>
+        <item>4_4_On This Day</item>
+        <item>4_5_Observance</item>
+        <item>5_0_extra</item>
+        <item>5_1_Remove Ads</item>
+        <item>5_2_Rate App</item>
+        <item>5_3_Share</item>
+        <item>5_4_Feedback</item>
+        <item>5_5_Privacy Policy</item>
     </string-array>
+
+    <string-array name="l_name_initials" tools:ignore="ExtraTranslation">
+        <item>1-ଚୁ-ଚେ-ଚୋ-ଲ/ଲା</item>
+        <item>2-ଲି-ଲ/ଲା-ଲେ-ଲୋ</item>
+        <item>3-ଅ/ଆ-ଇ-ଉ-ଏ</item>
+        <item>4-ଓ-ବ/ବା-ବି-ବୁ</item>
+        <item>5-ବେ-ବୋ-କ/କା-କି</item>
+        <item>6-କୁ-ଘ/ଘା-ଙ-ଛ/ଛା</item>
+        <item>7-କେ-କୋ-ହ/ହା-ହି</item>
+        <item>8-ହୁ-ହେ-ହୋ-ଡ/ଡା</item>
+        <item>9-ଡି-ଡୁ-ଡେ-ଡୋ</item>
+        <item>10-ମ/ମା-ମି-ମୁ-ମେ</item>
+        <item>11-ମୋ-ଟ/ଟା-ଟି-ଟୁ</item>
+        <item>12-ଟେ-ଟୋ-ପ/ପା-ପି</item>
+        <item>13-ପୁ-ଶ/ଶା-ଣ/ଣା-ଠ/ଠା</item>
+        <item>14-ପେ-ପୋ-ର/ରା-ରି</item>
+        <item>15-ରୁ-ରେ-ରୋ-ତ/ତା</item>
+        <item>16-ତି-ତୁ-ତେ-ତୋ</item>
+        <item>17-ନ/ନା-ନି-ନୁ-ନେ</item>
+        <item>18-ନୋ-ଯ/ଯା-ଯି-ଯୁ</item>
+        <item>19-ଯେ-ଯୋ-ଭ/ଭା-ଭି</item>
+        <item>20-ଭୂ-ଧ/ଧା-ଫା-ଢ/ଢା</item>
+        <item>21-ଭେ-ଭୋ-ଜା-ଜି</item>
+        <item>22-ଖି-ଖୁ-ଖେ-ଖୋ</item>
+        <item>23-ଗ/ଗା-ଗି-ଗୁ-ଗେ</item>
+        <item>24-ଗୋ-ଶ/ଶା-ଶି-ଶୁ</item>
+        <item>25-ଶେ-ଶୋ-ଦ/ଦା-ଦି</item>
+        <item>26-ଦୁ-ଥ-ଝ/ଝା-ଞ</item>
+        <item>27-ଦେ-ଦୋ-ଚ/ଚା-ଚି</item>
+    </string-array>
+    <string-array name="e_name_initials" tools:ignore="ExtraTranslation">
+        <item>1-Chu-Che-Cho-Laa</item>
+        <item>2-Lee-Loo-Le-Lo</item>
+        <item>3-A-Ee-U-E</item>
+        <item>4-O-Vaa-Vee-Vu</item>
+        <item>5-Ve-Vo-Kaa-Kee</item>
+        <item>6-Ku-Gha-Ing-Chha</item>
+        <item>7-Ke-Ko-Haa-Hee</item>
+        <item>8-Hu-He-Ho-Daa</item>
+        <item>9-Dee-Doo-De-Do</item>
+        <item>10-Maa-Mee-Moo-Me</item>
+        <item>11-Mo-Taa-Tee-Too</item>
+        <item>12-Te-To-Paa-Pee</item>
+        <item>13-Poo-Sha-Na-Tha</item>
+        <item>14-Pe-Po-Raa-Ree</item>
+        <item>15-Roo-Re-Ro-Taa</item>
+        <item>16-Tee-Too-Te-To</item>
+        <item>17-Naa-Nee-Noo-Ne</item>
+        <item>18-No-Yaa-Yee-Yoo</item>
+        <item>19-Ye-Yo-Bhaa-Bhee</item>
+        <item>20-Bhoo-Dhaa-Phaa-Dha</item>
+        <item>21-Bhe-Bho-Jaa-Jee</item>
+        <item>22-Khee-Khoo-Khe-Kho</item>
+        <item>23-Gaa-Gee-Gu-Ge</item>
+        <item>24-Go-Saa-See-Soo</item>
+        <item>25-Se-So-Daa-Dee</item>
+        <item>26-Doo-Tha-Jha-Yna</item>
+        <item>27-De-Do-Cha-Chee</item>
+
+    </string-array>
+
+    <string-array name="l_arr_dasha_name" translatable="false">
+        <item>ମହାଦଶା</item>
+        <item>ଅନ୍ତର୍ଦଶା</item>
+        <item>ପ୍ରତ୍ୟନ୍ତର\nଦଶା</item>
+        <item>ସୂକ୍ଷ୍ମଦଶା</item>
+        <item>ପ୍ରାଣ ଦଶା</item>
+    </string-array>
+    <string-array name="e_arr_dasha_name" translatable="false">
+        <item>Maha\nDasha</item>
+        <item>Antar\nDasha</item>
+        <item>Pratyantar\nDasha</item>
+        <item>Shookshma\nDasha</item>
+        <item>Pran\nDasha</item>
+    </string-array>
+    <string-array name="l_arr_sarpa_yoga" translatable="false">
+        <item>ଅନନ୍ତ କାଳସର୍ପ ଯୋଗ</item>
+        <item>କୁଳିକ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ବାସୁକି କାଳସର୍ପ ଯୋଗ</item>
+        <item>ଶଙ୍ଖପାଳ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ପଦ୍ମ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ମହାପଦ୍ମ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ତକ୍ଷକ କାଳସର୍ପ ଯୋଗ</item>
+        <item>କର୍କଟକ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ଶଙ୍ଖଚୁଡ଼ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ଘଟକ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ବିକ୍ଷତ କାଳସର୍ପ ଯୋଗ</item>
+        <item>ଶେଷନାଗ କାଳସର୍ପ ଯୋଗ</item>
+    </string-array>
+
+    <string-array name="e_arr_sarpa_yoga" translatable="false">
+        <item>Anant Kala Sarpa Yoga</item>
+        <item>Kulik Kala Sarpa Yoga</item>
+        <item>Vasuki Kala Sarpa Yoga</item>
+        <item>Shankhapal Kala Sarpa Yoga</item>
+        <item>Padma Kala Sarpa Yoga</item>
+        <item>Maha Padma Kala Sarpa Yoga</item>
+        <item>Takshak Kala Sarpa Yoga</item>
+        <item>Karkotak Kala Sarpa Yoga</item>
+        <item>Shankhachoodh Kala Sarpa Yoga</item>
+        <item>Ghatak Kala Sarpa Yoga</item>
+        <item>Vishakt Kala Sarpa Yoga</item>
+        <item>Shesh Nag Kala Sarpa Yoga</item>
+    </string-array>
+    <string-array name="l_arr_special_calculator" translatable="false">
+        <item>ଜନ୍ମ  ବାର୍ଷିକୀ</item>
+        <item>ଶ୍ରାଦ୍ଧ ବାର୍ଷିକୀ</item>
+        <item>ସ୍ମୃତି ବାର୍ଷିକୀ</item>
+        <item>ଜନ୍ମ ରାଶି</item>
+        <item>ଜନ୍ମ ନକ୍ଷତ୍ର</item>
+        <item>ଜନ୍ମ ଲଗ୍ନ</item>
+        <item>ମଙ୍ଗଳ ଦୋଷ</item>
+        <item>ପିତୃ ଦୋଷ</item>
+        <item>କାଳସର୍ପ ଦୋଷ</item>
+        <item>ଗ୍ରହ ଦଶା</item>
+        <item>ନକ୍ଷତ୍ରରୁ ନାମ</item>
+        <item>ବୟସ</item>
+    </string-array>
+    <string-array name="e_arr_special_calculator" translatable="false">
+        <item>Vedic Birthday</item>
+        <item>Shraddha</item>
+        <item>Annual Event</item>
+        <item>Birth Rashi</item>
+        <item>Birth Star</item>
+        <item>Birth Lagna</item>
+        <item>Mangala Dosha</item>
+        <item>Pitru Dosha</item>
+        <item>Kala Sarpa Dosha</item>
+        <item>Graha Dasha</item>
+        <item>Baby Name Initials</item>
+        <item>Age Calculator</item>
+    </string-array>
+
+    <string-array name="l_arr_special_ausp_day" translatable="false">
+        <item>ଅମୃତ ସିଦ୍ଧି ଯୋଗ</item>
+        <item>ସର୍ବାର୍ଥ ସିଦ୍ଧି ଯୋଗ</item>
+        <item>ରବି ପୁଷ୍ୟା ଯୋଗ</item>
+        <item>ଗୁରୁ ପୁଷ୍ୟା ଯୋଗ</item>
+        <item>ଦ୍ବିପୁଷ୍କର ଯୋଗ</item>
+        <item>ତ୍ରିପୁଷ୍କର ଯୋଗ</item>
+        <item>ଅଭିଜିତ ନକ୍ଷତ୍ର</item>
+    </string-array>
+
+    <string-array name="e_arr_special_ausp_day" translatable="false">
+        <item>Amrit Siddhi Yoga</item>
+        <item>Sarvartha Siddhi Yoga</item>
+        <item>Ravi Pushya Yoga</item>
+        <item>Guru Pushya Yoga</item>
+        <item>Dwipushkar Yoga</item>
+        <item>Tripushkar Yoga</item>
+        <item>Abhijit Nakshatra</item>
+    </string-array>
+
+
 </resources>
 

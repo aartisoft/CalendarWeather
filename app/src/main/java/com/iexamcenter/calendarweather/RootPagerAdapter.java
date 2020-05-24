@@ -13,6 +13,8 @@ import com.iexamcenter.calendarweather.home.CalendarPagerHomeFragment;
 import com.iexamcenter.calendarweather.more.MoreMainFragment;
 import com.iexamcenter.calendarweather.omg.OmgMainFragment;
 import com.iexamcenter.calendarweather.quote.QuoteMainFragment;
+import com.iexamcenter.calendarweather.tools.CalculatorMainFragment;
+import com.iexamcenter.calendarweather.tools.PremiumMainFragment;
 
 import java.util.ArrayList;
 
@@ -51,13 +53,14 @@ public class RootPagerAdapter extends FragmentPagerAdapter {
                 fragment.setArguments(args);
                 return fragment;
 
-           // case 1:
-             //   return HomeMainFragment.newInstance(res.getStringArray(R.array.tab_home));
+          // case 1:
+           //   return HomeMainFragment.newInstance(res.getStringArray(R.array.tab_home));
+             case 2:
+                return PremiumMainFragment.newInstance(res.getStringArray(R.array.tab_omg));
             case 1:
                 return OmgMainFragment.newInstance(res.getStringArray(R.array.tab_omg));
-
-            case 2:
-                return QuoteMainFragment.newInstance();
+           // case 3:
+             //   return QuoteMainFragment.newInstance();
             default:
                 return MoreMainFragment.newInstance();
 
