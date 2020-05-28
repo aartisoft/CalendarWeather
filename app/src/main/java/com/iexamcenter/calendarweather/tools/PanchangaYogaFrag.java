@@ -34,7 +34,9 @@ import com.iexamcenter.calendarweather.R;
 import com.iexamcenter.calendarweather.festival.FestivalFragment;
 import com.iexamcenter.calendarweather.panchang.CoreDataHelper;
 import com.iexamcenter.calendarweather.panchang.PanchangTask;
+import com.iexamcenter.calendarweather.panchang.PanchangUtility;
 import com.iexamcenter.calendarweather.utility.PrefManager;
+import com.iexamcenter.calendarweather.utility.Utility;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -69,14 +71,14 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
     TextView header;
     ArrayList<YogaDateTiming> md;
     String[] le_arr_sarpa_yoga, le_arr_dasha_name, le_name_initials, le_arr_ausp_work_yes_no, le_arr_tithi, le_arr_nakshatra, le_arr_month, le_arr_bara, le_arr_paksha, le_arr_masa;
-    String le_yoga_header, le_kala_sarpa_dosha, le_pitru_dosha, le_name_initials_title, le_nakshetra_pada, le_mangala_dosha;
+    String   le_time_hour,le_time_min,le_combination,le_duration,le_yoga_header, le_kala_sarpa_dosha, le_pitru_dosha, le_name_initials_title, le_nakshetra_pada, le_mangala_dosha;
     String le_dina, le_paksha;
     String le_tithi, le_nakshetra, le_lunar_rashi;
     String latitude, longitude;
     String area;
     String PAGE_TITLE_ENG,PAGE_TITLE_LOCAL;
     Resources res;
-    int mType;
+    int mType,mCalType;
     int selDate, selMonth, selYear;
     TextView city, latLng;
     LinearLayout placeCntr;
@@ -104,6 +106,10 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
     public void getMyResource() {
         res = mContext.getResources();
         if (mType == 0) {
+            le_time_hour = mContext.getResources().getString(R.string.l_time_hour);
+            le_time_min = mContext.getResources().getString(R.string.l_time_min);
+            le_combination = res.getString(R.string.l_combination);
+            le_duration = res.getString(R.string.l_duration);
             le_yoga_header = res.getString(R.string.l_yoga_header);
             le_kala_sarpa_dosha = res.getString(R.string.l_kala_sarpa_dosha);
             le_pitru_dosha = res.getString(R.string.l_pitru_dosha);
@@ -121,6 +127,10 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
             le_arr_bara = mContext.getResources().getStringArray(R.array.l_arr_bara);
             le_arr_paksha = mContext.getResources().getStringArray(R.array.l_arr_paksha);
             le_arr_masa = mContext.getResources().getStringArray(R.array.l_arr_masa);
+
+            le_arr_month = mContext.getResources().getStringArray(R.array.l_arr_month);
+
+
             le_paksha = mContext.getResources().getString(R.string.l_paksha);
             le_dina = mContext.getResources().getString(R.string.l_dina);
             le_tithi = mContext.getResources().getString(R.string.l_tithi);
@@ -128,6 +138,10 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
             le_lunar_rashi = mContext.getResources().getString(R.string.l_planet_chandra);
 
         } else {
+            le_time_hour = mContext.getResources().getString(R.string.e_time_hour);
+            le_time_min = mContext.getResources().getString(R.string.e_time_min);
+            le_combination = res.getString(R.string.e_combination);
+            le_duration = res.getString(R.string.e_duration);
             le_yoga_header = res.getString(R.string.e_yoga_header);
             le_kala_sarpa_dosha = res.getString(R.string.e_kala_sarpa_dosha);
             le_arr_sarpa_yoga = mContext.getResources().getStringArray(R.array.e_arr_sarpa_yoga);
@@ -178,6 +192,9 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
             longitude = mPref.getLongitude();
             area = mPref.getAreaAdmin();
             mType = CalendarWeatherApp.isPanchangEng ? 1 : 0;
+
+              mCalType = mPref.getClockFormat();
+
             getMyResource();
             Calendar cal = Calendar.getInstance();
             selDate = 1;
@@ -498,7 +515,12 @@ public class PanchangaYogaFrag extends Fragment implements LocationDialog.Locati
             prevYear.setEnabled(true);
             nextYear.setEnabled(true);
             prog.setVisibility(View.GONE);
-            String str = String.format(le_yoga_header,   "" + displayYearInt);
+            String yearStr="" + displayYearInt;
+            if(!CalendarWeatherApp.isPanchangEng){
+                 yearStr=Utility.getInstance(mContext).getDayNo(""+displayYearInt);
+            }
+
+            String str = String.format(le_yoga_header,   yearStr);
             header.setText(str);
         }
     }
@@ -1006,8 +1028,20 @@ public void getAbhijitNakshetra(CoreDataHelper myPanchangObj, CoreDataHelper myN
         SimpleDateFormat dateFormat1 = new SimpleDateFormat(DATE_FORMAT_1, Locale.ENGLISH);
         SimpleDateFormat dateFormat2 = new SimpleDateFormat(DATE_FORMAT_2, Locale.ENGLISH);
         SimpleDateFormat dateFormat3 = new SimpleDateFormat(DATE_FORMAT_3, Locale.ENGLISH);
-        date = dateFormat1.format(startTimeCal.getTime());
-        start = dateFormat2.format(startTimeCal.getTime());
+           date = dateFormat1.format(startTimeCal.getTime());
+
+        if(mType==1){
+            date = dateFormat1.format(startTimeCal.getTime());
+        }else{
+
+            String monthStr= le_arr_month[startTimeCal.get(Calendar.MONTH)];
+            String dateStr=Utility.getInstance(mContext).getDayNo(""+startTimeCal.get(Calendar.DAY_OF_MONTH));
+            String yearStr=Utility.getInstance(mContext).getDayNo(""+startTimeCal.get(Calendar.YEAR));
+            String baraStr= le_arr_bara[startTimeCal.get(Calendar.DAY_OF_WEEK)-1];
+            date=monthStr+" "+dateStr+", " +yearStr+", "+baraStr;
+        }
+
+       /* start = dateFormat2.format(startTimeCal.getTime());
         Calendar midNightCal = Calendar.getInstance();
         midNightCal.setTimeInMillis(startTimeCal.getTimeInMillis());
         midNightCal.set(Calendar.HOUR_OF_DAY, 23);
@@ -1022,32 +1056,35 @@ public void getAbhijitNakshetra(CoreDataHelper myPanchangObj, CoreDataHelper myN
         } else {
             endTime = endTimeCal;
             end = dateFormat3.format(endTime.getTime());
-        }
+        }*/
+        start=Utility.getInstance(mContext).getFormattedDate(startTimeCal,lang,mType,startTimeCal,mCalType,le_arr_month);
+        end=Utility.getInstance(mContext).getFormattedDate(endTimeCal,lang,mType,startTimeCal,mCalType,le_arr_month);
 
         ydt.jogaDate = date;
         ydt.jogaDateCal=startTimeCal;
         ydt.title=headerTitle;//+" Nakshetra";
         ydt.startTimeCal=startTimeCal;
-        ydt.endTimeCal=endTime;
-        ydt.timings ="From "+ start + " To " + end;
+        ydt.endTimeCal=endTimeCal;
+        ydt.timings = start + " - " + end;
         if (tithi > 0)
             ydt.combination = "";
         else
             ydt.combination = "";
 
-        ydt.duration = "Duration : " + printDifference(endTimeCal.getTimeInMillis() - startTimeCal.getTimeInMillis());
+        ydt.duration = le_duration+" : " + printDifference(endTimeCal.getTimeInMillis() - startTimeCal.getTimeInMillis());
         return ydt;
     }
 
     public YogaDateTiming setdata(Calendar nextSunrise, Calendar startTimeCal, Calendar endTimeCal, int weekday, int nakshetra, int tithi) {
+
         Calendar endTime = null;
         String date, start, end;
         YogaDateTiming ydt = new YogaDateTiming();
         SimpleDateFormat dateFormat1 = new SimpleDateFormat(DATE_FORMAT_1, Locale.ENGLISH);
-        SimpleDateFormat dateFormat2 = new SimpleDateFormat(DATE_FORMAT_2, Locale.ENGLISH);
-        SimpleDateFormat dateFormat3 = new SimpleDateFormat(DATE_FORMAT_3, Locale.ENGLISH);
+       // SimpleDateFormat dateFormat2 = new SimpleDateFormat(DATE_FORMAT_2, Locale.ENGLISH);
+       // SimpleDateFormat dateFormat3 = new SimpleDateFormat(DATE_FORMAT_3, Locale.ENGLISH);
         date = dateFormat1.format(startTimeCal.getTime());
-        start = dateFormat2.format(startTimeCal.getTime());
+       /*  start = dateFormat2.format(startTimeCal.getTime());
         Calendar midNightCal = Calendar.getInstance();
         midNightCal.setTimeInMillis(startTimeCal.getTimeInMillis());
         midNightCal.set(Calendar.HOUR_OF_DAY, 23);
@@ -1061,25 +1098,39 @@ public void getAbhijitNakshetra(CoreDataHelper myPanchangObj, CoreDataHelper myN
         } else {
             endTime = nextSunrise;
             end = dateFormat3.format(endTime.getTime());
+        }*/
+        if(mType==1){
+            date = dateFormat1.format(startTimeCal.getTime());
+        }else{
+
+            String monthStr= le_arr_month[startTimeCal.get(Calendar.MONTH)];
+            String dateStr=Utility.getInstance(mContext).getDayNo(""+startTimeCal.get(Calendar.DAY_OF_MONTH));
+            String yearStr=Utility.getInstance(mContext).getDayNo(""+startTimeCal.get(Calendar.YEAR));
+            String baraStr= le_arr_bara[startTimeCal.get(Calendar.DAY_OF_WEEK)-1];
+            date=monthStr+" "+dateStr+"," +yearStr+", "+baraStr;
         }
+        start=Utility.getInstance(mContext).getFormattedDate(startTimeCal,lang,mType,startTimeCal,mCalType,le_arr_month);
+        end=Utility.getInstance(mContext).getFormattedDate(endTimeCal,lang,mType,startTimeCal,mCalType,le_arr_month);
         ydt.jogaDate = date;
         ydt.jogaDateCal=startTimeCal;
         ydt.title=headerTitle;//+" Yoga ";
         ydt.startTimeCal=startTimeCal;
-        ydt.endTimeCal=endTime;
-        ydt.timings ="From "+ start + " To " + end;
-        if (tithi > 0)
-            ydt.combination = "Yoga Combination: " + le_arr_nakshatra[nakshetra - 1] + ", " + le_arr_tithi[tithi - 1] + ", " + le_arr_bara[weekday - 1];
-        else
-            ydt.combination = "Yoga Combination: " + le_arr_nakshatra[nakshetra - 1] + ", " + le_arr_bara[weekday - 1];
+        ydt.endTimeCal=endTimeCal;
+       // ydt.timings ="From "+ start + " To " + end;
+        ydt.timings = start + " - " + end;
 
-        ydt.duration = "Yoga Duration : " + printDifference(endTimeCal.getTimeInMillis() - startTimeCal.getTimeInMillis());
+        if (tithi > 0)
+            ydt.combination = le_combination+" : " + le_arr_nakshatra[nakshetra - 1] + ", " + le_arr_tithi[tithi - 1] + ", " + le_arr_bara[weekday - 1];
+        else
+            ydt.combination = le_combination+" : " + le_arr_nakshatra[nakshetra - 1] + ", " + le_arr_bara[weekday - 1];
+
+        ydt.duration = le_duration+" : " + printDifference(endTimeCal.getTimeInMillis() - startTimeCal.getTimeInMillis());
         return ydt;
     }
 
     public String printDifference(long different) {
-
-
+       return Utility.getInstance(mContext).timeConversion((long)(different/1000.0),le_time_hour,le_time_min);
+       /*
         long secondsInMilli = 1000;
         long minutesInMilli = secondsInMilli * 60;
         long hoursInMilli = minutesInMilli * 60;
@@ -1097,6 +1148,8 @@ public void getAbhijitNakshetra(CoreDataHelper myPanchangObj, CoreDataHelper myN
         long elapsedSeconds = different / secondsInMilli;
 
         return elapsedHours + " hour " + elapsedMinutes + " min";
+        */
+
     }
 
     public static class YogaDateTiming {

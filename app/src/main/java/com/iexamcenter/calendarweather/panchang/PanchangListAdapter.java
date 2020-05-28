@@ -699,6 +699,10 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
             // ok down to 1970, chnage cond before 1970 added
             lgajapati = mType == 0 ? ", ଗଜପତ୍ୟାଙ୍କ-" + myPanchangObj.le_sanSalAnka : ", Gajapatyanka-" + myPanchangObj.le_sanSalAnka;
             headerStr = lDay + " " + myPanchangObj.le_month + " " + lYear + ", " + le_samvat + "-" + myPanchangObj.le_samvata + ", " + le_shakaddha + "-" + myPanchangObj.le_sakaddha + ", " + le_sal + "-" + myPanchangObj.le_sanSal + lgajapati + ", " + myPanchangObj.le_ayana + ", " + myPanchangObj.le_ritu + le_ritu + ", " + myPanchangObj.le_solarMonth + " " + myPanchangObj.le_solarDay + le_dina + ", " + myPanchangObj.le_lunarMonthPurimant + "-" + myPanchangObj.le_lunarDayPurimant + le_dina + ", " + myPanchangObj.le_paksha + le_paksha + ", " + myPanchangObj.le_bara;
+        }else  if (!myPanchangObj.le_sanSalAnka.equals("0") && mPref.getMyLanguage().contains("hi")) {
+            // ok down to 1970, chnage cond before 1970 added
+
+            headerStr = lDay + " " + myPanchangObj.le_month + " " + lYear + ", " + le_samvat + "-" + myPanchangObj.le_samvata + ", " + le_shakaddha + "-" + myPanchangObj.le_sakaddha + ", " + le_sal + "-" + myPanchangObj.le_sanSal + ", " + myPanchangObj.le_ayana + ", " + myPanchangObj.le_ritu + le_ritu + ", " + myPanchangObj.le_solarMonth + " " + myPanchangObj.le_solarDay + le_dina + ", " + myPanchangObj.le_lunarMonthPurimant + "-" + myPanchangObj.le_lunarDayPurimant + le_dina + ", " + myPanchangObj.le_paksha + le_paksha + ", " + myPanchangObj.le_bara;
         } else {
             headerStr = lDay + " " + myPanchangObj.le_month + " " + lYear + ", " + myPanchangObj.le_solarMonth + " " + myPanchangObj.le_solarDay + le_dina + ", " + myPanchangObj.le_lunarMonthPurimant + " " + myPanchangObj.le_lunarDayPurimant + le_dina + ", " + myPanchangObj.le_bara + ", " + myPanchangObj.le_paksha + le_paksha + ", " + myPanchangObj.le_ritu + le_ritu + ", " + myPanchangObj.le_ayana + ", " + myPanchangObj.le_sakaddha + " " + le_shakaddha;
 
@@ -751,7 +755,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
 
         holder.cnter8.setVisibility(View.VISIBLE);
         holder.divider8.setVisibility(View.VISIBLE);
-        if (mPref.getMyLanguage().contains("or")) {
+      /*  if (mPref.getMyLanguage().contains("or")) {
 
             String shuvaKarya = setShuvaKaryaReg();
             if (shuvaKarya.isEmpty()) {
@@ -762,7 +766,11 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
                 holder.divider7.setVisibility(View.VISIBLE);
                 holder.shubhakamalist.setText(shuvaKarya);
             }
-        }
+        }else{*/
+            holder.cnter7.setVisibility(View.GONE);
+            holder.divider7.setVisibility(View.GONE);
+                holder.shubhakamalist.setVisibility(View.GONE);
+       // }
     }
 
     private void calculateMuhurta(ItemViewHolder holder, Calendar sunrisecal) {
@@ -772,11 +780,13 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
         String sunriseTime;
         String total = "30";
         if (layoutType != 1) {
-            sunriseTime = le_sunrise + " " + getFormattedDate(sunrisecal);
+           // sunriseTime = le_sunrise + " " + getFormattedDate(sunrisecal);
+            sunriseTime = le_sunrise + " " + Utility.getInstance(mContext).getFormattedDate( sunrisecal, mLang, mType, selectedCal, mCalType,le_arr_month);
             total = Utility.getInstance(mContext).getDayNo("" + 30);
 
         } else {
-            sunriseTime = le_sunrise + " " + geteFormattedDate(sunrisecal);
+            sunriseTime = le_sunrise + " " +Utility.getInstance(mContext).geteFormattedDate(sunrisecal, selectedCal, mCalType,le_arr_month);
+           // sunriseTime = le_sunrise + " " + geteFormattedDate(sunrisecal);
         }
         for (int i = 0; i < 30; i++) {
             Calendar cal = Calendar.getInstance();
@@ -796,13 +806,15 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
             }
 
             if (layoutType != 1) {
-                endF = getFormattedDate(cal1);
+                endF =  Utility.getInstance(mContext).getFormattedDate( cal1, mLang, mType, selectedCal, mCalType,le_arr_month);
+               // endF = getFormattedDate(cal1);
                 if (i != 29)
                     muhurtaStr = muhurtaStr + " <font color='" + color + "'>" + muhurtaName + "</font> " + endF + " " + le_time_to + ", " + le_time_next + " ";
                 else
                     muhurtaStr = muhurtaStr + " <font color='" + color + "'>" + muhurtaName + "</font> " + endF + " " + le_time_to;
             } else {
-                endF = geteFormattedDate(cal1);
+                endF = Utility.getInstance(mContext).geteFormattedDate(cal1, selectedCal, mCalType,le_arr_month);
+               // endF = geteFormattedDate(cal1);
                 if (i != 29)
                     muhurtaStr = muhurtaStr + " <font color='" + color + "'>" + muhurtaName + "</font> " + " " + le_time_to + " " + endF + ", " + le_time_next + " ";
                 else
@@ -828,14 +840,17 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
             String endF;
             String rashiStr = le_arr_rasi_kundali[rashi];
             if (layoutType != 1) {
-                endF = getFormattedDate(end);
+                endF =  Utility.getInstance(mContext).getFormattedDate( end, mLang, mType, selectedCal, mCalType,le_arr_month);
+
+               // endF = getFormattedDate(end);
                 if (x != 12)
                     lagnaStr1 = lagnaStr1 + "<font color='#e75480'>" + rashiStr + "</font> " + endF + " " + le_time_to + ", " + le_time_next + " ";
                 else
                     lagnaStr1 = lagnaStr1 + "<font color='#e75480'>" + rashiStr + "</font> ";
                 // lagnaStr1 = lagnaStr1 + "<font color='#e75480'>" + rashiStr + "</font> " + endF + " " + timeto;
             } else {
-                endF = geteFormattedDate(end);
+                endF =  Utility.getInstance(mContext).geteFormattedDate(end, selectedCal, mCalType,le_arr_month);
+               // endF = geteFormattedDate(end);
                 if (x != 12)
                     lagnaStr1 = lagnaStr1 + "<font color='#e75480'>" + rashiStr + "</font> " + " " + le_time_to + " " + endF + ", " + le_time_next + " ";
                 else
@@ -848,7 +863,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
         holder.lagna1.setText(Html.fromHtml(lagnaStr1));
 
     }
-
+/*
     private String geteFormattedDate(Calendar cal) {
 
         try {
@@ -902,7 +917,8 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
 
     private String getFormattedDate(Calendar cal) {
 
-        if (mLang.contains("or") && mType == 0) {
+
+        if ((mLang.contains("or") || mLang.contains("hi")) && mType == 0) {
             int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
             int calHour = cal.get(Calendar.HOUR_OF_DAY);
             int calMin = cal.get(Calendar.MINUTE);
@@ -957,7 +973,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
             return geteFormattedDate(cal);
         }
     }
-
+*/
     private String setShuvaKaryaReg() {
         return strShuvaKarja;
 
@@ -1033,7 +1049,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
 
     private StringBuilder getPanchangaValue(PanchangUtility.MyBela[] arr) {
 
-        if (mPref.getMyLanguage().contains("or")) {
+        if (mPref.getMyLanguage().contains("or")  || mPref.getMyLanguage().contains("hi")) {
             StringBuilder arrStr = new StringBuilder();
             try {
                 for (PanchangUtility.MyBela obj : arr) {
@@ -1106,7 +1122,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
 
     private StringBuilder getPanchangaValue(PanchangUtility.MySubPanchang[] arr) {
 
-        if (mPref.getMyLanguage().contains("or")) {
+        if (mPref.getMyLanguage().contains("or") || mPref.getMyLanguage().contains("hi")) {
             StringBuilder arrStr = new StringBuilder();
             try {
                 if (arr[0].time.isEmpty()) {

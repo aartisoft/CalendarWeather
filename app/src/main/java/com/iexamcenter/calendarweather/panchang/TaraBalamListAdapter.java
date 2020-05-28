@@ -232,7 +232,7 @@ public class TaraBalamListAdapter extends RecyclerView.Adapter<TaraBalamListAdap
 
     private String getFormattedDate(Calendar cal) {
 
-        if (mLang.contains("or") && !CalendarWeatherApp.isPanchangEng) {
+        if ((mLang.contains("or") || mLang.contains("hi")) && !CalendarWeatherApp.isPanchangEng) {
             int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
             int calHour = cal.get(Calendar.HOUR_OF_DAY);
             int calMin = cal.get(Calendar.MINUTE);

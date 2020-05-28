@@ -89,7 +89,7 @@ public class YogaMainFragment extends Fragment {
             if (Integer.parseInt(page[1]) >= 13 && CalendarWeatherApp.isRewardedPremiumGrp2) {
                 int pg=Integer.parseInt(page[1])-13;
                 openPage(pg );
-            }else{
+            }else if(!CalendarWeatherApp.isRewardedPremiumGrp1){
                 Toast.makeText(activity,"Please unlock, before use",Toast.LENGTH_SHORT).show();
             }
 

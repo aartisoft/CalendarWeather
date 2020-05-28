@@ -1,10 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+
     <string name="l_name_initials_str"><![CDATA[ଜନ୍ମ ନକ୍ଷତ୍ର ପାଦ <span style=\"color:#FF8C00;\"><strong>( %1$s )</strong></span> ରୁ ନାମର ପ୍ରଥମ ଅକ୍ଷର :  <span style=\"color:#FF8C00;\"><strong> %2$s </strong></span>]]></string>
     <string name="e_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
     <string name="l_pitru_dosha">ପିତୃ ଦୋଷ</string>
     <string name="e_pitru_dosha">Pitru Dosha</string>
 
-    <string name="l_yoga_header">%1$s Auspicious Days</string>
+    <string name="l_yoga_header">%1$s ଶୁଭଦିନ</string>
     <string name="e_yoga_header">%1$s Auspicious Days</string>
 
     <string name="l_kala_sarpa_dosha">କାଳ ସର୍ପ ଯୋଗ</string>
@@ -202,10 +204,10 @@
     <string name="e_time_night">Ratra</string>
 
     <string name="l_time_hour">ଘ</string>
-    <string name="e_time_hour">Ghanta</string>
+    <string name="e_time_hour">hr</string>
 
     <string name="l_time_min">ମି</string>
-    <string name="e_time_min">Min</string>
+    <string name="e_time_min">min</string>
 
     <string name="l_vedic_time_start">ବୈଦିକ ସମୟ-୬୦ ଦଣ୍ଡ(ସୂର୍ଯ୍ୟୋଦୟରୁ ଆରମ୍ଭ)</string>
     <string name="e_vedic_time_start">Vedic Time(Starts from Sunrise)</string>
@@ -1333,12 +1335,12 @@
     </string-array>
 
     <string-array name="l_arr_paksha">
-        <item>ଶୁକ୍ଳ </item>
-        <item>କୃଷ୍ଣ </item>
+        <item>ଶୁକ୍ଳ</item>
+        <item>କୃଷ୍ଣ</item>
     </string-array>
     <string-array name="e_arr_paksha">
-        <item>shukla </item>
-        <item>Krushna </item>
+        <item>shukla</item>
+        <item>Krushna</item>
     </string-array>
 
     <string-array name="l_arr_tarabalam">
@@ -1371,7 +1373,7 @@
         <item>ବୁଧ</item>
         <item>ଚନ୍ଦ୍ର</item>
         <item>ଶନି</item>
-        <item>ବୃହସ୍ପତି </item>
+        <item>ବୃହସ୍ପତି</item>
         <item>ମଙ୍ଗଳ</item>
     </string-array>
     <string-array name="e_arr_hora">
@@ -1710,7 +1712,7 @@
         <item>ଜୁଲାଇ</item>
         <item>ଅଗଷ୍ଟ</item>
         <item>ସେପ୍ଟେମ୍ବର</item>
-        <item>ଅକ୍ଟୋବର </item>
+        <item>ଅକ୍ଟୋବର</item>
         <item>ନଭେମ୍ବର</item>
         <item>ଡିସେମ୍ବର</item>
     </string-array>
@@ -1724,7 +1726,7 @@
         <item>July</item>
         <item>August</item>
         <item>September</item>
-        <item>October </item>
+        <item>October</item>
         <item>November</item>
         <item>December</item>
     </string-array>
@@ -1974,7 +1976,10 @@
         <item>Tripushkar Yoga</item>
         <item>Abhijit Nakshatra</item>
     </string-array>
-
+    <string name="l_combination">ଯୋଗ ମିଳନ</string>
+    <string name="e_combination">Combination</string>
+    <string name="l_duration">ସମୟ ପରିବ୍ୟାପ୍ତି</string>
+    <string name="e_duration">Duration</string>
 
 </resources>
 

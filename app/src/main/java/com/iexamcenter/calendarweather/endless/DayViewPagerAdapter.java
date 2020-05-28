@@ -241,7 +241,7 @@ class DayViewPagerAdapter extends FragmentPagerAdapter {
                 return 3;
         }else {*/
            // if (langCode.contains("or") || langCode.contains("hi") || langCode.contains("mr"))
-                return 6;
+                return 5;
        // return 6;
           //  else
             //    return 3;

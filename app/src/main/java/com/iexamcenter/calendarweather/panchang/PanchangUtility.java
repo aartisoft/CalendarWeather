@@ -7,6 +7,7 @@ import android.util.Log;
 import com.iexamcenter.calendarweather.CalendarWeatherApp;
 import com.iexamcenter.calendarweather.R;
 import com.iexamcenter.calendarweather.data.local.entity.EphemerisEntity;
+import com.iexamcenter.calendarweather.utility.PrefManager;
 import com.iexamcenter.calendarweather.utility.SunMoonCalculator;
 import com.iexamcenter.calendarweather.utility.Utility;
 
@@ -47,6 +48,7 @@ public class PanchangUtility {
     public PanchangUtility() {
 
     }
+
 
     public MyPanchang getMyPunchang(CoreDataHelper coreDataObj, String lang, int calType, String latStr, String lngStr, Context context, int year, int month, int day) {
         try {
@@ -1087,7 +1089,7 @@ String str="";
         if (cal == null)
             return "";
 
-        if (mLang.contains("or") && mType == 0) {
+        if ((mLang.contains("or") || mLang.contains("hi"))&& mType == 0) {
             int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
             int calHour = cal.get(Calendar.HOUR_OF_DAY);
             int calMin = cal.get(Calendar.MINUTE);

@@ -607,7 +607,6 @@
 
     </string-array>
 
-
     <string-array name="l_arr_tarabalam">
         <item>પરમ મિત્ર તારા (સારા)</item>
         <item>જન્મ તારા (સામાન્ય)</item>
@@ -667,43 +666,6 @@
         <item>Jupiter</item>
         <item>Mars</item>
     </string-array>
-    <string name="l_planet_surya">સૂર્ય</string>
-    <string name="e_planet_surya">Sun</string>
-
-    <string name="l_planet_chandra">ચંદ્ર</string>
-    <string name="e_planet_chandra">Moon</string>
-
-    <string name="l_planet_budha">બુધ</string>
-    <string name="e_planet_budha">Mercury</string>
-
-    <string name="l_planet_shukra">શુક્ર</string>
-    <string name="e_planet_shukra">Venus</string>
-
-    <string name="l_planet_mangal">મંગલ</string>
-    <string name="e_planet_mangal">Mars</string>
-
-    <string name="l_planet_gura">બૃહસ્પતિ</string>
-    <string name="e_planet_gura">Jupiter</string>
-
-    <string name="l_planet_sani">શનિ</string>
-    <string name="e_planet_sani">Saturn</string>
-
-    <string name="l_planet_aruna">યુરેનસ</string>
-    <string name="e_planet_aruna">Uranus</string>
-
-    <string name="l_planet_baruna">વરુણ</string>
-    <string name="e_planet_baruna">Neptune</string>
-
-    <string name="l_planet_jama">પ્લુટો</string>
-    <string name="e_planet_jama">Pluto</string>
-
-    <string name="l_planet_rahu">રાહુ</string>
-    <string name="e_planet_rahu">Rahu</string>
-
-    <string name="l_planet_ketu">કેતુ</string>
-    <string name="e_planet_ketu">Ketu</string>
-
-
     <string-array name="l_arr_ausp_work">
         <item>નિશક્રમણ   </item>
         <item>નામકરણ  </item>
@@ -1192,7 +1154,7 @@
     <string name="l_choghadiya">ચૌઘડિયા  </string>
     <string name="e_choghadiya">CHOUGHADIA</string>
 
-    <string name="l_pager_title1">ପଞ୍ଚାଙ୍ଗ</string>
+    <string name="l_pager_title1">પંચાંગ </string>
     <string name="e_pager_title1">DAILY\nPANCHANG</string>
 
     <string name="l_mangala_dosha">મંગલ દોષ</string>
@@ -1230,4 +1192,41 @@
 
     <string name="l_ghara">ઘર</string>
     <string name="e_ghara">House</string>
+
+
+    <string name="l_planet_surya">સૂર્ય</string>
+    <string name="e_planet_surya">Sun</string>
+
+    <string name="l_planet_chandra">ચંદ્ર</string>
+    <string name="e_planet_chandra">Moon</string>
+
+    <string name="l_planet_budha">બુધ</string>
+    <string name="e_planet_budha">Mercury</string>
+
+    <string name="l_planet_shukra">શુક્ર</string>
+    <string name="e_planet_shukra">Venus</string>
+
+    <string name="l_planet_mangal">મંગલ</string>
+    <string name="e_planet_mangal">Mars</string>
+
+    <string name="l_planet_gura">બૃહસ્પતિ</string>
+    <string name="e_planet_gura">Jupiter</string>
+
+    <string name="l_planet_sani">શનિ</string>
+    <string name="e_planet_sani">Saturn</string>
+
+    <string name="l_planet_aruna">યુરેનસ</string>
+    <string name="e_planet_aruna">Uranus</string>
+
+    <string name="l_planet_baruna">વરુણ</string>
+    <string name="e_planet_baruna">Neptune</string>
+
+    <string name="l_planet_jama">પ્લુટો</string>
+    <string name="e_planet_jama">Pluto</string>
+
+    <string name="l_planet_rahu">રાહુ</string>
+    <string name="e_planet_rahu">Rahu</string>
+
+    <string name="l_planet_ketu">કેતુ</string>
+    <string name="e_planet_ketu">Ketu</string>
 </resources>

@@ -538,7 +538,7 @@
         <item>amabasya</item>
     </string-array>
     <string name="e_lagna_at_sunrise">Lagna at Sunrise</string>
-    <string name="l_lagna_at_sunrise">Lagna at Sunris</string>
+    <string name="l_lagna_at_sunrise">Lagna at Sunrise</string>
     <string name="l_lagna">Lagna</string>
     <string name="e_lagna">Lagna</string>
 
@@ -849,43 +849,43 @@
     </string-array>
 
     <string-array name="l_arr_food">
-        <item>Kakharu</item>
-        <item>Boitalu</item>
-        <item>Potala o Taila</item>
-        <item>Mula</item>
-        <item>Bela o Panasha</item>
-        <item>Nimba o Taila</item>
-        <item>Tala</item>
-        <item>Nadia, Taila o Mansha</item>
-        <item>Lau</item>
-        <item>Kalama Saga</item>
-        <item>Simba, Machha o Mansha</item>
-        <item>Poi, Masura o Taila</item>
-        <item>Baigana</item>
-        <item>Biri o Taila</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
+        <item>White Pumpkin</item>
+        <item>Pumpkin</item>
+        <item>Pointed gourd and oil</item>
+        <item>Raddish</item>
+        <item>Stone apple and Jackfruit</item>
+        <item>Neem and oil</item>
+        <item>Tala palm</item>
+        <item>meat, Oil and coconut</item>
+        <item>Bottle gourd</item>
+        <item>Water Spinach</item>
+        <item>Walor papdi, fish, and meat</item>
+        <item>Basella, masoor and oil</item>
+        <item>Bringle</item>
+        <item>Urad daal and oil</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
 
     </string-array>
     <string-array name="e_arr_food">
-        <item>Kakharu</item>
-        <item>Boitalu</item>
-        <item>Potala o Taila</item>
-        <item>Mula</item>
-        <item>Bela o Panasha</item>
-        <item>Nimba o Taila</item>
-        <item>Tala</item>
-        <item>Nadia, Taila o Mansha</item>
-        <item>Lau</item>
-        <item>Kalama Saga</item>
-        <item>Simba, Machha o Mansha</item>
-        <item>Poi, Masura o Taila</item>
-        <item>Baigana</item>
-        <item>Biri o Taila</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
-        <item>Machha, Mansha, Taila o Stree Sanga</item>
+        <item>White Pumpkin</item>
+        <item>Pumpkin</item>
+        <item>Pointed gourd and oil</item>
+        <item>Raddish</item>
+        <item>Stone apple and Jackfruit</item>
+        <item>Neem and oil</item>
+        <item>Tala palm</item>
+        <item>meat, Oil and coconut</item>
+        <item>Bottle gourd</item>
+        <item>Water Spinach</item>
+        <item>Walor papdi, fish, and meat</item>
+        <item>Basella, masoor and oil</item>
+        <item>Bringle</item>
+        <item>Urad daal and oil</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
+        <item>Fish, Meat, Oil and Intercourse</item>
     </string-array>
 
 
@@ -1089,12 +1089,9 @@
     <string name="e_pager_title5">HORA\nMUHURTA</string>
     <string name="e_pager_title6">SHUBHA\nKARYA</string>
 
-    <!--string name="jogin_help">(Samukha, Bama, Dakshina dige Jogini Asubha. Prusthe ati subha o anyatra subha.)</string>
-
-    <string name="ejogin_help">(Samukha, Bama, Dakshina dige Jogini Asubha. Prusthe ati subha o anyatra subha.)</string-->
-    <string name="l_jogin_help">ଯାତ୍ରା ନାସ୍ତି</string>
+    <string name="l_jogin_help">yatra nasti</string>
     <string name="e_jogin_help">yatra nasti</string>
-    <string name="l_jogin_help1"> । ଏତଦ୍ ଭିନ୍ନ ଅନ୍ୟ ଦିଗ ଗୁଡ଼ିକରେ ଯାତ୍ରା ଶୁଭ।</string>
+    <string name="l_jogin_help1">. Other dige yatra shuva.</string>
     <string name="e_jogin_help1">. Other dige yatra shuva.</string>
 
     <string name="l_planet_asta">Asta</string>
@@ -1754,33 +1751,31 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
         <item>Shesh Nag Kala Sarpa Yoga</item>
     </string-array>
     <string-array name="l_arr_special_calculator" translatable="false">
-        <item>Vedic Birthday</item>
-        <item>Shraddha</item>
-        <item>Annual Event</item>
+        <item>Janmadina</item>
+        <item>Shraaddh</item>
+        <item>Kaaryakram</item>
         <item>Janma Rashi</item>
-        <item>Janma Nakshetra</item>
+        <item>Janma Star</item>
         <item>Janma Lagna</item>
-        <item>Mangala Dosha</item>
-        <item>Pitru Dosha</item>
-
-        <item>Kala Sarpa Dosha</item>
+        <item>Mangalik</item>
+        <item>Pitru Dosh</item>
+        <item>Kala Sarpa Dosh</item>
         <item>Graha Dasha</item>
-        <item>Baby Name Initials</item>
-        <item>Age Calculator</item>
+        <item>Naam Praarambhik</item>
+        <item>Aayu kailakuletar</item>
     </string-array>
     <string-array name="e_arr_special_calculator" translatable="false">
-        <item>Vedic Birthday</item>
-        <item>Annual Shraddha Day</item>
-        <item>Annual Event Day</item>
-        <item>Birth Rashi</item>
+        <item>Birthday</item>
+        <item>Shraaddh Day</item>
+        <item>Annual Event</item>
+        <item>Moonsign</item>
         <item>Birth Star</item>
         <item>Birth Lagna</item>
-        <item>Mangala Dosha</item>
-        <item>Pitru Dosha</item>
-
-        <item>Kala Sarpa Dosha</item>
-        <item>Graha Dasha</item>
-        <item>Baby Name Initials</item>
+        <item>Mangal Dosh</item>
+        <item>Pitra Dosh</item>
+        <item>Kaal Sarp Yoga</item>
+        <item>Maha Dasha</item>
+        <item>Baby Name</item>
         <item>Age Calculator</item>
     </string-array>
     <string-array name="l_arr_special_ausp_day" translatable="false">
@@ -1801,5 +1796,9 @@ For any enquiry/feedback, Please email us at &lt;iexamcenter@gmail.com&gt; or po
         <item>Tripushkar Yoga</item>
         <item>Abhijit Nakshatra</item>
     </string-array>
+    <string name="l_combination">Combination</string>
+    <string name="e_combination">Combination</string>
+    <string name="l_duration">Duration</string>
+    <string name="e_duration">Duration</string>
 </resources>
 

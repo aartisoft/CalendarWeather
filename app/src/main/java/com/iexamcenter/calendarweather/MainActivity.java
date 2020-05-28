@@ -73,8 +73,11 @@ import com.iexamcenter.calendarweather.weather.WeatherSlidingFragment;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -120,13 +123,13 @@ public class MainActivity extends AppCompatActivity {
     String le_menu_aradhana, le_menu_on_this_day, le_menu_media, le_menu_birth_anniversary, le_menu_death_anniversary, le_menu_other_anniversary, le_menu_panchang, le_menu_choghadia, le_menu_remove_ads, le_menu_rate_app, le_menu_share;
     String le_menu_feedback, le_menu_privacy_policy;
     String[] le_arr_main_menu;
-    Menu menu;
-    MenuItem nav_settings, nav_home, nav_calendar, nav_festival, nav_horoscope, nav_weather, nav_sun_moon, nav_vedic, nav_wall_calendar, nav_janma_kundali, nav_kundali_milana, nav_planet, nav_quote_cat, nav_quote_indian, nav_quote_others, nav_observance, nav_aradhana, nav_onthisday, nav_media, nav_birth_anniversary, nav_death_anniversary, nav_other_anniversary, nav_remove_ads, nav_rate, nav_share, nav_feedback, nav_privacy;
-
+   // Menu menu;
+  //  MenuItem nav_settings, nav_home, nav_calendar, nav_festival, nav_horoscope, nav_weather, nav_sun_moon, nav_vedic, nav_wall_calendar, nav_janma_kundali, nav_kundali_milana, nav_planet, nav_quote_cat, nav_quote_indian, nav_quote_others, nav_observance, nav_aradhana, nav_onthisday, nav_media, nav_birth_anniversary, nav_death_anniversary, nav_other_anniversary, nav_remove_ads, nav_rate, nav_share, nav_feedback, nav_privacy;
+/*
     public int getVisiblePagePosition() {
         return currentPagePosition;
     }
-
+*/
     public void setVisiblePagePosition(int position) {
         currentPagePosition = position;
     }
@@ -203,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
             le_menu_privacy_policy = mRes.getString(R.string.e_menu_privacy_policy);
         }
     }
-
+/*
     public void setMenuItem() {
         Log.e("xx", "xxxxxx::::::" + le_menu_settings);
         nav_settings.setTitle(le_menu_settings);
@@ -235,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
         nav_privacy.setTitle(le_menu_privacy_policy);
 
     }
-
+*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.clear();
@@ -361,7 +364,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.nav_view);
 
-        View header = navigationView.getHeaderView(0);
+      //  View header = navigationView.getHeaderView(0);
         // navigationView.setNavigationItemSelectedListener(this);
         //menu=navigationView.getMenu();
         if (!mPref.isFirstUse()) {
@@ -450,6 +453,14 @@ public class MainActivity extends AppCompatActivity {
             // }
         });
         viewModel.getCurrLang().observe(this, lang -> {
+            ActionBar actionBar = getSupportActionBar();
+            DateFormat dateFormat = new SimpleDateFormat("EEEE, d-MMM-yyyy", Locale.US);
+            Date date = new Date();
+            String today = dateFormat.format(date);
+
+            actionBar.setTitle(Utility.getInstance(mContext).getLanguageFull() + " Panchanga Darpana");
+            actionBar.setSubtitle(today);
+
             CalendarWeatherApp.updateAppResource(getResources(), this);
             getMyResource();
             // setMenuItem();
@@ -758,8 +769,8 @@ public class MainActivity extends AppCompatActivity {
             CalendarWeatherApp.isRewardedPremiumGrp2 = true;
             mAdView.setVisibility(View.GONE);
         }
-        //CalendarWeatherApp.isRewardedPremiumGrp1=true;
-        //  CalendarWeatherApp.isRewardedPremiumGrp2=true;
+        CalendarWeatherApp.isRewardedPremiumGrp1=true;
+          CalendarWeatherApp.isRewardedPremiumGrp2=true;
 
     }
 

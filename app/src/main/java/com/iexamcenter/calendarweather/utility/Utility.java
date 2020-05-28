@@ -809,4 +809,123 @@ public class Utility {
 
     }
 
+    public String getFormattedDate(Calendar cal,String mLang,int mType,Calendar selectedCal,int mCalType,String[] le_arr_month) {
+
+        if ((mLang.contains("or") || mLang.contains("hi")) && mType == 0) {
+            int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
+            int calHour = cal.get(Calendar.HOUR_OF_DAY);
+            int calMin = cal.get(Calendar.MINUTE);
+            int calMonth = cal.get(Calendar.MONTH);
+            String calDayNoStr = Utility.getInstance(mContext).getDayNo("" + calDayNo);
+            String calMinStr = Utility.getInstance(mContext).getDayNo("" + calMin);
+            String prefixTime = "";
+            if ((calHour > 0 && calHour < 4) || (calHour >= 19 && calHour <= 23)) {
+                prefixTime = res.getString(R.string.l_time_night);
+            }
+            if (calHour >= 4 && calHour < 9) {
+                prefixTime = res.getString(R.string.l_time_prattha);
+            } else if (calHour >= 9 && calHour < 16) {
+                prefixTime = res.getString(R.string.l_time_diba);
+            } else if (calHour >= 16 && calHour < 19) {
+                prefixTime = res.getString(R.string.l_time_sandhya);
+            }
+            if (calHour > 12) {
+                calHour = calHour - 12;
+            }
+            String calHourNoStr = Utility.getInstance(mContext).getDayNo("" + calHour);
+
+            String ldate;
+
+            int currDayNo = selectedCal.get(Calendar.DAY_OF_MONTH);
+            if (mCalType == 0) {
+                if (currDayNo != calDayNo) {
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + "" + res.getString(R.string.l_time_min) + " " + calDayNoStr + "/" + le_arr_month[calMonth];
+                } else {
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + res.getString(R.string.l_time_min);
+
+                }
+            } else if (mCalType == 1) {
+                if (currDayNo != calDayNo) {
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + "" + res.getString(R.string.l_time_min) + " " + calDayNoStr + "/" + le_arr_month[calMonth];
+
+                } else {
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + res.getString(R.string.l_time_min);
+
+                }
+            } else {
+                if (currDayNo != calDayNo) {
+
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + "" + res.getString(R.string.l_time_min) + "(+)";
+                } else {
+                    ldate = prefixTime + " " + calHourNoStr + "" + res.getString(R.string.l_time_hour) + " " + calMinStr + res.getString(R.string.l_time_min);
+
+                }
+            }
+            return ldate;
+        } else {
+            return geteFormattedDate(cal,selectedCal,mCalType,le_arr_month);
+        }
+    }
+    public  String geteFormattedDate(Calendar cal,Calendar selectedCal,int mCalType,String[] le_arr_month) {
+
+        try {
+            int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
+            Date date = cal.getTime();
+            java.text.DateFormat dateFormat;
+            int currDayNo = selectedCal.get(Calendar.DAY_OF_MONTH);
+            String dt;
+
+
+            if (mCalType == 0) {
+                if (currDayNo != calDayNo) {
+
+                    dateFormat = new SimpleDateFormat("hh:mm a  dd/MMM yyyy", Locale.US);
+                    dt = dateFormat.format(date);
+
+
+                } else {
+                    dateFormat = new SimpleDateFormat("hh:mm a", Locale.US);
+                    dt = dateFormat.format(date);
+                }
+            } else if (mCalType == 1) {
+                if (currDayNo != calDayNo) {
+
+                    dateFormat = new SimpleDateFormat("HH:mm dd/MMM yyyy", Locale.US);
+                    dt = dateFormat.format(date);
+
+                } else {
+                    dateFormat = new SimpleDateFormat("HH:mm", Locale.US);
+                    dt = dateFormat.format(date);
+                }
+            } else {
+                if (currDayNo != calDayNo) {
+                    dateFormat = new SimpleDateFormat("HH:mm", Locale.US);
+                    dt = dateFormat.format(date);
+                    dt = dt + "(+)";
+
+                } else {
+                    dateFormat = new SimpleDateFormat("HH:mm", Locale.US);
+                    dt = dateFormat.format(date);
+                }
+            }
+
+            return dt;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    public String timeConversion(long totalSeconds,String le_time_hour,String le_time_min) {
+
+        final int MINUTES_IN_AN_HOUR = 60;
+        final int SECONDS_IN_A_MINUTE = 60;
+        long totalMinutes = totalSeconds / SECONDS_IN_A_MINUTE;
+        long minutes = totalMinutes % MINUTES_IN_AN_HOUR;
+        long hours = totalMinutes / MINUTES_IN_AN_HOUR;
+
+
+        return getDayNo("" + hours) + le_time_hour + Utility.getInstance(mContext).getDayNo("" + minutes) + le_time_min;
+    }
 }

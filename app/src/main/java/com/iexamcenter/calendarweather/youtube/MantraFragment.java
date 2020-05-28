@@ -44,7 +44,7 @@ public class MantraFragment extends Fragment {
     MantraListAdapter mAdapter;
 
     public static MantraFragment newInstance() {
-
+        Log.e("getInstance","getInstance:MantraFragment");
         return new MantraFragment();
     }
 

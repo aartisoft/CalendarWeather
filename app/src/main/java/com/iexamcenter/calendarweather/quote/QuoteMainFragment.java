@@ -13,6 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +54,7 @@ public class QuoteMainFragment extends Fragment {
         }
     };*/
     public static QuoteMainFragment newInstance() {
-
+        Log.e("getInstance","getInstance:QuoteMainFragment");
         return new QuoteMainFragment();
     }
     @Override

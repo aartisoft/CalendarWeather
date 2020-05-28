@@ -89,7 +89,7 @@ public class CalculatorMainFragment extends Fragment {
             Log.e("pagepage",":::page:::::::"+page[0]+"--"+page[1]);
             if (Integer.parseInt(page[1]) <13 && (CalendarWeatherApp.isRewardedPremiumGrp1)) {
                 openPage(Integer.parseInt(page[1])-1);
-            }else{
+            }else if(!CalendarWeatherApp.isRewardedPremiumGrp1){
                 Toast.makeText(activity,"Please unlock, before use",Toast.LENGTH_SHORT).show();
             }
 
@@ -232,7 +232,7 @@ public void openPage(int position) {
                     rewardedAd.show(activityContext, adCallback);
                 } else {
                     rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
-                    Log.d("TAG", "The rewarded ad wasn't loaded yet.");
+                    Toast.makeText(activity, "Unable to load Google Ads.Please check connection.", Toast.LENGTH_LONG).show();
                 }
             }
         });

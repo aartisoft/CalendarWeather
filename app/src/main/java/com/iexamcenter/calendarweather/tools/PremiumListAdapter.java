@@ -18,6 +18,7 @@ import com.iexamcenter.calendarweather.AppConstants;
 import com.iexamcenter.calendarweather.CalendarWeatherApp;
 import com.iexamcenter.calendarweather.MainActivity;
 import com.iexamcenter.calendarweather.R;
+import com.iexamcenter.calendarweather.utility.Connectivity;
 import com.iexamcenter.calendarweather.utility.PrefManager;
 
 import java.util.ArrayList;
@@ -52,9 +53,14 @@ public class PremiumListAdapter extends RecyclerView.Adapter<PremiumListAdapter.
 
             @Override
             public void gotoPage(View v) {
-                if(!isRewared){
+
+
+                if (!Connectivity.isConnected(mContext)) {
+                    Toast.makeText(mContext, "Please check internet connection", Toast.LENGTH_LONG).show();
+                    return;
+                }else if(!isRewared){
                     mAds.performClick();
-                    Toast.makeText(mContext,"These are premium features. Unlock it before use.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext,"Unable to load Google Ads. Please check connection.",Toast.LENGTH_LONG).show();
                     return;
                 }
                 int position = (int) v.getTag();
@@ -165,11 +171,11 @@ public class PremiumListAdapter extends RecyclerView.Adapter<PremiumListAdapter.
         holder.titleCntr.setTag(position);
         holder.title1.setTag(position);
         holder.titleEng.setTag(position);
-        if(!mPref.getMyLanguage().contains("or")){
-            holder.titleEng.setVisibility(View.INVISIBLE);
-        }else{
+      //  if(!mPref.getMyLanguage().contains("or")){
+          //  holder.titleEng.setVisibility(View.INVISIBLE);
+      //  }else{
             holder.titleEng.setVisibility(View.VISIBLE);
-        }
+       // }
        // boolean isRewared = false;
         if (mylist.size() > 10) {
             isRewared = CalendarWeatherApp.isRewardedPremiumGrp1;

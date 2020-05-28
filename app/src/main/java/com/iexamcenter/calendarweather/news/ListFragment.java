@@ -72,6 +72,7 @@ public class ListFragment extends Fragment implements
     private AutoCompleteTextView actv;
 
     public static Fragment getInstance() {
+        Log.e("getInstance","getInstance:ListFragment");
         return new ListFragment();
     }
 
@@ -374,7 +375,7 @@ public class ListFragment extends Fragment implements
         try {
             setHasOptionsMenu(true);
             viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-
+            Log.e("getInstance","getInstance:ListFragment");
 
             mPref = PrefManager.getInstance(mContext);
             mPref.load();
@@ -541,7 +542,7 @@ public class ListFragment extends Fragment implements
         if(viewModel.getNewsList(key, type, rowId, lang).hasObservers()){
             viewModel.getNewsList(key, type, rowId, lang).removeObservers(this);
         }
-        viewModel.getNewsList(key, type, rowId, lang).observe(this, new Observer<List<NewsEntity>>() {
+        viewModel.getNewsList(key, type, rowId, lang).observe(mContext, new Observer<List<NewsEntity>>() {
             @Override
             public void onChanged(List<NewsEntity> obj) {
                 mNewsList.clear();
@@ -550,7 +551,7 @@ public class ListFragment extends Fragment implements
                     mAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
-                    Log.e("loadNews", "loadNews::" + obj.size());
+                    Log.e("getInstance","getInstance:ListFragment");
                 }
             }
         });
