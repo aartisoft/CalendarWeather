@@ -62,6 +62,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
     ArrayList<KundaliDiagram.houseinfo> houseinfos;
     HashMap<Integer, KundaliDiagram.houseinfo> houseinfosMap;
     Boolean isMangalaDosha;
+    String  mangalaDoshaDesc,le_mangal_dosha_desc1;
     String dashaPlanetLord;
     ArrayList<PlanetData> planetDataList;
     public boolean nextClicked = false, prevClicked = false;
@@ -83,7 +84,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
     int solarDay, lunarDay, paksha, weekDay, solarMonth, lunarMonth, tithiKundali, nakshetraKundali;
     String[] le_arr_sarpa_yoga, le_arr_dasha_name, le_name_initials, le_arr_ausp_work_yes_no, le_arr_tithi, le_arr_nakshatra, le_arr_month, le_arr_bara, le_arr_paksha, le_arr_masa;
-    String le_planet_rashi,le_kala_sarpa_dosha,le_pitru_dosha,le_name_initials_title, le_nakshetra_pada, le_mangala_dosha;
+    String le_sarpa_dosha_desc1,le_pitru_dosha_desc1,le_pitru_dosha_desc2,le_pitru_dosha_desc3,le_pitru_dosha_desc4,le_pitru_dosha_desc5,le_planet_rashi,le_kala_sarpa_dosha,le_pitru_dosha,le_name_initials_title, le_nakshetra_pada, le_mangala_dosha;
     String le_dina, le_paksha;
     String le_tithi, le_nakshetra, le_lunar_rashi;
     String latitude, longitude;
@@ -133,6 +134,14 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
     public void getMyResource() {
         res = mContext.getResources();
         if (mType == 0) {
+            le_mangal_dosha_desc1=res.getString(R.string.l_mangal_dosha_desc1);
+            le_sarpa_dosha_desc1=res.getString(R.string.l_sarpa_dosha_desc1);
+            le_pitru_dosha_desc2=res.getString(R.string.l_pitru_dosha_desc2);
+            le_pitru_dosha_desc1=res.getString(R.string.l_pitru_dosha_desc1);
+            le_pitru_dosha_desc2=res.getString(R.string.l_pitru_dosha_desc2);
+            le_pitru_dosha_desc3=res.getString(R.string.l_pitru_dosha_desc3);
+            le_pitru_dosha_desc4=res.getString(R.string.l_pitru_dosha_desc4);
+            le_pitru_dosha_desc5=res.getString(R.string.l_pitru_dosha_desc5);
             le_planet_rashi=res.getString(R.string.l_planet_rashi);
             le_kala_sarpa_dosha=res.getString(R.string.l_kala_sarpa_dosha);
             le_pitru_dosha=res.getString(R.string.l_pitru_dosha);
@@ -157,6 +166,14 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             le_lunar_rashi = mContext.getResources().getString(R.string.l_planet_chandra);
 
         } else {
+
+            le_mangal_dosha_desc1=res.getString(R.string.e_mangal_dosha_desc1);
+            le_sarpa_dosha_desc1=res.getString(R.string.e_sarpa_dosha_desc1);
+            le_pitru_dosha_desc1=res.getString(R.string.e_pitru_dosha_desc1);
+            le_pitru_dosha_desc2=res.getString(R.string.e_pitru_dosha_desc2);
+            le_pitru_dosha_desc3=res.getString(R.string.e_pitru_dosha_desc3);
+            le_pitru_dosha_desc4=res.getString(R.string.e_pitru_dosha_desc4);
+            le_pitru_dosha_desc5=res.getString(R.string.e_pitru_dosha_desc5);
             le_planet_rashi=res.getString(R.string.e_planet_rashi);
             le_kala_sarpa_dosha=res.getString(R.string.e_kala_sarpa_dosha);
             le_arr_sarpa_yoga = mContext.getResources().getStringArray(R.array.e_arr_sarpa_yoga);
@@ -616,6 +633,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                 actualBirthCal.set(Calendar.HOUR_OF_DAY, bHour);
                 actualBirthCal.set(Calendar.MINUTE, bMin);
                 String txtVal = "";
+                String txtval1="";
                 EphemerisEntity planetInfo;
                 switch (pageType) {
                     case 3:
@@ -658,6 +676,13 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                         getMangalaDosha();
                         txtVal = le_mangala_dosha + " - " + (isMangalaDosha ? le_arr_ausp_work_yes_no[0] : le_arr_ausp_work_yes_no[1]);
                         createDiagram();
+                        if(isMangalaDosha) {
+                            txtval1="<span style=\"font-weight:normal;color:#000000;\">" + mangalaDoshaDesc+"</span>";
+                            txt1.setVisibility(VISIBLE);
+                            txt1.setText(Html.fromHtml(txtval1));
+                        }else{
+                            txt1.setVisibility(GONE);
+                        }
                         break;
 
                     case 7:
@@ -678,7 +703,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                             txtVal = le_pitru_dosha+" - "+le_arr_ausp_work_yes_no[0];
                         }
                         txt.setVisibility(VISIBLE);
-                        String txtval1="<span style=\"font-weight:normal;color:#000000;\">" + pitruDosha+"</span>";
+                         txtval1="<span style=\"font-weight:normal;color:#000000;\">" + pitruDosha+"</span>";
                         txt1.setVisibility(VISIBLE);
                         txt1.setText(Html.fromHtml(txtval1));
 
@@ -693,6 +718,13 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                         createDiagram();
                         String sarpaYoga = checkSarpaDosha();
                         txtVal = (sarpaYoga != null ? sarpaYoga + " - " + le_arr_ausp_work_yes_no[0] : le_kala_sarpa_dosha+" - " + le_arr_ausp_work_yes_no[1]);
+                       if(sarpaYoga != null) {
+                           txtval1="<span style=\"font-weight:normal;color:#000000;\">" + le_sarpa_dosha_desc1+"</span>";
+                           txt1.setVisibility(VISIBLE);
+                           txt1.setText(Html.fromHtml(txtval1));
+                       }else{
+                           txt1.setVisibility(GONE);
+                       }
                         break;
                     case 9:
                         janmaDashaCntr1.removeAllViews();
@@ -758,78 +790,143 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             boolean cond16 = (houseno == 5 && planetindex.contains(",10,"));
             boolean cond17 = (houseno == 5 && planetindex.contains(",11,"));
 
+            boolean cond18 = (houseno == 1 && planetindex.contains(",10,"));
+            boolean cond19 = (houseno == 1 && planetindex.contains(",11,"));
+            String tmpStr;
+            String hNo=Utility.getInstance(mContext).getDayNo(""+houseno);
+            String hNo9=Utility.getInstance(mContext).getDayNo(""+9);
+            String hNo5=Utility.getInstance(mContext).getDayNo(""+5);
             if (cond1) {
 
-                reason.append("<br/>" +le_arr_planet[1]).append(" associated  ").append(le_arr_planet[10]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[1],le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+               // reason.append("<br/>" +le_arr_planet[1]).append(" associated  ").append(le_arr_planet[10]).append(" in house - " + houseno);
             }
             if (cond2) {
-
-                reason.append("<br/>" +le_arr_planet[1]).append(" associated ").append(le_arr_planet[11]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[1],le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[1]).append(" associated ").append(le_arr_planet[11]).append(" in house - " + houseno);
             }
             if (cond3) {
-
-                reason.append("<br/>" +le_arr_planet[1]).append(" associated ").append(le_arr_planet[6]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[1],le_arr_planet[6],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[1]).append(" associated ").append(le_arr_planet[6]).append(" in house - " + houseno);
             }
 
             if (cond4) {
-
-                reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[10]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[0],le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[10]).append(" in house - " + houseno);
             }
             if (cond5) {
-
-                reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[11]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[0],le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[11]).append(" in house - " + houseno);
             }
             if (cond6) {
-
-                reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[6]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[0],le_arr_planet[6],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[6]).append(" in house - " + houseno);
             }
             if (cond7) {
-
-                reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[4]).append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[0],le_arr_planet[4],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[0]).append(" associated ").append(le_arr_planet[4]).append(" in house - " + houseno);
             }
 
-            if (cond8) {
-
-                reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[10]);
+            if (cond8 && !hNo9.equals(hNo)) {
+                tmpStr=String.format(le_pitru_dosha_desc4,hNo9,le_arr_planet[5],le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[10]);
+            }else  if (cond8) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[10],hNo9,le_arr_planet[5]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
             }
-            if (cond9) {
-
-                reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
+            if (cond9 && !hNo9.equals(hNo)) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo9,le_arr_planet[5]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
+            }else  if (cond9) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo9,le_arr_planet[5]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
             }
+           /* if ((cond9 || cond8) && hNo9.equals(hNo)) {
+                tmpStr=String.format(le_pitru_dosha_desc5,hNo9,le_arr_planet[5],le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
+            }*/
             if (cond10) {
-
-                reason.append("<br/>" +le_arr_planet[10]).append(" associated ").append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+               // reason.append("<br/>" +le_arr_planet[10]).append(" associated ").append(" in house - " + houseno);
             }
             if (cond11) {
-
-                reason.append("<br/>" +le_arr_planet[11]).append(" associated ").append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[11]).append(" associated ").append(" in house - " + houseno);
             }
             if (cond12) {
-
-                reason.append("<br/>" +le_arr_planet[6]).append(" associated ").append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[6],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>" +le_arr_planet[6]).append(" associated ").append(" in house - " + houseno);
             }
             if (cond13) {
-
-                reason.append("<br/>" + le_arr_planet[4]).append(" associated ").append(" in house - " + houseno);
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[4],hNo);
+                reason.append("<br/>" + tmpStr);
+               // reason.append("<br/>" + le_arr_planet[4]).append(" associated ").append(" in house - " + houseno);
             }
 
-            if (cond14) {
-
-                reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[4]);
+            if (cond14 && !hNo.equals(hNo5))  {
+                tmpStr=String.format(le_pitru_dosha_desc4,hNo5,le_arr_planet[0],le_arr_planet[4],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[4]);
+            }else if (cond14) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[4],hNo5,le_arr_planet[0]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
             }
-            if (cond15) {
-
-                reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[6]);
+            if (cond15  && !hNo.equals(hNo5)) {
+                tmpStr=String.format(le_pitru_dosha_desc4,hNo5,le_arr_planet[0],le_arr_planet[6],hNo);
+                reason.append("<br/>" + tmpStr);
+               // reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[6]);
+            }else if (cond15) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[6],hNo5,le_arr_planet[0]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
             }
-            if (cond16) {
-
-                reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[10]);
+            if (cond16  && !hNo.equals(hNo5)) {
+                tmpStr=String.format(le_pitru_dosha_desc4,hNo5,le_arr_planet[0],le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[10]);
+            }else if (cond16) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[10],hNo5,le_arr_planet[0]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
             }
-            if (cond17) {
-
-                reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
+            if (cond17 && !hNo.equals(hNo5)) {
+                tmpStr=String.format(le_pitru_dosha_desc4,hNo5,le_arr_planet[0],le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
+            }else if (cond17) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo5,le_arr_planet[0]);
+                reason.append("<br/>" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
             }
-
+           /* if ((cond14 || cond15 || cond16 || cond17) && hNo.equals(hNo5)) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo5,le_arr_planet[0]);
+                reason.append("<br/>x" + tmpStr);
+                //reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[11]);
+            }*/
+            if (cond18) {
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[10],hNo);
+                reason.append("<br/>" + tmpStr);
+             }
+            if (cond19) {
+                tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[11],hNo);
+                reason.append("<br/>" + tmpStr);
+               }
         }
         return reason;
     }
@@ -958,6 +1055,13 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
             if (i == 2 && (houseNoIndex == 0 || houseNoIndex == 1 || houseNoIndex == 3 || houseNoIndex == 6 || houseNoIndex == 7 || houseNoIndex == 11)) {
                 isMangalaDosha = true;
+               String mangalaIsIn=""+(houseNoIndex+1);
+                if(!CalendarWeatherApp.isPanchangEng){
+                    mangalaIsIn=Utility.getInstance(mContext).getDayNo(mangalaIsIn);
+                }
+                String tmpStr=String.format(le_mangal_dosha_desc1,mangalaIsIn);
+
+                mangalaDoshaDesc=tmpStr;
             }
 
         }
@@ -1633,9 +1737,9 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
         int posRahu = -1, posKetu = -1;
         for (int i = 0; i < 12; i++) {
-            if (houseinfosMap.get(i).planetIndexList.contentEquals(",10,")) {
+            if (houseinfosMap.get(i).planetIndexList.contains(",10,")) {
                 posRahu = houseinfosMap.get(i).houseno;
-            } else if (houseinfosMap.get(i).planetIndexList.contentEquals(",11,")) {
+            } else if (houseinfosMap.get(i).planetIndexList.contains(",11,")) {
                 posKetu = houseinfosMap.get(i).houseno;
             }
             Log.e("houseinfosMap", i + ":SAR:houseinfosMap::" + houseinfosMap.get(i).houseno + ":" + houseinfosMap.get(i).planetIndexList + "::" + houseinfosMap.get(i).planetList);

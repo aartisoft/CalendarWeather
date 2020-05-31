@@ -88,7 +88,6 @@ public class MySettingsActivity extends AppCompatActivity {
         setDefaultCalendar();
         updateData();
 
-        // LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("APP_LANGUAGE_CHANGE_ACTION"));
 
     }
 
@@ -97,7 +96,6 @@ public class MySettingsActivity extends AppCompatActivity {
         setDefaultClockType();
         mPref.load();
         viewModel.setCurrLang(mPref.getMyLanguage());
-        // LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("APP_LANGUAGE_CHANGE_ACTION"));
     }
 
     public void refreshThemeType() {
@@ -106,7 +104,6 @@ public class MySettingsActivity extends AppCompatActivity {
 
         MyTheme.changeToTheme(this);
 
-        //  LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("APP_THEME_CHANGE_ACTION"));
 
 
     }

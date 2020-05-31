@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.util.Log;
@@ -68,8 +66,6 @@ public class HomeMainFragment extends Fragment {
         activity = (MainActivity) getActivity();
         setHasOptionsMenu(true);
 
-       // LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver, new IntentFilter(AppConstants.GOTOPAGE));
-
         res = activity != null ? activity.getResources() : null;
         setRetainInstance(true);
         setUp(rootView);
@@ -90,8 +86,7 @@ public class HomeMainFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-       // LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
-    }
+     }
 
     public TabLayout getTabLayout() {
         return tabLayout;

@@ -748,7 +748,7 @@ public class ExtraInfoRegAppWidgetProvider extends AppWidgetProvider {
     }
 
     private StringBuilder getPanchangaValue(PanchangUtilityWidget.MySubPanchang[] arr) {
-        if (mPref.getMyLanguage().contains("or")) {
+        if (mPref.getMyLanguage().contains("or") || mPref.getMyLanguage().contains("hi")  || mPref.getMyLanguage().contains("mr")  || mPref.getMyLanguage().contains("gu")) {
             StringBuilder arrStr = new StringBuilder();
             try {
                 if (arr[0].time.isEmpty()) {

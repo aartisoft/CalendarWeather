@@ -918,7 +918,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
     private String getFormattedDate(Calendar cal) {
 
 
-        if ((mLang.contains("or") || mLang.contains("hi")) && mType == 0) {
+        if ((mLang.contains("or") || mLang.contains("hi")  || mLang.contains("mr")   || mLang.contains("gu")) && mType == 0) {
             int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
             int calHour = cal.get(Calendar.HOUR_OF_DAY);
             int calMin = cal.get(Calendar.MINUTE);
@@ -1122,7 +1122,7 @@ public class PanchangListAdapter extends RecyclerView.Adapter<PanchangListAdapte
 
     private StringBuilder getPanchangaValue(PanchangUtility.MySubPanchang[] arr) {
 
-        if (mPref.getMyLanguage().contains("or") || mPref.getMyLanguage().contains("hi")) {
+        if (mPref.getMyLanguage().contains("or") || mPref.getMyLanguage().contains("hi") || mPref.getMyLanguage().contains("mr") || mPref.getMyLanguage().contains("gu")) {
             StringBuilder arrStr = new StringBuilder();
             try {
                 if (arr[0].time.isEmpty()) {

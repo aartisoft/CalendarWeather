@@ -1,14 +1,10 @@
 package com.iexamcenter.calendarweather;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.location.Address;
-import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,7 +27,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.NavUtils;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.DialogFragment;
@@ -39,7 +34,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -47,16 +41,16 @@ import androidx.work.WorkManager;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.tabs.TabLayout;
 import com.iexamcenter.calendarweather.billingmodule.IAPFragment;
-import com.iexamcenter.calendarweather.endless.DayViewMainFragment;
 import com.iexamcenter.calendarweather.home.HinduTimeFrag;
 import com.iexamcenter.calendarweather.sunmoon.SunMoonMainFragment;
 import com.iexamcenter.calendarweather.tools.BirthAnniversaryFrag;
@@ -71,8 +65,6 @@ import com.iexamcenter.calendarweather.wallcalendar.WallCalendarMainFragment;
 import com.iexamcenter.calendarweather.weather.WeatherSlidingFragment;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -83,25 +75,14 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-//import static com.iexamcenter.calendarweather.billingmodule.billing.BillingManager.BILLING_MANAGER_NOT_INITIALIZED;
 
 @SuppressWarnings("NullableProblems")
 public class MainActivity extends AppCompatActivity {
-
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-
-
-    private static final String DIALOG_TAG = "dialog";
-
-    // private BillingManager mBillingManager;
-    // private AcquireFragment mAcquireFragment;
-    // private IAPMainViewController mViewController;
     MainActivity mContext;
-
-
     public PrefManager mPref;
     Fragment rootFragment;
     public BottomNavigationView bottomNavigationView;
@@ -113,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     public TabLayout tabLayout;
     private boolean mToolBarNavigationListenerIsRegistered = false;
-    private int currentPagePosition = 0;
     MainViewModel viewModel;
     boolean workManagerStarted = false;
     Resources mRes;
@@ -123,20 +103,9 @@ public class MainActivity extends AppCompatActivity {
     String le_menu_aradhana, le_menu_on_this_day, le_menu_media, le_menu_birth_anniversary, le_menu_death_anniversary, le_menu_other_anniversary, le_menu_panchang, le_menu_choghadia, le_menu_remove_ads, le_menu_rate_app, le_menu_share;
     String le_menu_feedback, le_menu_privacy_policy;
     String[] le_arr_main_menu;
-   // Menu menu;
-  //  MenuItem nav_settings, nav_home, nav_calendar, nav_festival, nav_horoscope, nav_weather, nav_sun_moon, nav_vedic, nav_wall_calendar, nav_janma_kundali, nav_kundali_milana, nav_planet, nav_quote_cat, nav_quote_indian, nav_quote_others, nav_observance, nav_aradhana, nav_onthisday, nav_media, nav_birth_anniversary, nav_death_anniversary, nav_other_anniversary, nav_remove_ads, nav_rate, nav_share, nav_feedback, nav_privacy;
-/*
-    public int getVisiblePagePosition() {
-        return currentPagePosition;
-    }
-*/
-    public void setVisiblePagePosition(int position) {
-        currentPagePosition = position;
-    }
 
     public void getMyResource() {
-        mRes = mContext.getResources();
-        Log.e("xx", "xxxxxx::::::" + CalendarWeatherApp.isPanchangEng);
+
         if (!CalendarWeatherApp.isPanchangEng) {
             le_arr_main_menu = mRes.getStringArray(R.array.l_arr_main_menu);
             le_menu_settings = mRes.getString(R.string.l_menu_settings);
@@ -159,12 +128,9 @@ public class MainActivity extends AppCompatActivity {
             le_menu_aradhana = mRes.getString(R.string.l_menu_aradhana);
             le_menu_on_this_day = mRes.getString(R.string.l_menu_on_this_day);
             le_menu_media = mRes.getString(R.string.l_menu_media);
-
             le_menu_birth_anniversary = mRes.getString(R.string.l_menu_birth_anniversary);
             le_menu_death_anniversary = mRes.getString(R.string.l_menu_death_anniversary);
             le_menu_other_anniversary = mRes.getString(R.string.l_menu_other_anniversary);
-
-
             le_menu_panchang = mRes.getString(R.string.l_menu_panchang);
             le_menu_choghadia = mRes.getString(R.string.l_menu_choghadia);
             le_menu_remove_ads = mRes.getString(R.string.l_menu_remove_ads);
@@ -196,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
             le_menu_birth_anniversary = mRes.getString(R.string.e_menu_birth_anniversary);
             le_menu_death_anniversary = mRes.getString(R.string.e_menu_death_anniversary);
             le_menu_other_anniversary = mRes.getString(R.string.e_menu_other_anniversary);
-
             le_menu_panchang = mRes.getString(R.string.e_menu_panchang);
             le_menu_choghadia = mRes.getString(R.string.e_menu_choghadia);
             le_menu_remove_ads = mRes.getString(R.string.e_menu_remove_ads);
@@ -206,39 +171,7 @@ public class MainActivity extends AppCompatActivity {
             le_menu_privacy_policy = mRes.getString(R.string.e_menu_privacy_policy);
         }
     }
-/*
-    public void setMenuItem() {
-        Log.e("xx", "xxxxxx::::::" + le_menu_settings);
-        nav_settings.setTitle(le_menu_settings);
-        nav_home.setTitle(le_menu_panchanga);
-        nav_calendar.setTitle(le_menu_calendar);
-        nav_festival.setTitle(le_menu_festivals);
-        nav_horoscope.setTitle(le_menu_horoscope);
-        nav_weather.setTitle(le_menu_weather);
-        nav_sun_moon.setTitle(le_menu_sun_moon);
-        nav_vedic.setTitle(le_menu_vedic_time);
-        nav_wall_calendar.setTitle(le_menu_wall_calendar);
-        nav_janma_kundali.setTitle(le_menu_janma_kundali);
-        nav_kundali_milana.setTitle(le_menu_kundali_milana);
-        nav_planet.setTitle(le_menu_planet);
-        nav_quote_cat.setTitle(le_menu_category);
-        nav_quote_indian.setTitle(le_menu_national);
-        nav_quote_others.setTitle(le_menu_international);
-        nav_observance.setTitle(le_menu_observance);
-        nav_aradhana.setTitle(le_menu_aradhana);
-        nav_onthisday.setTitle(le_menu_on_this_day);
-        nav_media.setTitle(le_menu_media);
-        nav_birth_anniversary.setTitle(le_menu_birth_anniversary);
-        nav_death_anniversary.setTitle(le_menu_death_anniversary);
-        nav_other_anniversary.setTitle(le_menu_other_anniversary);
-        nav_remove_ads.setTitle(le_menu_remove_ads);
-        nav_rate.setTitle(le_menu_rate_app);
-        nav_share.setTitle(le_menu_share);
-        nav_feedback.setTitle(le_menu_feedback);
-        nav_privacy.setTitle(le_menu_privacy_policy);
 
-    }
-*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.clear();
@@ -253,17 +186,13 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 drawer.openDrawer(GravityCompat.START);
                 return true;
-
             case R.id.action_settings:
                 Intent intent = new Intent(this, MySettingsActivity.class);
-                //  Intent intent = new Intent(this, MapActivity.class);
                 startActivity(intent);
                 return true;
-
             default:
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -277,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
         final DialogFragment appLangDialog = AppLangDialog.newInstance(this);
         appLangDialog.setCancelable(false);
         appLangDialog.show(ft0, "MYLANG");
-        Log.e("PrefManager", "PrefMaPrefManagernager213");
     }
 
     @Override
@@ -289,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mPref = PrefManager.getInstance(this);
         PackageInfo pInfo;
-
+        mRes = mContext.getResources();
 
         String version = "";
         try {
@@ -309,14 +237,9 @@ public class MainActivity extends AppCompatActivity {
         Intent arg = getIntent();
         if (arg.hasExtra("MY_LANG")) {
             mPref.setMyLanguage(arg.getStringExtra("MY_LANG"));
+            mPref.load();
+            setDefaultLatLng();
         }
-        mPref.load();
-        setDefaultLatLng();
-
-        // if (mPref.isFirstUse()) {
-
-        // }
-
 
         viewModel.getEphemerisData(System.currentTimeMillis(), -1).observe(this, obj -> {
             if (obj.size() == 0 && !workManagerStarted) {
@@ -324,26 +247,19 @@ public class MainActivity extends AppCompatActivity {
                 viewModel.startWorkmanager();
             }
         });
-
-
         CalendarWeatherApp.updateAppResource(getResources(), getApplicationContext());
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         findViewById(R.id.closeCntr).setOnClickListener(v -> {
             if (mPref.isRemovedAds()) {
-                CalendarWeatherApp.isRewardedPremiumGrp1 = false;
-                CalendarWeatherApp.isRewardedPremiumGrp2 = false;
+                CalendarWeatherApp.isPremiumAccessGrp1 = false;
+                CalendarWeatherApp.isPremiumAccessGrp2 = false;
             }
             finish();
         });
-
         drawer = findViewById(R.id.drawer_layout);
-
         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
-
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -358,112 +274,51 @@ public class MainActivity extends AppCompatActivity {
         };
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
         navigationView = findViewById(R.id.nav_view);
-
-      //  View header = navigationView.getHeaderView(0);
-        // navigationView.setNavigationItemSelectedListener(this);
-        //menu=navigationView.getMenu();
         if (!mPref.isFirstUse()) {
             setUpHome();
         } else {
             mPref.setMyLanguage("en");
             mPref.load();
-
             selectlang();
         }
-
-        /*
-
-
-        nav_settings = menu.findItem(R.id.nav_settings);
-        nav_home = menu.findItem(R.id.nav_home);
-        nav_calendar = menu.findItem(R.id.nav_calendar);
-        nav_festival = menu.findItem(R.id.nav_festival);
-        nav_horoscope = menu.findItem(R.id.nav_horoscope);
-        nav_weather = menu.findItem(R.id.nav_weather);
-        nav_sun_moon = menu.findItem(R.id.nav_sun_moon);
-        nav_vedic = menu.findItem(R.id.nav_vedic);
-        nav_wall_calendar = menu.findItem(R.id.nav_wall_calendar);
-        nav_janma_kundali = menu.findItem(R.id.nav_janma_kundali);
-        nav_kundali_milana = menu.findItem(R.id.nav_kundali_milana);
-        nav_planet = menu.findItem(R.id.nav_planet);
-        nav_quote_cat = menu.findItem(R.id.nav_quote_cat);
-        nav_quote_indian = menu.findItem(R.id.nav_quote_indian);
-        nav_quote_others = menu.findItem(R.id.nav_quote_others);
-        nav_observance = menu.findItem(R.id.nav_observance);
-        nav_aradhana = menu.findItem(R.id.nav_aradhana);
-        nav_onthisday = menu.findItem(R.id.nav_onthisday);
-        nav_media = menu.findItem(R.id.nav_media);
-
-        nav_birth_anniversary = menu.findItem(R.id.nav_birth_anniversary);
-        nav_death_anniversary = menu.findItem(R.id.nav_death_anniversary);
-        nav_other_anniversary = menu.findItem(R.id.nav_other_anniversary);
-        nav_remove_ads = menu.findItem(R.id.nav_remove_ads);
-        nav_rate = menu.findItem(R.id.nav_rate);
-        nav_share = menu.findItem(R.id.nav_share);
-        nav_feedback = menu.findItem(R.id.nav_feedback);
-        nav_privacy = menu.findItem(R.id.nav_privacy);
-
-         */
-
-
-        System.out.println("IAPFragment::1:" + mPref.isFirstUse());
         if (Connectivity.isConnected(mContext) && mPref.isFirstUse()) {
             System.out.println("IAPFragment::2:");
             IAPFragment.newInstance(mContext).handleRemoveAds(0, mContext);
         }
-
         setDefaultAlarm();
-
         onNewIntent(getIntent());
-
-
         TextView versionTxt = findViewById(R.id.version);
         SwitchMaterial switch1 = findViewById(R.id.switch1);
         expListView = findViewById(R.id.expandableListView);
         versionTxt.setText(version);
-        //  initBilling();
-        showHideBannerAds();
-        // handleAds();
+        showHideAds();
         clearAllFile(false);
-
-
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 getMyResource();
-                // setMenuItem();
                 expandMenu();
             }
         }, 1000);
 
         switch1.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Log.e("xx", "xxxxxx:" + isChecked);
-            //  if(isChecked){
             CalendarWeatherApp.isPanchangEng = isChecked;
             viewModel.isEngChanged(isChecked);
-
             getMyResource();
             expandMenu();
-            // }
         });
         viewModel.getCurrLang().observe(this, lang -> {
             ActionBar actionBar = getSupportActionBar();
             DateFormat dateFormat = new SimpleDateFormat("EEEE, d-MMM-yyyy", Locale.US);
             Date date = new Date();
             String today = dateFormat.format(date);
-
             actionBar.setTitle(Utility.getInstance(mContext).getLanguageFull() + " Panchanga Darpana");
             actionBar.setSubtitle(today);
-
             CalendarWeatherApp.updateAppResource(getResources(), this);
             getMyResource();
-            // setMenuItem();
             expandMenu();
         });
 
@@ -472,154 +327,118 @@ public class MainActivity extends AppCompatActivity {
 
     public void expandMenu() {
         prepareListData();
-
-
         listAdapter = new ExpandableMenuListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
-        // preparing list data
+        expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
 
-
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-
-                if (drawer.isDrawerOpen(GravityCompat.START)) {
-                    drawer.closeDrawer(GravityCompat.START);
-                }
-                int page = groupPosition + 1, subpage = childPosition + 1;
-                switch (page) {
-                    case 1:
-                        switch (subpage) {
-                            case 1:
-                                Intent intent = new Intent(mContext, MySettingsActivity.class);
-                                startActivity(intent);
-                                break;
-                            case 2:
-                                goToPage(1, 1);
-                                break;
-                            case 3:
-                                goToPage(1, 2);
-                                break;
-                            case 4:
-                                goToPage(1, 3);
-                                break;
-                            case 5:
-                                openFragment(0);//weather
-                                break;
-                            case 6:
-                                openFragment(1); //vedic
-                                break;
-                            case 7:
-                                openFragment(2); //sunmoon
-                                break;
-                            case 8:
-                                openFragment(3); //wallcale
-                                break;
-                        }
-                        break;
-                    case 2:
-                        switch (subpage) {
-                            case 1:
-                                goToPage(2, 1);
-                                break;
-                            case 2:
-                                goToPage(2, 2);
-                                break;
-                            case 3:
-                                goToPage(2, 3);
-                                break;
-                        }
-                        break;
-                    case 3:
-
-                        goToPage(3, subpage);
-                        break;
-
-                    case 4:
-                        switch (subpage) {
-                            case 1:
-                                goToPage(4, 1);
-                                break;
-                            case 2:
-                                goToPage(4, 2);
-                                break;
-                            case 3:
-                                goToPage(4, 3);
-                                break;
-                            case 4:
-                                goToPage(4, 4);
-                                break;
-                            case 5:
-                                goToPage(4, 5);
-                                break;
-                        }
-                        break;
-                    case 5:
-                        switch (subpage) {
-                            case 1:
-                                openFragment(7);
-                                break;
-                            case 2:
-                                openFragment(8);
-                                break;
-                            case 3:
-                                openFragment(9);
-                                break;
-                            case 4:
-                                openFragment(10);
-                                break;
-                            case 5:
-                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
-                                startActivity(browserIntent);
-                                break;
-                        }
-                        break;
-
-
-                }
-
-
-                return false;
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
             }
+            int page = groupPosition + 1, subpage = childPosition + 1;
+            switch (page) {
+                case 1:
+                    switch (subpage) {
+                        case 1:
+                            Intent intent = new Intent(mContext, MySettingsActivity.class);
+                            startActivity(intent);
+                            break;
+                        case 2:
+                            goToPage(1, 1);
+                            break;
+                        case 3:
+                            goToPage(1, 2);
+                            break;
+                        case 4:
+                            goToPage(1, 3);
+                            break;
+                        case 5:
+                            openFragment(0);//weather
+                            break;
+                        case 6:
+                            openFragment(1); //vedic
+                            break;
+                        case 7:
+                            openFragment(2); //sunmoon
+                            break;
+                        case 8:
+                            openFragment(3); //wallcale
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (subpage) {
+                        case 1:
+                            goToPage(2, 1);
+                            break;
+                        case 2:
+                            goToPage(2, 2);
+                            break;
+                        case 3:
+                            goToPage(2, 3);
+                            break;
+                    }
+                    break;
+                case 3:
+
+                    goToPage(3, subpage);
+                    break;
+
+                case 4:
+                    switch (subpage) {
+                        case 1:
+                            goToPage(4, 1);
+                            break;
+                        case 2:
+                            goToPage(4, 2);
+                            break;
+                        case 3:
+                            goToPage(4, 3);
+                            break;
+                        case 4:
+                            goToPage(4, 4);
+                            break;
+                        case 5:
+                            goToPage(4, 5);
+                            break;
+                    }
+                    break;
+                case 5:
+                    switch (subpage) {
+                        case 1:
+                            openFragment(7);
+                            break;
+                        case 2:
+                            openFragment(8);
+                            break;
+                        case 3:
+                            openFragment(9);
+                            break;
+                        case 4:
+                            openFragment(10);
+                            break;
+                        case 5:
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
+                            startActivity(browserIntent);
+                            break;
+                    }
+                    break;
+            }
+            return false;
         });
         expListView.expandGroup(0);
-        // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-
-            @Override
-            public void onGroupExpand(int groupPosition) {
-
-            }
-        });
-// Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-
-
-            }
-        });
     }
 
     private void prepareListData() {
-
         listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
-        // Adding child data
+        listDataChild = new HashMap<>();
         int len = le_arr_main_menu.length;
-
         for (int i = 0; i < len; i++) {
             String[] arr = le_arr_main_menu[i].split("_");
             if (arr[1].contentEquals("0")) {
                 listDataHeader.add(arr[2]);
             }
-
         }
         int size = listDataHeader.size();
-
         for (int j = 0; j < size; j++) {
             List<String> child = new ArrayList<String>();
             for (int i = 0; i < len; i++) {
@@ -628,11 +447,8 @@ public class MainActivity extends AppCompatActivity {
                     child.add(arr[2]);
                 }
             }
-
             listDataChild.put(listDataHeader.get(j), child);
         }
-
-
     }
 
     private void clearAllFile(boolean all) {
@@ -692,7 +508,6 @@ public class MainActivity extends AppCompatActivity {
                 duration = (24 * 60) + (diff / (1000 * 60));
             }
 
-            System.out.println(diff + ":PeriodicWorkRequestStart:min:" + duration);
             String TAG = "MY_APP_ALARM";
             OneTimeWorkRequest mywork =
                     new OneTimeWorkRequest.Builder(MyAlaramWorker.class)
@@ -705,107 +520,62 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void handleAds() {
-        // initBilling();
-        runOnUiThread(new Runnable() {
+    public void loadBannerAds(AdView mAdView) {
+
+        mAdView.setVisibility(View.GONE);
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
             @Override
-            public void run() {
-                showHideBannerAds();
+            public void onAdLoaded() {
+                mAdView.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                mAdView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAdOpened() {
+            }
+
+            @Override
+            public void onAdClicked() {
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+            }
+
+            @Override
+            public void onAdClosed() {
             }
         });
     }
 
-
-    public void showHideBannerAds() {
+    public void showHideAds() {
         AdView mAdView = findViewById(R.id.adView);
-        mAdView.setVisibility(View.GONE);
         if (!mPref.isRemovedAds() && !mPref.isFirstUse()) {
-            MobileAds.initialize(this, new OnInitializationCompleteListener() {
-                @Override
-                public void onInitializationComplete(InitializationStatus initializationStatus) {
-                }
-            });
-
-
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
-            mAdView.setAdListener(new AdListener() {
-                @Override
-                public void onAdLoaded() {
-                    mAdView.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onAdFailedToLoad(int errorCode) {
-                    Log.e("onAdonAd", "onAdonAd::" + errorCode);
-                    // Code to be executed when an ad request fails.
-                    mAdView.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onAdOpened() {
-                    // Code to be executed when an ad opens an overlay that
-                    // covers the screen.
-                }
-
-                @Override
-                public void onAdClicked() {
-                    // Code to be executed when the user clicks on an ad.
-                }
-
-                @Override
-                public void onAdLeftApplication() {
-                    // Code to be executed when the user has left the app.
-                }
-
-                @Override
-                public void onAdClosed() {
-                    // Code to be executed when the user is about to return
-                    // to the app after tapping on an ad.
-                }
-            });
+            CalendarWeatherApp.isPremiumAccessGrp1 = false;
+            CalendarWeatherApp.isPremiumAccessGrp2 = false;
+            loadBannerAds(mAdView);
+            loadInterstitialAds(1);
+            loadInterstitialAds(2);
+            loadRewardedAds(1);
+            loadRewardedAds(2);
         } else {
-            CalendarWeatherApp.isRewardedPremiumGrp1 = true;
-            CalendarWeatherApp.isRewardedPremiumGrp2 = true;
-            mAdView.setVisibility(View.GONE);
+            CalendarWeatherApp.isPremiumAccessGrp1 = true;
+             CalendarWeatherApp.isPremiumAccessGrp2 = true;
+             mAdView.setVisibility(View.GONE);
         }
-        CalendarWeatherApp.isRewardedPremiumGrp1=true;
-          CalendarWeatherApp.isRewardedPremiumGrp2=true;
+        // CalendarWeatherApp.isPremiumAccessGrp1=true;
+        //  CalendarWeatherApp.isPremiumAccessGrp2=true;
 
     }
 
-    public void removeAds() {
-
-
-        // onPurchaseButtonClicked();
-
-    }
-
-    /*
-        public void onPurchaseButtonClicked() {
-
-            if (mAcquireFragment == null) {
-                mAcquireFragment = new AcquireFragment();
-            }
-
-            if (!isAcquireFragmentShown()) {
-                mAcquireFragment.show(mContext.getSupportFragmentManager(), DIALOG_TAG);
-
-                if (mBillingManager != null
-                        && mBillingManager.getBillingClientResponseCode()
-                        > BILLING_MANAGER_NOT_INITIALIZED) {
-
-
-                    mAcquireFragment.onManagerReady(this);
-                }
-            }
-        }
-
-
-            public boolean isAcquireFragmentShown() {
-                return mAcquireFragment != null && mAcquireFragment.isVisible();
-            }
-        */
     @Override
     public void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -821,14 +591,14 @@ public class MainActivity extends AppCompatActivity {
 
                     CalendarWeatherApp.setSelectedPage(4, 3);
                 } else if (extras.containsKey("widget_ele_observance")) {
-                    CalendarWeatherApp.setSelectedPage(4, 1);
+                    CalendarWeatherApp.setSelectedPage(4, 5);
 
                 } else if (extras.containsKey("widget_ele_prayers")) {
-                    CalendarWeatherApp.setSelectedPage(4, 2);
+                    CalendarWeatherApp.setSelectedPage(4, 1);
                 } else if (extras.containsKey("widget_ele_todayinfo")) {
                     CalendarWeatherApp.setSelectedPage(1, 1);
                 } else if ((extras.containsKey("TodayUpdates") || extras.containsKey("widget_ele_today_updates"))) {
-                    CalendarWeatherApp.setSelectedPage(4, 4);
+                    CalendarWeatherApp.setSelectedPage(4, 3);
                 } else if (extras.containsKey("weather") || extras.containsKey("widget_ele_weather")) {
                     // CalendarWeatherApp.setSelectedPage(1, 1);
                     openFragment(0);
@@ -837,10 +607,10 @@ public class MainActivity extends AppCompatActivity {
                     CalendarWeatherApp.setSelectedPage(1, 3);
                 } else if (extras.containsKey("widget_ele_event")) {
 
-                    CalendarWeatherApp.setSelectedPage(4, 3);
+                    CalendarWeatherApp.setSelectedPage(4, 4);
                 } else if (extras.containsKey("birthday")) {
 
-                    CalendarWeatherApp.setSelectedPage(4, 3);
+                    CalendarWeatherApp.setSelectedPage(4, 4);
                 }
             }
 
@@ -852,7 +622,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void setUpHome() {
-
         FragmentManager fm = getSupportFragmentManager();
         rootFragment = fm.findFragmentByTag(AppConstants.FRAG_MAIN_PAGER_TAG);
         FragmentTransaction ft = fm.beginTransaction();
@@ -866,7 +635,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         CalendarWeatherApp.isForeground = false;
     }
 
@@ -877,112 +645,17 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.isFirstUse()) {
                 mPref.setFirstUse(false);
             }
-
-
-            // LocalBroadcastManager.getInstance(this).unregisterReceiver(mThemeChangedReceiver);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        try {
-            Log.e("MYDATETIME", "::onActivityResult:m:" + requestCode + "::" + resultCode);
-
-            if (resultCode == Activity.RESULT_OK) {
-                switch (requestCode) {
-
-
-                  /*   case Constant.REQUEST_CODE_LOCATION_PICKER_MAP:
-                    case Constant.REQUEST_CODE_LOCATION_PICKER:
-                        String[] retVal=Helper.getInstance().getAddressLatLon(data, mContext);
-                        if (retVal!=null && retVal.length>2) {
-
-                            mPref.setLatitude(retVal[0]);
-                            mPref.setLongitude(retVal[1]);
-                            mPref.setWeatherCityId("");
-                            mPref.setAreaAdmin(retVal[2]);
-                            viewModel.isLocationChanged(true);
-                        }
-
-                        break;
-                   case Constant.REQUEST_CODE_LOCATION_PICKER:
-                        Place place1 = PlacePicker.getPlace(this, data);
-
-                        LatLng latLng1 = place1.getLatLng();
-                        mPref.setLatitude(String.valueOf(latLng1.latitude));
-                        mPref.setLongitude(String.valueOf(latLng1.longitude));
-                        mPref.setAreaAdmin(place1.getAddress().toString());
-                        sendBroadcast(new Intent("LOCATION_CHANGED"));
-                        break;*/
-
-                }
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     ArrayList<String> stateList = new ArrayList();
-
-    public String getAddress(double latitude, double longitude) {
-        try {
-
-            Geocoder geocoder;
-            List<Address> addresses;
-            geocoder = new Geocoder(this, Locale.getDefault());
-
-            addresses = geocoder.getFromLocation(latitude, longitude, 2); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
-
-            // String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-            String city = addresses.get(0).getLocality();
-            String state = addresses.get(0).getAdminArea();
-            //  String country = addresses.get(0).getCountryName();
-            String postalCode = addresses.get(0).getPostalCode();
-            //  String knownName = addresses.get(0).getFeatureName();
-            String str = state;
-            if (!stateList.contains(state))
-                stateList.add(state);
-            if (str == null) {
-                str = city;
-            }
-            if (str == null) {
-
-                if (addresses.size() > 1) {
-                    city = addresses.get(1).getLocality();
-                    state = addresses.get(1).getAdminArea();
-                    postalCode = addresses.get(1).getPostalCode();
-                    if (!stateList.contains(state))
-                        stateList.add(state);
-                    str = state;
-                    if (str == null) {
-                        str = city;
-                    }
-                    if (str == null && postalCode != null) {
-                        str = "PIN:" + postalCode;
-                    } else {
-                        Log.e("Geocoder", latitude + "::" + longitude + "::Geocoder::" + "-2:" + city + "-3:" + state + "-4:" + postalCode);
-
-                    }
-
-
-                }
-
-
-            }
-
-
-            return str;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "XXXXXX";
-    }
 
     public void enableBackButtonViews(boolean enable) {
         try {
@@ -1023,7 +696,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-        Log.e("onPause", "onPause:::-XY-:");
     }
 
     @Override
@@ -1031,7 +703,6 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Helper.getInstance().hideKeyboard(mContext);
         CalendarWeatherApp.isForeground = true;
-        Log.e("onPause", "onResume:::-XY-:");
         CalendarWeatherApp.updateAppResource(mContext.getResources(), mContext);
     }
 
@@ -1054,8 +725,8 @@ public class MainActivity extends AppCompatActivity {
 
             if (sBackPressed + 2000 > System.currentTimeMillis()) {
                 if (!mPref.isRemovedAds()) {
-                    CalendarWeatherApp.isRewardedPremiumGrp1 = false;
-                    CalendarWeatherApp.isRewardedPremiumGrp2 = false;
+                    CalendarWeatherApp.isPremiumAccessGrp1 = false;
+                    CalendarWeatherApp.isPremiumAccessGrp2 = false;
                 }
                 finish();
             } else {
@@ -1064,21 +735,15 @@ public class MainActivity extends AppCompatActivity {
             }
             sBackPressed = System.currentTimeMillis();
         }
-
-
     }
 
     public void showHideToolBarView(Boolean visible) {
         AppBarLayout.LayoutParams params = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
-
         if (visible) {
             params.setScrollFlags(0);
         } else {
             params.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS | AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL);
-
         }
-
-
     }
 
     public void showHideBottomNavigationView(Boolean visible) {
@@ -1087,7 +752,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public void openFragment(int type) {
@@ -1119,7 +783,7 @@ public class MainActivity extends AppCompatActivity {
                 ft.addToBackStack(AppConstants.FRAG_WALL_CAL_TAG);
                 ft.commit();
                 break;
-            case 4:
+           /* case 4:
                 frag = BirthAnniversaryFrag.newInstance();
                 ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
@@ -1136,7 +800,7 @@ public class MainActivity extends AppCompatActivity {
                 ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.addToBackStack(AppConstants.FRAG_ANNIVERSARY_TAG);
                 ft.commit();
-                break;
+                break;*/
             case 7:
                 if (Connectivity.isConnected(mContext)) {
                     IAPFragment feedbackDialog = IAPFragment.newInstance(this);
@@ -1171,217 +835,14 @@ public class MainActivity extends AppCompatActivity {
                 FeedbackDialog feedbackDialog = FeedbackDialog.newInstance(this, 0);
                 feedbackDialog.show(ft, "feedback");
                 break;
-
         }
-
-
     }
 
-    /*
-        @Override
-        public boolean onNavigationItemSelected(MenuItem item) {
-
-
-
-            int id = item.getItemId();
-
-
-            if (id == android.R.id.home) {
-                NavUtils.navigateUpFromSameTask(this);
-                return false;
-            }
-            FragmentManager fm = getSupportFragmentManager();
-
-            Fragment frag;
-            FragmentTransaction ft = fm.beginTransaction();
-            switch (id) {
-                case R.id.nav_settings:
-                    Intent intent = new Intent(this, MySettingsActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.nav_home:
-                    Calendar cal = Calendar.getInstance();
-                    frag = DayViewMainFragment.newInstance();
-                    Bundle args = new Bundle();
-                    args.putInt("DAY", cal.get(Calendar.DAY_OF_MONTH));
-                    args.putInt("MONTH", cal.get(Calendar.MONTH));
-                    args.putInt("YEAR", cal.get(Calendar.YEAR));
-                    frag.setArguments(args);
-                    ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_DAYINFO_TAG);
-
-                    ft.addToBackStack(AppConstants.FRAG_DAYINFO_TAG);
-                    ft.commit();
-
-                    break;
-                case R.id.nav_calendar:
-                    goToPage(1, 1);
-                    break;
-                case R.id.nav_festival:
-                    goToPage(1, 2);
-
-                    break;
-
-
-                case R.id.nav_horoscope:
-                    goToPage(1, 3);
-
-                    break;
-
-                case R.id.nav_planet:
-                    goToPage(2, 3);
-                    break;
-
-
-                case R.id.nav_janma_kundali:
-                    goToPage(2, 1);
-
-                    break;
-                case R.id.nav_kundali_milana:
-                    goToPage(2, 2);
-                    break;
-
-
-                case R.id.nav_weather:
-                    openFragment(0);
-                    break;
-                case R.id.nav_vedic:
-                    openFragment(2);
-                    break;
-                case R.id.nav_sun_moon:
-                    openFragment(1);
-                    break;
-                case R.id.nav_wall_calendar:
-                    openFragment(3);
-                    break;
-                case R.id.nav_birth_anniversary:
-
-                    openFragment(4);
-                    break;
-                case R.id.nav_death_anniversary:
-
-                    openFragment(5);
-                    break;
-                case R.id.nav_other_anniversary:
-
-                    openFragment(6);
-                    break;
-
-                case R.id.nav_quote_cat:
-                    goToPage(3, 1);
-                    break;
-                case R.id.nav_quote_indian:
-                    goToPage(3, 2);
-                    break;
-                case R.id.nav_quote_others:
-                    goToPage(3, 3);
-                    break;
-
-
-                case R.id.nav_observance:
-                    goToPage(4, 1);
-                    break;
-                case R.id.nav_aradhana:
-                    goToPage(4, 2);
-                    break;
-                case R.id.nav_media:
-                    goToPage(4, 4);
-                    break;
-                case R.id.nav_onthisday:
-                    goToPage(4, 3);
-                    break;
-
-
-                case R.id.nav_remove_ads:
-                    if (Connectivity.isConnected(this)) {
-
-
-                              //  frag = IAPFragment.newInstance();
-                               // ft.replace(R.id.frameContainer, frag, AppConstants.FRAG_WEATHER_TAG);
-                                //ft.addToBackStack(AppConstants.FRAG_WEATHER_TAG);
-                              //  ft.commit();
-
-                        IAPFragment feedbackDialog = IAPFragment.newInstance(this);
-                        feedbackDialog.show(ft, "IAPFragment");
-
-                        //  removeAds();
-                    } else {
-                        Toast.makeText(mContext, "Please use internet. Try again.", Toast.LENGTH_LONG).show();
-                    }
-                    break;
-
-
-                case R.id.nav_rate:
-                    if (Connectivity.isConnected(this))
-                        AppRater.app_launched(this, true);
-                    else {
-                        Utility.getInstance(this).newToastLong(getResources().getString(R.string.internet_required));
-                    }
-                    break;
-                case R.id.nav_share:
-                    drawer.closeDrawer(Gravity.LEFT);
-                    frag = fm.findFragmentByTag("share");
-                    if (frag != null) {
-                        ft.remove(frag);
-                    }
-                    AppShareDialog shareDialog = AppShareDialog.newInstance(this);
-                    shareDialog.show(ft, "share");
-
-
-                    // Intent intent1 = new Intent(this, FullscreenActivity.class);
-                    // startActivity(intent1);
-
-
-                    break;
-                case R.id.nav_feedback:
-                    drawer.closeDrawer(Gravity.LEFT);
-                    frag = fm.findFragmentByTag("feedback");
-                    if (frag != null) {
-                        ft.remove(frag);
-                    }
-                    FeedbackDialog feedbackDialog = FeedbackDialog.newInstance(this, 0);
-                    feedbackDialog.show(ft, "feedback");
-                    break;
-
-                case R.id.nav_privacy:
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://static.iexamcenter.com/calendarweather/privacy_policy.html"));
-                    startActivity(browserIntent);
-                    break;
-                case R.id.nav_test:
-                    if (CalendarWeatherApp.ForTesting) {
-                        CalendarWeatherApp.ForTesting = false;
-                        Toast.makeText(mContext, "Tester access removed", Toast.LENGTH_SHORT).show();
-
-                    } else {
-                        CalendarWeatherApp.ForTesting = true;
-                        Toast.makeText(mContext, "You are a tester now", Toast.LENGTH_SHORT).show();
-
-                    }
-
-                    break;
-
-
-            }
-
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }
-    */
     public void goToPage(int page, int section) {
-
+        Log.e("goToPage","goToPage:MAIN:"+page + "_" + section);
         viewModel.setPageSubpage(page + "_" + section);
-        Intent intent = new Intent(AppConstants.GOTOPAGE);
-
-        intent.putExtra("PAGE", page);
-        intent.putExtra("SECTION", section);
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
-
     }
 
-  /*  public void showRefreshedUi() {
-        if (mAcquireFragment != null) {
-            mAcquireFragment.refreshUI();
-        }
-    }*/
 
     @UiThread
     public void alert(@StringRes int messageId) {
@@ -1394,245 +855,125 @@ public class MainActivity extends AppCompatActivity {
         if (Looper.getMainLooper().getThread() != Thread.currentThread()) {
             throw new RuntimeException("Dialog could be shown only from the main thread");
         }
-
         AlertDialog.Builder bld = new AlertDialog.Builder(mContext);
         bld.setNeutralButton("OK", null);
-
         if (optionalParam == null) {
             bld.setMessage(messageId);
         } else {
             bld.setMessage(getResources().getString(messageId, optionalParam));
         }
-
         bld.create().show();
     }
 
-/*
-    public void onBillingManagerSetupFinished() {
-        if (mAcquireFragment != null) {
-            mAcquireFragment.onManagerReady(this);
-        }
-    }
-
-    @Override
-    public BillingManager getBillingManager() {
-        return mBillingManager;
-    }
-
-    @Override
-    public boolean isPremiumOnePurchased() {
-        return mViewController.isPremiumOnePurchased();
-    }
-
-    @Override
-    public boolean isPremiumTwoPurchased() {
-        return mViewController.isPremiumTwoPurchased();
-    }
-
-    @Override
-    public boolean isPremiumThreePurchased() {
-        return mViewController.isPremiumThreePurchased();
-    }
-
-    @Override
-    public boolean isPremiumFourPurchased() {
-        return mViewController.isPremiumFourPurchased();
-    }
-
-    @Override
-    public boolean isPremiumFivePurchased() {
-        return mViewController.isPremiumFivePurchased();
-    }
-*/
-
     public void setDefaultLatLng() {
-        if (mPref.getLatitude() == null && mPref.getLongitude() == null) {
-            switch (mPref.getMyLanguage()) {
-                case "or":
-                    mPref.setLatitude("19.8048");
-                    mPref.setLongitude("85.8179");
-                    mPref.setAreaAdmin("Jagannath Temple, Puri, Odisha");
-                    break;
-                case "bn":
-                    mPref.setLatitude("22.572645");
-                    mPref.setLongitude("88.363892");
-                    mPref.setAreaAdmin("Kolkata, West Bengal");
-                    break;
-                case "hi":
-                    mPref.setLatitude("28.644800");
-                    mPref.setLongitude("77.216721");
-                    mPref.setAreaAdmin("New Delhi, India");
-                    break;
-                case "pa":
-                    mPref.setLatitude("30.741482");
-                    mPref.setLongitude("76.768066");
-                    mPref.setAreaAdmin("Chandigarh, Punjab");
-                    break;
-                case "gu":
-                    mPref.setLatitude("23.237560");
-                    mPref.setLongitude("72.647781");
-                    mPref.setAreaAdmin("Gandhinagar, Gujarat");
-                    break;
-                case "mr":
-                    mPref.setLatitude("18.516726");
-                    mPref.setLongitude("73.856255");
-                    mPref.setAreaAdmin("Pune, Maharashtra");
-                    break;
-                case "kn":
-                    mPref.setLatitude("12.972442");
-                    mPref.setLongitude("77.580643");
-                    mPref.setAreaAdmin("Bengaluru, Karnataka");
-                    break;
-                case "ml":
-                    mPref.setLatitude("8.524139");
-                    mPref.setLongitude("76.936638");
-                    mPref.setAreaAdmin("Thiruvananthapuram, Kerala");
-                    break;
-                case "ta":
-                    mPref.setLatitude("13.067439");
-                    mPref.setLongitude("80.237617");
-                    mPref.setAreaAdmin("Chennai, Tamil Nadu");
-                    break;
-                case "te":
-                    mPref.setLatitude("17.387140");
-                    mPref.setLongitude("78.491684");
-                    mPref.setAreaAdmin("Hyderabad, Telangana");
-                    break;
-                default:
-                    mPref.setLatitude("20.7652");
-                    mPref.setLongitude("86.1752");
-                    mPref.setAreaAdmin("Jajpur, Odisha");
 
-            }
-            mPref.load();
+        switch (mPref.getMyLanguage()) {
+            case "or":
+                mPref.setLatitude("19.8876");
+                mPref.setLongitude("86.0945");
+                mPref.setAreaAdmin("Konark Sun Temple, Puri, Odisha");
+                break;
+            case "bn":
+                mPref.setLatitude("22.572645");
+                mPref.setLongitude("88.363892");
+                mPref.setAreaAdmin("Kolkata, West Bengal");
+                break;
+            case "hi":
+                mPref.setLatitude("28.644800");
+                mPref.setLongitude("77.216721");
+                mPref.setAreaAdmin("New Delhi, India");
+                break;
+            case "pa":
+                mPref.setLatitude("30.741482");
+                mPref.setLongitude("76.768066");
+                mPref.setAreaAdmin("Chandigarh, Punjab");
+                break;
+            case "gu":
+                mPref.setLatitude("23.237560");
+                mPref.setLongitude("72.647781");
+                mPref.setAreaAdmin("Gandhinagar, Gujarat");
+                break;
+            case "mr":
+                mPref.setLatitude("18.516726");
+                mPref.setLongitude("73.856255");
+                mPref.setAreaAdmin("Pune, Maharashtra");
+                break;
+            case "kn":
+                mPref.setLatitude("12.972442");
+                mPref.setLongitude("77.580643");
+                mPref.setAreaAdmin("Bengaluru, Karnataka");
+                break;
+            case "ml":
+                mPref.setLatitude("8.524139");
+                mPref.setLongitude("76.936638");
+                mPref.setAreaAdmin("Thiruvananthapuram, Kerala");
+                break;
+            case "ta":
+                mPref.setLatitude("13.067439");
+                mPref.setLongitude("80.237617");
+                mPref.setAreaAdmin("Chennai, Tamil Nadu");
+                break;
+            case "te":
+                mPref.setLatitude("17.387140");
+                mPref.setLongitude("78.491684");
+                mPref.setAreaAdmin("Hyderabad, Telangana");
+                break;
+            default:
+                mPref.setLatitude("28.6129");
+                mPref.setLongitude("77.2295");
+                mPref.setAreaAdmin("India Gate");
+
         }
+        mPref.load();
     }
 
+    public RewardedAd mRewardedAdGrp1, mRewardedAdGrp2;
+    public InterstitialAd mInterstitialAdGrp1, mInterstitialAdGrp2;
 
-    public void writeToFile(String data, Context context, String filename) {
-        try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(filename, Context.MODE_PRIVATE));
-            outputStreamWriter.write(data);
-            outputStreamWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void loadRewardedAds(int type) {
+
+        switch (type) {
+            case 1:
+                mRewardedAdGrp1 = createAndLoadRewardedAd(mRes.getString(R.string.reward_ad_unit_id_1));
+                break;
+            case 2:
+                mRewardedAdGrp2 = createAndLoadRewardedAd(mRes.getString(R.string.reward_ad_unit_id_2));
+                break;
         }
     }
-/*
-public void parseCityJson(){
-    BufferedReader reader = null;
-    String receiveString;
-    StringBuilder stringBuilder = new StringBuilder();
-    try {
-        reader = new BufferedReader(
-                new InputStreamReader(mContext.getAssets().open(  "citylist.json")));
+    public void loadInterstitialAds(int type) {
 
-        while ((receiveString = reader.readLine()) != null) {
-            stringBuilder.append(receiveString);
+        switch (type) {
+            case 1:
+                mInterstitialAdGrp1=createAndLoadInterstitialAd(mRes.getString(R.string.interstitial_ad_unit_id_1));
+                break;
+            case 2:
+                mInterstitialAdGrp2=createAndLoadInterstitialAd(mRes.getString(R.string.interstitial_ad_unit_id_2));
+                break;
         }
-
-    Gson gson = new Gson();
-    CityListResponse[] res1 = gson.fromJson(stringBuilder.toString(), CityListResponse[].class);
-    if(res1!=null){
-        int size=res1.length;
-        int cityCnt=0;
-        String str;
-        stringBuilder = new StringBuilder();
-        for(int i=0;i<size;i++){
-            CityListResponse obj = res1[i];
-            if(obj.getCountry().equalsIgnoreCase("IN")) {
-                cityCnt++;
-                 str=obj.getId()+" "+obj.getCoord().getLat()+" "+obj.getCoord().getLon()+" "+obj.getName()+"\n";
-                stringBuilder.append(str);
-                Log.e("CityList", cityCnt+":"+obj.getCountry() + ":cityList:"+ str);
-            }
-        }
-        writeToFile(stringBuilder.toString(), mContext, "MYCOUNTRYJSON.txt");
     }
-    }catch (Exception e){
-        e.printStackTrace();
-    }
-
-}
-    public String readFromFile(Context context, String filename) {
-
-        String ret = "";
-
-        try {
-            InputStream inputStream = context.openFileInput(filename);
-
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString;
-                StringBuilder stringBuilder = new StringBuilder();
-
-                while ((receiveString = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(receiveString);
-                }
-
-                inputStream.close();
-                ret = stringBuilder.toString();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return ret;
-    }
-
-
-
-    public void getCityAddress() {
-        BufferedReader reader = null;
-        String receiveString;
-        StringBuilder stringBuilder = new StringBuilder();
-        int cnt = 0;
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(mContext.getAssets().open("location.txt")));
-
-            while ((receiveString = reader.readLine()) != null) {
-                cnt++;
-                String[] tmp = receiveString.split(" ");
-                double lat = Double.parseDouble(tmp[1]);
-                double lng = Double.parseDouble(tmp[2]);
-                String str = getAddress(lat, lng);
-                stringBuilder.append((receiveString + "," + str + "\n"));
-
-
-                //  stringBuilder.append(receiveString);
-            }
-            writeToFile(stringBuilder.toString(), mContext, "WeatherLocation.txt");
-            // for(int i=0;i<stateList.size();i++){
-            Log.e("stateList", "::Geocoder::state:" + stateList.size());
-            //  }
-
-            Gson gson = new Gson();
-            CityListResponse[] res1 = gson.fromJson(stringBuilder.toString(), CityListResponse[].class);
-            if(res1!=null){
-                int size=res1.length;
-                int cityCnt=0;
-                String str;
-                stringBuilder = new StringBuilder();
-                for(int i=0;i<size;i++){
-                    CityListResponse obj = res1[i];
-                    if(obj.getCountry().equalsIgnoreCase("IN")) {
-                        cityCnt++;
-                        str=obj.getId()+" "+obj.getCoord().getLat()+" "+obj.getCoord().getLon()+" "+obj.getName()+"\n";
-                        stringBuilder.append(str);
-                        Log.e("CityList", cityCnt+":"+obj.getCountry() + ":cityList:"+ str);
-                    }
-                }
-                //  writeToFile(stringBuilder.toString(), mContext, "MYCOUNTRYJSON.txt");
+    public RewardedAd createAndLoadRewardedAd(String adUnitId) {
+        RewardedAd rewardedAd = new RewardedAd(this, adUnitId);
+        RewardedAdLoadCallback adLoadCallback = new RewardedAdLoadCallback() {
+            @Override
+            public void onRewardedAdLoaded() {
+                // Ad successfully loaded.
             }
 
+            @Override
+            public void onRewardedAdFailedToLoad(int errorCode) {
+                // Ad failed to load.
+            }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        };
+        rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
+        return rewardedAd;
     }
-     */
 
+    public InterstitialAd createAndLoadInterstitialAd(String adUnitId) {
+        InterstitialAd interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(adUnitId);
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+        return interstitialAd;
+    }
 }

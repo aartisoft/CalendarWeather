@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,7 +61,6 @@ public class MoreMainFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-      //  LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
     }
 
     @Override
@@ -89,7 +86,6 @@ public class MoreMainFragment extends Fragment {
             }
 
         });
-       // LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver, new IntentFilter(AppConstants.GOTOPAGE));
         return rootView;
     }
 

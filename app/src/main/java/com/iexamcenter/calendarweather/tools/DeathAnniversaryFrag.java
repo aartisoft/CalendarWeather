@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -714,9 +715,12 @@ Log.e("myCoreData1","myCoreData:2:"+mTithiIndex);
                 long days = 0;
 
                 if (nodob.isChecked()) {
-                    SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM, YYYY", Locale.ENGLISH);
+                    SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM, yyyy", Locale.ENGLISH);
                     String formatted = format1.format(calculatedBirthCal.getTime());
                     String txt2Str = "Annual Shraddha Date : " + formatted + "\n" + headerStr;
+                    String txt2Str1 =  "<strong>" + anniName + " Anniversary Date : " + formatted +"</strong><br/><span>"+headerStr+"</span";
+
+
                     txt1.setGravity(Gravity.CENTER);
                     DataCls obj= new DataCls();
                     obj.cal=calculatedBirthCal;
@@ -725,16 +729,18 @@ Log.e("myCoreData1","myCoreData:2:"+mTithiIndex);
                     reminder.setTag(obj);
 
                     reminder.setVisibility(View.VISIBLE);
-                    txt1.setText(txt2Str);
+                    txt1.setText(Html.fromHtml(txt2Str1));
                     next.setVisibility(View.VISIBLE);
                     prev.setVisibility(View.VISIBLE);
                 } else {
                     days = ((calculatedBirthCal.getTimeInMillis() > actualBirthCal.getTimeInMillis()) ? (calculatedBirthCal.getTimeInMillis() - actualBirthCal.getTimeInMillis()) : (actualBirthCal.getTimeInMillis() - calculatedBirthCal.getTimeInMillis())) / (24 * 60 * 60 * 1000L);
-                    SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM, YYYY", Locale.ENGLISH);
+                    SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM, yyyy", Locale.ENGLISH);
                     String formatted = format1.format(actualBirthCal.getTime());
                     String txt1Str = anniName + " Date : " + formatted + "\n" + headerStr;
                     formatted = format1.format(calculatedBirthCal.getTime());
                     String txt2Str = "Annual Shraddha Date : " + formatted + "\n" + headerStr;
+                    String txt2Str1 =  "<strong>" + anniName + " Anniversary Date : " + formatted +"</strong><br/><span>"+headerStr+"</span";
+
                     txt.setGravity(Gravity.CENTER);
                     txt1.setGravity(Gravity.CENTER);
                     DataCls obj= new DataCls();
@@ -753,7 +759,7 @@ Log.e("myCoreData1","myCoreData:2:"+mTithiIndex);
                     } else if (type == 1 && days < 300) {
                         observerPlanetInfo((selYear + (++mDiffYear)), selMonth, selDate, 1);
                     }
-                    txt1.setText(txt2Str);
+                    txt1.setText(Html.fromHtml(txt2Str1));
 
                 }
 

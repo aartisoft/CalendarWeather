@@ -253,7 +253,7 @@
     </string-array>
 
 
-    <string name="l_shraddha">Shraddha</string>
+    <string name="l_shraddha">શ્રાદ્ધ</string>
     <string name="l_uayan">ઉત્તરાયણ</string>
     <string name="l_dayan">દક્ષિણાયન</string>
 
@@ -283,14 +283,12 @@
     <string name="l_rahu_bela">રાહુ કાળ</string>
     <string name="l_gulika_bela">ગુલિક કાળ</string>
     <string name="l_yama_bela">યમગંડ</string>
-    <string name="l_time_prattha">Subha</string>
-    <string name="l_time_diba">Diba</string>
-    <string name="l_time_sandhya">Sham</string>
-    <string name="l_time_night">Ratra</string>
-    <string name="l_time_hour">Ghanta</string>
-    <string name="l_time_min">Min</string>
+    <string name="l_time_prattha">સવારે</string>
+    <string name="l_time_diba">દિન</string>
+    <string name="l_time_sandhya">સાંજ</string>
+    <string name="l_time_night">રાત્રે</string>
     <string name="l_time_from">-</string>
-    <string name="l_time_to"></string>
+    <string name="l_time_to">પછી</string>
     <string name="l_time_next">તે પછી</string>
 
     <string name="e_noon">Noon</string>
@@ -322,7 +320,6 @@
     <string name="e_time_from">-</string>
     <string name="e_time_to">upto</string>
     <string name="e_time_next">next</string>
-
 
 
     <string name="l_sankranti">સંક્રાતિ</string>
@@ -417,8 +414,8 @@
         <item>પુષ્ય</item>
         <item>આશ્લેષા</item>
         <item>મઘા</item>
-        <item>પૂર્વ ફાલ્ગુની</item>
-        <item>ઉત્તર ફાલ્ગુની</item>
+        <item>પૂર્વફાલ્ગુની</item>
+        <item>ઉત્તરફાલ્ગુની</item>
         <item>હસ્ત</item>
         <item>ચિત્રા</item>
         <item>સ્વાતિ</item>
@@ -426,13 +423,13 @@
         <item>અનુરાધા</item>
         <item>જ્યેષ્ઠા</item>
         <item>મૂળ</item>
-        <item>પૂર્વ અષાઢ</item>
-        <item>ઉત્તર અષાઢ</item>
+        <item>પૂર્વઅષાઢ</item>
+        <item>ઉત્તરઅષાઢ</item>
         <item>શ્રાવણ</item>
         <item>ધનિષ્ટા</item>
         <item>શતભિષા</item>
-        <item>પૂર્વ ભાદ્રપદ</item>
-        <item>ઉત્તર ભાદ્રપદ</item>
+        <item>પૂર્વભાદ્રપદ</item>
+        <item>ઉત્તરભાદ્રપદ</item>
         <item>રેવતી</item>
         <item>અભિજીત</item>
 
@@ -535,8 +532,8 @@
         <item>Pushya</item>
         <item>Ashlesha</item>
         <item>Magha</item>
-        <item>Purva Phalguni</item>
-        <item>Uttara Phalguni</item>
+        <item>PurvaPhalguni</item>
+        <item>UttaraPhalguni</item>
         <item>Hasta</item>
         <item>Chitra</item>
         <item>Swati</item>
@@ -544,13 +541,13 @@
         <item>Anuradha</item>
         <item>Jyeshtha</item>
         <item>Mul</item>
-        <item>Purva Ashadh</item>
-        <item>Uttara Ashadh</item>
+        <item>PurvaAshadh</item>
+        <item>UttaraAshadh</item>
         <item>Shraavan</item>
         <item>Dhanishta</item>
         <item>Shatabhisha</item>
-        <item>Purva Bhadrapad</item>
-        <item>Uttara Bhadrapad</item>
+        <item>PurvaBhadrapad</item>
+        <item>UttaraBhadrapad</item>
         <item>Revati</item>
         <item>Abhijit</item>
     </string-array>
@@ -631,13 +628,13 @@
 
     </string-array>
     <string-array name="l_arr_choghadiya_day">
-        <item>ઉદ્વેગ (ખરાબ)</item>
-        <item>ચર (તટસ્થ)  </item>
-        <item>લાભ</item>
-        <item>અમૃત</item>
-        <item>કાલ</item>
-        <item>શુભ </item>
-        <item>રોગ</item>
+        <item>ઉદ્વેગ(અશુભ)</item>
+        <item>ચર(તટસ્થ)  </item>
+        <item>લાભ(વૃદ્ધિ)</item>
+        <item>અમૃત(શ્રેષ્ઠ)</item>
+        <item>કાલ(નુકસાન)</item>
+        <item>શુભ(સારું) </item>
+        <item>રોગ(અશુભ)</item>
     </string-array>
     <string-array name="e_arr_choghadiya_day">
         <item>Udvega(Bad)</item>
@@ -648,6 +645,27 @@
         <item>Shubha(Good)</item>
         <item>Roga(Evil)</item>
     </string-array>
+    <string-array name="l_arr_choghadiya_night">
+
+        <item>શુભ(સારું)</item>
+        <item>અમૃત(શ્રેષ્ઠ)</item>
+        <item>ચર(તટસ્થ)</item>
+        <item>રોગ(અશુભ)</item>
+        <item>કાલ(નુકસાન)</item>
+        <item>લાભ(વૃદ્ધિ)</item>
+        <item>ઉદ્વેગ(અશુભ))</item>
+    </string-array>
+
+    <string-array name="e_arr_choghadiya_night">
+        <item>Shubha(Good)</item>
+        <item>Amrita(Best)</item>
+        <item>Chara(Neutral)</item>
+        <item>Roga(Evil)</item>
+        <item>Kala(Loss)</item>
+        <item>Labha(Gain)</item>
+        <item>Udvega(Bad)</item>
+    </string-array>
+
     <string-array name="l_arr_hora">
         <item>સૂર્ય</item>
         <item>શુક્ર</item>
@@ -989,6 +1007,262 @@
         <item>Retrograde</item>
     </string-array>
 
+
+    <string-array name="l_arr_main_menu">
+        <item>1_0_મુખ્ય પૃષ્ઠ</item>
+        <item>1_1_સેટિંગ્સ</item>
+        <item>1_2_પંચાંગ</item>
+        <item>1_3_ઉત્સવ</item>
+        <item>1_4_જન્માક્ષર</item>
+        <item>1_5_હવામાન</item>
+        <item>1_6_સૂર્ય ચંદ્ર</item>
+        <item>1_7_વૈદિક સમય</item>
+        <item>1_8_દિવાલ કેલેન્ડર</item>
+        <item>2_0_જ્યોતિષ પૃષ્ઠ</item>
+        <item>2_1_જન્મકુંડળી</item>
+        <item>2_2_કુંડલી મિલન</item>
+        <item>2_3_ગ્રહ</item>
+        <item>3_0_પ્રીમિયમ પૃષ્ઠ</item>
+        <item>3_1_વૈદિક જન્મદિવસ</item>
+        <item>3_2_શ્રાદ્ધ</item>
+        <item>3_3_વાર્ષિક ઘટના</item>
+        <item>3_4_જન્મ ચંદ્ર</item>
+        <item>3_5_જન્મ તારો</item>
+        <item>3_6_જન્મ ચડતો</item>
+        <item>3_7_મંગળની ખામી</item>
+        <item>3_8_પિત્ર દોષ</item>
+        <item>3_9_કાલસર્પ દોષ</item>
+        <item>3_10_ગ્રહ દશા</item>
+        <item>3_11_બાળકનું નામ પ્રારંભિક</item>
+        <item>3_12_વય ગણતરી</item>
+        <item>3_13_અમૃત સિદ્ધિ યોગ</item>
+        <item>3_14_સર્વસિદ્ધિ યોગ</item>
+        <item>3_15_રવિ પુષ્ય યોગ</item>
+        <item>3_16_ગુરુ પુષ્ય યોગ</item>
+        <item>3_17_બિપુષ્કર યોગ</item>
+        <item>3_18_ત્રિપુષ્કર યોગ</item>
+        <item>3_19_અભિજિત નક્ષત્ર</item>
+        <item>4_0_વધારે</item>
+        <item>4_1_પૂજા</item>
+        <item>4_2_દંતકથા કહે છે</item>
+        <item>4_3_મીડિયા</item>
+        <item>4_4_આ દિવસ</item>
+        <item>4_5_પાલન દિવસ</item>
+        <item>5_0_વધારાનું</item>
+        <item>5_1_જાહેરાતો દૂર કરો</item>
+        <item>5_2_રેટ એપ્લિકેશન</item>
+        <item>5_3_શેર એપ્લિકેશન</item>
+        <item>5_4_પ્રતિસાદ</item>
+        <item>5_5_ગોપનીયતા નીતિ</item>
+    </string-array>
+    <string-array name="e_arr_main_menu">
+        <item>1_0_Main Page</item>
+        <item>1_1_Settings</item>
+        <item>1_2_Calendar</item>
+        <item>1_3_Festivals</item>
+        <item>1_4_Horoscope</item>
+        <item>1_5_Weather</item>
+        <item>1_6_Sun Moon</item>
+        <item>1_7_Vedic Time</item>
+        <item>1_8_Wall Calendar</item>
+        <item>2_0_Jyotish Page</item>
+        <item>2_1_Janma Kundali</item>
+        <item>2_2_Kundali Milan</item>
+        <item>2_3_Planet</item>
+        <item>3_0_Premium Page</item>
+        <item>3_1_Vedic Birthday</item>
+        <item>3_2_Shraddha</item>
+        <item>3_3_Annual Event</item>
+        <item>3_4_Birth Rashi</item>
+        <item>3_5_Birth Star</item>
+        <item>3_6_Birth Lagna</item>
+        <item>3_7_Mangal Dosh</item>
+        <item>3_8_Pitru Dosh</item>
+        <item>3_9_Kaal Sarp Dosh</item>
+        <item>3_10_Graha Dasha</item>
+        <item>3_11_Baby Name Initials</item>
+        <item>3_12_Age Calculator</item>
+        <item>3_13_Amrit Siddhi Yoga</item>
+        <item>3_14_Sarvartha Siddhi Yoga</item>
+        <item>3_15_Ravi Pushya Yoga</item>
+        <item>3_16_Guru Pushya Yoga</item>
+        <item>3_17_Dwipushkar Yoga</item>
+        <item>3_18_Tripushkar Yoga</item>
+        <item>3_19_Abhijit Nakshatra</item>
+        <item>4_0_More</item>
+        <item>4_1_Aradhana</item>
+        <item>4_2_Legend Says</item>
+        <item>4_3_Media</item>
+        <item>4_4_On This Day</item>
+        <item>4_5_Observance</item>
+        <item>5_0_extra</item>
+        <item>5_1_Remove Ads</item>
+        <item>5_2_Rate App</item>
+        <item>5_3_Share</item>
+        <item>5_4_Feedback</item>
+        <item>5_5_Privacy Policy</item>
+    </string-array>
+
+    <string-array name="l_name_initials">
+        <item>1-Chu-Che-Cho-Laa</item>
+        <item>2-Lee-Loo-Le-Lo</item>
+        <item>3-A-Ee-U-E</item>
+        <item>4-O-Vaa-Vee-Vu</item>
+        <item>5-Ve-Vo-Kaa-Kee</item>
+        <item>6-Ku-Gha-Ing-Chha</item>
+        <item>7-Ke-Ko-Haa-Hee</item>
+        <item>8-Hu-He-Ho-Daa</item>
+        <item>9-Dee-Doo-De-Do</item>
+        <item>10-Maa-Mee-Moo-Me</item>
+        <item>11-Mo-Taa-Tee-Too</item>
+        <item>12-Te-To-Paa-Pee</item>
+        <item>13-Poo-Sha-Na-Tha</item>
+        <item>14-Pe-Po-Raa-Ree</item>
+        <item>15-Roo-Re-Ro-Taa</item>
+        <item>16-Tee-Too-Te-To</item>
+        <item>17-Naa-Nee-Noo-Ne</item>
+        <item>18-No-Yaa-Yee-Yoo</item>
+        <item>19-Ye-Yo-Bhaa-Bhee</item>
+        <item>20-Bhoo-Dhaa-Phaa-Dha</item>
+        <item>21-Bhe-Bho-Jaa-Jee</item>
+        <item>22-Khee-Khoo-Khe-Kho</item>
+        <item>23-Gaa-Gee-Gu-Ge</item>
+        <item>24-Go-Saa-See-Soo</item>
+        <item>25-Se-So-Daa-Dee</item>
+        <item>26-Doo-Tha-Jha-Yna</item>
+        <item>27-De-Do-Cha-Chee</item>
+    </string-array>
+    <string-array name="e_name_initials">
+        <item>1-Chu-Che-Cho-Laa</item>
+        <item>2-Lee-Loo-Le-Lo</item>
+        <item>3-A-Ee-U-E</item>
+        <item>4-O-Vaa-Vee-Vu</item>
+        <item>5-Ve-Vo-Kaa-Kee</item>
+        <item>6-Ku-Gha-Ing-Chha</item>
+        <item>7-Ke-Ko-Haa-Hee</item>
+        <item>8-Hu-He-Ho-Daa</item>
+        <item>9-Dee-Doo-De-Do</item>
+        <item>10-Maa-Mee-Moo-Me</item>
+        <item>11-Mo-Taa-Tee-Too</item>
+        <item>12-Te-To-Paa-Pee</item>
+        <item>13-Poo-Sha-Na-Tha</item>
+        <item>14-Pe-Po-Raa-Ree</item>
+        <item>15-Roo-Re-Ro-Taa</item>
+        <item>16-Tee-Too-Te-To</item>
+        <item>17-Naa-Nee-Noo-Ne</item>
+        <item>18-No-Yaa-Yee-Yoo</item>
+        <item>19-Ye-Yo-Bhaa-Bhee</item>
+        <item>20-Bhoo-Dhaa-Phaa-Dha</item>
+        <item>21-Bhe-Bho-Jaa-Jee</item>
+        <item>22-Khee-Khoo-Khe-Kho</item>
+        <item>23-Gaa-Gee-Gu-Ge</item>
+        <item>24-Go-Saa-See-Soo</item>
+        <item>25-Se-So-Daa-Dee</item>
+        <item>26-Doo-Tha-Jha-Yna</item>
+        <item>27-De-Do-Cha-Chee</item>
+
+    </string-array>
+
+    <string-array name="l_arr_dasha_name" translatable="false">
+        <item>મહાદશા</item>
+        <item>અંતર દશા</item>
+        <item>પ્રણયંતર દશા</item>
+        <item>શુક્શ્મા દશા</item>
+        <item>પ્રાન દશા</item>
+    </string-array>
+    <string-array name="e_arr_dasha_name" translatable="false">
+        <item>Maha\nDasha</item>
+        <item>Antar\nDasha</item>
+        <item>Pratyantar\nDasha</item>
+        <item>Shookshma\nDasha</item>
+        <item>Pran\nDasha</item>
+    </string-array>
+    <string-array name="l_arr_sarpa_yoga" translatable="false">
+        <item>અનંત કાલસર્પ યોગ</item>
+        <item>કુલિક કાલસર્પ યોગ</item>
+        <item>વાસુકી કાલસર્પ યોગ</item>
+        <item>શંખળાપાલ કાલસર્પ યોગ</item>
+        <item>પદ્મ કાલસર્પ યોગ</item>
+        <item>મહા પદ્મ કાલસર્પ યોગ</item>
+        <item>તક્ષક કાલસર્પ યોગ</item>
+        <item>કર્કોટક કાલસર્પ યોગ</item>
+        <item>શંખચુદ કાલસર્પ યોગ</item>
+        <item>ઘટક કાલસર્પ યોગ</item>
+        <item>વિશાક્ત કાલસર્પ યોગ</item>
+        <item>શેષનાગ કાલસર્પ યોગ</item>
+    </string-array>
+
+    <string-array name="e_arr_sarpa_yoga" translatable="false">
+        <item>Anant Kala Sarpa Yoga</item>
+        <item>Kulik Kala Sarpa Yoga</item>
+        <item>Vasuki Kala Sarpa Yoga</item>
+        <item>Shankhapal Kala Sarpa Yoga</item>
+        <item>Padma Kala Sarpa Yoga</item>
+        <item>Maha Padma Kala Sarpa Yoga</item>
+        <item>Takshak Kala Sarpa Yoga</item>
+        <item>Karkotak Kala Sarpa Yoga</item>
+        <item>Shankhachoodh Kala Sarpa Yoga</item>
+        <item>Ghatak Kala Sarpa Yoga</item>
+        <item>Vishakt Kala Sarpa Yoga</item>
+        <item>Shesh Nag Kala Sarpa Yoga</item>
+    </string-array>
+    <string-array name="l_arr_special_calculator" translatable="false">
+        <item>જન્મદિવસ</item>
+        <item>શ્રાદ્ધ દિન</item>
+        <item>વાર્ષિક ઘટના</item>
+        <item>જન્મ રાશી</item>
+        <item>જન્મ તારા</item>
+        <item>જન્મ ચડતા</item>
+        <item>મંગલ દોશા</item>
+        <item>પિત્ર દોશા</item>
+        <item>કાલસર્પ દોષ</item>
+        <item>ગ્રહ દશા</item>
+        <item>નામ પ્રારંભિક</item>
+        <item>વય ગણતરી</item>
+    </string-array>
+    <string-array name="e_arr_special_calculator" translatable="false">
+        <item>Vedic Birthday</item>
+        <item>Shraaddh Day</item>
+        <item>Annual Event</item>
+        <item>Birth Rashi</item>
+        <item>Birth Star</item>
+        <item>Birth Lagna</item>
+        <item>Mangal Dosh</item>
+        <item>Pitru Dosh</item>
+        <item>Kala Sarpa Dosh</item>
+        <item>Graha Dasha</item>
+        <item>Baby Name Initials</item>
+        <item>Age Calculator</item>
+    </string-array>
+
+    <string-array name="l_arr_special_ausp_day" translatable="false">
+        <item>અમૃત સિદ્ધિ યોગ</item>
+        <item>સર્વસિદ્ધિ યોગ</item>
+        <item>રવિ પુષ્ય યોગ</item>
+        <item>ગુરુ પુષ્ય યોગ</item>
+        <item>બિપુષ્કર યોગ</item>
+        <item>ત્રિપુષ્કર યોગ</item>
+        <item>અભિજિત નક્ષત્ર</item>
+    </string-array>
+
+    <string-array name="e_arr_special_ausp_day" translatable="false">
+        <item>Amrit Siddhi Yoga</item>
+        <item>Sarvartha Siddhi Yoga</item>
+        <item>Ravi Pushya Yoga</item>
+        <item>Guru Pushya Yoga</item>
+        <item>Dwipushkar Yoga</item>
+        <item>Tripushkar Yoga</item>
+        <item>Abhijit Nakshatra</item>
+    </string-array>
+    <string-array name="l_arr_ausp_work_yes_no">
+        <item>હા</item>
+        <item>ના</item>
+    </string-array>
+    <string-array name="e_arr_ausp_work_yes_no">
+        <item>YES</item>
+        <item>NO</item>
+    </string-array>
+
     <string name="l_kundali_yoni_title">યોની </string>
     <string name="e_kundali_yoni_title">yoni</string>
 
@@ -1080,11 +1354,11 @@
     <string name="l_ghatabar">ઘટવાર</string>
     <string name="e_ghatabar">Ghata Bar</string>
 
-    <string name="l_ghatarashi">તમારી રાશિ</string>
-    <string name="e_ghatarashi">rashi byaktinka pai</string>
+    <string name="l_ghatarashi">રાશિ લોકો માટે</string>
+    <string name="e_ghatarashi">Rasi loko mate</string>
 
-    <string name="l_nakshatra_byakti">તમારું  નક્ષત્ર</string>
-    <string name="e_nakshatra_byakti">nakshatra byaktinka pai</string>
+    <string name="l_nakshatra_byakti">નક્ષત્ર લોકો માટે</string>
+    <string name="e_nakshatra_byakti">nakshatra loko mate</string>
 
     <string name="l_ghata_chandra">ઘટચન્દ્ર </string>
     <string name="e_ghata_chandra">Ghata Chandra</string>
@@ -1229,4 +1503,102 @@
 
     <string name="l_planet_ketu">કેતુ</string>
     <string name="e_planet_ketu">Ketu</string>
+
+
+    <string name="l_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
+    <string name="e_name_initials_str"><![CDATA[Based on birth star <span style=\"color:#FF8C00;\"><strong> %1$s </strong></span> following Swars for name initials are recommended : <span style=\"color:#FF8C00;\"><strong>%2$s </strong></span>]]></string>
+    <string name="l_pitru_dosha">પિત્ર દોશા</string>
+    <string name="e_pitru_dosha">Pitra Dosh</string>
+
+    <string name="l_yoga_header">%1$s શુભ દિવસ</string>
+    <string name="e_yoga_header">%1$s Auspicious Days</string>
+
+    <string name="l_kala_sarpa_dosha">કાલ સર્પ યોગ</string>
+    <string name="e_kala_sarpa_dosha">Kala Sarpa Yoga</string>
+
+    <string name="l_nakshetra_pada">પાદ</string>
+    <string name="e_nakshetra_pada">pada</string>
+
+    <string name="l_time_tharu">થી</string>
+    <string name="e_time_tharu">thi</string>
+
+    <string name="l_sal" translatable="false">વર્ષ</string>
+    <string name="e_sal" translatable="false">saal</string>
+
+    <string name="l_shraddha_parban">પર્વણા</string>
+    <string name="e_shraddha_parban">Parbana</string>
+
+    <string name="l_shraddha_eko">એકીકૃત</string>
+    <string name="e_shraddha_eko">Ekodhista</string>
+
+    <string name="l_shraddha_ra">ના</string>
+    <string name="e_shraddha_ra">ka</string>
+
+    <string name="l_lagna_at_sunrise">સૂર્યોદય સમયે લગના</string>
+    <string name="e_lagna_at_sunrise">Lagna at Sunrise</string>
+
+    <string name="l_lagna">લગના</string>
+    <string name="e_lagna">Lagna</string>
+
+    <string name="l_planet_graha">ગ્રહ</string>
+    <string name="e_planet_graha">planet</string>
+
+    <string name="l_time_hour">ક</string>
+    <string name="e_time_hour">hr</string>
+    <string name="l_time_min">મિ</string>
+    <string name="e_time_min">min</string>
+
+    <string name="l_combination">Combination</string>
+    <string name="e_combination">Combination</string>
+    <string name="l_duration">અવધિ</string>
+    <string name="e_duration">Duration</string>
+
+    <string name="l_pitru_dosha_desc1">%1$s ગ્રહ ઘર -%2$s માં છે</string>
+    <string name="e_pitru_dosha_desc1">%1$s planet is in house -  %2$s</string>
+    <string name="l_pitru_dosha_desc2">%1$s ગ્રહ અને %2$s ગ્રહ એક સાથે ઘરે - %3$s</string>
+    <string name="e_pitru_dosha_desc2">%1$s and %2$s  together in house - %3$s</string>
+    <string name="l_pitru_dosha_desc3">%3$s ગ્રહનો સ્વામી %2$s ઘર %1$s ગ્રહના ઘરે છે</string>
+    <string name="e_pitru_dosha_desc3"> %3$s is in %1$s \'s resident house - %2$s</string>
+
+    <string name="l_pitru_dosha_desc4">%3$s ગ્રહ અને %1$s ઘરનો માલિક %2$s ગ્રહ %4$s - ગૃહમાં છે</string>
+    <string name="e_pitru_dosha_desc4"> Lord of  %1$s house %2$s and  %3$s in house %4$s</string>
+
+
+    <string name="l_pitru_dosha_desc5">%1$s ગ્રહ ગૃહ - %2$s ના સ્વામી %3$s ગ્રહના ઘરે છે</string>
+    <string name="e_pitru_dosha_desc5"> %1$s is in house-%2$s of Lord %3$s </string>
+
+    <string name="l_sarpa_dosha_desc1">બધા ગ્રહો રાહુ અને કેતુની અંદર છે</string>
+    <string name="e_sarpa_dosha_desc1">All planets are within Rahu &amp; Ketu </string>
+
+    <string name="l_mangal_dosha_desc1">મંગલ ઘર %1$s માં છે</string>
+    <string name="e_mangal_dosha_desc1">Mangal is in house-%1$s</string>
+
+    <string name="l_jogin_help">પ્રવાસ નો સમય</string>
+    <string name="e_jogin_help">yatra nasti</string>
+    <string name="l_jogin_help1">. અન્ય દિશા યાત્રા શુભ</string>
+    <string name="e_jogin_help1">. Anya disa yatra subha.</string>
+
+    <string-array name="l_arr_day_planet">
+        <item>@string/l_planet_surya</item>
+        <item>@string/l_planet_surya</item>
+        <item>@string/l_planet_mangal</item>
+        <item>@string/l_planet_budha</item>
+        <item>@string/l_planet_gura</item>
+        <item>@string/l_planet_shukra</item>
+        <item>@string/l_planet_sani</item>
+    </string-array>
+    <string-array name="l_arr_planet">
+        <item>@string/l_planet_surya</item>
+        <item>@string/l_planet_chandra</item>
+        <item>@string/l_planet_budha</item>
+        <item>@string/l_planet_shukra</item>
+        <item>@string/l_planet_mangal</item>
+        <item>@string/l_planet_gura</item>
+        <item>@string/l_planet_sani</item>
+        <item>@string/l_planet_aruna</item>
+        <item>@string/l_planet_baruna</item>
+        <item>@string/l_planet_jama</item>
+        <item>@string/l_planet_rahu</item>
+        <item>@string/l_planet_ketu</item>
+    </string-array>
 </resources>

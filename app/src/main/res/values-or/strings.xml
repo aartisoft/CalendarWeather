@@ -1981,5 +1981,25 @@
     <string name="l_duration">ସମୟ ପରିବ୍ୟାପ୍ତି</string>
     <string name="e_duration">Duration</string>
 
+
+
+
+    <string name="l_pitru_dosha_desc1">ପିତୃଦୋଷ - %1$sଗ୍ରହ %2$sଘରେ</string>
+    <string name="e_pitru_dosha_desc1">%1$s in house -  %2$s</string>
+    <string name="l_pitru_dosha_desc2">ପିତୃଦୋଷ - %1$sଗ୍ରହ ଓ %2$sଗ୍ରହ %3$sଘରେ</string>
+    <string name="e_pitru_dosha_desc2">%1$s and %2$s  together in house - %3$s</string>
+    <string name="l_pitru_dosha_desc3">ପିତୃଦୋଷ - %2$sଘରର ଅଧିପତି %1$sଗ୍ରହଙ୍କ ଘରେ %3$sଗ୍ରହ</string>
+    <string name="e_pitru_dosha_desc3"> %3$s is in %1$s \'s resident house - %2$s</string>
+    <string name="l_pitru_dosha_desc4">ପିତୃଦୋଷ - %1$sଘରର ଅଧିପତି %2$sଗ୍ରହ ଓ %3$sଗ୍ରହ %4$sଘରେ</string>
+    <string name="e_pitru_dosha_desc4"> Lord of  %1$s house %2$s and  %3$s in house %4$s</string>
+    <string name="l_pitru_dosha_desc5">ପିତୃଦୋଷ - %1$sଗ୍ରହ %2$sଘରର ଅଧିପତି %3$sଗ୍ରହଙ୍କ ଘରେ</string>
+    <string name="e_pitru_dosha_desc5"> %1$s is in house-%2$s of Lord %3$s </string>
+
+    <string name="l_sarpa_dosha_desc1">ସମସ୍ତ ଗ୍ରହ ଗଣ ରାହୁ ଓ କେତୁ ଙ୍କ ଅଧିନରେ ଅଛନ୍ତି</string>
+    <string name="e_sarpa_dosha_desc1">All planets are within Rahu &amp; Ketu </string>
+
+    <string name="l_mangal_dosha_desc1">ମଙ୍ଗଳଗ୍ରହ %1$s ଘରେ ଥିବାରୁ ମାଙ୍ଗଳିକ ଦୋଷ ରହୁଛି</string>
+    <string name="e_mangal_dosha_desc1">Mangala is in house-%1$s</string>
+
 </resources>
 

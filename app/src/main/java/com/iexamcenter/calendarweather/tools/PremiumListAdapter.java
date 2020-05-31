@@ -60,7 +60,7 @@ public class PremiumListAdapter extends RecyclerView.Adapter<PremiumListAdapter.
                     return;
                 }else if(!isRewared){
                     mAds.performClick();
-                    Toast.makeText(mContext,"Unable to load Google Ads. Please check connection.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext,"Please check connection.",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 int position = (int) v.getTag();
@@ -178,9 +178,9 @@ public class PremiumListAdapter extends RecyclerView.Adapter<PremiumListAdapter.
        // }
        // boolean isRewared = false;
         if (mylist.size() > 10) {
-            isRewared = CalendarWeatherApp.isRewardedPremiumGrp1;
+            isRewared = CalendarWeatherApp.isPremiumAccessGrp1;
         } else {
-            isRewared = CalendarWeatherApp.isRewardedPremiumGrp2;
+            isRewared = CalendarWeatherApp.isPremiumAccessGrp2;
         }
         if (isRewared) {
             holder.titleCntr.setBackground(null);

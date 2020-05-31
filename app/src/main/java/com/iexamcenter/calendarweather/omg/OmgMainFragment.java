@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,14 +74,12 @@ public class OmgMainFragment extends Fragment {
             }
 
         });
-       // LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver,new IntentFilter(AppConstants.GOTOPAGE));
-        return rootView;
+       return rootView;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-       // LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
     }
 
     public TabLayout getTabLayout(){

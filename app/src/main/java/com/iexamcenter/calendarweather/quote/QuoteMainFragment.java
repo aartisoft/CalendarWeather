@@ -10,8 +10,6 @@ import androidx.annotation.NonNull;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.util.Log;
@@ -66,19 +64,13 @@ public class QuoteMainFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-       // LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
-       // activity.showHideBottomNavigationView(true);
     }
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_main, container, false);
-      //  activity.showHideBottomNavigationView(false);
-
-      //  activity.enableBackButtonViews(true);
-        //LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver,new IntentFilter(AppConstants.GOTOPAGE));
-        DateFormat dateFormat = new SimpleDateFormat("EEE, d-MMM-yyyy", Locale.US);
+           DateFormat dateFormat = new SimpleDateFormat("EEE, d-MMM-yyyy", Locale.US);
         Date date = new Date();
         String today = dateFormat.format(date);
        // activity.toolbar.setTitle("Legends Quotes");

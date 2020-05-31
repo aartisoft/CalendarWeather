@@ -70,22 +70,22 @@ public class PremiumMainFragment extends Fragment {
         viewModel.getPageSubpage().observe(getViewLifecycleOwner(), pageSubpage -> {
 
             String[] page=pageSubpage.split("_");
-            if (Integer.parseInt(page[1]) > 11) {
-                tabViewPager.setCurrentItem(Integer.parseInt(page[1]) - 1);
-            }else {
-                tabViewPager.setCurrentItem(0);
+            if(Integer.parseInt(page[0])==3) {
+                if (Integer.parseInt(page[1]) > 11) {
+                    tabViewPager.setCurrentItem(Integer.parseInt(page[1]) - 1);
+                } else {
+                    tabViewPager.setCurrentItem(0);
+                }
             }
 
         });
-       // LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver,new IntentFilter(AppConstants.GOTOPAGE));
-        return rootView;
+         return rootView;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-       // LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
-    }
+     }
 
     public TabLayout getTabLayout(){
         return tabLayout;

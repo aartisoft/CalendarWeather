@@ -3,6 +3,7 @@ package com.iexamcenter.calendarweather;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +70,7 @@ public class RootFragment extends Fragment {
         viewModel.getPageSubpage().observe(getViewLifecycleOwner(), pageSubpage -> {
 
             String[] page=pageSubpage.split("_");
+            Log.e("goToPage","goToPage:root:"+(Integer.parseInt(page[0]) - 1));
             mPager.setCurrentItem(Integer.parseInt(page[0]) - 1);
 
         });
@@ -129,6 +131,7 @@ public class RootFragment extends Fragment {
 
         mPagerAdapter = new RootPagerAdapter(getChildFragmentManager(), activity, al);
         mPager.setAdapter(mPagerAdapter);
+        mPager.setOffscreenPageLimit(4);
         mPager.setCurrentItem(CalendarWeatherApp.getSelectedPage() - 1);
         bottomNavigationView.getMenu().getItem(CalendarWeatherApp.getSelectedPage() - 1).setChecked(true);
 
@@ -140,7 +143,7 @@ public class RootFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-                activity.setVisiblePagePosition(position);
+              //  activity.setVisiblePagePosition(position);
 
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
 

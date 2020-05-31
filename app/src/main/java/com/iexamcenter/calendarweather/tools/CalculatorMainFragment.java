@@ -19,11 +19,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.material.button.MaterialButton;
 import com.iexamcenter.calendarweather.AppConstants;
 import com.iexamcenter.calendarweather.CalendarWeatherApp;
@@ -34,7 +33,6 @@ import com.iexamcenter.calendarweather.utility.Connectivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -48,6 +46,7 @@ public class CalculatorMainFragment extends Fragment {
     Resources res;
     RecyclerView recyclerView;
     private RewardedAd rewardedAd;
+    private InterstitialAd mInterstitialAdGrp;
     int page;
     MaterialButton ads;
     PremiumListAdapter mAdapter;
@@ -86,11 +85,12 @@ public class CalculatorMainFragment extends Fragment {
         viewModel.getPageSubpage().observe(getViewLifecycleOwner(), pageSubpage -> {
 
             String[] page=pageSubpage.split("_");
-            Log.e("pagepage",":::page:::::::"+page[0]+"--"+page[1]);
-            if (Integer.parseInt(page[1]) <13 && (CalendarWeatherApp.isRewardedPremiumGrp1)) {
-                openPage(Integer.parseInt(page[1])-1);
-            }else if(!CalendarWeatherApp.isRewardedPremiumGrp1){
-                Toast.makeText(activity,"Please unlock, before use",Toast.LENGTH_SHORT).show();
+            if(Integer.parseInt(page[0])==3) {
+                if (Integer.parseInt(page[1]) < 13 && (CalendarWeatherApp.isPremiumAccessGrp1)) {
+                    openPage(Integer.parseInt(page[1]) - 1);
+                } else if (!CalendarWeatherApp.isPremiumAccessGrp1) {
+                    Toast.makeText(activity, "Please unlock, before use", Toast.LENGTH_SHORT).show();
+                }
             }
 
         });
@@ -175,7 +175,7 @@ public void openPage(int position) {
         super.onDestroy();
 
     }
-
+/*
     public void loadAds() {
         String reward_ad_unit_id_1 = activity.getResources().getString(R.string.reward_ad_unit_id_1);
         rewardedAd = new RewardedAd(activity, reward_ad_unit_id_1);
@@ -237,7 +237,7 @@ public void openPage(int position) {
             }
         });
     }
-
+*/
     protected void setUp(View rootView) {
         ads = rootView.findViewById(R.id.ads);
         recyclerView = rootView.findViewById(R.id.recycler_view);
@@ -248,39 +248,64 @@ public void openPage(int position) {
         ArrayList<String> myDataset = new ArrayList<>();
         List<String> pageList = Arrays.asList(le_arr_special_calculator1);
         myDataset.addAll(pageList);
-      /*/  if (page == 0) {
 
-             myDataset.add("Birthday Calculator");
-            myDataset.add("Shraddha Calculator");
-            myDataset.add("Annual Event Calculator");
-            myDataset.add("Janma Rashi Calculator");
-            myDataset.add("Janma Nakshetra Calculator");
-            myDataset.add("Janma Lagna Calculator");
-            myDataset.add("Mangala Dosha Calculator");
-            myDataset.add("Kala Sarpa Yoga Calculator");
-            myDataset.add("Pitru Dosha Calculator");
-            myDataset.add("Dasha Calculator");
-            myDataset.add("Baby Name Initials Calculator");
-            myDataset.add("Age Calculator");
-        } else {
-            myDataset.add("Amrit Siddhi Yoga");
-            myDataset.add("Sarvartha Siddhi Yoga");
-            myDataset.add("Ravi Pushya Yoga");
-            myDataset.add("Guru Pushya Yoga");
-            myDataset.add("Dwipushkar Yoga");
-            myDataset.add("Tripushkar Yoga");
-            // myDataset.add("Ravi Calculator");
-        }*/
         ads.setText("Unlock below items for just one Google Ads");
         // ads.setText("Tap here to watch one Google Ads to unlock below items");
         mAdapter = new PremiumListAdapter(activity, myDataset, ads,le_arr_special_calculator1,le_arr_special_calculator2);
         recyclerView.setAdapter(mAdapter);
-        if (!CalendarWeatherApp.isRewardedPremiumGrp1) {
+        if (!CalendarWeatherApp.isPremiumAccessGrp1) {
             ads.setVisibility(View.VISIBLE);
-            loadAds();
         } else {
             ads.setVisibility(View.GONE);
         }
+        ads.setOnClickListener(v -> {
+            if (!Connectivity.isConnected(activity)) {
+                Toast.makeText(activity, "Please check internet connection", Toast.LENGTH_LONG).show();
+                return;
+            }
+            rewardedAd=activity.mRewardedAdGrp1;
+            mInterstitialAdGrp=activity.mInterstitialAdGrp1;
+            if (rewardedAd.isLoaded()) {
+                Activity activityContext = activity;
+                RewardedAdCallback adCallback = new RewardedAdCallback() {
+                    @Override
+                    public void onRewardedAdOpened() {
+                        // Ad opened.
+                    }
+                    @Override
+                    public void onRewardedAdClosed() {
+                        activity.loadRewardedAds(1);
+                    }
+
+
+                    @Override
+                    public void onUserEarnedReward(@NonNull RewardItem reward) {
+                        CalendarWeatherApp.isPremiumAccessGrp1 = true;
+                        ads.setText("Thank You, Now you can able to access below features");
+                        mAdapter.notifyDataSetChanged();
+                        ads.setEnabled(false);
+                        ads.setTextColor(Color.BLACK);
+                    }
+
+                    @Override
+                    public void onRewardedAdFailedToShow(int errorCode) {
+                        ads.setText("Sorry, Failed to load ads, Try again later.");
+                    }
+                };
+                rewardedAd.show(activityContext, adCallback);
+            }else if(mInterstitialAdGrp.isLoaded()){
+                mInterstitialAdGrp.show();
+                CalendarWeatherApp.isPremiumAccessGrp1 = true;
+                ads.setText("Thank You, Now you can able to access below features");
+                mAdapter.notifyDataSetChanged();
+                ads.setEnabled(false);
+                ads.setTextColor(Color.BLACK);
+            } else {
+                activity.loadRewardedAds(1);
+                activity.loadInterstitialAds(1);
+                Toast.makeText(activity, "Unable to load Google Ads. Try again..", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public static class data {

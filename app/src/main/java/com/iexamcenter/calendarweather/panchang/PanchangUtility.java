@@ -1089,7 +1089,7 @@ String str="";
         if (cal == null)
             return "";
 
-        if ((mLang.contains("or") || mLang.contains("hi"))&& mType == 0) {
+        if ((mLang.contains("or") || mLang.contains("hi")  || mLang.contains("mr")   || mLang.contains("gu"))&& mType == 0) {
             int calDayNo = cal.get(Calendar.DAY_OF_MONTH);
             int calHour = cal.get(Calendar.HOUR_OF_DAY);
             int calMin = cal.get(Calendar.MINUTE);

@@ -120,8 +120,7 @@ public class CalendarPagerHomeFragment extends Fragment {
         setRetainInstance(true);
         setHasOptionsMenu(true);
         CalendarWeatherApp.updateAppResource(activity.getResources(), activity);
-        //   LocalBroadcastManager.getInstance(activity).registerReceiver(mMessageReceiver,new IntentFilter(AppConstants.GOTOPAGE));
-        activity = (MainActivity) getActivity();
+         activity = (MainActivity) getActivity();
 
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
@@ -243,14 +242,7 @@ public class CalendarPagerHomeFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        try {
 
-            //  LocalBroadcastManager.getInstance(activity).unregisterReceiver(mMessageReceiver);
-          //  activity.unregisterReceiver(mLocationChangedReceiver);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     private void showDatePicker() {

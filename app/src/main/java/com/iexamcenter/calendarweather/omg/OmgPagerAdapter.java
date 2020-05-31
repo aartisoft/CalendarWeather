@@ -48,10 +48,8 @@ class OmgPagerAdapter extends FragmentPagerAdapter {
                 args = new Bundle();
                 args.putInt(KundaliMainFragment.ARG_POSITION, position);
                 fragment.setArguments(args);
-
                 break;
             case 1:
-
                 fragment = KundaliMatchFrag.newInstance();
                 args = new Bundle();
                 args.putInt(KundaliMatchFrag.ARG_POSITION, position);
