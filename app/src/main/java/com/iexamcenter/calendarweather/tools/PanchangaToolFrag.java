@@ -347,7 +347,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                     break;
 
             }
-           // headerTitle=PAGE_TITLE_VAL;
+            // headerTitle=PAGE_TITLE_VAL;
             placeDateHelpTxt.setText(placeDateHelp);
             lbl_place.setText(lbl_place_txt);
             lbl_date.setText(lbl_date_txt);
@@ -452,7 +452,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
     }
 
     public void openPicker(int page) {
-       // txt.setText("");
+        // txt.setText("");
         FragmentTransaction ft0 = getChildFragmentManager().beginTransaction();
         Fragment prev0 = getChildFragmentManager().findFragmentByTag("MYDATETIME");
         if (prev0 != null) {
@@ -703,7 +703,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                             txtVal = le_pitru_dosha+" - "+le_arr_ausp_work_yes_no[0];
                         }
                         txt.setVisibility(VISIBLE);
-                         txtval1="<span style=\"font-weight:normal;color:#000000;\">" + pitruDosha+"</span>";
+                        txtval1="<span style=\"font-weight:normal;color:#000000;\">" + pitruDosha+"</span>";
                         txt1.setVisibility(VISIBLE);
                         txt1.setText(Html.fromHtml(txtval1));
 
@@ -718,13 +718,13 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                         createDiagram();
                         String sarpaYoga = checkSarpaDosha();
                         txtVal = (sarpaYoga != null ? sarpaYoga + " - " + le_arr_ausp_work_yes_no[0] : le_kala_sarpa_dosha+" - " + le_arr_ausp_work_yes_no[1]);
-                       if(sarpaYoga != null) {
-                           txtval1="<span style=\"font-weight:normal;color:#000000;\">" + le_sarpa_dosha_desc1+"</span>";
-                           txt1.setVisibility(VISIBLE);
-                           txt1.setText(Html.fromHtml(txtval1));
-                       }else{
-                           txt1.setVisibility(GONE);
-                       }
+                        if(sarpaYoga != null) {
+                            txtval1="<span style=\"font-weight:normal;color:#000000;\">" + le_sarpa_dosha_desc1+"</span>";
+                            txt1.setVisibility(VISIBLE);
+                            txt1.setText(Html.fromHtml(txtval1));
+                        }else{
+                            txt1.setVisibility(GONE);
+                        }
                         break;
                     case 9:
                         janmaDashaCntr1.removeAllViews();
@@ -800,7 +800,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
                 tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[1],le_arr_planet[10],hNo);
                 reason.append("<br/>" + tmpStr);
-               // reason.append("<br/>" +le_arr_planet[1]).append(" associated  ").append(le_arr_planet[10]).append(" in house - " + houseno);
+                // reason.append("<br/>" +le_arr_planet[1]).append(" associated  ").append(le_arr_planet[10]).append(" in house - " + houseno);
             }
             if (cond2) {
                 tmpStr=String.format(le_pitru_dosha_desc2,le_arr_planet[1],le_arr_planet[11],hNo);
@@ -839,7 +839,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                 reason.append("<br/>" + tmpStr);
                 //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[10]);
             }else  if (cond8) {
-                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[10],hNo9,le_arr_planet[5]);
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[5],hNo9,le_arr_planet[10]);
                 reason.append("<br/>" + tmpStr);
                 //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
             }
@@ -847,8 +847,8 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
                 tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo9,le_arr_planet[5]);
                 reason.append("<br/>" + tmpStr);
                 //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
-            }else  if (cond9) {
-                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[11],hNo9,le_arr_planet[5]);
+            }else  if (cond8) {
+                tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[5],hNo9,le_arr_planet[11]);
                 reason.append("<br/>" + tmpStr);
                 //reason.append("<br/>9th house lord " + le_arr_planet[5]).append(" associated with ").append(le_arr_planet[11]);
             }
@@ -860,7 +860,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             if (cond10) {
                 tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[10],hNo);
                 reason.append("<br/>" + tmpStr);
-               // reason.append("<br/>" +le_arr_planet[10]).append(" associated ").append(" in house - " + houseno);
+                // reason.append("<br/>" +le_arr_planet[10]).append(" associated ").append(" in house - " + houseno);
             }
             if (cond11) {
                 tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[11],hNo);
@@ -875,7 +875,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             if (cond13) {
                 tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[4],hNo);
                 reason.append("<br/>" + tmpStr);
-               // reason.append("<br/>" + le_arr_planet[4]).append(" associated ").append(" in house - " + houseno);
+                // reason.append("<br/>" + le_arr_planet[4]).append(" associated ").append(" in house - " + houseno);
             }
 
             if (cond14 && !hNo.equals(hNo5))  {
@@ -890,7 +890,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             if (cond15  && !hNo.equals(hNo5)) {
                 tmpStr=String.format(le_pitru_dosha_desc4,hNo5,le_arr_planet[0],le_arr_planet[6],hNo);
                 reason.append("<br/>" + tmpStr);
-               // reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[6]);
+                // reason.append("<br/>5th house lord " + le_arr_planet[0]).append(" associated with ").append(le_arr_planet[6]);
             }else if (cond15) {
                 tmpStr=String.format(le_pitru_dosha_desc5,le_arr_planet[6],hNo5,le_arr_planet[0]);
                 reason.append("<br/>" + tmpStr);
@@ -922,11 +922,11 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
             if (cond18) {
                 tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[10],hNo);
                 reason.append("<br/>" + tmpStr);
-             }
+            }
             if (cond19) {
                 tmpStr=String.format(le_pitru_dosha_desc1,le_arr_planet[11],hNo);
                 reason.append("<br/>" + tmpStr);
-               }
+            }
         }
         return reason;
     }
@@ -1055,7 +1055,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
             if (i == 2 && (houseNoIndex == 0 || houseNoIndex == 1 || houseNoIndex == 3 || houseNoIndex == 6 || houseNoIndex == 7 || houseNoIndex == 11)) {
                 isMangalaDosha = true;
-               String mangalaIsIn=""+(houseNoIndex+1);
+                String mangalaIsIn=""+(houseNoIndex+1);
                 if(!CalendarWeatherApp.isPanchangEng){
                     mangalaIsIn=Utility.getInstance(mContext).getDayNo(mangalaIsIn);
                 }
@@ -1285,7 +1285,9 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
 
 
         birthDate.set(bYear, bMonth, bDate, bHour, bMin, 0);
-
+        currDate.set(Calendar.HOUR_OF_DAY,bHour);
+        currDate.set(Calendar.MINUTE,bMin);
+        currDate.set(Calendar.SECOND,0);
         //  int birthOrCurrType=1;// 1 birth ,2 curr
         Calendar compCal = Calendar.getInstance();
         if (birthOrCurrType == 1)
@@ -1338,7 +1340,7 @@ public class PanchangaToolFrag extends Fragment implements LocationDialog.Locati
         // dashaList.addAll(calcSubDasha(dasha, 0,2, compCal));
         if (dasha.startDate.getTimeInMillis() < compCal.getTimeInMillis() && dasha.endDate.getTimeInMillis() > compCal.getTimeInMillis()) {
             dashaList.add(dasha);
-            dashaList.addAll(calcSubDasha(dasha, 0, 2, compCal));
+            dashaList.addAll(calcSubDasha(dasha, index-1, 2, compCal));
         }
 
         planet1stDasha = planetLord;
